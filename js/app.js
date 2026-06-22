@@ -451,12 +451,10 @@ function updateAppChrome(strat) {
   const headerMeta = document.querySelector('.header-meta');
   if (headerMeta) headerMeta.style.display = strat?.id === 'performance' ? 'none' : '';
   const sync = document.getElementById('appSyncStatus');
-  if (sync) sync.textContent = '資料已連線';
-  const lastUpdated = document.getElementById('appLastUpdated');
   const date = DATA.market_index_data?.updated
     || DATA.watchlist_data?.last_updated
     || DATA.momentum_candidates_data?.updated;
-  if (lastUpdated) lastUpdated.textContent = date ? String(date).slice(0, 10) : '尚無更新紀錄';
+  if (sync) sync.textContent = date ? `更新於 ${String(date).slice(0, 10)}` : '等待資料載入';
 }
 
 // ════════════════════════════════════════════════════
