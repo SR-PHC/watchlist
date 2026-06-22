@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>自選標的池</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:        #f4f6f9;
+  --bg2:       #ffffff;
+  --bg3:       #eef2f7;
+  --bg4:       #e4ebf3;
+  --border:    #d7dee8;
+  --border2:   #b9c4d1;
+  --text:      #111827;
+  --text2:     #4b5563;
+  --text3:     #788497;
+  --green:     #0b74b8;
+  --green-dim: rgba(11,116,184,0.09);
+  --amber:     #b7791f;
+  --red:       #dc2626;
+  --market-up: #d93025;
+  --market-down:#0f8f64;
+  --market-up-dim:rgba(217,48,37,0.10);
+  --market-down-dim:rgba(15,143,100,0.10);
+  --mono:      'IBM Plex Mono', monospace;
+  --cond:      'Barlow Condensed', sans-serif;
+  --sans:      'Noto Sans TC', sans-serif;
+  --shadow-sm: 0 8px 22px rgba(15,23,42,0.07);
+  --radius:    3px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:
+    linear-gradient(180deg, rgba(11,116,184,0.08) 0%, rgba(244,246,249,0) 260px),
+    var(--bg);
+  color:var(--text);
+  font-family:var(--sans);font-size:14px;line-height:1.55;
+  min-height:100vh;
+}
+.page-inner{max-width:1100px;margin:0 auto;padding:0 20px;width:100%;}
+header{
+  position:sticky;top:0;z-index:10;
+  background:rgba(5,8,14,.94);
+  border-bottom:2px solid var(--green);
+  height:54px;
+  backdrop-filter:blur(14px);
+}
+header .page-inner{display:flex;align-items:center;justify-content:space-between;height:100%;}
+.logo{
+  font-family:var(--cond);font-size:18px;font-weight:700;letter-spacing:.08em;
+  color:#fff;text-transform:uppercase;
+}
+.updated{font-family:var(--mono);font-size:11px;color:#9aa7ba;}
+main{padding:28px 0 60px;}
+h1{font-family:var(--cond);font-size:26px;letter-spacing:.02em;margin-bottom:4px;}
+.subtitle{color:var(--text3);font-size:13px;margin-bottom:22px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
+.card{
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);
+  padding:16px;box-shadow:var(--shadow-sm);
+}
+.card.pinned{border-color:var(--green);box-shadow:0 0 0 1px var(--green-dim),var(--shadow-sm);}
+.card-top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:6px;}
+.stock-name{font-weight:700;font-size:15px;}
+.stock-id{font-family:var(--mono);color:var(--text3);font-size:12px;margin-left:6px;}
+.pin-badge{font-size:11px;color:var(--green);font-weight:700;}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0;}
+.tag{
+  font-size:11px;padding:2px 7px;border-radius:10px;
+  background:var(--bg3);color:var(--text2);border:1px solid var(--border);
+}
+.metrics{display:flex;justify-content:space-between;font-family:var(--mono);font-size:13px;margin-top:10px;}
+.pnl-up{color:var(--market-up);font-weight:700;}
+.pnl-down{color:var(--market-down);font-weight:700;}
+.meta{color:var(--text3);font-size:11px;margin-top:8px;}
+.empty{color:var(--text3);padding:40px 0;text-align:center;}
+.journal{margin-top:48px;border-top:1px dashed var(--border2);padding-top:20px;}
+.journal h2{font-family:var(--cond);font-size:18px;margin-bottom:14px;}
+.journal-entry{
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);
+  padding:12px 14px;margin-bottom:10px;
+}
+.journal-date{font-family:var(--mono);font-size:11px;color:var(--green);font-weight:600;margin-bottom:4px;}
+.journal-text{font-size:13px;color:var(--text2);white-space:pre-wrap;}
+footer{color:var(--text3);font-size:11px;text-align:center;padding:20px 0;}
+</style>
+</head>
+<body>
+<header>
+  <div class="page-inner">
+    <div class="logo">自選標的池</div>
+    <div class="updated" id="updatedAt"></div>
+  </div>
+</header>
+<main>
+  <div class="page-inner">
+    <h1>觀察中標的</h1>
+    <div class="subtitle">僅供參考交流，非投資建議。資料每次更新時手動同步。</div>
+    <div class="grid" id="grid"></div>
+    <div class="journal" id="journalSection" style="display:none">
+      <h2>更新紀錄</h2>
+      <div id="journalList"></div>
+    </div>
+  </div>
+</main>
+<footer>本頁為唯讀展示，不會回寫任何資料。</footer>
+
+<script>
+async function load() {
+  const res = await fetch('watchlist.json', { cache: 'no-store' });
+  const data = await res.json();
+  document.getElementById('updatedAt').textContent = '更新於 ' + (data.last_updated || '-');
+
+  const grid = document.getElementById('grid');
+  const rows = (data.active || []).slice().sort((a, b) => {
+    if (!!b.pinned !== !!a.pinned) return b.pinned ? 1 : -1;
+    return 0;
+  });
+
+  if (!rows.length) {
+    grid.innerHTML = '<div class="empty">目前沒有觀察中的標的</div>';
+  } else {
+    grid.innerHTML = rows.map(row => {
+      const pnl = Number(row.pnl_pct || 0);
+      const pnlClass = pnl >= 0 ? 'pnl-up' : 'pnl-down';
+      const tags = (row.pattern_tags || []).slice(0, 4)
+        .map(t => `<span class="tag">${t}</span>`).join('');
+      return `
+        <div class="card ${row.pinned ? 'pinned' : ''}">
+          <div class="card-top">
+            <div>
+              <span class="stock-name">${row.name || ''}</span>
+              <span class="stock-id">${row.stock_id || ''}</span>
+            </div>
+            ${row.pinned ? '<span class="pin-badge">釘選</span>' : ''}
+          </div>
+          <div class="tags">${tags}</div>
+          <div class="metrics">
+            <span>進場 ${row.entry_price ?? '-'}</span>
+            <span>現價 ${row.current_price ?? '-'}</span>
+            <span class="${pnlClass}">${pnl >= 0 ? '+' : ''}${pnl}%</span>
+          </div>
+          <div class="meta">${row.source_strategy || ''} · 加入於 ${row.added_date || '-'}</div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  try {
+    const jres = await fetch('journal.json', { cache: 'no-store' });
+    const journal = await jres.json();
+    if (Array.isArray(journal) && journal.length) {
+      document.getElementById('journalSection').style.display = '';
+      document.getElementById('journalList').innerHTML = journal
+        .slice().reverse()
+        .map(e => `
+          <div class="journal-entry">
+            <div class="journal-date">${e.date}</div>
+            <div class="journal-text">${e.note}</div>
+          </div>
+        `).join('');
+    }
+  } catch (e) {}
+}
+load();
+</script>
+</body>
+</html>
