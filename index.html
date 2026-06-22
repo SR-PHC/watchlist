@@ -1,171 +1,88 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>自選標的池</title>
+<meta name="theme-color" content="#0a0f1e">
+<meta name="apple-mobile-web-app-title" content="SR_PC">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>SR_PC（展示版）</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png">
+<link rel="shortcut icon" href="assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg:        #f4f6f9;
-  --bg2:       #ffffff;
-  --bg3:       #eef2f7;
-  --bg4:       #e4ebf3;
-  --border:    #d7dee8;
-  --border2:   #b9c4d1;
-  --text:      #111827;
-  --text2:     #4b5563;
-  --text3:     #788497;
-  --green:     #0b74b8;
-  --green-dim: rgba(11,116,184,0.09);
-  --amber:     #b7791f;
-  --red:       #dc2626;
-  --market-up: #d93025;
-  --market-down:#0f8f64;
-  --market-up-dim:rgba(217,48,37,0.10);
-  --market-down-dim:rgba(15,143,100,0.10);
-  --mono:      'IBM Plex Mono', monospace;
-  --cond:      'Barlow Condensed', sans-serif;
-  --sans:      'Noto Sans TC', sans-serif;
-  --shadow-sm: 0 8px 22px rgba(15,23,42,0.07);
-  --radius:    3px;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{
-  background:
-    linear-gradient(180deg, rgba(11,116,184,0.08) 0%, rgba(244,246,249,0) 260px),
-    var(--bg);
-  color:var(--text);
-  font-family:var(--sans);font-size:14px;line-height:1.55;
-  min-height:100vh;
-}
-.page-inner{max-width:1100px;margin:0 auto;padding:0 20px;width:100%;}
-header{
-  position:sticky;top:0;z-index:10;
-  background:rgba(5,8,14,.94);
-  border-bottom:2px solid var(--green);
-  height:54px;
-  backdrop-filter:blur(14px);
-}
-header .page-inner{display:flex;align-items:center;justify-content:space-between;height:100%;}
-.logo{
-  font-family:var(--cond);font-size:18px;font-weight:700;letter-spacing:.08em;
-  color:#fff;text-transform:uppercase;
-}
-.updated{font-family:var(--mono);font-size:11px;color:#9aa7ba;}
-main{padding:28px 0 60px;}
-h1{font-family:var(--cond);font-size:26px;letter-spacing:.02em;margin-bottom:4px;}
-.subtitle{color:var(--text3);font-size:13px;margin-bottom:22px;}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
-.card{
-  background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);
-  padding:16px;box-shadow:var(--shadow-sm);
-}
-.card.pinned{border-color:var(--green);box-shadow:0 0 0 1px var(--green-dim),var(--shadow-sm);}
-.card-top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:6px;}
-.stock-name{font-weight:700;font-size:15px;}
-.stock-id{font-family:var(--mono);color:var(--text3);font-size:12px;margin-left:6px;}
-.pin-badge{font-size:11px;color:var(--green);font-weight:700;}
-.tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0;}
-.tag{
-  font-size:11px;padding:2px 7px;border-radius:10px;
-  background:var(--bg3);color:var(--text2);border:1px solid var(--border);
-}
-.metrics{display:flex;justify-content:space-between;font-family:var(--mono);font-size:13px;margin-top:10px;}
-.pnl-up{color:var(--market-up);font-weight:700;}
-.pnl-down{color:var(--market-down);font-weight:700;}
-.meta{color:var(--text3);font-size:11px;margin-top:8px;}
-.empty{color:var(--text3);padding:40px 0;text-align:center;}
-.journal{margin-top:48px;border-top:1px dashed var(--border2);padding-top:20px;}
-.journal h2{font-family:var(--cond);font-size:18px;margin-bottom:14px;}
-.journal-entry{
-  background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);
-  padding:12px 14px;margin-bottom:10px;
-}
-.journal-date{font-family:var(--mono);font-size:11px;color:var(--green);font-weight:600;margin-bottom:4px;}
-.journal-text{font-size:13px;color:var(--text2);white-space:pre-wrap;}
-footer{color:var(--text3);font-size:11px;text-align:center;padding:20px 0;}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="css/main.css?v=0.6.10">
+<link rel="stylesheet" href="css/portfolio-theme.css?v=0.2.0">
 </head>
 <body>
-<header>
-  <div class="page-inner">
-    <div class="logo">自選標的池</div>
-    <div class="updated" id="updatedAt"></div>
-  </div>
-</header>
-<main>
-  <div class="page-inner">
-    <h1>觀察中標的</h1>
-    <div class="subtitle">僅供參考交流，非投資建議。資料每次更新時手動同步。</div>
-    <div class="grid" id="grid"></div>
-    <div class="journal" id="journalSection" style="display:none">
-      <h2>更新紀錄</h2>
-      <div id="journalList"></div>
+<div class="app-shell">
+  <aside class="app-sidebar">
+    <div class="app-brand">
+      <span class="app-brand-mark">SR</span>
+      <span class="app-brand-copy"><strong>SR_PC</strong><small>唯讀展示版</small></span>
+      <button class="mobile-nav-close" type="button" onclick="toggleMobileNav(false)" aria-label="關閉目錄">×</button>
     </div>
-  </div>
-</main>
-<footer>本頁為唯讀展示，不會回寫任何資料。</footer>
+    <div class="app-search" aria-hidden="true"><span>⌕</span> 快速搜尋</div>
+    <div class="app-nav-label">主要功能</div>
+    <nav class="strategy-nav">
+      <div class="page-inner" id="strategyNav"></div>
+    </nav>
+    <div class="app-system-card">
+      <div><span>DATA SYSTEM</span><i></i></div>
+      <strong>唯讀展示</strong>
+      <small id="appSyncStatus">等待資料載入</small>
+    </div>
+  </aside>
+  <button class="mobile-nav-backdrop" type="button" onclick="toggleMobileNav(false)" aria-label="關閉目錄"></button>
 
-<script>
-async function load() {
-  const res = await fetch('watchlist.json', { cache: 'no-store' });
-  const data = await res.json();
-  document.getElementById('updatedAt').textContent = '更新於 ' + (data.last_updated || '-');
-
-  const grid = document.getElementById('grid');
-  const rows = (data.active || []).slice().sort((a, b) => {
-    if (!!b.pinned !== !!a.pinned) return b.pinned ? 1 : -1;
-    return 0;
-  });
-
-  if (!rows.length) {
-    grid.innerHTML = '<div class="empty">目前沒有觀察中的標的</div>';
-  } else {
-    grid.innerHTML = rows.map(row => {
-      const pnl = Number(row.pnl_pct || 0);
-      const pnlClass = pnl >= 0 ? 'pnl-up' : 'pnl-down';
-      const tags = (row.pattern_tags || []).slice(0, 4)
-        .map(t => `<span class="tag">${t}</span>`).join('');
-      return `
-        <div class="card ${row.pinned ? 'pinned' : ''}">
-          <div class="card-top">
-            <div>
-              <span class="stock-name">${row.name || ''}</span>
-              <span class="stock-id">${row.stock_id || ''}</span>
-            </div>
-            ${row.pinned ? '<span class="pin-badge">釘選</span>' : ''}
-          </div>
-          <div class="tags">${tags}</div>
-          <div class="metrics">
-            <span>進場 ${row.entry_price ?? '-'}</span>
-            <span>現價 ${row.current_price ?? '-'}</span>
-            <span class="${pnlClass}">${pnl >= 0 ? '+' : ''}${pnl}%</span>
-          </div>
-          <div class="meta">${row.source_strategy || ''} · 加入於 ${row.added_date || '-'}</div>
+  <section class="app-surface">
+    <header>
+      <div class="page-inner">
+        <button class="mobile-menu-btn" type="button" onclick="toggleMobileNav(true)" aria-label="開啟目錄" aria-controls="strategyNav">☰</button>
+        <div class="mobile-brand">SR_PC</div>
+        <div class="page-heading">
+          <strong id="pageHeadingTitle">投資決策中心</strong>
+          <small>選股策略唯讀展示（不含績效與帳戶資料）</small>
         </div>
-      `;
-    }).join('');
-  }
+        <div class="header-quote" id="headerQuote">Aim for moon, you may hit a star.</div>
+      </div>
+    </header>
 
-  try {
-    const jres = await fetch('journal.json', { cache: 'no-store' });
-    const journal = await jres.json();
-    if (Array.isArray(journal) && journal.length) {
-      document.getElementById('journalSection').style.display = '';
-      document.getElementById('journalList').innerHTML = journal
-        .slice().reverse()
-        .map(e => `
-          <div class="journal-entry">
-            <div class="journal-date">${e.date}</div>
-            <div class="journal-text">${e.note}</div>
-          </div>
-        `).join('');
-    }
-  } catch (e) {}
-}
-load();
-</script>
+    <div id="loadProgress" class="load-progress" role="progressbar" aria-live="polite" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div class="load-progress-copy">
+        <span id="loadProgressLabel">準備讀取資料…</span>
+        <strong id="loadProgressPercent">0%</strong>
+      </div>
+      <div class="load-progress-track"><i id="loadProgressBar"></i></div>
+    </div>
+
+    <div class="page-layout">
+      <main id="mainContent"></main>
+      <aside class="watchlist-sidebar" id="rightSidebar" style="display:none">
+        <div id="marketPanel" class="market-panel" style="display:none"></div>
+      </aside>
+    </div>
+  </section>
+</div>
+
+<script src="js/public-stub.js"></script>
+<script src="js/app.js?v=0.7.14"></script>
+<script src="js/render-ssr.js?v=0.7.1"></script>
+<script src="js/render-watchlist.js?v=0.1.6"></script>
+<script src="js/render-candidates.js?v=0.1.1"></script>
+<script src="js/render-neckline.js?v=0.2.1"></script>
+<script src="js/render-neckline-track.js?v=0.1.0"></script>
+<script src="js/render-chips.js?v=0.5.4"></script>
+<script src="js/render-big-holder-trend.js?v=0.7.4"></script>
+<script src="js/render-big-holder-trend-track.js?v=0.1.0"></script>
+<script src="js/render-volume.js?v=0.5.1"></script>
+<script src="js/render-volume-pullback.js?v=0.5.1"></script>
+<script src="js/render-right-top.js?v=0.5.4"></script>
+<script src="js/render-right-top-track.js?v=0.5.1"></script>
 </body>
 </html>

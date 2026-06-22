@@ -1,0 +1,435 @@
+{
+  "schema_version": 1,
+  "analysis_date": "2026-06-17",
+  "generated_at": "2026-06-17T17:47:44+08:00",
+  "commit_sha": "af71b65e15f7afc2bc19865176f3b362718a2be4",
+  "daily_scan_commit_sha": "8ecbc57e9ce137652de13ad9718a631e8dfcc342",
+  "source_pool_updated": "2026-06-17T17:06:40+08:00",
+  "data_status": "fresh",
+  "data_status_label": "核心資料、雙市場指數與候選 K 線皆為當日",
+  "decision": "conditional_review",
+  "decision_label": "今日不無條件開新倉，保留 3 檔條件式人工檢視",
+  "decision_summary": "momentum_candidates.json、current_prices.json、market_index.json 與 shioaji_kbars.json 均更新至 2026-06-17；TAIEX、TPEX 同為當日。相較 2026-06-16 的 focus pool，今日新增 11 檔，全部具備至少 120 根且最新至當日的 Shioaji 日 K；週線與月線已直接由日 K 聚合，price_weekly_cache.json 為空不構成資料缺口。台灣虎航量能與突破階段最強但籌碼近 3 週下降；遠東銀有大戶與量增交叉確認但第一目標距離短；聯詠型態分最高但第一段報酬風險不足且高價股風險較大。今日只保留三檔條件式人工看圖，不是自動下單或保證買進指令。",
+  "new_candidate_count": 11,
+  "qualified_count": 3,
+  "market_context": {
+    "taiex_close": 45877.39,
+    "taiex_change_pct": 0.15,
+    "tpex_close": 433.34,
+    "tpex_change_pct": 0.72,
+    "summary": "2026-06-17 加權指數上漲 0.15%、櫃買指數上漲 0.72%，兩市場同步收紅；環境偏多，但新進候選多數已拉出長上影或接近短線壓力，仍需等回測承接。",
+    "risks": [
+      "TAIEX 與 TPEX 同步上漲，市場環境有利多方，但隔日開高追價容易讓停損距離放大",
+      "今日新進 focus pool 有 11 檔，其中多檔仍是準突破或無結構停損，不適合直接排名為建倉標的",
+      "所有價位只供人工看圖與風險規劃，不是自動下單或保證買進指令"
+    ]
+  },
+  "missing_data": [],
+  "source_data_dates": {
+    "momentum_candidates": "2026-06-17T17:06:40+08:00",
+    "current_prices": "2026-06-17",
+    "current_prices_updated": "2026-06-17T17:05:02.651415+08:00",
+    "shioaji_kbars": "2026-06-17",
+    "shioaji_kbars_updated": "2026-06-17T17:06:50.209882+08:00",
+    "market_index": "2026-06-17",
+    "market_index_updated": "2026-06-17T17:05:10.988560+08:00",
+    "market_index_taiex": "2026-06-17",
+    "market_index_tpex": "2026-06-17",
+    "right_top": "2026-06-17T17:04:38+08:00",
+    "volume_signal": "2026-06-17T17:04:43+08:00",
+    "chips_big_holder_weekly_updated": "2026-06-13T09:04:58+08:00",
+    "chips_big_holder_price_updated": "2026-06-17",
+    "big_holder_trend_source_date": "2026-06-12",
+    "big_holder_trend_price_updated": "2026-06-17",
+    "price_weekly_cache": "empty_not_used"
+  },
+  "kbar_checks": {
+    "2399": {
+      "count": 260,
+      "latest_date": "2026-06-17"
+    },
+    "2501": {
+      "count": 260,
+      "latest_date": "2026-06-17"
+    },
+    "2845": {
+      "count": 260,
+      "latest_date": "2026-06-17"
+    },
+    "2889": {
+      "count": 260,
+      "latest_date": "2026-06-17"
+    },
+    "3034": {
+      "count": 260,
+      "latest_date": "2026-06-17"
+    },
+    "3357": {
+      "count": 260,
+      "latest_date": "2026-06-17"
+    },
+    "3406": {
+      "count": 260,
+      "latest_date": "2026-06-17"
+    },
+    "4739": {
+      "count": 260,
+      "latest_date": "2026-06-17"
+    },
+    "4915": {
+      "count": 260,
+      "latest_date": "2026-06-17"
+    },
+    "6126": {
+      "count": 260,
+      "latest_date": "2026-06-17"
+    },
+    "6757": {
+      "count": 260,
+      "latest_date": "2026-06-17"
+    }
+  },
+  "reviewed_new_candidates": [
+    {
+      "stock_id": "3034",
+      "name": "聯詠",
+      "included": true,
+      "pattern_type": "W底突破頸線首日 + BBW 收斂接近 pivot",
+      "pattern_score": 75,
+      "close": 515,
+      "source_strategies": [
+        "突破策略"
+      ],
+      "kbar_count": 260,
+      "latest_kbar_date": "2026-06-17",
+      "reason": "列入前三條件式人工檢視。"
+    },
+    {
+      "stock_id": "2845",
+      "name": "遠東銀",
+      "included": true,
+      "pattern_type": "長盤整突破首日 + 平台突破後回測",
+      "pattern_score": 73,
+      "close": 13.3,
+      "source_strategies": [
+        "低基期大戶",
+        "量增訊號"
+      ],
+      "kbar_count": 260,
+      "latest_kbar_date": "2026-06-17",
+      "reason": "列入前三條件式人工檢視。"
+    },
+    {
+      "stock_id": "6757",
+      "name": "台灣虎航-創",
+      "included": true,
+      "pattern_type": "W底突破頸線首日",
+      "pattern_score": 71.8,
+      "close": 59.1,
+      "source_strategies": [
+        "突破策略"
+      ],
+      "kbar_count": 260,
+      "latest_kbar_date": "2026-06-17",
+      "reason": "列入前三條件式人工檢視。"
+    },
+    {
+      "stock_id": "4739",
+      "name": "康普",
+      "included": false,
+      "pattern_type": "W底突破頸線首日",
+      "pattern_score": 65.8,
+      "close": 123,
+      "source_strategies": [
+        "趨勢大戶"
+      ],
+      "kbar_count": 260,
+      "latest_kbar_date": "2026-06-17",
+      "reason": "未納入：型態仍可看，但當日量僅為前 20 日均量 0.75 倍，突破續航不足。"
+    },
+    {
+      "stock_id": "6126",
+      "name": "信音",
+      "included": false,
+      "pattern_type": "W底突破頸線首日",
+      "pattern_score": 64.8,
+      "close": 40.4,
+      "source_strategies": [
+        "趨勢大戶"
+      ],
+      "kbar_count": 260,
+      "latest_kbar_date": "2026-06-17",
+      "reason": "未納入：型態仍可看，但當日量僅為前 20 日均量 0.34 倍，突破續航不足。"
+    },
+    {
+      "stock_id": "2501",
+      "name": "國建",
+      "included": false,
+      "pattern_type": "W底突破頸線首日",
+      "pattern_score": 57.8,
+      "close": 27,
+      "source_strategies": [
+        "趨勢大戶",
+        "突破策略"
+      ],
+      "kbar_count": 260,
+      "latest_kbar_date": "2026-06-17",
+      "reason": "未納入：型態分 57.8 低於前三候選，第一段壓力距離收盤過近，報酬風險不如前三名。"
+    },
+    {
+      "stock_id": "3357",
+      "name": "臺慶科",
+      "included": false,
+      "pattern_type": "W底突破頸線首日",
+      "pattern_score": 57.8,
+      "close": 316.5,
+      "source_strategies": [
+        "突破策略"
+      ],
+      "kbar_count": 260,
+      "latest_kbar_date": "2026-06-17",
+      "reason": "未納入：仍屬準突破，距離突破價 322 元尚未確認，且單日漲幅 5.15%。"
+    },
+    {
+      "stock_id": "4915",
+      "name": "致伸",
+      "included": false,
+      "pattern_type": "箱型接近上緣",
+      "pattern_score": 49.4,
+      "close": 76,
+      "source_strategies": [
+        "低基期大戶",
+        "突破策略"
+      ],
+      "kbar_count": 260,
+      "latest_kbar_date": "2026-06-17",
+      "reason": "未納入：repository 未提供 invalidation，無法制定結構停損；此類候選只能觀察突破是否成形。"
+    },
+    {
+      "stock_id": "2399",
+      "name": "映泰",
+      "included": false,
+      "pattern_type": "箱型接近上緣",
+      "pattern_score": 45.4,
+      "close": 51.9,
+      "source_strategies": [
+        "突破策略"
+      ],
+      "kbar_count": 260,
+      "latest_kbar_date": "2026-06-17",
+      "reason": "未納入：repository 未提供 invalidation，無法制定結構停損；此類候選只能觀察突破是否成形。"
+    },
+    {
+      "stock_id": "3406",
+      "name": "玉晶光",
+      "included": false,
+      "pattern_type": "箱型接近上緣",
+      "pattern_score": 43.4,
+      "close": 722,
+      "source_strategies": [
+        "趨勢大戶",
+        "突破策略"
+      ],
+      "kbar_count": 260,
+      "latest_kbar_date": "2026-06-17",
+      "reason": "未納入：repository 未提供 invalidation，無法制定結構停損；此類候選只能觀察突破是否成形。"
+    },
+    {
+      "stock_id": "2889",
+      "name": "國票金",
+      "included": false,
+      "pattern_type": "型態待確認",
+      "pattern_score": 39,
+      "close": 15.2,
+      "source_strategies": [
+        "突破策略"
+      ],
+      "kbar_count": 260,
+      "latest_kbar_date": "2026-06-17",
+      "reason": "未納入：repository 未提供 invalidation，無法制定結構停損；此類候選只能觀察突破是否成形。"
+    }
+  ],
+  "candidates": [
+    {
+      "rank": 1,
+      "stock_id": "6757",
+      "name": "台灣虎航-創",
+      "industry": "創新版股票",
+      "market": "TWSE",
+      "source_strategies": [
+        "突破策略"
+      ],
+      "pattern_type": "W底突破頸線首日",
+      "pattern_score": 71.8,
+      "close": 59.1,
+      "strengths": [
+        "repository 固定型態辨識 W底突破頸線首日，型態分 71.8",
+        "日線收盤 59.10 元高於 20 日均價 55.41 元與 60 日均價 52.46 元",
+        "週線收盤 59.10 元高於 10 週均價 53.67 元與 20 週均價 55.34 元",
+        "月線收盤 59.10 元高於 6 月均價 57.70 元與 12 月均價 66.05 元；6 月均價目前低於 12 月均價",
+        "當日成交量 17,691 張，為前 20 日均量 3,673.7 張的 4.82 倍",
+        "突破策略來源標示 突破確認，突破參考價 57.00 元，收盤距突破價 3.68%",
+        "突破策略同時標示盤整突破與動能突破，日量與週量皆放大"
+      ],
+      "risks": [
+        "right_top 籌碼欄位顯示千張大戶近 3 週減少 1.32 個百分點、400 張大戶近 3 週減少 1.57 個百分點，籌碼不是加分項",
+        "2026-06-17 最高 62.00 元、收盤 59.10 元，突破日留下明顯上影線賣壓",
+        "12 月均價 66.05 元仍高於 6 月均價 57.70 元，月線長週期尚未完全翻多",
+        "建倉後若收盤跌破結構停損 57.33 元，型態失效，不適合移動停損找理由續抱"
+      ],
+      "reference_entry": {
+        "low": 57.35,
+        "high": 59.1,
+        "basis": "僅在後續守住 repository invalidation 57.33 元上方，且 57.35 至 59.10 元有承接時評估；若直接高於 59.10 元追價，原報酬風險失效。"
+      },
+      "structural_stop": {
+        "price": 57.33,
+        "basis": "採 repository 固定型態模型輸出的 invalidation 57.33 元；建倉後收盤跌破代表 W底突破頸線首日 結構失效。"
+      },
+      "targets": [
+        {
+          "label": "目標一",
+          "price": 60.7,
+          "basis": "最近 90 根 Shioaji 日 K 中，收盤 59.10 元上方的前段壓力帶依序為 59.40、60.00、60.70 元；取 60.70 元作為第一個需重新站回的壓力。"
+        },
+        {
+          "label": "目標二",
+          "price": 63,
+          "basis": "2026-03-20 Shioaji 日 K 高點 63.00 元，為 60.70 元之後的下一個可驗證壓力。"
+        }
+      ],
+      "reward_risk": {
+        "target1": 2.77,
+        "target2": 5.34,
+        "basis": "以參考進場區中值 58.225 元與結構停損 57.33 元計算；此為人工看圖用風險規劃，不代表保證達標。"
+      },
+      "invalidation_conditions": [
+        "後續收盤跌回 59.10 元 repository 型態關鍵價下方",
+        "成交量跌回前 20 日均量 3,673.7 張以下且價格無法續攻",
+        "建倉後收盤跌破 57.33 元",
+        "實際進場價高於 59.10 元，原參考價位與報酬風險比失效"
+      ]
+    },
+    {
+      "rank": 2,
+      "stock_id": "2845",
+      "name": "遠東銀",
+      "industry": "金融",
+      "market": "",
+      "source_strategies": [
+        "低基期大戶",
+        "量增訊號"
+      ],
+      "pattern_type": "長盤整突破首日 + 平台突破後回測",
+      "pattern_score": 73,
+      "close": 13.3,
+      "strengths": [
+        "repository 固定型態辨識 長盤整突破首日 + 平台突破後回測，型態分 73",
+        "日線收盤 13.30 元高於 20 日均價 12.40 元與 60 日均價 12.38 元",
+        "週線收盤 13.30 元高於 10 週均價 12.41 元與 20 週均價 12.47 元",
+        "月線收盤 13.30 元高於 6 月均價 12.55 元與 12 月均價 12.73 元；6 月均價目前低於 12 月均價",
+        "當日成交量 36,924 張，為前 20 日均量 15,985.0 張的 2.31 倍",
+        "低基期大戶資料顯示千張大戶近 3 週增加 1.82 個百分點、400 張大戶近 3 週增加 1.13 個百分點",
+        "量增訊號資料顯示 signal_date 2026-06-17，量比 10 日均量 1.82 倍"
+      ],
+      "risks": [
+        "第一目標 13.40 元距離參考區中值不遠，若只看第一段，報酬風險偏低",
+        "10 週均價 12.41 元仍低於 20 週均價 12.47 元，6 月均價 12.55 元也低於 12 月均價 12.73 元，中長週期剛翻起",
+        "金融股波動較小，若突破後沒有續量，容易變成慢速盤整而不是快速攻擊",
+        "建倉後若收盤跌破結構停損 12.66 元，型態失效，不適合移動停損找理由續抱"
+      ],
+      "reference_entry": {
+        "low": 13.05,
+        "high": 13.3,
+        "basis": "僅在後續守住 13.05 元平台突破關鍵價，且 13.05 至 13.30 元回測不失守時評估；若直接高於 13.30 元，不沿用本計畫追價。"
+      },
+      "structural_stop": {
+        "price": 12.66,
+        "basis": "採 repository 固定型態模型輸出的 invalidation 12.66 元；建倉後收盤跌破代表 長盤整突破首日 + 平台突破後回測 結構失效。"
+      },
+      "targets": [
+        {
+          "label": "目標一",
+          "price": 13.4,
+          "basis": "2026-06-17 Shioaji 日 K 高點 13.40 元；今日已創 90 日新高但未收最高，先把當日高點視為第一壓力。"
+        },
+        {
+          "label": "目標二",
+          "price": 14.45,
+          "basis": "最近 90 根日 K 沒有更高歷史壓力可引用，改以參考進場區中值 13.175 元至結構停損 12.66 元的風險距離估算約 2.5R，依台股跳動單位取整為 14.45 元。"
+        }
+      ],
+      "reward_risk": {
+        "target1": 0.44,
+        "target2": 2.48,
+        "basis": "以參考進場區中值 13.175 元與結構停損 12.66 元計算；此為人工看圖用風險規劃，不代表保證達標。"
+      },
+      "invalidation_conditions": [
+        "後續收盤跌回 13.05 元 repository 型態關鍵價下方",
+        "成交量跌回前 20 日均量 15,985.0 張以下且價格無法續攻",
+        "建倉後收盤跌破 12.66 元",
+        "實際進場價高於 13.30 元，原參考價位與報酬風險比失效"
+      ]
+    },
+    {
+      "rank": 3,
+      "stock_id": "3034",
+      "name": "聯詠",
+      "industry": "半導體業",
+      "market": "TWSE",
+      "source_strategies": [
+        "突破策略"
+      ],
+      "pattern_type": "W底突破頸線首日 + BBW 收斂接近 pivot",
+      "pattern_score": 75,
+      "close": 515,
+      "strengths": [
+        "repository 固定型態辨識 W底突破頸線首日 + BBW 收斂接近 pivot，型態分 75",
+        "日線收盤 515.00 元高於 20 日均價 489.85 元與 60 日均價 444.18 元",
+        "週線收盤 515.00 元高於 10 週均價 466.45 元與 20 週均價 424.77 元",
+        "月線收盤 515.00 元高於 6 月均價 424.75 元與 12 月均價 420.13 元；6 月均價目前高於 12 月均價",
+        "當日成交量 6,778 張，為前 20 日均量 5,493.4 張的 1.23 倍",
+        "突破策略來源標示 突破確認，突破參考價 507.00 元，收盤距突破價 1.58%",
+        "同時具備 W 底突破與 tight pivot 標籤，日線、週線、月線價格均站上主要均線"
+      ],
+      "risks": [
+        "只有突破策略單一來源，right_top 顯示千張大戶近 3 週僅增加 0.27 個百分點、400 張大戶近 3 週減少 0.06 個百分點，籌碼同步性不足",
+        "第一目標 519 元距離收盤 515 元太近，以參考區中值計算第一段報酬風險低於 1R",
+        "高價股單位風險大，若實際進場價高於 515 元，需要重新縮小張數或放棄",
+        "建倉後若收盤跌破結構停損 496.64 元，型態失效，不適合移動停損找理由續抱"
+      ],
+      "reference_entry": {
+        "low": 512,
+        "high": 515,
+        "basis": "僅在後續守住 512 元 W 底頸線，且 512 至 515 元有承接時評估；若直接高於 515 元追價，高價股單筆風險會放大。"
+      },
+      "structural_stop": {
+        "price": 496.64,
+        "basis": "採 repository 固定型態模型輸出的 invalidation 496.64 元；建倉後收盤跌破代表 W底突破頸線首日 + BBW 收斂接近 pivot 結構失效。"
+      },
+      "targets": [
+        {
+          "label": "目標一",
+          "price": 519,
+          "basis": "2026-06-17 Shioaji 日 K 高點 519 元；今日創 90 日新高後收在 515 元，先以當日高點作為第一壓力。"
+        },
+        {
+          "label": "目標二",
+          "price": 556,
+          "basis": "最近 90 根日 K 沒有更高歷史壓力可引用，改以參考進場區中值 513.50 元至結構停損 496.64 元的風險距離估算約 2.5R，依台股跳動單位取整為 556 元。"
+        }
+      ],
+      "reward_risk": {
+        "target1": 0.33,
+        "target2": 2.52,
+        "basis": "以參考進場區中值 513.500 元與結構停損 496.64 元計算；此為人工看圖用風險規劃，不代表保證達標。"
+      },
+      "invalidation_conditions": [
+        "後續收盤跌回 512.00 元 repository 型態關鍵價下方",
+        "成交量跌回前 20 日均量 5,493.4 張以下且價格無法續攻",
+        "建倉後收盤跌破 496.64 元",
+        "實際進場價高於 515.00 元，原參考價位與報酬風險比失效"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7648 @@
+{
+  "strategy_id": "big_holder_trend",
+  "updated": "2026-06-20T09:00:11+08:00",
+  "source_date": "2026-06-18",
+  "criteria": {
+    "big_pct_1000_gt": 30.0,
+    "chip_signal": "千張或400張連續4週增加，或千張/400張本週增加超過3%",
+    "vol_20d_avg_gt": 500,
+    "bullish_alignment": "EMA20 > EMA60 > EMA120 > EMA200",
+    "statistical_edge": {
+      "metric": "max_gain_60d",
+      "range": [
+        45.0,
+        65.0
+      ],
+      "label": "60日45-65統計優勢區",
+      "usage": "客觀打標，不代表買進建議；用於週六趨勢大戶池產生後拉出觀察名單"
+    },
+    "statistical_week_0_10": {
+      "metric": [
+        "max_gain_60d",
+        "week_chg_pct"
+      ],
+      "range": {
+        "max_gain_60d": [
+          45,
+          65
+        ],
+        "week_chg_pct": [
+          0,
+          10
+        ]
+      },
+      "label": "45-65週漲0-10",
+      "usage": "客觀小分類；用於前端一鍵拉出觀察池"
+    }
+  },
+  "counts": {
+    "big_pct_gt_30": 1667,
+    "chip_signal": 270,
+    "bullish_aligned": 107,
+    "stat_edge_45_65": 11,
+    "stat_week_0_10_45_65": 4,
+    "results": 88
+  },
+  "results": [
+    {
+      "stock_id": "2243",
+      "name": "宏旭-KY",
+      "industry": "汽車",
+      "market_cap": 7.1,
+      "big_pct_1000": 47.6,
+      "big_pct_400": 64.95,
+      "chg_1w_1000": 10.03,
+      "chg_1w_400": 5.59,
+      "big_trend_1000": [
+        38.97,
+        39.21,
+        43.26,
+        47.6
+      ],
+      "big_trend_400": [
+        54.5,
+        59.48,
+        61.51,
+        64.95
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增",
+        "400張4週連增",
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 14,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 46.55,
+      "entry_date": "2026-06-18",
+      "entry_close": 51.7,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 46.55,
+      "since_entry_pct": -9.96,
+      "ema20": 34.18,
+      "ema60": 26.6,
+      "ema120": 21.86,
+      "ema200": 18.84,
+      "bullish_aligned": true,
+      "high_60d": 51.7,
+      "low_60d": 19.35,
+      "max_gain_60d": 167.18,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 2182,
+      "week_chg_pct": 52.73,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 55.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 5,
+        "位置": 0,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 30.0,
+      "invalidation": 29.1,
+      "pattern_confidence": 0.9,
+      "score": 55.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "6182",
+      "name": "合晶",
+      "industry": "櫃半導",
+      "market_cap": 176.5,
+      "big_pct_1000": 38.39,
+      "big_pct_400": 43.47,
+      "chg_1w_1000": 7.38,
+      "chg_1w_400": 8.11,
+      "big_trend_1000": [
+        33.88,
+        34.86,
+        35.75,
+        38.39
+      ],
+      "big_trend_400": [
+        38.36,
+        39.65,
+        40.21,
+        43.47
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增",
+        "400張4週連增",
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 14,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 116.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 120.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 116.5,
+      "since_entry_pct": -2.92,
+      "ema20": 89.8,
+      "ema60": 67.32,
+      "ema120": 53.51,
+      "ema200": 44.97,
+      "bullish_aligned": true,
+      "high_60d": 120.0,
+      "low_60d": 30.9,
+      "max_gain_60d": 288.35,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 36168,
+      "week_chg_pct": 48.33,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 56.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 6,
+        "位置": 0,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 101.5,
+      "invalidation": 98.45,
+      "pattern_confidence": 0.9,
+      "score": 56.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2478",
+      "name": "大毅",
+      "industry": "電零",
+      "market_cap": 71.7,
+      "big_pct_1000": 59.36,
+      "big_pct_400": 69.68,
+      "chg_1w_1000": 7.65,
+      "chg_1w_400": 6.38,
+      "big_trend_1000": [
+        50.55,
+        52.57,
+        55.14,
+        59.36
+      ],
+      "big_trend_400": [
+        62.1,
+        64.04,
+        65.5,
+        69.68
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增",
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 12,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 235.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 234.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 235.5,
+      "since_entry_pct": 0.64,
+      "ema20": 164.04,
+      "ema60": 117.83,
+      "ema120": 94.26,
+      "ema200": 80.42,
+      "bullish_aligned": true,
+      "high_60d": 234.0,
+      "low_60d": 57.5,
+      "max_gain_60d": 306.96,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 12969,
+      "week_chg_pct": 31.83,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 57.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 5,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 152.5,
+      "invalidation": 147.92,
+      "pattern_confidence": 0.9,
+      "score": 57.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2493",
+      "name": "揚博",
+      "industry": "電零",
+      "market_cap": 32.2,
+      "big_pct_1000": 48.79,
+      "big_pct_400": 57.69,
+      "chg_1w_1000": 8.16,
+      "chg_1w_400": 6.79,
+      "big_trend_1000": [
+        46.05,
+        45.61,
+        45.11,
+        48.79
+      ],
+      "big_trend_400": [
+        51.08,
+        52.44,
+        54.02,
+        57.69
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張4週連增",
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 11,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 268.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 273.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 268.0,
+      "since_entry_pct": -2.01,
+      "ema20": 193.04,
+      "ema60": 155.42,
+      "ema120": 136.74,
+      "ema200": 126.02,
+      "bullish_aligned": true,
+      "high_60d": 273.5,
+      "low_60d": 103.5,
+      "max_gain_60d": 164.25,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 7737,
+      "week_chg_pct": 45.09,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 60.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 10,
+        "位置": 0,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "量縮整理",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 190.5,
+      "invalidation": 184.78,
+      "pattern_confidence": 0.9,
+      "score": 60.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "8261",
+      "name": "富鼎",
+      "industry": "半導",
+      "market_cap": 22.0,
+      "big_pct_1000": 42.12,
+      "big_pct_400": 50.33,
+      "chg_1w_1000": 11.16,
+      "chg_1w_400": 20.87,
+      "big_trend_1000": [
+        46.04,
+        38.26,
+        37.89,
+        42.12
+      ],
+      "big_trend_400": [
+        50.97,
+        44.71,
+        41.64,
+        50.33
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 236.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 215.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 236.5,
+      "since_entry_pct": 10.0,
+      "ema20": 172.8,
+      "ema60": 146.34,
+      "ema120": 127.08,
+      "ema200": 114.56,
+      "bullish_aligned": true,
+      "high_60d": 215.0,
+      "low_60d": 96.6,
+      "max_gain_60d": 122.57,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 10574,
+      "week_chg_pct": 36.08,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 47.8,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 19.8,
+        "量價": 0,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 212.5,
+      "invalidation": 206.12,
+      "pattern_confidence": 0.9,
+      "score": 47.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "5351",
+      "name": "鈺創",
+      "industry": "櫃半導",
+      "market_cap": 47.7,
+      "big_pct_1000": 31.22,
+      "big_pct_400": 36.74,
+      "chg_1w_1000": 18.62,
+      "chg_1w_400": 11.71,
+      "big_trend_1000": [
+        27.61,
+        29.74,
+        26.32,
+        31.22
+      ],
+      "big_trend_400": [
+        32.5,
+        35.22,
+        32.89,
+        36.74
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 99.8,
+      "entry_date": "2026-06-18",
+      "entry_close": 94.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 99.8,
+      "since_entry_pct": 6.17,
+      "ema20": 87.02,
+      "ema60": 78.62,
+      "ema120": 69.07,
+      "ema200": 60.11,
+      "bullish_aligned": true,
+      "high_60d": 94.0,
+      "low_60d": 61.1,
+      "max_gain_60d": 53.85,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 31902,
+      "week_chg_pct": 11.51,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "45-65",
+      "stat_edge": true,
+      "stat_edge_id": "max_gain_60d_45_65",
+      "stat_edge_label": "60日45-65統計優勢區",
+      "stat_edge_range": [
+        45.0,
+        65.0
+      ],
+      "stat_edge_basis": "big_holder_trend 60日最大漲幅分箱回測：45-65% 區間入池後平均漲幅與勝率較佳",
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 56.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 0,
+        "位置": 6,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 96.0,
+      "invalidation": 93.12,
+      "pattern_confidence": 0.9,
+      "score": 56.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2241",
+      "name": "艾姆勒",
+      "industry": "汽車",
+      "market_cap": null,
+      "big_pct_1000": 35.41,
+      "big_pct_400": 44.54,
+      "chg_1w_1000": 15.79,
+      "chg_1w_400": 4.38,
+      "big_trend_1000": [
+        31.89,
+        28.3,
+        30.58,
+        35.41
+      ],
+      "big_trend_400": [
+        44.39,
+        39.09,
+        42.67,
+        44.54
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 51.6,
+      "entry_date": "2026-06-18",
+      "entry_close": 50.6,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 51.6,
+      "since_entry_pct": 1.98,
+      "ema20": 39.89,
+      "ema60": 35.34,
+      "ema120": 33.64,
+      "ema200": 32.37,
+      "bullish_aligned": true,
+      "high_60d": 50.6,
+      "low_60d": 27.1,
+      "max_gain_60d": 86.72,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 5151,
+      "week_chg_pct": 26.34,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 50.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 0,
+        "位置": 0,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 39.95,
+      "invalidation": 38.75,
+      "pattern_confidence": 0.9,
+      "score": 50.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2455",
+      "name": "全新",
+      "industry": "通信",
+      "market_cap": 182.1,
+      "big_pct_1000": 38.58,
+      "big_pct_400": 52.37,
+      "chg_1w_1000": 14.92,
+      "chg_1w_400": 7.49,
+      "big_trend_1000": [
+        35.26,
+        35.56,
+        33.57,
+        38.58
+      ],
+      "big_trend_400": [
+        50.37,
+        50.92,
+        48.72,
+        52.37
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 409.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 416.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 409.5,
+      "since_entry_pct": -1.56,
+      "ema20": 387.39,
+      "ema60": 345.42,
+      "ema120": 290.18,
+      "ema200": 246.19,
+      "bullish_aligned": true,
+      "high_60d": 444.0,
+      "low_60d": 242.5,
+      "max_gain_60d": 83.09,
+      "pullback_from_60d_high_pct": -6.31,
+      "vol_20d_avg": 9663,
+      "week_chg_pct": 30.0,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "65-85",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 37.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 5,
+        "位置": 6,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 37.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2399",
+      "name": "映泰",
+      "industry": "電腦",
+      "market_cap": 20.8,
+      "big_pct_1000": 31.85,
+      "big_pct_400": 38.44,
+      "chg_1w_1000": 14.08,
+      "chg_1w_400": 9.73,
+      "big_trend_1000": [
+        25.6,
+        28.75,
+        27.92,
+        31.85
+      ],
+      "big_trend_400": [
+        33.17,
+        35.1,
+        35.03,
+        38.44
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 51.6,
+      "entry_date": "2026-06-18",
+      "entry_close": 48.05,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 51.6,
+      "since_entry_pct": 7.39,
+      "ema20": 47.83,
+      "ema60": 42.46,
+      "ema120": 36.47,
+      "ema200": 31.95,
+      "bullish_aligned": true,
+      "high_60d": 52.8,
+      "low_60d": 29.25,
+      "max_gain_60d": 80.51,
+      "pullback_from_60d_high_pct": -9.0,
+      "vol_20d_avg": 13118,
+      "week_chg_pct": 4.12,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "65-85",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 45.0,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 0.0,
+        "量價": 5,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 45.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "6269",
+      "name": "台郡",
+      "industry": "電零",
+      "market_cap": 289.9,
+      "big_pct_1000": 30.13,
+      "big_pct_400": 37.4,
+      "chg_1w_1000": 12.8,
+      "chg_1w_400": 12.24,
+      "big_trend_1000": [
+        27.11,
+        27.18,
+        26.71,
+        30.13
+      ],
+      "big_trend_400": [
+        32.85,
+        33.97,
+        33.32,
+        37.4
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 87.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 79.6,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 87.5,
+      "since_entry_pct": 9.92,
+      "ema20": 70.1,
+      "ema60": 65.52,
+      "ema120": 63.29,
+      "ema200": 61.93,
+      "bullish_aligned": true,
+      "high_60d": 79.9,
+      "low_60d": 56.0,
+      "max_gain_60d": 42.68,
+      "pullback_from_60d_high_pct": -0.38,
+      "vol_20d_avg": 11436,
+      "week_chg_pct": 20.97,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "30-45",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 52.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 0,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 80.0,
+      "invalidation": 77.6,
+      "pattern_confidence": 0.9,
+      "score": 52.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "3019",
+      "name": "亞光",
+      "industry": "光電",
+      "market_cap": 226.6,
+      "big_pct_1000": 37.12,
+      "big_pct_400": 42.4,
+      "chg_1w_1000": 12.62,
+      "chg_1w_400": 7.4,
+      "big_trend_1000": [
+        33.53,
+        32.18,
+        32.96,
+        37.12
+      ],
+      "big_trend_400": [
+        39.57,
+        39.48,
+        39.48,
+        42.4
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 163.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 160.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 163.0,
+      "since_entry_pct": 1.56,
+      "ema20": 152.23,
+      "ema60": 145.78,
+      "ema120": 143.36,
+      "ema200": 142.46,
+      "bullish_aligned": true,
+      "high_60d": 164.0,
+      "low_60d": 120.5,
+      "max_gain_60d": 36.1,
+      "pullback_from_60d_high_pct": -2.13,
+      "vol_20d_avg": 12389,
+      "week_chg_pct": 10.31,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "30-45",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 40.4,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 8.4,
+        "量價": 0,
+        "位置": 6,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "箱頂整理",
+        "大戶上升"
+      ],
+      "patterns": [
+        "box_near_top"
+      ],
+      "key_level": 167.5,
+      "invalidation": null,
+      "pattern_confidence": 0.6,
+      "score": 40.4,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "6202",
+      "name": "盛群",
+      "industry": "半導",
+      "market_cap": 160.1,
+      "big_pct_1000": 33.94,
+      "big_pct_400": 39.44,
+      "chg_1w_1000": 10.77,
+      "chg_1w_400": 9.65,
+      "big_trend_1000": [
+        32.42,
+        32.23,
+        30.64,
+        33.94
+      ],
+      "big_trend_400": [
+        37.77,
+        36.9,
+        35.97,
+        39.44
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 73.7,
+      "entry_date": "2026-06-18",
+      "entry_close": 67.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 73.7,
+      "since_entry_pct": 10.0,
+      "ema20": 59.0,
+      "ema60": 55.88,
+      "ema120": 52.38,
+      "ema200": 49.67,
+      "bullish_aligned": true,
+      "high_60d": 67.0,
+      "low_60d": 45.3,
+      "max_gain_60d": 47.9,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 6419,
+      "week_chg_pct": 24.07,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "45-65",
+      "stat_edge": true,
+      "stat_edge_id": "max_gain_60d_45_65",
+      "stat_edge_label": "60日45-65統計優勢區",
+      "stat_edge_range": [
+        45.0,
+        65.0
+      ],
+      "stat_edge_basis": "big_holder_trend 60日最大漲幅分箱回測：45-65% 區間入池後平均漲幅與勝率較佳",
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 47.8,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 19.8,
+        "量價": 0,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 65.7,
+      "invalidation": 63.73,
+      "pattern_confidence": 0.9,
+      "score": 47.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2489",
+      "name": "瑞軒",
+      "industry": "光電",
+      "market_cap": 87.8,
+      "big_pct_1000": 32.03,
+      "big_pct_400": 35.56,
+      "chg_1w_1000": 10.22,
+      "chg_1w_400": 9.18,
+      "big_trend_1000": [
+        33.19,
+        31.52,
+        29.06,
+        32.03
+      ],
+      "big_trend_400": [
+        36.87,
+        34.76,
+        32.57,
+        35.56
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 50.7,
+      "entry_date": "2026-06-18",
+      "entry_close": 48.15,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 50.7,
+      "since_entry_pct": 5.3,
+      "ema20": 45.79,
+      "ema60": 42.33,
+      "ema120": 36.1,
+      "ema200": 30.54,
+      "bullish_aligned": true,
+      "high_60d": 56.5,
+      "low_60d": 31.25,
+      "max_gain_60d": 80.8,
+      "pullback_from_60d_high_pct": -14.78,
+      "vol_20d_avg": 40550,
+      "week_chg_pct": 17.44,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "65-85",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 44.0,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 0.0,
+        "量價": 11,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 44.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "8096",
+      "name": "擎亞",
+      "industry": "櫃通路",
+      "market_cap": 12.8,
+      "big_pct_1000": 52.84,
+      "big_pct_400": 58.09,
+      "chg_1w_1000": 9.65,
+      "chg_1w_400": 7.95,
+      "big_trend_1000": [
+        47.8,
+        49.22,
+        48.19,
+        52.84
+      ],
+      "big_trend_400": [
+        53.61,
+        54.01,
+        53.81,
+        58.09
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 157.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 155.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 157.5,
+      "since_entry_pct": 1.29,
+      "ema20": 130.0,
+      "ema60": 109.36,
+      "ema120": 91.98,
+      "ema200": 79.41,
+      "bullish_aligned": true,
+      "high_60d": 155.5,
+      "low_60d": 85.7,
+      "max_gain_60d": 81.45,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 13558,
+      "week_chg_pct": 28.51,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "65-85",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 55.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 5,
+        "位置": 0,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "量縮整理",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 145.0,
+      "invalidation": 140.65,
+      "pattern_confidence": 0.9,
+      "score": 55.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "5425",
+      "name": "台半",
+      "industry": "櫃半導",
+      "market_cap": 114.1,
+      "big_pct_1000": 37.08,
+      "big_pct_400": 41.88,
+      "chg_1w_1000": 9.61,
+      "chg_1w_400": 3.36,
+      "big_trend_1000": [
+        45.95,
+        36.31,
+        33.83,
+        37.08
+      ],
+      "big_trend_400": [
+        52.23,
+        41.61,
+        40.52,
+        41.88
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 130.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 118.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 130.0,
+      "since_entry_pct": 9.7,
+      "ema20": 98.08,
+      "ema60": 83.09,
+      "ema120": 72.99,
+      "ema200": 66.44,
+      "bullish_aligned": true,
+      "high_60d": 118.5,
+      "low_60d": 52.2,
+      "max_gain_60d": 127.01,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 33823,
+      "week_chg_pct": 28.94,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 63.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 5,
+        "位置": 8,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "量縮整理",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 125.5,
+      "invalidation": 121.73,
+      "pattern_confidence": 0.9,
+      "score": 63.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2401",
+      "name": "凌陽",
+      "industry": "半導",
+      "market_cap": 82.9,
+      "big_pct_1000": 35.5,
+      "big_pct_400": 41.91,
+      "chg_1w_1000": 7.77,
+      "chg_1w_400": 6.29,
+      "big_trend_1000": [
+        33.73,
+        33.23,
+        32.94,
+        35.5
+      ],
+      "big_trend_400": [
+        39.73,
+        39.17,
+        39.43,
+        41.91
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 34.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 32.25,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 34.0,
+      "since_entry_pct": 5.43,
+      "ema20": 28.81,
+      "ema60": 26.21,
+      "ema120": 24.36,
+      "ema200": 23.22,
+      "bullish_aligned": true,
+      "high_60d": 32.25,
+      "low_60d": 19.35,
+      "max_gain_60d": 66.67,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 17774,
+      "week_chg_pct": 17.06,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "65-85",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 64.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 6,
+        "位置": 8,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 33.0,
+      "invalidation": 32.01,
+      "pattern_confidence": 0.9,
+      "score": 64.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2342",
+      "name": "茂矽",
+      "industry": "半導",
+      "market_cap": 30.8,
+      "big_pct_1000": 36.48,
+      "big_pct_400": 42.94,
+      "chg_1w_1000": 6.05,
+      "chg_1w_400": 7.24,
+      "big_trend_1000": [
+        36.21,
+        37.87,
+        34.4,
+        36.48
+      ],
+      "big_trend_400": [
+        40.91,
+        43.06,
+        40.04,
+        42.94
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 58.6,
+      "entry_date": "2026-06-18",
+      "entry_close": 55.2,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 58.6,
+      "since_entry_pct": 6.16,
+      "ema20": 43.69,
+      "ema60": 39.08,
+      "ema120": 35.72,
+      "ema200": 33.11,
+      "bullish_aligned": true,
+      "high_60d": 55.2,
+      "low_60d": 28.0,
+      "max_gain_60d": 97.14,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 12649,
+      "week_chg_pct": 39.04,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 51.8,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 19.8,
+        "量價": 6,
+        "位置": 0,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 47.45,
+      "invalidation": 46.03,
+      "pattern_confidence": 0.9,
+      "score": 51.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2375",
+      "name": "凱美",
+      "industry": "電零",
+      "market_cap": 37.0,
+      "big_pct_1000": 30.01,
+      "big_pct_400": 35.35,
+      "chg_1w_1000": 4.42,
+      "chg_1w_400": 6.86,
+      "big_trend_1000": [
+        32.52,
+        28.01,
+        28.74,
+        30.01
+      ],
+      "big_trend_400": [
+        37.65,
+        31.69,
+        33.08,
+        35.35
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 219.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 219.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 219.0,
+      "since_entry_pct": 0.0,
+      "ema20": 162.98,
+      "ema60": 127.11,
+      "ema120": 108.91,
+      "ema200": 97.44,
+      "bullish_aligned": true,
+      "high_60d": 219.0,
+      "low_60d": 72.6,
+      "max_gain_60d": 201.65,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 17440,
+      "week_chg_pct": 36.02,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 55.8,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 19.8,
+        "量價": 10,
+        "位置": 0,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 176.5,
+      "invalidation": 171.2,
+      "pattern_confidence": 0.9,
+      "score": 55.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "3550",
+      "name": "聯穎",
+      "industry": "電零",
+      "market_cap": 12.3,
+      "big_pct_1000": 44.56,
+      "big_pct_400": 53.97,
+      "chg_1w_1000": 3.48,
+      "chg_1w_400": 6.77,
+      "big_trend_1000": [
+        36.64,
+        38.45,
+        43.06,
+        44.56
+      ],
+      "big_trend_400": [
+        43.23,
+        48.27,
+        50.55,
+        53.97
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 35.9,
+      "entry_date": "2026-06-18",
+      "entry_close": 37.25,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 35.9,
+      "since_entry_pct": -3.62,
+      "ema20": 26.77,
+      "ema60": 22.58,
+      "ema120": 20.07,
+      "ema200": 18.35,
+      "bullish_aligned": true,
+      "high_60d": 37.25,
+      "low_60d": 17.5,
+      "max_gain_60d": 112.86,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 7227,
+      "week_chg_pct": 30.24,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 61.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 11,
+        "位置": 0,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 22.5,
+      "invalidation": 21.82,
+      "pattern_confidence": 0.9,
+      "score": 61.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "5483",
+      "name": "中美晶",
+      "industry": "櫃半導",
+      "market_cap": 478.4,
+      "big_pct_1000": 55.99,
+      "big_pct_400": 62.42,
+      "chg_1w_1000": 6.42,
+      "chg_1w_400": 4.94,
+      "big_trend_1000": [
+        54.2,
+        53.72,
+        52.61,
+        55.99
+      ],
+      "big_trend_400": [
+        61.2,
+        60.51,
+        59.48,
+        62.42
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 180.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 181.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 180.5,
+      "since_entry_pct": -0.28,
+      "ema20": 160.96,
+      "ema60": 145.37,
+      "ema120": 133.6,
+      "ema200": 126.24,
+      "bullish_aligned": true,
+      "high_60d": 182.5,
+      "low_60d": 106.0,
+      "max_gain_60d": 72.17,
+      "pullback_from_60d_high_pct": -0.82,
+      "vol_20d_avg": 22426,
+      "week_chg_pct": 24.83,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "65-85",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 55.7,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 18.7,
+        "量價": 0,
+        "位置": 6,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "頸線回測",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_retest"
+      ],
+      "key_level": 179.5,
+      "invalidation": 174.12,
+      "pattern_confidence": 0.85,
+      "score": 55.7,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "8039",
+      "name": "台虹",
+      "industry": "電零",
+      "market_cap": 88.1,
+      "big_pct_1000": 49.35,
+      "big_pct_400": 57.92,
+      "chg_1w_1000": 6.22,
+      "chg_1w_400": 3.34,
+      "big_trend_1000": [
+        50.56,
+        47.9,
+        46.46,
+        49.35
+      ],
+      "big_trend_400": [
+        59.19,
+        56.61,
+        56.05,
+        57.92
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 153.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 145.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 153.0,
+      "since_entry_pct": 5.15,
+      "ema20": 143.0,
+      "ema60": 134.79,
+      "ema120": 119.16,
+      "ema200": 103.83,
+      "bullish_aligned": true,
+      "high_60d": 162.0,
+      "low_60d": 106.5,
+      "max_gain_60d": 52.11,
+      "pullback_from_60d_high_pct": -10.19,
+      "vol_20d_avg": 15547,
+      "week_chg_pct": 6.99,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "45-65",
+      "stat_edge": true,
+      "stat_edge_id": "max_gain_60d_45_65",
+      "stat_edge_label": "60日45-65統計優勢區",
+      "stat_edge_range": [
+        45.0,
+        65.0
+      ],
+      "stat_edge_basis": "big_holder_trend 60日最大漲幅分箱回測：45-65% 區間入池後平均漲幅與勝率較佳",
+      "stat_week_0_10": true,
+      "stat_week_0_10_id": "max_gain_45_65_week_0_10",
+      "stat_week_0_10_label": "45-65週漲0-10",
+      "stat_week_0_10_basis": "60日漲幅45-65%、週漲幅0-10%",
+      "pattern_state": "先觀察",
+      "pattern_score": 45.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 45.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "3624",
+      "name": "光頡",
+      "industry": "櫃電零",
+      "market_cap": 31.0,
+      "big_pct_1000": 55.91,
+      "big_pct_400": 61.13,
+      "chg_1w_1000": 5.67,
+      "chg_1w_400": 3.03,
+      "big_trend_1000": [
+        53.49,
+        49.12,
+        52.91,
+        55.91
+      ],
+      "big_trend_400": [
+        61.9,
+        57.82,
+        59.33,
+        61.13
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 176.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 160.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 176.5,
+      "since_entry_pct": 9.97,
+      "ema20": 115.79,
+      "ema60": 87.62,
+      "ema120": 72.31,
+      "ema200": 62.52,
+      "bullish_aligned": true,
+      "high_60d": 160.5,
+      "low_60d": 45.3,
+      "max_gain_60d": 254.3,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 16040,
+      "week_chg_pct": 45.91,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 57.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 5,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 122.0,
+      "invalidation": 118.34,
+      "pattern_confidence": 0.9,
+      "score": 57.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "1727",
+      "name": "中華化",
+      "industry": "化學",
+      "market_cap": 14.2,
+      "big_pct_1000": 49.73,
+      "big_pct_400": 55.51,
+      "chg_1w_1000": 4.19,
+      "chg_1w_400": 5.25,
+      "big_trend_1000": [
+        50.51,
+        48.93,
+        47.73,
+        49.73
+      ],
+      "big_trend_400": [
+        55.03,
+        52.3,
+        52.74,
+        55.51
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 102.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 94.1,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 102.0,
+      "since_entry_pct": 8.4,
+      "ema20": 89.5,
+      "ema60": 78.31,
+      "ema120": 66.08,
+      "ema200": 56.71,
+      "bullish_aligned": true,
+      "high_60d": 104.5,
+      "low_60d": 47.1,
+      "max_gain_60d": 121.87,
+      "pullback_from_60d_high_pct": -9.95,
+      "vol_20d_avg": 8585,
+      "week_chg_pct": 10.06,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 48.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 20,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 48.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "3081",
+      "name": "聯亞",
+      "industry": "櫃通信",
+      "market_cap": 223.7,
+      "big_pct_1000": 31.62,
+      "big_pct_400": 44.41,
+      "chg_1w_1000": 5.22,
+      "chg_1w_400": 3.42,
+      "big_trend_1000": [
+        30.68,
+        31.4,
+        30.05,
+        31.62
+      ],
+      "big_trend_400": [
+        44.45,
+        43.65,
+        42.94,
+        44.41
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 2375.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 2440.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 2375.0,
+      "since_entry_pct": -2.66,
+      "ema20": 2468.51,
+      "ema60": 2326.52,
+      "ema120": 1891.31,
+      "ema200": 1500.43,
+      "bullish_aligned": true,
+      "high_60d": 3160.0,
+      "low_60d": 1400.0,
+      "max_gain_60d": 125.71,
+      "pullback_from_60d_high_pct": -22.78,
+      "vol_20d_avg": 2699,
+      "week_chg_pct": 12.7,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 23.0,
+      "pattern_subs": {
+        "結構": 0,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 23.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "3576",
+      "name": "聯合再生",
+      "industry": "光電",
+      "market_cap": 218.6,
+      "big_pct_1000": 34.55,
+      "big_pct_400": 38.82,
+      "chg_1w_1000": 4.51,
+      "chg_1w_400": 3.49,
+      "big_trend_1000": [
+        32.83,
+        33.32,
+        33.06,
+        34.55
+      ],
+      "big_trend_400": [
+        37.14,
+        37.57,
+        37.51,
+        38.82
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 18.05,
+      "entry_date": "2026-06-18",
+      "entry_close": 18.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 18.05,
+      "since_entry_pct": 0.28,
+      "ema20": 18.38,
+      "ema60": 17.86,
+      "ema120": 16.16,
+      "ema200": 14.17,
+      "bullish_aligned": true,
+      "high_60d": 25.0,
+      "low_60d": 14.75,
+      "max_gain_60d": 69.49,
+      "pullback_from_60d_high_pct": -28.0,
+      "vol_20d_avg": 34652,
+      "week_chg_pct": 0.0,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "65-85",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 32.0,
+      "pattern_subs": {
+        "結構": 14,
+        "型態": 0.0,
+        "量價": 5,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 32.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2409",
+      "name": "友達",
+      "industry": "光電",
+      "market_cap": 783.4,
+      "big_pct_1000": 45.37,
+      "big_pct_400": 50.13,
+      "chg_1w_1000": 4.3,
+      "chg_1w_400": 3.79,
+      "big_trend_1000": [
+        45.59,
+        46.56,
+        43.5,
+        45.37
+      ],
+      "big_trend_400": [
+        50.39,
+        51.58,
+        48.3,
+        50.13
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 30.95,
+      "entry_date": "2026-06-18",
+      "entry_close": 28.15,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 30.95,
+      "since_entry_pct": 9.95,
+      "ema20": 24.1,
+      "ema60": 20.92,
+      "ema120": 18.44,
+      "ema200": 16.79,
+      "bullish_aligned": true,
+      "high_60d": 29.25,
+      "low_60d": 14.3,
+      "max_gain_60d": 104.55,
+      "pullback_from_60d_high_pct": -3.76,
+      "vol_20d_avg": 487476,
+      "week_chg_pct": 21.6,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 58.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 0,
+        "位置": 8,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 29.6,
+      "invalidation": 28.71,
+      "pattern_confidence": 0.9,
+      "score": 58.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2344",
+      "name": "華邦電",
+      "industry": "半導",
+      "market_cap": 740.3,
+      "big_pct_1000": 71.35,
+      "big_pct_400": 74.46,
+      "chg_1w_1000": 4.05,
+      "chg_1w_400": 4.01,
+      "big_trend_1000": [
+        71.13,
+        71.05,
+        68.57,
+        71.35
+      ],
+      "big_trend_400": [
+        74.03,
+        73.98,
+        71.59,
+        74.46
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 222.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 218.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 222.0,
+      "since_entry_pct": 1.6,
+      "ema20": 167.37,
+      "ema60": 135.58,
+      "ema120": 113.56,
+      "ema200": 94.03,
+      "bullish_aligned": true,
+      "high_60d": 218.5,
+      "low_60d": 85.7,
+      "max_gain_60d": 154.96,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 272963,
+      "week_chg_pct": 39.62,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 56.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 6,
+        "位置": 0,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 193.0,
+      "invalidation": 187.21,
+      "pattern_confidence": 0.9,
+      "score": 56.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "6205",
+      "name": "詮欣",
+      "industry": "電零",
+      "market_cap": 18.2,
+      "big_pct_1000": 40.79,
+      "big_pct_400": 47.21,
+      "chg_1w_1000": 3.66,
+      "chg_1w_400": 3.44,
+      "big_trend_1000": [
+        39.34,
+        39.34,
+        39.35,
+        40.79
+      ],
+      "big_trend_400": [
+        46.23,
+        45.81,
+        45.64,
+        47.21
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "signal_score": 9,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 84.1,
+      "entry_date": "2026-06-18",
+      "entry_close": 81.3,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 84.1,
+      "since_entry_pct": 3.44,
+      "ema20": 81.72,
+      "ema60": 76.14,
+      "ema120": 67.75,
+      "ema200": 61.6,
+      "bullish_aligned": true,
+      "high_60d": 98.2,
+      "low_60d": 50.8,
+      "max_gain_60d": 93.31,
+      "pullback_from_60d_high_pct": -17.21,
+      "vol_20d_avg": 3349,
+      "week_chg_pct": 3.3,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 45.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 45.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "5488",
+      "name": "松普",
+      "industry": "櫃電零",
+      "market_cap": 7.7,
+      "big_pct_1000": 37.74,
+      "big_pct_400": 44.77,
+      "chg_1w_1000": 3.0,
+      "chg_1w_400": -0.58,
+      "big_trend_1000": [
+        35.99,
+        36.45,
+        36.64,
+        37.74
+      ],
+      "big_trend_400": [
+        44.47,
+        44.1,
+        45.03,
+        44.77
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增",
+        "千張單週激增"
+      ],
+      "signal_score": 8,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 13.4,
+      "entry_date": "2026-06-18",
+      "entry_close": 12.45,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 13.4,
+      "since_entry_pct": 7.63,
+      "ema20": 12.26,
+      "ema60": 11.33,
+      "ema120": 10.76,
+      "ema200": 10.46,
+      "bullish_aligned": true,
+      "high_60d": 14.25,
+      "low_60d": 9.6,
+      "max_gain_60d": 48.44,
+      "pullback_from_60d_high_pct": -12.63,
+      "vol_20d_avg": 1252,
+      "week_chg_pct": 3.75,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "45-65",
+      "stat_edge": true,
+      "stat_edge_id": "max_gain_60d_45_65",
+      "stat_edge_label": "60日45-65統計優勢區",
+      "stat_edge_range": [
+        45.0,
+        65.0
+      ],
+      "stat_edge_basis": "big_holder_trend 60日最大漲幅分箱回測：45-65% 區間入池後平均漲幅與勝率較佳",
+      "stat_week_0_10": true,
+      "stat_week_0_10_id": "max_gain_45_65_week_0_10",
+      "stat_week_0_10_label": "45-65週漲0-10",
+      "stat_week_0_10_basis": "60日漲幅45-65%、週漲幅0-10%",
+      "pattern_state": "先觀察",
+      "pattern_score": 46.0,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 5,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 46.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "5285",
+      "name": "界霖",
+      "industry": "半導",
+      "market_cap": 56.0,
+      "big_pct_1000": 54.18,
+      "big_pct_400": 62.72,
+      "chg_1w_1000": 6.95,
+      "chg_1w_400": 2.37,
+      "big_trend_1000": [
+        51.9,
+        51.0,
+        50.66,
+        54.18
+      ],
+      "big_trend_400": [
+        61.64,
+        61.21,
+        61.27,
+        62.72
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 102.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 93.7,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 102.5,
+      "since_entry_pct": 9.39,
+      "ema20": 86.41,
+      "ema60": 73.32,
+      "ema120": 64.46,
+      "ema200": 59.23,
+      "bullish_aligned": true,
+      "high_60d": 99.3,
+      "low_60d": 46.8,
+      "max_gain_60d": 112.18,
+      "pullback_from_60d_high_pct": -5.64,
+      "vol_20d_avg": 4858,
+      "week_chg_pct": 7.95,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 68.8,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 19.8,
+        "量價": 15,
+        "位置": 8,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "量縮整理",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 99.6,
+      "invalidation": 96.61,
+      "pattern_confidence": 0.9,
+      "score": 68.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "8147",
+      "name": "正淩",
+      "industry": "櫃電零",
+      "market_cap": 9.8,
+      "big_pct_1000": 37.82,
+      "big_pct_400": 47.54,
+      "chg_1w_1000": 6.06,
+      "chg_1w_400": -0.48,
+      "big_trend_1000": [
+        36.59,
+        36.03,
+        35.66,
+        37.82
+      ],
+      "big_trend_400": [
+        48.7,
+        48.14,
+        47.77,
+        47.54
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 149.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 146.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 149.5,
+      "since_entry_pct": 2.05,
+      "ema20": 156.12,
+      "ema60": 155.16,
+      "ema120": 143.6,
+      "ema200": 133.7,
+      "bullish_aligned": true,
+      "high_60d": 190.5,
+      "low_60d": 130.0,
+      "max_gain_60d": 46.54,
+      "pullback_from_60d_high_pct": -23.1,
+      "vol_20d_avg": 707,
+      "week_chg_pct": 1.38,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "45-65",
+      "stat_edge": true,
+      "stat_edge_id": "max_gain_60d_45_65",
+      "stat_edge_label": "60日45-65統計優勢區",
+      "stat_edge_range": [
+        45.0,
+        65.0
+      ],
+      "stat_edge_basis": "big_holder_trend 60日最大漲幅分箱回測：45-65% 區間入池後平均漲幅與勝率較佳",
+      "stat_week_0_10": true,
+      "stat_week_0_10_id": "max_gain_45_65_week_0_10",
+      "stat_week_0_10_label": "45-65週漲0-10",
+      "stat_week_0_10_basis": "60日漲幅45-65%、週漲幅0-10%",
+      "pattern_state": "先觀察",
+      "pattern_score": 23.0,
+      "pattern_subs": {
+        "結構": 0,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 23.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "3673",
+      "name": "TPK-KY",
+      "industry": "光電",
+      "market_cap": 212.7,
+      "big_pct_1000": 39.96,
+      "big_pct_400": 46.53,
+      "chg_1w_1000": 5.77,
+      "chg_1w_400": 2.33,
+      "big_trend_1000": [
+        44.58,
+        39.1,
+        37.78,
+        39.96
+      ],
+      "big_trend_400": [
+        50.38,
+        45.94,
+        45.47,
+        46.53
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 88.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 86.2,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 88.5,
+      "since_entry_pct": 2.67,
+      "ema20": 81.31,
+      "ema60": 69.84,
+      "ema120": 59.75,
+      "ema200": 52.8,
+      "bullish_aligned": true,
+      "high_60d": 94.0,
+      "low_60d": 43.4,
+      "max_gain_60d": 116.59,
+      "pullback_from_60d_high_pct": -8.3,
+      "vol_20d_avg": 32520,
+      "week_chg_pct": 9.53,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 45.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 45.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2369",
+      "name": "菱生",
+      "industry": "半導",
+      "market_cap": 32.7,
+      "big_pct_1000": 31.91,
+      "big_pct_400": 35.62,
+      "chg_1w_1000": 5.73,
+      "chg_1w_400": 2.59,
+      "big_trend_1000": [
+        36.62,
+        33.21,
+        30.18,
+        31.91
+      ],
+      "big_trend_400": [
+        39.82,
+        36.22,
+        34.72,
+        35.62
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 40.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 36.85,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 40.5,
+      "since_entry_pct": 9.91,
+      "ema20": 34.26,
+      "ema60": 32.3,
+      "ema120": 29.55,
+      "ema200": 26.65,
+      "bullish_aligned": true,
+      "high_60d": 40.3,
+      "low_60d": 28.15,
+      "max_gain_60d": 43.16,
+      "pullback_from_60d_high_pct": -8.56,
+      "vol_20d_avg": 26000,
+      "week_chg_pct": 15.52,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "30-45",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 51.4,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 8.4,
+        "量價": 10,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "箱頂整理",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "box_near_top"
+      ],
+      "key_level": 42.0,
+      "invalidation": null,
+      "pattern_confidence": 0.6,
+      "score": 51.4,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "6209",
+      "name": "今國光",
+      "industry": "光電",
+      "market_cap": 47.2,
+      "big_pct_1000": 37.37,
+      "big_pct_400": 45.06,
+      "chg_1w_1000": 5.0,
+      "chg_1w_400": 2.88,
+      "big_trend_1000": [
+        36.17,
+        36.81,
+        35.59,
+        37.37
+      ],
+      "big_trend_400": [
+        46.04,
+        45.86,
+        43.8,
+        45.06
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 97.2,
+      "entry_date": "2026-06-18",
+      "entry_close": 97.1,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 97.2,
+      "since_entry_pct": 0.1,
+      "ema20": 84.53,
+      "ema60": 73.92,
+      "ema120": 65.98,
+      "ema200": 58.73,
+      "bullish_aligned": true,
+      "high_60d": 97.1,
+      "low_60d": 49.0,
+      "max_gain_60d": 98.16,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 26605,
+      "week_chg_pct": 22.45,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 50.7,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 18.7,
+        "量價": 0,
+        "位置": 6,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "頸線回測",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_retest"
+      ],
+      "key_level": 95.9,
+      "invalidation": 93.02,
+      "pattern_confidence": 0.85,
+      "score": 50.7,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "6531",
+      "name": "愛普*",
+      "industry": "半導",
+      "market_cap": 29.9,
+      "big_pct_1000": 55.41,
+      "big_pct_400": 65.05,
+      "chg_1w_1000": 4.92,
+      "chg_1w_400": -0.61,
+      "big_trend_1000": [
+        53.18,
+        51.52,
+        52.81,
+        55.41
+      ],
+      "big_trend_400": [
+        67.41,
+        64.85,
+        65.45,
+        65.05
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 1115.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 1025.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 1115.0,
+      "since_entry_pct": 8.78,
+      "ema20": 973.42,
+      "ema60": 856.78,
+      "ema120": 710.24,
+      "ema200": 600.38,
+      "bullish_aligned": true,
+      "high_60d": 1190.0,
+      "low_60d": 440.0,
+      "max_gain_60d": 170.45,
+      "pullback_from_60d_high_pct": -13.87,
+      "vol_20d_avg": 6433,
+      "week_chg_pct": 15.17,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 38.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 38.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2340",
+      "name": "台亞",
+      "industry": "半導",
+      "market_cap": 98.2,
+      "big_pct_1000": 32.83,
+      "big_pct_400": 38.3,
+      "chg_1w_1000": 4.79,
+      "chg_1w_400": 2.68,
+      "big_trend_1000": [
+        32.98,
+        32.82,
+        31.33,
+        32.83
+      ],
+      "big_trend_400": [
+        38.01,
+        37.87,
+        37.3,
+        38.3
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 42.8,
+      "entry_date": "2026-06-18",
+      "entry_close": 39.95,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 42.8,
+      "since_entry_pct": 7.13,
+      "ema20": 36.61,
+      "ema60": 34.66,
+      "ema120": 31.88,
+      "ema200": 29.48,
+      "bullish_aligned": true,
+      "high_60d": 42.95,
+      "low_60d": 24.2,
+      "max_gain_60d": 77.48,
+      "pullback_from_60d_high_pct": -6.98,
+      "vol_20d_avg": 10138,
+      "week_chg_pct": 20.88,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "65-85",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 39.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 11,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 39.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "6218",
+      "name": "豪勉",
+      "industry": "櫃通信",
+      "market_cap": 14.1,
+      "big_pct_1000": 37.19,
+      "big_pct_400": 47.37,
+      "chg_1w_1000": 4.64,
+      "chg_1w_400": 0.11,
+      "big_trend_1000": [
+        35.89,
+        35.58,
+        35.54,
+        37.19
+      ],
+      "big_trend_400": [
+        48.79,
+        47.46,
+        47.32,
+        47.37
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 37.1,
+      "entry_date": "2026-06-18",
+      "entry_close": 35.15,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 37.1,
+      "since_entry_pct": 5.55,
+      "ema20": 35.78,
+      "ema60": 34.59,
+      "ema120": 31.04,
+      "ema200": 28.07,
+      "bullish_aligned": true,
+      "high_60d": 45.1,
+      "low_60d": 24.35,
+      "max_gain_60d": 85.22,
+      "pullback_from_60d_high_pct": -22.06,
+      "vol_20d_avg": 1480,
+      "week_chg_pct": 11.23,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 38.0,
+      "pattern_subs": {
+        "結構": 8,
+        "型態": 0.0,
+        "量價": 20,
+        "位置": 6,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 38.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2467",
+      "name": "志聖",
+      "industry": "電零",
+      "market_cap": 42.1,
+      "big_pct_1000": 58.43,
+      "big_pct_400": 68.36,
+      "chg_1w_1000": 4.45,
+      "chg_1w_400": 0.15,
+      "big_trend_1000": [
+        58.39,
+        57.19,
+        55.94,
+        58.43
+      ],
+      "big_trend_400": [
+        69.34,
+        68.33,
+        68.26,
+        68.36
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 630.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 599.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 630.0,
+      "since_entry_pct": 5.18,
+      "ema20": 583.06,
+      "ema60": 535.45,
+      "ema120": 449.69,
+      "ema200": 376.46,
+      "bullish_aligned": true,
+      "high_60d": 668.0,
+      "low_60d": 368.0,
+      "max_gain_60d": 81.52,
+      "pullback_from_60d_high_pct": -10.33,
+      "vol_20d_avg": 2209,
+      "week_chg_pct": 10.52,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "65-85",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 42.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 6,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 42.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "5210",
+      "name": "寶碩",
+      "industry": "櫃資服",
+      "market_cap": 4.8,
+      "big_pct_1000": 35.91,
+      "big_pct_400": 42.54,
+      "chg_1w_1000": 3.94,
+      "chg_1w_400": -0.51,
+      "big_trend_1000": [
+        34.55,
+        34.55,
+        34.55,
+        35.91
+      ],
+      "big_trend_400": [
+        42.3,
+        41.72,
+        42.76,
+        42.54
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 29.8,
+      "entry_date": "2026-06-18",
+      "entry_close": 30.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 29.8,
+      "since_entry_pct": -0.67,
+      "ema20": 29.25,
+      "ema60": 26.65,
+      "ema120": 25.23,
+      "ema200": 24.94,
+      "bullish_aligned": true,
+      "high_60d": 31.3,
+      "low_60d": 21.8,
+      "max_gain_60d": 43.58,
+      "pullback_from_60d_high_pct": -4.15,
+      "vol_20d_avg": 779,
+      "week_chg_pct": -1.64,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "30-45",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 50.0,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 50.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "6405",
+      "name": "悅城",
+      "industry": "光電",
+      "market_cap": 9.3,
+      "big_pct_1000": 38.4,
+      "big_pct_400": 54.06,
+      "chg_1w_1000": 3.9,
+      "chg_1w_400": 2.89,
+      "big_trend_1000": [
+        39.3,
+        39.37,
+        36.96,
+        38.4
+      ],
+      "big_trend_400": [
+        52.41,
+        52.98,
+        52.54,
+        54.06
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 68.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 71.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 68.5,
+      "since_entry_pct": -4.2,
+      "ema20": 68.01,
+      "ema60": 56.96,
+      "ema120": 46.96,
+      "ema200": 40.54,
+      "bullish_aligned": true,
+      "high_60d": 81.0,
+      "low_60d": 29.55,
+      "max_gain_60d": 174.11,
+      "pullback_from_60d_high_pct": -11.73,
+      "vol_20d_avg": 2220,
+      "week_chg_pct": -2.05,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 53.7,
+      "pattern_subs": {
+        "結構": 8,
+        "型態": 18.7,
+        "量價": 10,
+        "位置": 13,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "頸線回測",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_retest"
+      ],
+      "key_level": 67.2,
+      "invalidation": 65.18,
+      "pattern_confidence": 0.85,
+      "score": 53.7,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2465",
+      "name": "麗臺",
+      "industry": "電腦",
+      "market_cap": 7.0,
+      "big_pct_1000": 30.72,
+      "big_pct_400": 36.28,
+      "chg_1w_1000": 3.85,
+      "chg_1w_400": 0.89,
+      "big_trend_1000": [
+        31.15,
+        30.8,
+        29.58,
+        30.72
+      ],
+      "big_trend_400": [
+        38.48,
+        36.47,
+        35.96,
+        36.28
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 79.4,
+      "entry_date": "2026-06-18",
+      "entry_close": 80.9,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 79.4,
+      "since_entry_pct": -1.85,
+      "ema20": 80.77,
+      "ema60": 74.91,
+      "ema120": 69.06,
+      "ema200": 65.87,
+      "bullish_aligned": true,
+      "high_60d": 89.5,
+      "low_60d": 52.0,
+      "max_gain_60d": 72.12,
+      "pullback_from_60d_high_pct": -9.61,
+      "vol_20d_avg": 2219,
+      "week_chg_pct": 6.59,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "65-85",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 29.0,
+      "pattern_subs": {
+        "結構": 6,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 29.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2486",
+      "name": "一詮",
+      "industry": "光電",
+      "market_cap": 16.6,
+      "big_pct_1000": 33.46,
+      "big_pct_400": 39.89,
+      "chg_1w_1000": 3.72,
+      "chg_1w_400": 1.19,
+      "big_trend_1000": [
+        35.19,
+        34.73,
+        32.26,
+        33.46
+      ],
+      "big_trend_400": [
+        42.24,
+        40.94,
+        39.42,
+        39.89
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 272.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 276.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 272.0,
+      "since_entry_pct": -1.63,
+      "ema20": 258.53,
+      "ema60": 232.4,
+      "ema120": 193.04,
+      "ema200": 162.29,
+      "bullish_aligned": true,
+      "high_60d": 307.0,
+      "low_60d": 132.5,
+      "max_gain_60d": 131.7,
+      "pullback_from_60d_high_pct": -9.93,
+      "vol_20d_avg": 9614,
+      "week_chg_pct": 12.86,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 44.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 11,
+        "位置": 7,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 44.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "4722",
+      "name": "國精化",
+      "industry": "化學",
+      "market_cap": 27.5,
+      "big_pct_1000": 44.1,
+      "big_pct_400": 60.02,
+      "chg_1w_1000": 3.64,
+      "chg_1w_400": 1.99,
+      "big_trend_1000": [
+        44.11,
+        43.19,
+        42.55,
+        44.1
+      ],
+      "big_trend_400": [
+        59.3,
+        59.58,
+        58.85,
+        60.02
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 284.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 277.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 284.5,
+      "since_entry_pct": 2.52,
+      "ema20": 251.32,
+      "ema60": 228.52,
+      "ema120": 204.01,
+      "ema200": 180.74,
+      "bullish_aligned": true,
+      "high_60d": 286.5,
+      "low_60d": 159.0,
+      "max_gain_60d": 80.19,
+      "pullback_from_60d_high_pct": -3.14,
+      "vol_20d_avg": 2257,
+      "week_chg_pct": 34.71,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "65-85",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 34.4,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 8.4,
+        "量價": 0,
+        "位置": 0,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "箱頂整理",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "box_near_top"
+      ],
+      "key_level": 295.0,
+      "invalidation": null,
+      "pattern_confidence": 0.6,
+      "score": 34.4,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "6414",
+      "name": "樺漢",
+      "industry": "電腦",
+      "market_cap": 176.8,
+      "big_pct_1000": 53.43,
+      "big_pct_400": 65.39,
+      "chg_1w_1000": 3.55,
+      "chg_1w_400": -0.8,
+      "big_trend_1000": [
+        51.83,
+        52.08,
+        51.6,
+        53.43
+      ],
+      "big_trend_400": [
+        65.0,
+        65.53,
+        65.92,
+        65.39
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 381.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 383.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 381.0,
+      "since_entry_pct": -0.52,
+      "ema20": 371.72,
+      "ema60": 342.18,
+      "ema120": 322.43,
+      "ema200": 312.88,
+      "bullish_aligned": true,
+      "high_60d": 401.0,
+      "low_60d": 264.0,
+      "max_gain_60d": 51.89,
+      "pullback_from_60d_high_pct": -4.49,
+      "vol_20d_avg": 2083,
+      "week_chg_pct": -3.04,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "45-65",
+      "stat_edge": true,
+      "stat_edge_id": "max_gain_60d_45_65",
+      "stat_edge_label": "60日45-65統計優勢區",
+      "stat_edge_range": [
+        45.0,
+        65.0
+      ],
+      "stat_edge_basis": "big_holder_trend 60日最大漲幅分箱回測：45-65% 區間入池後平均漲幅與勝率較佳",
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 45.0,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 0.0,
+        "量價": 5,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 45.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2030",
+      "name": "彰源",
+      "industry": "鋼鐵",
+      "market_cap": 35.8,
+      "big_pct_1000": 43.17,
+      "big_pct_400": 46.89,
+      "chg_1w_1000": 3.3,
+      "chg_1w_400": 0.69,
+      "big_trend_1000": [
+        42.87,
+        42.39,
+        41.79,
+        43.17
+      ],
+      "big_trend_400": [
+        46.48,
+        46.58,
+        46.57,
+        46.89
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 19.6,
+      "entry_date": "2026-06-18",
+      "entry_close": 18.55,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 19.6,
+      "since_entry_pct": 5.66,
+      "ema20": 18.26,
+      "ema60": 17.35,
+      "ema120": 16.57,
+      "ema200": 16.04,
+      "bullish_aligned": true,
+      "high_60d": 19.2,
+      "low_60d": 15.5,
+      "max_gain_60d": 23.87,
+      "pullback_from_60d_high_pct": -3.39,
+      "vol_20d_avg": 1966,
+      "week_chg_pct": 2.2,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "15-30",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "值得看圖",
+      "pattern_score": 83.8,
+      "pattern_subs": {
+        "結構": 30,
+        "型態": 19.8,
+        "量價": 15,
+        "位置": 15,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 19.0,
+      "invalidation": 18.43,
+      "pattern_confidence": 0.9,
+      "score": 83.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2390",
+      "name": "云辰",
+      "industry": "他電",
+      "market_cap": 24.7,
+      "big_pct_1000": 34.87,
+      "big_pct_400": 39.13,
+      "chg_1w_1000": 3.29,
+      "chg_1w_400": -0.56,
+      "big_trend_1000": [
+        33.44,
+        33.09,
+        33.76,
+        34.87
+      ],
+      "big_trend_400": [
+        37.78,
+        38.59,
+        39.35,
+        39.13
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 12.15,
+      "entry_date": "2026-06-18",
+      "entry_close": 12.35,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 12.15,
+      "since_entry_pct": -1.62,
+      "ema20": 11.68,
+      "ema60": 10.87,
+      "ema120": 10.57,
+      "ema200": 10.55,
+      "bullish_aligned": true,
+      "high_60d": 13.1,
+      "low_60d": 9.38,
+      "max_gain_60d": 39.66,
+      "pullback_from_60d_high_pct": -5.73,
+      "vol_20d_avg": 2085,
+      "week_chg_pct": 1.23,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "30-45",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 50.0,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 50.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "3717",
+      "name": "聯嘉投控",
+      "industry": "汽車",
+      "market_cap": null,
+      "big_pct_1000": 36.32,
+      "big_pct_400": 45.71,
+      "chg_1w_1000": 3.24,
+      "chg_1w_400": 0.97,
+      "big_trend_1000": [
+        36.92,
+        36.6,
+        35.18,
+        36.32
+      ],
+      "big_trend_400": [
+        46.44,
+        45.99,
+        45.27,
+        45.71
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 22.2,
+      "entry_date": "2026-06-18",
+      "entry_close": 22.55,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 22.2,
+      "since_entry_pct": -1.55,
+      "ema20": 21.93,
+      "ema60": 21.53,
+      "ema120": 20.69,
+      "ema200": 20.2,
+      "bullish_aligned": true,
+      "high_60d": 24.65,
+      "low_60d": 19.5,
+      "max_gain_60d": 26.41,
+      "pullback_from_60d_high_pct": -8.52,
+      "vol_20d_avg": 3721,
+      "week_chg_pct": 11.08,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "15-30",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 38.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 5,
+        "位置": 7,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 38.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "6770",
+      "name": "力積電",
+      "industry": "半導",
+      "market_cap": null,
+      "big_pct_1000": 46.01,
+      "big_pct_400": 49.64,
+      "chg_1w_1000": 3.23,
+      "chg_1w_400": 2.43,
+      "big_trend_1000": [
+        51.64,
+        47.74,
+        44.57,
+        46.01
+      ],
+      "big_trend_400": [
+        55.44,
+        51.73,
+        48.46,
+        49.64
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 81.6,
+      "entry_date": "2026-06-18",
+      "entry_close": 74.2,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 81.6,
+      "since_entry_pct": 9.97,
+      "ema20": 70.97,
+      "ema60": 65.58,
+      "ema120": 58.55,
+      "ema200": 50.46,
+      "bullish_aligned": true,
+      "high_60d": 88.7,
+      "low_60d": 51.4,
+      "max_gain_60d": 72.57,
+      "pullback_from_60d_high_pct": -16.35,
+      "vol_20d_avg": 262334,
+      "week_chg_pct": 15.22,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "65-85",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 43.0,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 43.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "6691",
+      "name": "洋基工程",
+      "industry": "他電",
+      "market_cap": null,
+      "big_pct_1000": 55.69,
+      "big_pct_400": 69.28,
+      "chg_1w_1000": 3.19,
+      "chg_1w_400": 1.11,
+      "big_trend_1000": [
+        54.02,
+        53.88,
+        53.97,
+        55.69
+      ],
+      "big_trend_400": [
+        69.34,
+        68.43,
+        68.52,
+        69.28
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 728.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 720.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 728.0,
+      "since_entry_pct": 1.11,
+      "ema20": 668.66,
+      "ema60": 642.75,
+      "ema120": 611.86,
+      "ema200": 577.87,
+      "bullish_aligned": true,
+      "high_60d": 757.0,
+      "low_60d": 555.0,
+      "max_gain_60d": 36.4,
+      "pullback_from_60d_high_pct": -4.89,
+      "vol_20d_avg": 920,
+      "week_chg_pct": 13.03,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "30-45",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 40.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 5,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 40.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "4956",
+      "name": "光鋐",
+      "industry": "光電",
+      "market_cap": 14.9,
+      "big_pct_1000": 33.13,
+      "big_pct_400": 38.11,
+      "chg_1w_1000": 3.18,
+      "chg_1w_400": -0.08,
+      "big_trend_1000": [
+        34.42,
+        32.14,
+        32.11,
+        33.13
+      ],
+      "big_trend_400": [
+        38.55,
+        37.73,
+        38.14,
+        38.11
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 39.65,
+      "entry_date": "2026-06-18",
+      "entry_close": 38.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 39.65,
+      "since_entry_pct": 2.99,
+      "ema20": 41.19,
+      "ema60": 40.6,
+      "ema120": 35.98,
+      "ema200": 32.38,
+      "bullish_aligned": true,
+      "high_60d": 54.7,
+      "low_60d": 31.6,
+      "max_gain_60d": 73.1,
+      "pullback_from_60d_high_pct": -29.62,
+      "vol_20d_avg": 3857,
+      "week_chg_pct": 3.22,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "65-85",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 23.0,
+      "pattern_subs": {
+        "結構": 0,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 23.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "3481",
+      "name": "群創",
+      "industry": "光電",
+      "market_cap": 682.7,
+      "big_pct_1000": 41.48,
+      "big_pct_400": 45.84,
+      "chg_1w_1000": 3.13,
+      "chg_1w_400": 2.8,
+      "big_trend_1000": [
+        39.56,
+        41.17,
+        40.22,
+        41.48
+      ],
+      "big_trend_400": [
+        44.29,
+        45.65,
+        44.59,
+        45.84
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張單週激增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 66.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 64.4,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 66.0,
+      "since_entry_pct": 2.48,
+      "ema20": 50.22,
+      "ema60": 39.72,
+      "ema120": 32.1,
+      "ema200": 26.8,
+      "bullish_aligned": true,
+      "high_60d": 64.4,
+      "low_60d": 23.4,
+      "max_gain_60d": 175.21,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 518193,
+      "week_chg_pct": 37.17,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 60.8,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 19.8,
+        "量價": 15,
+        "位置": 0,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "量縮整理",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 60.5,
+      "invalidation": 58.68,
+      "pattern_confidence": 0.9,
+      "score": 60.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "4707",
+      "name": "磐亞",
+      "industry": "櫃化學",
+      "market_cap": 28.3,
+      "big_pct_1000": 64.96,
+      "big_pct_400": 71.12,
+      "chg_1w_1000": 1.63,
+      "chg_1w_400": 0.74,
+      "big_trend_1000": [
+        63.36,
+        63.91,
+        63.92,
+        64.96
+      ],
+      "big_trend_400": [
+        68.96,
+        70.4,
+        70.6,
+        71.12
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增",
+        "400張4週連增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 23.2,
+      "entry_date": "2026-06-18",
+      "entry_close": 23.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 23.2,
+      "since_entry_pct": 0.87,
+      "ema20": 19.23,
+      "ema60": 16.14,
+      "ema120": 14.02,
+      "ema200": 12.77,
+      "bullish_aligned": true,
+      "high_60d": 23.0,
+      "low_60d": 10.35,
+      "max_gain_60d": 122.22,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 3690,
+      "week_chg_pct": 15.87,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 52.7,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 18.7,
+        "量價": 6,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "頸線回測",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_retest"
+      ],
+      "key_level": 21.75,
+      "invalidation": 21.1,
+      "pattern_confidence": 0.85,
+      "score": 52.7,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2492",
+      "name": "華新科",
+      "industry": "電零",
+      "market_cap": 857.4,
+      "big_pct_1000": 71.1,
+      "big_pct_400": 74.44,
+      "chg_1w_1000": 1.3,
+      "chg_1w_400": 0.83,
+      "big_trend_1000": [
+        68.4,
+        69.62,
+        70.19,
+        71.1
+      ],
+      "big_trend_400": [
+        72.37,
+        72.84,
+        73.83,
+        74.44
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增",
+        "400張4週連增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 617.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 561.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 617.0,
+      "since_entry_pct": 9.98,
+      "ema20": 411.67,
+      "ema60": 287.49,
+      "ema120": 219.47,
+      "ema200": 179.97,
+      "bullish_aligned": true,
+      "high_60d": 561.0,
+      "low_60d": 114.0,
+      "max_gain_60d": 392.11,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 8816,
+      "week_chg_pct": 34.37,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 58.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 6,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 482.5,
+      "invalidation": 468.02,
+      "pattern_confidence": 0.9,
+      "score": 58.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "3704",
+      "name": "合勤控",
+      "industry": "通信",
+      "market_cap": 106.8,
+      "big_pct_1000": 59.87,
+      "big_pct_400": 65.93,
+      "chg_1w_1000": 0.54,
+      "chg_1w_400": 0.66,
+      "big_trend_1000": [
+        56.84,
+        58.92,
+        59.55,
+        59.87
+      ],
+      "big_trend_400": [
+        62.39,
+        64.41,
+        65.5,
+        65.93
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增",
+        "400張4週連增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 48.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 48.25,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 48.5,
+      "since_entry_pct": 0.52,
+      "ema20": 45.73,
+      "ema60": 40.98,
+      "ema120": 38.0,
+      "ema200": 35.98,
+      "bullish_aligned": true,
+      "high_60d": 49.35,
+      "low_60d": 32.3,
+      "max_gain_60d": 52.79,
+      "pullback_from_60d_high_pct": -2.23,
+      "vol_20d_avg": 6863,
+      "week_chg_pct": 5.01,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "45-65",
+      "stat_edge": true,
+      "stat_edge_id": "max_gain_60d_45_65",
+      "stat_edge_label": "60日45-65統計優勢區",
+      "stat_edge_range": [
+        45.0,
+        65.0
+      ],
+      "stat_edge_basis": "big_holder_trend 60日最大漲幅分箱回測：45-65% 區間入池後平均漲幅與勝率較佳",
+      "stat_week_0_10": true,
+      "stat_week_0_10_id": "max_gain_45_65_week_0_10",
+      "stat_week_0_10_label": "45-65週漲0-10",
+      "stat_week_0_10_basis": "60日漲幅45-65%、週漲幅0-10%",
+      "pattern_state": "先觀察",
+      "pattern_score": 53.4,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 8.4,
+        "量價": 5,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "箱頂整理",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [
+        "box_near_top"
+      ],
+      "key_level": 50.0,
+      "invalidation": null,
+      "pattern_confidence": 0.6,
+      "score": 53.4,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "1709",
+      "name": "和益",
+      "industry": "化學",
+      "market_cap": 67.5,
+      "big_pct_1000": 53.46,
+      "big_pct_400": 63.06,
+      "chg_1w_1000": 0.38,
+      "chg_1w_400": 0.41,
+      "big_trend_1000": [
+        52.68,
+        52.77,
+        53.26,
+        53.46
+      ],
+      "big_trend_400": [
+        62.18,
+        62.45,
+        62.8,
+        63.06
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增",
+        "400張4週連增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 21.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 21.25,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 21.5,
+      "since_entry_pct": 1.18,
+      "ema20": 20.27,
+      "ema60": 19.19,
+      "ema120": 18.48,
+      "ema200": 18.14,
+      "bullish_aligned": true,
+      "high_60d": 21.35,
+      "low_60d": 17.8,
+      "max_gain_60d": 19.94,
+      "pullback_from_60d_high_pct": -0.47,
+      "vol_20d_avg": 1730,
+      "week_chg_pct": 1.92,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "15-30",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "值得看圖",
+      "pattern_score": 70.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 5,
+        "位置": 15,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 21.25,
+      "invalidation": 20.61,
+      "pattern_confidence": 0.9,
+      "score": 70.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "1904",
+      "name": "正隆",
+      "industry": "造紙",
+      "market_cap": 204.5,
+      "big_pct_1000": 61.83,
+      "big_pct_400": 66.11,
+      "chg_1w_1000": 0.28,
+      "chg_1w_400": 0.21,
+      "big_trend_1000": [
+        60.9,
+        61.45,
+        61.66,
+        61.83
+      ],
+      "big_trend_400": [
+        65.12,
+        65.65,
+        65.97,
+        66.11
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增",
+        "400張4週連增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 22.55,
+      "entry_date": "2026-06-18",
+      "entry_close": 23.1,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 22.55,
+      "since_entry_pct": -2.38,
+      "ema20": 21.54,
+      "ema60": 19.88,
+      "ema120": 19.09,
+      "ema200": 18.67,
+      "bullish_aligned": true,
+      "high_60d": 23.15,
+      "low_60d": 17.45,
+      "max_gain_60d": 32.66,
+      "pullback_from_60d_high_pct": -0.22,
+      "vol_20d_avg": 5998,
+      "week_chg_pct": 1.54,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "30-45",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "值得看圖",
+      "pattern_score": 69.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 20.75,
+      "invalidation": 20.13,
+      "pattern_confidence": 0.9,
+      "score": 69.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "1460",
+      "name": "宏遠",
+      "industry": "紡織",
+      "market_cap": 56.7,
+      "big_pct_1000": 65.63,
+      "big_pct_400": 72.21,
+      "chg_1w_1000": 0.28,
+      "chg_1w_400": 0.14,
+      "big_trend_1000": [
+        64.89,
+        65.32,
+        65.45,
+        65.63
+      ],
+      "big_trend_400": [
+        71.65,
+        72.08,
+        72.11,
+        72.21
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增",
+        "400張4週連增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 7.15,
+      "entry_date": "2026-06-18",
+      "entry_close": 7.2,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 7.15,
+      "since_entry_pct": -0.69,
+      "ema20": 7.14,
+      "ema60": 7.03,
+      "ema120": 6.87,
+      "ema200": 6.77,
+      "bullish_aligned": true,
+      "high_60d": 7.53,
+      "low_60d": 6.73,
+      "max_gain_60d": 11.89,
+      "pullback_from_60d_high_pct": -4.38,
+      "vol_20d_avg": 853,
+      "week_chg_pct": 1.55,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "0-15",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 40.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 5,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 40.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2883",
+      "name": "凱基金",
+      "industry": "金融",
+      "market_cap": 1369.4,
+      "big_pct_1000": 63.93,
+      "big_pct_400": 67.69,
+      "chg_1w_1000": 0.09,
+      "chg_1w_400": 0.15,
+      "big_trend_1000": [
+        62.65,
+        63.36,
+        63.87,
+        63.93
+      ],
+      "big_trend_400": [
+        66.61,
+        67.15,
+        67.59,
+        67.69
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增",
+        "400張4週連增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 30.35,
+      "entry_date": "2026-06-18",
+      "entry_close": 30.75,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 30.35,
+      "since_entry_pct": -1.3,
+      "ema20": 26.69,
+      "ema60": 23.47,
+      "ema120": 21.36,
+      "ema200": 19.94,
+      "bullish_aligned": true,
+      "high_60d": 30.75,
+      "low_60d": 19.25,
+      "max_gain_60d": 59.74,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 161528,
+      "week_chg_pct": 10.81,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "45-65",
+      "stat_edge": true,
+      "stat_edge_id": "max_gain_60d_45_65",
+      "stat_edge_label": "60日45-65統計優勢區",
+      "stat_edge_range": [
+        45.0,
+        65.0
+      ],
+      "stat_edge_basis": "big_holder_trend 60日最大漲幅分箱回測：45-65% 區間入池後平均漲幅與勝率較佳",
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 60.8,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 19.8,
+        "量價": 10,
+        "位置": 5,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 23.1,
+      "invalidation": 22.41,
+      "pattern_confidence": 0.9,
+      "score": 60.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2882",
+      "name": "國泰金",
+      "industry": "金融",
+      "market_cap": 5037.9,
+      "big_pct_1000": 83.55,
+      "big_pct_400": 85.86,
+      "chg_1w_1000": 0.14,
+      "chg_1w_400": 0.1,
+      "big_trend_1000": [
+        83.04,
+        83.22,
+        83.43,
+        83.55
+      ],
+      "big_trend_400": [
+        85.47,
+        85.58,
+        85.77,
+        85.86
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增",
+        "400張4週連增"
+      ],
+      "signal_score": 5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 113.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 115.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 113.0,
+      "since_entry_pct": -2.16,
+      "ema20": 97.7,
+      "ema60": 85.94,
+      "ema120": 79.77,
+      "ema200": 75.57,
+      "bullish_aligned": true,
+      "high_60d": 115.5,
+      "low_60d": 70.3,
+      "max_gain_60d": 64.3,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 52258,
+      "week_chg_pct": 14.93,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "45-65",
+      "stat_edge": true,
+      "stat_edge_id": "max_gain_60d_45_65",
+      "stat_edge_label": "60日45-65統計優勢區",
+      "stat_edge_range": [
+        45.0,
+        65.0
+      ],
+      "stat_edge_basis": "big_holder_trend 60日最大漲幅分箱回測：45-65% 區間入池後平均漲幅與勝率較佳",
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 62.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 10,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 80.8,
+      "invalidation": 78.38,
+      "pattern_confidence": 0.9,
+      "score": 62.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2316",
+      "name": "楠梓電",
+      "industry": "電零",
+      "market_cap": 67.7,
+      "big_pct_1000": 58.42,
+      "big_pct_400": 67.88,
+      "chg_1w_1000": 1.32,
+      "chg_1w_400": 4.91,
+      "big_trend_1000": [
+        56.17,
+        55.56,
+        57.66,
+        58.42
+      ],
+      "big_trend_400": [
+        65.11,
+        64.28,
+        64.7,
+        67.88
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張單週激增"
+      ],
+      "signal_score": 4,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 226.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 205.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 226.0,
+      "since_entry_pct": 9.98,
+      "ema20": 165.14,
+      "ema60": 140.88,
+      "ema120": 123.8,
+      "ema200": 110.19,
+      "bullish_aligned": true,
+      "high_60d": 205.5,
+      "low_60d": 92.6,
+      "max_gain_60d": 121.92,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 7388,
+      "week_chg_pct": 33.88,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 52.8,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 19.8,
+        "量價": 5,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "量縮整理",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 188.0,
+      "invalidation": 182.36,
+      "pattern_confidence": 0.9,
+      "score": 52.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "8155",
+      "name": "博智",
+      "industry": "櫃電零",
+      "market_cap": 30.9,
+      "big_pct_1000": 35.87,
+      "big_pct_400": 49.99,
+      "chg_1w_1000": -0.14,
+      "chg_1w_400": 4.89,
+      "big_trend_1000": [
+        37.92,
+        35.94,
+        35.92,
+        35.87
+      ],
+      "big_trend_400": [
+        51.6,
+        50.33,
+        47.66,
+        49.99
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張單週激增"
+      ],
+      "signal_score": 4,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 407.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 404.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 407.5,
+      "since_entry_pct": 0.74,
+      "ema20": 386.96,
+      "ema60": 359.83,
+      "ema120": 307.4,
+      "ema200": 262.92,
+      "bullish_aligned": true,
+      "high_60d": 456.5,
+      "low_60d": 238.5,
+      "max_gain_60d": 91.4,
+      "pullback_from_60d_high_pct": -11.39,
+      "vol_20d_avg": 1544,
+      "week_chg_pct": 16.4,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 37.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 5,
+        "位置": 6,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 37.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "6693",
+      "name": "廣閎科",
+      "industry": "櫃半導",
+      "market_cap": null,
+      "big_pct_1000": 31.39,
+      "big_pct_400": 44.8,
+      "chg_1w_1000": 0.0,
+      "chg_1w_400": 4.67,
+      "big_trend_1000": [
+        31.39,
+        31.39,
+        31.39,
+        31.39
+      ],
+      "big_trend_400": [
+        44.29,
+        44.37,
+        42.8,
+        44.8
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張單週激增"
+      ],
+      "signal_score": 4,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 236.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 215.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 236.5,
+      "since_entry_pct": 10.0,
+      "ema20": 168.42,
+      "ema60": 145.92,
+      "ema120": 124.68,
+      "ema200": 107.83,
+      "bullish_aligned": true,
+      "high_60d": 215.0,
+      "low_60d": 102.5,
+      "max_gain_60d": 109.76,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 1989,
+      "week_chg_pct": 38.71,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 57.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 5,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 169.0,
+      "invalidation": 163.93,
+      "pattern_confidence": 0.9,
+      "score": 57.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2070",
+      "name": "精湛",
+      "industry": "櫃電機",
+      "market_cap": 12.2,
+      "big_pct_1000": 47.35,
+      "big_pct_400": 56.51,
+      "chg_1w_1000": 0.0,
+      "chg_1w_400": 3.9,
+      "big_trend_1000": [
+        47.35,
+        47.35,
+        47.35,
+        47.35
+      ],
+      "big_trend_400": [
+        54.37,
+        54.39,
+        54.39,
+        56.51
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張單週激增"
+      ],
+      "signal_score": 4,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 67.7,
+      "entry_date": "2026-06-18",
+      "entry_close": 68.2,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 67.7,
+      "since_entry_pct": -0.73,
+      "ema20": 66.19,
+      "ema60": 59.88,
+      "ema120": 53.5,
+      "ema200": 49.89,
+      "bullish_aligned": true,
+      "high_60d": 82.4,
+      "low_60d": 38.0,
+      "max_gain_60d": 116.84,
+      "pullback_from_60d_high_pct": -17.23,
+      "vol_20d_avg": 1784,
+      "week_chg_pct": 7.91,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 45.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 45.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "5484",
+      "name": "慧友",
+      "industry": "光電",
+      "market_cap": 6.5,
+      "big_pct_1000": 34.13,
+      "big_pct_400": 39.41,
+      "chg_1w_1000": 0.0,
+      "chg_1w_400": 3.68,
+      "big_trend_1000": [
+        34.31,
+        34.15,
+        34.13,
+        34.13
+      ],
+      "big_trend_400": [
+        38.29,
+        38.09,
+        38.01,
+        39.41
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張單週激增"
+      ],
+      "signal_score": 4,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 47.1,
+      "entry_date": "2026-06-18",
+      "entry_close": 47.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 47.1,
+      "since_entry_pct": 0.21,
+      "ema20": 48.74,
+      "ema60": 44.85,
+      "ema120": 42.57,
+      "ema200": 41.59,
+      "bullish_aligned": true,
+      "high_60d": 57.9,
+      "low_60d": 36.85,
+      "max_gain_60d": 57.12,
+      "pullback_from_60d_high_pct": -18.83,
+      "vol_20d_avg": 1995,
+      "week_chg_pct": -5.43,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "45-65",
+      "stat_edge": true,
+      "stat_edge_id": "max_gain_60d_45_65",
+      "stat_edge_label": "60日45-65統計優勢區",
+      "stat_edge_range": [
+        45.0,
+        65.0
+      ],
+      "stat_edge_basis": "big_holder_trend 60日最大漲幅分箱回測：45-65% 區間入池後平均漲幅與勝率較佳",
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 42.8,
+      "pattern_subs": {
+        "結構": 0,
+        "型態": 19.8,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "W底突破頸線",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 40.35,
+      "invalidation": 39.14,
+      "pattern_confidence": 0.9,
+      "score": 42.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "6510",
+      "name": "精測",
+      "industry": "櫃半導",
+      "market_cap": 151.6,
+      "big_pct_1000": 38.1,
+      "big_pct_400": 50.15,
+      "chg_1w_1000": 0.11,
+      "chg_1w_400": 3.55,
+      "big_trend_1000": [
+        37.59,
+        37.89,
+        38.06,
+        38.1
+      ],
+      "big_trend_400": [
+        51.39,
+        49.09,
+        48.43,
+        50.15
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張單週激增"
+      ],
+      "signal_score": 4,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 3525.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 3610.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 3525.0,
+      "since_entry_pct": -2.35,
+      "ema20": 3473.32,
+      "ema60": 3454.16,
+      "ema120": 3172.08,
+      "ema200": 2764.97,
+      "bullish_aligned": true,
+      "high_60d": 4200.0,
+      "low_60d": 3075.0,
+      "max_gain_60d": 36.59,
+      "pullback_from_60d_high_pct": -14.05,
+      "vol_20d_avg": 818,
+      "week_chg_pct": 6.49,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "30-45",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 43.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 7,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 43.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "5302",
+      "name": "太欣",
+      "industry": "櫃半導",
+      "market_cap": 8.2,
+      "big_pct_1000": 46.18,
+      "big_pct_400": 52.82,
+      "chg_1w_1000": 1.41,
+      "chg_1w_400": 3.53,
+      "big_trend_1000": [
+        45.54,
+        45.54,
+        45.54,
+        46.18
+      ],
+      "big_trend_400": [
+        50.45,
+        50.45,
+        51.02,
+        52.82
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張單週激增"
+      ],
+      "signal_score": 4,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 12.6,
+      "entry_date": "2026-06-18",
+      "entry_close": 12.55,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 12.6,
+      "since_entry_pct": 0.4,
+      "ema20": 11.36,
+      "ema60": 11.1,
+      "ema120": 10.8,
+      "ema200": 10.3,
+      "bullish_aligned": true,
+      "high_60d": 12.7,
+      "low_60d": 9.79,
+      "max_gain_60d": 29.72,
+      "pullback_from_60d_high_pct": -1.18,
+      "vol_20d_avg": 1391,
+      "week_chg_pct": 14.09,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "15-30",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 52.7,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 18.7,
+        "量價": 0,
+        "位置": 3,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "頸線回測",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_retest"
+      ],
+      "key_level": 11.9,
+      "invalidation": 11.54,
+      "pattern_confidence": 0.85,
+      "score": 52.7,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "8064",
+      "name": "東捷",
+      "industry": "櫃光電",
+      "market_cap": 28.2,
+      "big_pct_1000": 39.16,
+      "big_pct_400": 48.06,
+      "chg_1w_1000": 0.46,
+      "chg_1w_400": 3.35,
+      "big_trend_1000": [
+        40.75,
+        41.53,
+        38.98,
+        39.16
+      ],
+      "big_trend_400": [
+        47.44,
+        49.29,
+        46.5,
+        48.06
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張單週激增"
+      ],
+      "signal_score": 4,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 165.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 156.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 165.5,
+      "since_entry_pct": 6.09,
+      "ema20": 142.96,
+      "ema60": 116.76,
+      "ema120": 93.14,
+      "ema200": 77.29,
+      "bullish_aligned": true,
+      "high_60d": 172.5,
+      "low_60d": 63.3,
+      "max_gain_60d": 172.51,
+      "pullback_from_60d_high_pct": -9.57,
+      "vol_20d_avg": 16216,
+      "week_chg_pct": 17.29,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 33.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 5,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 33.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "3413",
+      "name": "京鼎",
+      "industry": "半導",
+      "market_cap": 95.1,
+      "big_pct_1000": 35.72,
+      "big_pct_400": 43.37,
+      "chg_1w_1000": -2.11,
+      "chg_1w_400": 3.14,
+      "big_trend_1000": [
+        37.56,
+        37.32,
+        36.49,
+        35.72
+      ],
+      "big_trend_400": [
+        44.33,
+        44.49,
+        42.05,
+        43.37
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張單週激增"
+      ],
+      "signal_score": 4,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 321.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 324.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 321.0,
+      "since_entry_pct": -1.08,
+      "ema20": 316.24,
+      "ema60": 313.64,
+      "ema120": 309.05,
+      "ema200": 305.89,
+      "bullish_aligned": true,
+      "high_60d": 349.0,
+      "low_60d": 289.0,
+      "max_gain_60d": 20.76,
+      "pullback_from_60d_high_pct": -7.02,
+      "vol_20d_avg": 3044,
+      "week_chg_pct": 10.94,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "15-30",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 45.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 45.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "3321",
+      "name": "同泰",
+      "industry": "電零",
+      "market_cap": 13.8,
+      "big_pct_1000": 36.88,
+      "big_pct_400": 48.31,
+      "chg_1w_1000": 1.04,
+      "chg_1w_400": 2.55,
+      "big_trend_1000": [
+        36.15,
+        36.26,
+        36.5,
+        36.88
+      ],
+      "big_trend_400": [
+        47.42,
+        47.36,
+        47.11,
+        48.31
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增"
+      ],
+      "signal_score": 3,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 26.7,
+      "entry_date": "2026-06-18",
+      "entry_close": 24.3,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 26.7,
+      "since_entry_pct": 9.88,
+      "ema20": 20.42,
+      "ema60": 18.4,
+      "ema120": 17.36,
+      "ema200": 15.93,
+      "bullish_aligned": true,
+      "high_60d": 24.3,
+      "low_60d": 15.15,
+      "max_gain_60d": 60.4,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 1326,
+      "week_chg_pct": 23.66,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "45-65",
+      "stat_edge": true,
+      "stat_edge_id": "max_gain_60d_45_65",
+      "stat_edge_label": "60日45-65統計優勢區",
+      "stat_edge_range": [
+        45.0,
+        65.0
+      ],
+      "stat_edge_basis": "big_holder_trend 60日最大漲幅分箱回測：45-65% 區間入池後平均漲幅與勝率較佳",
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 58.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 6,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 21.1,
+      "invalidation": 20.47,
+      "pattern_confidence": 0.9,
+      "score": 58.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2501",
+      "name": "國建",
+      "industry": "營建",
+      "market_cap": 253.9,
+      "big_pct_1000": 74.09,
+      "big_pct_400": 78.38,
+      "chg_1w_1000": 0.28,
+      "chg_1w_400": 0.35,
+      "big_trend_1000": [
+        72.29,
+        72.62,
+        73.88,
+        74.09
+      ],
+      "big_trend_400": [
+        76.66,
+        76.83,
+        78.11,
+        78.38
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增"
+      ],
+      "signal_score": 3,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 24.85,
+      "entry_date": "2026-06-18",
+      "entry_close": 26.85,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 24.85,
+      "since_entry_pct": -7.45,
+      "ema20": 24.81,
+      "ema60": 23.8,
+      "ema120": 23.3,
+      "ema200": 22.77,
+      "bullish_aligned": true,
+      "high_60d": 27.0,
+      "low_60d": 21.7,
+      "max_gain_60d": 24.42,
+      "pullback_from_60d_high_pct": -0.56,
+      "vol_20d_avg": 7353,
+      "week_chg_pct": 4.27,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "15-30",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 38.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 5,
+        "位置": 7,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 38.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2542",
+      "name": "興富發",
+      "industry": "營建",
+      "market_cap": 564.6,
+      "big_pct_1000": 59.55,
+      "big_pct_400": 63.08,
+      "chg_1w_1000": 0.3,
+      "chg_1w_400": 0.11,
+      "big_trend_1000": [
+        58.12,
+        58.22,
+        59.37,
+        59.55
+      ],
+      "big_trend_400": [
+        61.84,
+        62.01,
+        63.01,
+        63.08
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增"
+      ],
+      "signal_score": 3,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 42.7,
+      "entry_date": "2026-06-18",
+      "entry_close": 44.75,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 42.7,
+      "since_entry_pct": -4.58,
+      "ema20": 43.74,
+      "ema60": 41.28,
+      "ema120": 40.09,
+      "ema200": 39.83,
+      "bullish_aligned": true,
+      "high_60d": 45.45,
+      "low_60d": 33.9,
+      "max_gain_60d": 34.07,
+      "pullback_from_60d_high_pct": -1.54,
+      "vol_20d_avg": 19430,
+      "week_chg_pct": -1.32,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "30-45",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 37.0,
+      "pattern_subs": {
+        "結構": 14,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 37.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2867",
+      "name": "三商壽",
+      "industry": "金融",
+      "market_cap": 253.8,
+      "big_pct_1000": 81.42,
+      "big_pct_400": 85.01,
+      "chg_1w_1000": 0.25,
+      "chg_1w_400": 0.21,
+      "big_trend_1000": [
+        80.05,
+        80.66,
+        81.22,
+        81.42
+      ],
+      "big_trend_400": [
+        83.79,
+        84.37,
+        84.83,
+        85.01
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增"
+      ],
+      "signal_score": 3,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 8.69,
+      "entry_date": "2026-06-18",
+      "entry_close": 8.74,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 8.69,
+      "since_entry_pct": -0.57,
+      "ema20": 8.14,
+      "ema60": 7.91,
+      "ema120": 7.71,
+      "ema200": 7.38,
+      "bullish_aligned": true,
+      "high_60d": 8.74,
+      "low_60d": 7.44,
+      "max_gain_60d": 17.47,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 19364,
+      "week_chg_pct": 6.72,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "15-30",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "值得看圖",
+      "pattern_score": 64.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 5,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 8.19,
+      "invalidation": 7.94,
+      "pattern_confidence": 0.9,
+      "score": 64.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "3444",
+      "name": "利機",
+      "industry": "櫃通路",
+      "market_cap": 12.6,
+      "big_pct_1000": 37.94,
+      "big_pct_400": 48.6,
+      "chg_1w_1000": 0.21,
+      "chg_1w_400": 0.16,
+      "big_trend_1000": [
+        37.64,
+        37.78,
+        37.86,
+        37.94
+      ],
+      "big_trend_400": [
+        50.56,
+        50.55,
+        48.52,
+        48.6
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增"
+      ],
+      "signal_score": 3,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 95.6,
+      "entry_date": "2026-06-18",
+      "entry_close": 97.9,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 95.6,
+      "since_entry_pct": -2.35,
+      "ema20": 96.23,
+      "ema60": 89.28,
+      "ema120": 80.33,
+      "ema200": 73.78,
+      "bullish_aligned": true,
+      "high_60d": 117.5,
+      "low_60d": 59.6,
+      "max_gain_60d": 97.15,
+      "pullback_from_60d_high_pct": -16.68,
+      "vol_20d_avg": 1342,
+      "week_chg_pct": 9.02,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 23.0,
+      "pattern_subs": {
+        "結構": 0,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 23.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2886",
+      "name": "兆豐金",
+      "industry": "金融",
+      "market_cap": 4263.5,
+      "big_pct_1000": 81.28,
+      "big_pct_400": 82.75,
+      "chg_1w_1000": 0.17,
+      "chg_1w_400": 0.16,
+      "big_trend_1000": [
+        80.41,
+        80.84,
+        81.14,
+        81.28
+      ],
+      "big_trend_400": [
+        81.91,
+        82.34,
+        82.62,
+        82.75
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增"
+      ],
+      "signal_score": 3,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 44.75,
+      "entry_date": "2026-06-18",
+      "entry_close": 45.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 44.75,
+      "since_entry_pct": -1.65,
+      "ema20": 42.63,
+      "ema60": 40.98,
+      "ema120": 40.49,
+      "ema200": 40.38,
+      "bullish_aligned": true,
+      "high_60d": 45.5,
+      "low_60d": 38.45,
+      "max_gain_60d": 18.34,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 44051,
+      "week_chg_pct": 4.84,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "15-30",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "值得看圖",
+      "pattern_score": 61.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 21.8,
+        "量價": 0,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "平台突破回測",
+        "大戶上升"
+      ],
+      "patterns": [
+        "platform_breakout_retest"
+      ],
+      "key_level": 44.95,
+      "invalidation": 43.6,
+      "pattern_confidence": 0.95,
+      "score": 61.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "5522",
+      "name": "遠雄",
+      "industry": "營建",
+      "market_cap": 301.1,
+      "big_pct_1000": 87.26,
+      "big_pct_400": 89.66,
+      "chg_1w_1000": 0.06,
+      "chg_1w_400": 0.13,
+      "big_trend_1000": [
+        86.75,
+        87.04,
+        87.21,
+        87.26
+      ],
+      "big_trend_400": [
+        89.04,
+        89.3,
+        89.54,
+        89.66
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增"
+      ],
+      "signal_score": 3,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 73.8,
+      "entry_date": "2026-06-18",
+      "entry_close": 74.4,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 73.8,
+      "since_entry_pct": -0.81,
+      "ema20": 75.22,
+      "ema60": 72.38,
+      "ema120": 70.0,
+      "ema200": 68.02,
+      "bullish_aligned": true,
+      "high_60d": 82.2,
+      "low_60d": 68.4,
+      "max_gain_60d": 20.18,
+      "pullback_from_60d_high_pct": -9.49,
+      "vol_20d_avg": 1650,
+      "week_chg_pct": -7.0,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "15-30",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 43.0,
+      "pattern_subs": {
+        "結構": 19,
+        "型態": 0.0,
+        "量價": 11,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 43.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2838",
+      "name": "聯邦銀",
+      "industry": "金融",
+      "market_cap": 287.8,
+      "big_pct_1000": 89.12,
+      "big_pct_400": 90.8,
+      "chg_1w_1000": 0.04,
+      "chg_1w_400": 0.08,
+      "big_trend_1000": [
+        89.03,
+        89.07,
+        89.08,
+        89.12
+      ],
+      "big_trend_400": [
+        90.61,
+        90.7,
+        90.73,
+        90.8
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "千張4週連增"
+      ],
+      "signal_score": 3,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 22.4,
+      "entry_date": "2026-06-18",
+      "entry_close": 22.75,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 22.4,
+      "since_entry_pct": -1.54,
+      "ema20": 21.43,
+      "ema60": 20.73,
+      "ema120": 20.15,
+      "ema200": 19.57,
+      "bullish_aligned": true,
+      "high_60d": 22.75,
+      "low_60d": 20.0,
+      "max_gain_60d": 13.75,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 2521,
+      "week_chg_pct": 5.08,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "0-15",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "值得看圖",
+      "pattern_score": 64.7,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 18.7,
+        "量價": 0,
+        "位置": 15,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "頸線回測",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_retest"
+      ],
+      "key_level": 21.9,
+      "invalidation": 21.24,
+      "pattern_confidence": 0.85,
+      "score": 64.7,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "3147",
+      "name": "大綜",
+      "industry": "櫃資服",
+      "market_cap": 13.9,
+      "big_pct_1000": 50.82,
+      "big_pct_400": 61.38,
+      "chg_1w_1000": -0.04,
+      "chg_1w_400": 2.13,
+      "big_trend_1000": [
+        47.74,
+        50.08,
+        50.84,
+        50.82
+      ],
+      "big_trend_400": [
+        53.55,
+        57.33,
+        60.1,
+        61.38
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張4週連增"
+      ],
+      "signal_score": 2,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 320.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 327.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 320.0,
+      "since_entry_pct": -2.14,
+      "ema20": 277.43,
+      "ema60": 221.2,
+      "ema120": 200.15,
+      "ema200": 194.03,
+      "bullish_aligned": true,
+      "high_60d": 350.0,
+      "low_60d": 153.5,
+      "max_gain_60d": 128.01,
+      "pullback_from_60d_high_pct": -6.57,
+      "vol_20d_avg": 1226,
+      "week_chg_pct": 2.83,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 65.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 10,
+        "位置": 5,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 194.0,
+      "invalidation": 188.18,
+      "pattern_confidence": 0.9,
+      "score": 65.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "1342",
+      "name": "八貫",
+      "industry": "其他",
+      "market_cap": null,
+      "big_pct_1000": 51.58,
+      "big_pct_400": 58.29,
+      "chg_1w_1000": 0.0,
+      "chg_1w_400": 1.75,
+      "big_trend_1000": [
+        51.58,
+        51.58,
+        51.58,
+        51.58
+      ],
+      "big_trend_400": [
+        56.2,
+        56.51,
+        57.29,
+        58.29
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張4週連增"
+      ],
+      "signal_score": 2,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 117.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 116.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 117.0,
+      "since_entry_pct": 0.86,
+      "ema20": 106.22,
+      "ema60": 98.44,
+      "ema120": 94.97,
+      "ema200": 93.21,
+      "bullish_aligned": true,
+      "high_60d": 117.5,
+      "low_60d": 83.1,
+      "max_gain_60d": 41.4,
+      "pullback_from_60d_high_pct": -1.28,
+      "vol_20d_avg": 1241,
+      "week_chg_pct": 8.41,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "30-45",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 55.8,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 19.8,
+        "量價": 5,
+        "位置": 5,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 96.5,
+      "invalidation": 93.61,
+      "pattern_confidence": 0.9,
+      "score": 55.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "8121",
+      "name": "越峰",
+      "industry": "櫃電零",
+      "market_cap": 23.7,
+      "big_pct_1000": 55.97,
+      "big_pct_400": 62.96,
+      "chg_1w_1000": -0.6,
+      "chg_1w_400": 1.7,
+      "big_trend_1000": [
+        54.31,
+        55.17,
+        56.31,
+        55.97
+      ],
+      "big_trend_400": [
+        61.05,
+        61.33,
+        61.91,
+        62.96
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張4週連增"
+      ],
+      "signal_score": 2,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 54.4,
+      "entry_date": "2026-06-18",
+      "entry_close": 53.4,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 54.4,
+      "since_entry_pct": 1.87,
+      "ema20": 43.26,
+      "ema60": 36.16,
+      "ema120": 32.23,
+      "ema200": 29.63,
+      "bullish_aligned": true,
+      "high_60d": 53.4,
+      "low_60d": 22.9,
+      "max_gain_60d": 133.19,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 3875,
+      "week_chg_pct": 22.76,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 45.8,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 19.8,
+        "量價": 0,
+        "位置": 0,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 43.5,
+      "invalidation": 42.2,
+      "pattern_confidence": 0.9,
+      "score": 45.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "3090",
+      "name": "日電貿",
+      "industry": "電零",
+      "market_cap": 84.1,
+      "big_pct_1000": 62.53,
+      "big_pct_400": 69.35,
+      "chg_1w_1000": 1.64,
+      "chg_1w_400": 1.46,
+      "big_trend_1000": [
+        61.64,
+        61.3,
+        61.52,
+        62.53
+      ],
+      "big_trend_400": [
+        67.81,
+        67.99,
+        68.35,
+        69.35
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張4週連增"
+      ],
+      "signal_score": 2,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 335.5,
+      "entry_date": "2026-06-18",
+      "entry_close": 332.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 335.5,
+      "since_entry_pct": 0.9,
+      "ema20": 238.16,
+      "ema60": 176.31,
+      "ema120": 141.67,
+      "ema200": 121.57,
+      "bullish_aligned": true,
+      "high_60d": 332.5,
+      "low_60d": 90.5,
+      "max_gain_60d": 267.4,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 11565,
+      "week_chg_pct": 42.7,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 45.8,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 19.8,
+        "量價": 0,
+        "位置": 0,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 251.0,
+      "invalidation": 243.47,
+      "pattern_confidence": 0.9,
+      "score": 45.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "1423",
+      "name": "利華",
+      "industry": "紡織",
+      "market_cap": 14.3,
+      "big_pct_1000": 75.92,
+      "big_pct_400": 82.54,
+      "chg_1w_1000": 1.35,
+      "chg_1w_400": 0.72,
+      "big_trend_1000": [
+        74.25,
+        74.59,
+        74.91,
+        75.92
+      ],
+      "big_trend_400": [
+        81.34,
+        81.68,
+        81.95,
+        82.54
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張4週連增"
+      ],
+      "signal_score": 2,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 38.65,
+      "entry_date": "2026-06-18",
+      "entry_close": 39.65,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 38.65,
+      "since_entry_pct": -2.52,
+      "ema20": 43.02,
+      "ema60": 41.63,
+      "ema120": 40.46,
+      "ema200": 39.59,
+      "bullish_aligned": true,
+      "high_60d": 45.1,
+      "low_60d": 39.65,
+      "max_gain_60d": 13.75,
+      "pullback_from_60d_high_pct": -12.08,
+      "vol_20d_avg": 723,
+      "week_chg_pct": -10.7,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "0-15",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 24.0,
+      "pattern_subs": {
+        "結構": 5,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 5,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 24.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "3093",
+      "name": "港建*",
+      "industry": "櫃他電",
+      "market_cap": 11.6,
+      "big_pct_1000": 71.7,
+      "big_pct_400": 77.22,
+      "chg_1w_1000": 0.29,
+      "chg_1w_400": 0.9,
+      "big_trend_1000": [
+        69.84,
+        69.84,
+        71.49,
+        71.7
+      ],
+      "big_trend_400": [
+        74.67,
+        75.83,
+        76.53,
+        77.22
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張4週連增"
+      ],
+      "signal_score": 2,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 65.3,
+      "entry_date": "2026-06-18",
+      "entry_close": 65.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 65.3,
+      "since_entry_pct": 0.46,
+      "ema20": 60.29,
+      "ema60": 54.98,
+      "ema120": 47.48,
+      "ema200": 41.69,
+      "bullish_aligned": true,
+      "high_60d": 75.6,
+      "low_60d": 39.4,
+      "max_gain_60d": 91.88,
+      "pullback_from_60d_high_pct": -14.02,
+      "vol_20d_avg": 3548,
+      "week_chg_pct": 7.79,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "值得看圖",
+      "pattern_score": 69.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 59.6,
+      "invalidation": 57.81,
+      "pattern_confidence": 0.9,
+      "score": 69.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "4127",
+      "name": "天良",
+      "industry": "櫃生技",
+      "market_cap": 4.0,
+      "big_pct_1000": 57.44,
+      "big_pct_400": 76.59,
+      "chg_1w_1000": 0.12,
+      "chg_1w_400": 0.86,
+      "big_trend_1000": [
+        58.33,
+        57.68,
+        57.37,
+        57.44
+      ],
+      "big_trend_400": [
+        74.44,
+        75.68,
+        75.94,
+        76.59
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張4週連增"
+      ],
+      "signal_score": 2,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 64.8,
+      "entry_date": "2026-06-18",
+      "entry_close": 67.1,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 64.8,
+      "since_entry_pct": -3.43,
+      "ema20": 64.44,
+      "ema60": 52.97,
+      "ema120": 45.69,
+      "ema200": 41.86,
+      "bullish_aligned": true,
+      "high_60d": 71.2,
+      "low_60d": 35.2,
+      "max_gain_60d": 102.27,
+      "pullback_from_60d_high_pct": -5.76,
+      "vol_20d_avg": 777,
+      "week_chg_pct": 5.5,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 43.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 7,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 43.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "9933",
+      "name": "中鼎",
+      "industry": "其他",
+      "market_cap": 341.2,
+      "big_pct_1000": 53.69,
+      "big_pct_400": 59.92,
+      "chg_1w_1000": 0.85,
+      "chg_1w_400": 0.57,
+      "big_trend_1000": [
+        53.68,
+        53.47,
+        53.24,
+        53.69
+      ],
+      "big_trend_400": [
+        59.23,
+        59.33,
+        59.58,
+        59.92
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張4週連增"
+      ],
+      "signal_score": 2,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 43.75,
+      "entry_date": "2026-06-18",
+      "entry_close": 42.65,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 43.75,
+      "since_entry_pct": 2.58,
+      "ema20": 41.02,
+      "ema60": 38.42,
+      "ema120": 36.21,
+      "ema200": 34.41,
+      "bullish_aligned": true,
+      "high_60d": 43.45,
+      "low_60d": 34.65,
+      "max_gain_60d": 25.4,
+      "pullback_from_60d_high_pct": -1.84,
+      "vol_20d_avg": 6860,
+      "week_chg_pct": 3.39,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "15-30",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "值得看圖",
+      "pattern_score": 75.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 10,
+        "位置": 15,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 43.45,
+      "invalidation": 42.15,
+      "pattern_confidence": 0.9,
+      "score": 75.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "6121",
+      "name": "新普",
+      "industry": "櫃電腦",
+      "market_cap": 430.1,
+      "big_pct_1000": 51.14,
+      "big_pct_400": 68.18,
+      "chg_1w_1000": 0.55,
+      "chg_1w_400": 0.12,
+      "big_trend_1000": [
+        51.29,
+        51.59,
+        50.86,
+        51.14
+      ],
+      "big_trend_400": [
+        67.66,
+        67.8,
+        68.1,
+        68.18
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張4週連增"
+      ],
+      "signal_score": 2,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 424.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 417.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 424.0,
+      "since_entry_pct": 1.56,
+      "ema20": 403.7,
+      "ema60": 382.12,
+      "ema120": 370.99,
+      "ema200": 367.44,
+      "bullish_aligned": true,
+      "high_60d": 422.5,
+      "low_60d": 333.0,
+      "max_gain_60d": 26.88,
+      "pullback_from_60d_high_pct": -1.18,
+      "vol_20d_avg": 1223,
+      "week_chg_pct": 1.58,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "15-30",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "值得看圖",
+      "pattern_score": 70.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 5,
+        "位置": 15,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 423.5,
+      "invalidation": 410.8,
+      "pattern_confidence": 0.9,
+      "score": 70.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "6435",
+      "name": "大中",
+      "industry": "櫃半導",
+      "market_cap": 35.5,
+      "big_pct_1000": 48.33,
+      "big_pct_400": 57.87,
+      "chg_1w_1000": 0.04,
+      "chg_1w_400": 0.07,
+      "big_trend_1000": [
+        48.25,
+        48.28,
+        48.31,
+        48.33
+      ],
+      "big_trend_400": [
+        56.29,
+        57.49,
+        57.83,
+        57.87
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張4週連增"
+      ],
+      "signal_score": 2,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 349.0,
+      "entry_date": "2026-06-18",
+      "entry_close": 317.5,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 349.0,
+      "since_entry_pct": 9.92,
+      "ema20": 271.97,
+      "ema60": 230.14,
+      "ema120": 193.58,
+      "ema200": 167.81,
+      "bullish_aligned": true,
+      "high_60d": 317.5,
+      "low_60d": 145.0,
+      "max_gain_60d": 118.97,
+      "pullback_from_60d_high_pct": 0.0,
+      "vol_20d_avg": 991,
+      "week_chg_pct": 23.06,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "85+",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "太遠不追",
+      "pattern_score": 52.8,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 19.8,
+        "量價": 5,
+        "位置": 2,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "量縮整理",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 306.5,
+      "invalidation": 297.31,
+      "pattern_confidence": 0.9,
+      "score": 52.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "4167",
+      "name": "松瑞藥",
+      "industry": "櫃生技",
+      "market_cap": 47.0,
+      "big_pct_1000": 33.56,
+      "big_pct_400": 40.46,
+      "chg_1w_1000": -0.06,
+      "chg_1w_400": 0.07,
+      "big_trend_1000": [
+        32.93,
+        33.05,
+        33.58,
+        33.56
+      ],
+      "big_trend_400": [
+        40.02,
+        40.41,
+        40.43,
+        40.46
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張4週連增"
+      ],
+      "signal_score": 2,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 19.7,
+      "entry_date": "2026-06-18",
+      "entry_close": 19.95,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 19.7,
+      "since_entry_pct": -1.25,
+      "ema20": 19.82,
+      "ema60": 19.69,
+      "ema120": 19.54,
+      "ema200": 19.5,
+      "bullish_aligned": true,
+      "high_60d": 21.85,
+      "low_60d": 18.7,
+      "max_gain_60d": 16.84,
+      "pullback_from_60d_high_pct": -8.7,
+      "vol_20d_avg": 1160,
+      "week_chg_pct": 1.53,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "15-30",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 42.0,
+      "pattern_subs": {
+        "結構": 19,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 42.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "5353",
+      "name": "台林",
+      "industry": "櫃通信",
+      "market_cap": 12.8,
+      "big_pct_1000": 37.82,
+      "big_pct_400": 54.86,
+      "chg_1w_1000": 0.0,
+      "chg_1w_400": 0.04,
+      "big_trend_1000": [
+        37.82,
+        37.82,
+        37.82,
+        37.82
+      ],
+      "big_trend_400": [
+        54.79,
+        54.81,
+        54.84,
+        54.86
+      ],
+      "date_labels": [
+        "05/29",
+        "06/05",
+        "06/12",
+        "06/18"
+      ],
+      "tags": [
+        "400張4週連增"
+      ],
+      "signal_score": 2,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "price_date": "2026-06-18",
+      "close": 32.3,
+      "entry_date": "2026-06-18",
+      "entry_close": 32.0,
+      "latest_price_date": "2026-06-22",
+      "latest_close": 32.3,
+      "since_entry_pct": 0.94,
+      "ema20": 30.92,
+      "ema60": 28.36,
+      "ema120": 27.16,
+      "ema200": 26.76,
+      "bullish_aligned": true,
+      "high_60d": 34.1,
+      "low_60d": 24.15,
+      "max_gain_60d": 41.2,
+      "pullback_from_60d_high_pct": -6.16,
+      "vol_20d_avg": 568,
+      "week_chg_pct": -2.59,
+      "price_filter_pass": true,
+      "stat_bucket_60d": "30-45",
+      "stat_edge": false,
+      "stat_edge_id": null,
+      "stat_edge_label": null,
+      "stat_edge_range": null,
+      "stat_edge_basis": null,
+      "stat_week_0_10": false,
+      "stat_week_0_10_id": null,
+      "stat_week_0_10_label": null,
+      "stat_week_0_10_basis": null,
+      "pattern_state": "先觀察",
+      "pattern_score": 50.0,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score": 50.0,
+      "score_model": "pattern_score_only_v1"
+    }
+  ],
+  "score_model": "pattern_score_only_v1",
+  "price_updated": "2026-06-22",
+  "performance_updated": "2026-06-22T17:02:44+08:00",
+  "updated_rows": 88
+}
