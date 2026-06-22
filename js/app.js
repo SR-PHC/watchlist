@@ -451,10 +451,12 @@ function updateAppChrome(strat) {
   const headerMeta = document.querySelector('.header-meta');
   if (headerMeta) headerMeta.style.display = strat?.id === 'performance' ? 'none' : '';
   const sync = document.getElementById('appSyncStatus');
-  const date = DATA.yuanta_portfolio?.meta?.updated_at
-    || DATA.market_index_data?.updated
-    || DATA.performance_data?.last_updated;
-  if (sync) sync.textContent = date ? `最後更新 ${String(date).slice(0, 16).replace('T', ' ')}` : '資料已連線';
+  if (sync) sync.textContent = '資料已連線';
+  const lastUpdated = document.getElementById('appLastUpdated');
+  const date = DATA.market_index_data?.updated
+    || DATA.watchlist_data?.last_updated
+    || DATA.momentum_candidates_data?.updated;
+  if (lastUpdated) lastUpdated.textContent = date ? String(date).slice(0, 10) : '尚無更新紀錄';
 }
 
 // ════════════════════════════════════════════════════
