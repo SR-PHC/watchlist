@@ -1,4 +1,8 @@
 const MINI_NECKLINE_CANDIDATES = 'data/neckline_candidates.json';
+const NECKLINE_RANK_STATE = {
+  view: 'top20',
+  selected: new Set(),
+};
 
 function _necklineData() {
   if (!DATA.neckline_candidates_data) DATA.neckline_candidates_data = {};
@@ -17,6 +21,32 @@ function syncNecklineSummary(d) {
   d.summary.pinned_total = Object.keys(d.pinned).length;
   d.summary.new_in_watch_pool = d.watch_pool.filter(row => row && row.is_new).length;
   return d.summary;
+}
+
+function getNecklineRankData() {
+  return DATA.neckline_daily_rank_data || { summary: {}, rows: [] };
+}
+
+function getDeletedNecklineIds() {
+  return new Set(Object.keys(_necklineData().deleted || {}).map(String));
+}
+
+function getVisibleNecklineRankRows() {
+  const rankData = getNecklineRankData();
+  const deleted = getDeletedNecklineIds();
+  let rows = Array.isArray(rankData.rows) ? rankData.rows.filter(row => !deleted.has(String(row.stock_id))) : [];
+  if (NECKLINE_RANK_STATE.view === 'top20') rows = rows.slice(0, 20);
+  if (NECKLINE_RANK_STATE.view === 'selected') rows = rows.filter(row => NECKLINE_RANK_STATE.selected.has(String(row.stock_id)));
+  return rows;
+}
+
+function cleanupNecklineRankSelection() {
+  const visibleIds = new Set((getNecklineRankData().rows || []).map(row => String(row.stock_id)));
+  [...NECKLINE_RANK_STATE.selected].forEach(stockId => {
+    if (!visibleIds.has(String(stockId)) || getDeletedNecklineIds().has(String(stockId))) {
+      NECKLINE_RANK_STATE.selected.delete(String(stockId));
+    }
+  });
 }
 
 function necklineGuideLevels(row) {
@@ -81,28 +111,89 @@ async function unpinNecklineTracking(stockId) {
 }
 
 async function deleteNecklineWatch(stockId) {
-  const d = _necklineData();
-  const idx = d.watch_pool.findIndex(item => String(item.stock_id) === String(stockId));
-  if (idx === -1) return;
-  const row = d.watch_pool[idx];
-  if (!confirm(`將 ${row.stock_id} ${row.name || ''} 移出觀察池？30個交易日內不會再自動跳出。`)) return;
+  return deleteManyNecklineStocks([stockId]);
+}
 
+async function deleteManyNecklineStocks(stockIds) {
+  const d = _necklineData();
+  const ids = [...new Set(stockIds.map(String).filter(Boolean))];
+  if (!ids.length) return;
+  const labels = ids.slice(0, 8).map(id => {
+    const row = d.watch_pool.find(item => String(item.stock_id) === id)
+      || getNecklineRankData().rows?.find(item => String(item.stock_id) === id);
+    return `${id}${row?.name ? ` ${row.name}` : ''}`;
+  });
+  const moreText = ids.length > 8 ? ` 等 ${ids.length} 檔` : '';
+  if (!confirm(`將 ${labels.join('、')}${moreText} 移出頸線清單？30個交易日內不會再自動跳出。`)) return;
+
+  const prevWatchPool = [...d.watch_pool];
   const prevDeleted = { ...d.deleted };
-  d.watch_pool.splice(idx, 1);
-  d.deleted[stockId] = { deleted_date: dateTW() };
+  const prevPinned = { ...d.pinned };
+  const prevTracking = [...d.pinned_tracking];
+
+  d.watch_pool = d.watch_pool.filter(item => !ids.includes(String(item.stock_id)));
+  ids.forEach(stockId => {
+    d.deleted[stockId] = { deleted_date: dateTW() };
+    delete d.pinned[stockId];
+  });
+  d.pinned_tracking = d.pinned_tracking.filter(item => !ids.includes(String(item.stock_id)));
+  ids.forEach(stockId => NECKLINE_RANK_STATE.selected.delete(String(stockId)));
   syncNecklineSummary(d);
 
-  const ok = await miniWriteJson(MINI_NECKLINE_CANDIDATES, d, `neckline: delete ${stockId}`);
+  const ok = await miniWriteJson(MINI_NECKLINE_CANDIDATES, d, `neckline: delete ${ids.join(',')}`);
   if (ok) renderStrategy();
-  else { d.watch_pool.splice(idx, 0, row); d.deleted = prevDeleted; syncNecklineSummary(d); }
+  else {
+    d.watch_pool = prevWatchPool;
+    d.deleted = prevDeleted;
+    d.pinned = prevPinned;
+    d.pinned_tracking = prevTracking;
+    syncNecklineSummary(d);
+  }
+}
+
+function toggleNecklineRankView(view) {
+  NECKLINE_RANK_STATE.view = view;
+  renderStrategy();
+}
+
+function toggleNecklineRankSelect(stockId, checked) {
+  const sid = String(stockId);
+  if (checked) NECKLINE_RANK_STATE.selected.add(sid);
+  else NECKLINE_RANK_STATE.selected.delete(sid);
+  renderStrategy();
+}
+
+function toggleNecklineRankSelectAll(checked) {
+  const rows = getVisibleNecklineRankRows();
+  rows.forEach(row => {
+    const sid = String(row.stock_id);
+    if (checked) NECKLINE_RANK_STATE.selected.add(sid);
+    else NECKLINE_RANK_STATE.selected.delete(sid);
+  });
+  renderStrategy();
+}
+
+async function deleteSelectedNecklineRanks() {
+  const ids = [...NECKLINE_RANK_STATE.selected];
+  if (!ids.length) {
+    alert('請先勾選要移除的標的。');
+    return;
+  }
+  await deleteManyNecklineStocks(ids);
 }
 
 function renderNeckline(strat, main) {
   const data = _necklineData();
+  cleanupNecklineRankSelection();
   const summary = data.summary || {};
   const rows = [...data.watch_pool].sort((a, b) => Number(!!b.pinned) - Number(!!a.pinned));
+  const rankData = getNecklineRankData();
+  const visibleRankRows = getVisibleNecklineRankRows();
   const watchPoolTotal = rows.length;
   const newInWatchPool = rows.filter(row => row && row.is_new).length;
+  const selectedCount = NECKLINE_RANK_STATE.selected.size;
+  const allVisibleSelected = visibleRankRows.length > 0 && visibleRankRows.every(row => NECKLINE_RANK_STATE.selected.has(String(row.stock_id)));
+  const rankWatchMap = new Map(rows.map(row => [String(row.stock_id), row]));
   const fmt = (value, digits = 2) => value == null || Number.isNaN(Number(value)) ? '-' : Number(value).toFixed(digits);
   const pnlCls = pct => (pct || 0) >= 0 ? 'sa-pnl-pos' : 'sa-pnl-neg';
   const pnlStr = pct => pct == null ? '—' : `${pct >= 0 ? '+' : ''}${pct.toFixed(2)}%`;
@@ -147,6 +238,41 @@ function renderNeckline(strat, main) {
     </article>`;
   }).join('');
 
+  const rankRowsHtml = visibleRankRows.map(row => {
+    const stockId = String(row.stock_id);
+    const selected = NECKLINE_RANK_STATE.selected.has(stockId);
+    const liveRow = rankWatchMap.get(stockId);
+    const gradeClass = row.score_grade === 'A' ? 'rank-grade-a' : row.score_grade === 'B' ? 'rank-grade-b' : 'rank-grade-c';
+    const bucketClass = row.score_bucket === '優先看' ? 'rank-bucket-hot' : row.score_bucket === '觀察' ? 'rank-bucket-watch' : 'rank-bucket-cool';
+    return `<tr class="${selected ? 'neckline-rank-row-selected' : ''}">
+      <td><input type="checkbox" ${selected ? 'checked' : ''} onchange="toggleNecklineRankSelect('${stockId}', this.checked)"></td>
+      <td><span class="rank-index">${row.rank}</span></td>
+      <td>
+        <div class="rank-stock-cell">
+          <span class="stock-code">${stockId}</span>
+          <span class="stock-name">${row.name || '-'}</span>
+          <span class="stock-industry">${row.industry || '-'}</span>
+        </div>
+      </td>
+      <td><span class="rank-score-pill">${fmt(row.score_total, 1)}</span></td>
+      <td><span class="rank-grade-pill ${gradeClass}">${row.score_grade || '-'}</span></td>
+      <td><span class="rank-grade-pill ${bucketClass}">${row.score_bucket || '-'}</span></td>
+      <td>${row.status || '-'}</td>
+      <td>${fmt(row.breakout_to_neckline_pct)}%</td>
+      <td>${fmt(row.pullback_low_vs_neckline_pct)}%</td>
+      <td>${fmt(row.confirm_vol20_ratio, 2)}</td>
+      <td>${row.confirm_close_at_high ? '是' : '否'}</td>
+      <td>${fmt(liveRow?.as_of_price ?? row.current_price)}</td>
+      <td class="rank-reason-cell" title="${row.score_reasons || ''}">${row.score_reasons || '-'}</td>
+      <td>
+        <div class="rank-actions">
+          ${liveRow ? `<button class="perf-btn sidebar-mini-btn" onclick="pinNecklineWatch('${stockId}')" ${liveRow.pinned ? 'disabled' : ''}>${liveRow.pinned ? '已釘選' : '釘選'}</button>` : '<span class="updated-tag">非觀察池</span>'}
+          <button class="perf-btn perf-btn-del sidebar-mini-btn" onclick="deleteNecklineWatch('${stockId}')">刪除</button>
+        </div>
+      </td>
+    </tr>`;
+  }).join('');
+
   const trackingRows = data.pinned_tracking.map(row => `<tr>
     <td><span class="stock-code">${row.stock_id}</span><span style="font-size:12px;color:var(--text2);margin-left:4px">${row.name || '-'}</span></td>
     <td style="font-family:var(--mono);font-size:12px">${row.pin_date || '-'}</td>
@@ -163,12 +289,54 @@ function renderNeckline(strat, main) {
       <div class="summary-card"><div class="summary-label">候選清單</div><div class="summary-value">${summary.candidate_pool_total ?? '-'}</div><div class="summary-sub">全市場掃描</div></div>
       <div class="summary-card"><div class="summary-label">觀察池</div><div class="summary-value green">${watchPoolTotal}</div><div class="summary-sub">距頸線 5% 以內</div></div>
       <div class="summary-card"><div class="summary-label">已進場</div><div class="summary-value blue">${summary.entered_total ?? '-'}</div><div class="summary-sub">請至「頸線追蹤」查看</div></div>
+      <div class="summary-card"><div class="summary-label">排名母體</div><div class="summary-value amber">${rankData.summary?.total ?? '-'}</div><div class="summary-sub">含你保留的全量樣本</div></div>
       <div class="summary-card"><div class="summary-label">資料日期</div><div class="summary-value" style="font-size:16px">${data.updated || '-'}</div><div class="summary-sub">盤後掃描</div></div>
     </div>
     <div class="conditions">${(strat.conditions || []).map(condition => `<span class="cond"><i class="cond-dot"></i>${condition}</span>`).join('')}</div>
     <div class="table-wrap">
       <div class="table-toolbar"><span class="table-title">觀察池</span><div class="toolbar-right"><span class="updated-tag">今日新增 ${newInWatchPool}</span></div></div>
       <div class="pool-kcard-grid">${cards || '<div style="grid-column:1/-1;text-align:center;color:var(--text3);padding:28px">目前沒有貼近頸線的標的</div>'}</div>
+    </div>
+    <div class="table-wrap" style="margin-top:16px">
+      <div class="table-toolbar">
+        <span class="table-title">日常評分排名</span>
+        <div class="toolbar-right neckline-rank-toolbar">
+          <span class="updated-tag">已選 ${selectedCount}</span>
+          <span class="updated-tag">更新 ${(rankData.updated || '-').slice(0, 16)}</span>
+          <div class="neckline-rank-view-switch">
+            <button class="view-btn ${NECKLINE_RANK_STATE.view === 'top20' ? 'active' : ''}" onclick="toggleNecklineRankView('top20')">Top 20</button>
+            <button class="view-btn ${NECKLINE_RANK_STATE.view === 'all' ? 'active' : ''}" onclick="toggleNecklineRankView('all')">全部</button>
+            <button class="view-btn ${NECKLINE_RANK_STATE.view === 'selected' ? 'active' : ''}" onclick="toggleNecklineRankView('selected')">只看勾選</button>
+          </div>
+          <button class="perf-btn perf-btn-del" onclick="deleteSelectedNecklineRanks()" ${selectedCount ? '' : 'disabled'}>批次刪除</button>
+        </div>
+      </div>
+      <div class="neckline-rank-hint">
+        這區保留全量樣本供你回溯，只是用分數先幫你縮小範圍。刪除會寫進冷卻清單，之後不會反覆跳回來。
+      </div>
+      <div class="table-scroll">
+        <table class="neckline-rank-table">
+          <thead>
+            <tr>
+              <th><input type="checkbox" ${allVisibleSelected ? 'checked' : ''} onchange="toggleNecklineRankSelectAll(this.checked)"></th>
+              <th>排名</th>
+              <th>代號 / 名稱</th>
+              <th>總分</th>
+              <th>級別</th>
+              <th>分組</th>
+              <th>狀態</th>
+              <th>結構深度</th>
+              <th>守頸線</th>
+              <th>確認量</th>
+              <th>收高</th>
+              <th>現價</th>
+              <th>原因</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>${rankRowsHtml || `<tr><td colspan="14" style="text-align:center;color:var(--text3);padding:24px">目前沒有可顯示的排名資料</td></tr>`}</tbody>
+        </table>
+      </div>
     </div>
     <div class="table-wrap" style="margin-top:16px">
       <div class="table-toolbar"><span class="table-title">釘選追蹤</span><div class="toolbar-right"><span class="updated-tag">${data.pinned_tracking.length} 檔</span></div></div>

@@ -453,6 +453,100 @@ header .page-inner{
   justify-content:flex-end;
   padding:0 14px 13px;
 }
+.neckline-rank-toolbar{
+  gap:8px;
+  flex-wrap:wrap;
+}
+.neckline-rank-view-switch{
+  display:flex;
+  gap:6px;
+}
+.neckline-rank-hint{
+  padding:10px 14px;
+  border-bottom:1px solid var(--border);
+  font-size:12px;
+  color:var(--text3);
+  line-height:1.7;
+}
+.neckline-rank-table th,
+.neckline-rank-table td{
+  vertical-align:top;
+}
+.neckline-rank-row-selected{
+  background:rgba(107,255,182,.06);
+}
+.rank-index{
+  display:inline-flex;
+  min-width:34px;
+  justify-content:center;
+  padding:3px 8px;
+  border:1px solid var(--border);
+  border-radius:999px;
+  font-family:var(--mono);
+  font-size:11px;
+  color:var(--text2);
+}
+.rank-stock-cell{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  min-width:150px;
+}
+.rank-score-pill{
+  display:inline-block;
+  min-width:54px;
+  padding:4px 8px;
+  border-radius:999px;
+  background:rgba(107,255,182,.1);
+  color:var(--green);
+  font-family:var(--mono);
+  font-weight:800;
+  text-align:center;
+}
+.rank-grade-pill{
+  display:inline-block;
+  padding:4px 8px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:700;
+  white-space:nowrap;
+}
+.rank-grade-a{
+  background:rgba(107,255,182,.12);
+  color:var(--green);
+}
+.rank-grade-b{
+  background:rgba(255,214,107,.12);
+  color:var(--amber);
+}
+.rank-grade-c{
+  background:rgba(255,107,107,.12);
+  color:#ff7d7d;
+}
+.rank-bucket-hot{
+  background:rgba(39,174,96,.14);
+  color:#78f0aa;
+}
+.rank-bucket-watch{
+  background:rgba(242,153,74,.14);
+  color:#f4be6f;
+}
+.rank-bucket-cool{
+  background:rgba(120,130,150,.14);
+  color:#adb7c7;
+}
+.rank-reason-cell{
+  min-width:260px;
+  max-width:420px;
+  color:var(--text2);
+  line-height:1.55;
+}
+.rank-actions{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+  min-width:120px;
+}
 
 /* ── Industry group header row ───────────────── */
 tr.industry-header-row td{
@@ -857,6 +951,9 @@ main{padding:24px 0 0;min-width:0}
   .pool-kcard-top{align-items:flex-start}
   .pool-kcard-id{align-items:flex-start;flex-direction:column;gap:3px}
   .toolbar-right{align-items:flex-start;flex-wrap:wrap;justify-content:flex-end}
+  .neckline-rank-view-switch{width:100%}
+  .neckline-rank-view-switch .view-btn{flex:1 1 0}
+  .rank-reason-cell{min-width:220px}
   .entry-analysis-header{align-items:flex-start;flex-direction:column;gap:8px}
   .entry-analysis-header > div:first-child{width:100%}
   .entry-analysis-header h2{line-height:1.35}
@@ -1710,6 +1807,7 @@ tbody tr:hover .spark-bar{opacity:.9}
   .pool-kcard-tags{padding:0 12px 8px}
   .pool-kcard-detail{padding:10px 12px;gap:8px}
   .pool-kcard-actions{padding:0 12px 12px}
+  .rank-stock-cell{min-width:130px}
   #bigHolderTrendTable{min-width:430px}
   #bigHolderTrendTable thead th:nth-child(8),
   #bigHolderTrendTable tbody td:nth-child(8){display:none}

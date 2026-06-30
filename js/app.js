@@ -211,6 +211,7 @@ const DATA = {
   right_top_track_data:         null,
   big_holder_trend_track_data:  null,
   neckline_track_data:          null,
+  neckline_daily_rank_data:     null,
 };
 let DATE_LABELS = [];
 
@@ -591,7 +592,7 @@ const STRATEGY_RESOURCE_KEYS = {
   performance: ['perf', 'marketIndex', 'yuanta', 'yuantaSnapshots'],
   ssr: ['momentum', 'entryAnalysis', 'watchlist', 'kbars', 'neckline', 'necklineKbars'],
   watchlist: ['momentum', 'entryAnalysis', 'watchlist', 'kbars', 'neckline', 'necklineKbars'],
-  neckline: ['neckline', 'necklineKbars'],
+  neckline: ['neckline', 'necklineKbars', 'necklineDailyRank'],
   neckline_track: ['necklineTrack'],
   chips_big_holder: ['chips'],
   big_holder_trend: ['bigHolderTrend'],
@@ -621,6 +622,7 @@ const RESOURCE_LABELS = {
   rightTopTrack: '突破追蹤',
   bigHolderTrendTrack: '趨勢追蹤',
   necklineTrack: '頸線追蹤',
+  necklineDailyRank: '頸線日排名',
   yuanta: '元大帳戶',
   yuantaSnapshots: '帳戶快照',
   currentPrices: '最新價格',
@@ -733,7 +735,7 @@ async function loadData(strategyId = activeStratId) {
   const progress = beginLoadProgress(strategyId, requestedKeys);
 
   try {
-    const [chipsRes, bhtRes, vsRes, vpbRes, mcRes, entryAnalysisRes, wlRes, intradayRes, kbRes, perfRes, miRes, rtRes, rttRes, bhttRes, yuantaRes, yuantaSnapshotsRes, necklineRes, necklineKbarsRes, nteRes] = await Promise.all([
+    const [chipsRes, bhtRes, vsRes, vpbRes, mcRes, entryAnalysisRes, wlRes, intradayRes, kbRes, perfRes, miRes, rtRes, rttRes, bhttRes, yuantaRes, yuantaSnapshotsRes, necklineRes, necklineKbarsRes, nteRes, necklineDailyRankRes] = await Promise.all([
       fetchDataJson('chips', 'data/chips_big_holder.json', requestedKeys, progress),
       fetchDataJson('bigHolderTrend', 'data/big_holder_trend.json', requestedKeys, progress),
       fetchDataJson('volumeSignal', 'data/volume_signal.json', requestedKeys, progress),
@@ -753,6 +755,7 @@ async function loadData(strategyId = activeStratId) {
       fetchDataJson('neckline', 'data/neckline_candidates.json', requestedKeys, progress),
       fetchDataJson('necklineKbars', 'data/neckline_kbars.json', requestedKeys, progress),
       fetchDataJson('necklineTrack', 'data/neckline_track.json', requestedKeys, progress),
+      fetchDataJson('necklineDailyRank', 'data/neckline_daily_rank.json', requestedKeys, progress),
     ]);
 
     if (chipsRes && chipsRes.results) {
@@ -821,6 +824,10 @@ async function loadData(strategyId = activeStratId) {
 
     if (necklineKbarsRes && necklineKbarsRes.stocks) {
       DATA.neckline_kbars_data = necklineKbarsRes;
+    }
+
+    if (necklineDailyRankRes && Array.isArray(necklineDailyRankRes.rows)) {
+      DATA.neckline_daily_rank_data = necklineDailyRankRes;
     }
 
     if (perfRes) {
