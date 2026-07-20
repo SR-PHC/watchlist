@@ -372,18 +372,22 @@ function renderUnifiedCandidates(strat, main) {
   const pool = DATA.decision_pool_data || {};
   const allDecisionRows = Array.isArray(pool.rows) ? pool.rows : buildUnifiedCandidateRows();
   const summary = pool.summary || {};
+  const strongLatestRows = DATA.strong_stock_monitor_data?.latest_rows || [];
   const activeFilter = window._decisionPoolFilter || 'all';
   const filterOptions = [
     ['all', '全部', allDecisionRows.length],
     ['neckline_confirmed', '頸線當日進場', summary.neckline_confirmed ?? 0],
     ['resonance', '三池共振', summary.resonance ?? 0],
     ['trend_45_65', '趨勢45-65', summary.trend_45_65 ?? 0],
+    ['strong_latest', '強勢Latest', strongLatestRows.length],
   ];
   window.setDecisionPoolFilter = key => {
     window._decisionPoolFilter = key;
     renderStrategy();
   };
-  const rows = activeFilter === 'all'
+  const rows = activeFilter === 'strong_latest'
+    ? strongLatestRows
+    : activeFilter === 'all'
     ? allDecisionRows
     : allDecisionRows.filter(row => (row.reasons || []).includes(activeFilter));
 
@@ -404,11 +408,18 @@ function renderUnifiedCandidates(strat, main) {
   const fmt = (value, digits = 2) => value == null || Number.isNaN(Number(value)) ? '-' : Number(value).toFixed(digits);
   const fmtLots = value => value == null || Number.isNaN(Number(value)) ? '-' : Math.round(Number(value)).toLocaleString();
   const reason = row => (row.reason_labels || []).join(' / ') || '工作檯來源';
+  const strongReason = row => row.tier === 'leader' ? '強勢Latest / Leader' : '強勢Latest / Watch';
   const cards = rows.map(row => {
-    const latest = unifiedCandidateBars(String(row.stock_id)).at(-1) || {};
+    const isStrongLatest = activeFilter === 'strong_latest';
+    const latest = (isStrongLatest ? strongStockBars(String(row.stock_id)) : unifiedCandidateBars(String(row.stock_id))).at(-1) || {};
     const volume = row.volume ?? latest.volume ?? latest.vol ?? null;
     const current = row.current_price ?? latest.close ?? null;
-    return `<article class="pool-kcard" data-unified-id="${row.stock_id}" data-period="day">
+    const rowLabel = isStrongLatest ? strongReason(row) : reason(row);
+    const rowStatus = isStrongLatest ? `新進 ${row.first_seen_date || row.date || ''}` : (row.status || '待看K');
+    const dataAttr = isStrongLatest ? `data-strong-id="${row.stock_id}"` : `data-unified-id="${row.stock_id}"`;
+    const periodFn = isStrongLatest ? 'setStrongStockPeriod' : 'setUnifiedCandidatePeriod';
+    const emptyPrefix = isStrongLatest ? 'strong' : 'unified';
+    return `<article class="pool-kcard" ${dataAttr} data-period="day">
       <div class="pool-kcard-top">
         <div>
           <div class="pool-kcard-id"><span class="stock-code">${row.stock_id}</span><span class="stock-name">${row.name || '-'}</span></div>
@@ -417,21 +428,22 @@ function renderUnifiedCandidates(strat, main) {
         <div class="pool-kcard-score"><span>現價</span><strong>${fmt(current)}</strong><em>${row.signal_date || ''}</em></div>
       </div>
       <div class="pool-kcard-tags">
-        <span class="tag-badge" style="color:var(--green);border-color:var(--border)">${reason(row)}</span>
-        <span class="tag-badge" style="color:var(--text3);border-color:var(--border)">${row.status || '待看K'}</span>
+        <span class="tag-badge" style="color:var(--green);border-color:var(--border)">${rowLabel}</span>
+        <span class="tag-badge" style="color:var(--text3);border-color:var(--border)">${rowStatus}</span>
       </div>
       <div class="pool-kchart-wrap">
         <canvas></canvas>
-        <div class="pool-kchart-empty" data-empty="unified-${row.stock_id}">無 K 棒資料</div>
+        <div class="pool-kchart-empty" data-empty="${emptyPrefix}-${row.stock_id}">無 K 棒資料</div>
         <div class="pool-period-switch">
-          <button class="active" onclick="setUnifiedCandidatePeriod('${row.stock_id}','day')">日</button>
-          <button onclick="setUnifiedCandidatePeriod('${row.stock_id}','week')">週</button>
-          <button onclick="setUnifiedCandidatePeriod('${row.stock_id}','month')">月</button>
+          <button class="active" onclick="${periodFn}('${row.stock_id}','day')">日</button>
+          <button onclick="${periodFn}('${row.stock_id}','week')">週</button>
+          <button onclick="${periodFn}('${row.stock_id}','month')">月</button>
         </div>
       </div>
       <div class="pool-kcard-detail">
         <div><span>成交量</span><strong>${fmtLots(volume)}</strong></div>
-        <div><span>20日均量</span><strong>${fmtLots(row.vol_20d_avg)}</strong></div>
+        <div><span>20日均量</span><strong>${fmtLots(row.vol_20d_avg ?? row.vol20)}</strong></div>
+        ${isStrongLatest ? `<div><span>20日</span><strong>${fmt(row.ret_20d_pct, 1)}%</strong></div><div><span>相對20日</span><strong>${fmt(row.relative_20d_pct, 1)}%</strong></div>` : ''}
       </div>
     </article>`;
   }).join('');
@@ -453,6 +465,13 @@ function renderUnifiedCandidates(strat, main) {
           ${kbarTag}
         </div>
       </div>
+      ${strongLatestRows.length ? `<div style="padding:12px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div>
+          <div class="summary-label">強勢雷達 Latest</div>
+          <div class="summary-sub">最近 3 個交易日新進雷達，先看 K 棒確認，不視為進場訊號</div>
+        </div>
+        <button class="view-btn" onclick="setStrategy('strong_stock_monitor')">查看 ${strongLatestRows.length} 檔</button>
+      </div>` : ''}
       <div style="display:flex;gap:8px;padding:10px 14px;border-bottom:1px solid var(--border);flex-wrap:wrap">
         ${filterOptions.map(([key, label, count]) => `
           <button class="view-btn ${activeFilter === key ? 'active' : ''}" onclick="setDecisionPoolFilter('${key}')">${label} ${count}</button>
@@ -461,7 +480,10 @@ function renderUnifiedCandidates(strat, main) {
       <div class="pool-kcard-grid">${cards || '<div style="grid-column:1/-1;text-align:center;color:var(--text3);padding:28px">今日沒有需要放上工作檯的標的</div>'}</div>
     </div>
   </div>`;
-  setTimeout(() => rows.forEach(row => setUnifiedCandidatePeriod(row.stock_id, 'day')), 40);
+  setTimeout(() => rows.forEach(row => {
+    if (activeFilter === 'strong_latest') setStrongStockPeriod(row.stock_id, 'day');
+    else setUnifiedCandidatePeriod(row.stock_id, 'day');
+  }), 40);
 }
 
 function strongStockBars(stockId) {
@@ -490,9 +512,11 @@ function renderStrongStockMonitor(strat, main) {
   const data = DATA.strong_stock_monitor_data || {};
   const summary = data.summary || {};
   const allRows = Array.isArray(data.rows) ? data.rows : [];
-  const activeFilter = window._strongStockFilter || 'leader';
+  const latestRows = Array.isArray(data.latest_rows) ? data.latest_rows : allRows.filter(row => row.latest_entered);
+  const activeFilter = window._strongStockFilter || 'latest';
   const strongThemes = (data.themes || []).filter(theme => theme.strong_theme);
   const filterOptions = [
+    ['latest', 'Latest', summary.latest ?? latestRows.length],
     ['leader', 'Leader', summary.leader ?? allRows.filter(row => row.tier === 'leader').length],
     ['watch', 'Watch', summary.watch ?? allRows.filter(row => row.tier === 'watch').length],
     ['all', '全部', summary.total ?? allRows.length],
@@ -501,7 +525,9 @@ function renderStrongStockMonitor(strat, main) {
     window._strongStockFilter = key;
     renderStrategy();
   };
-  const rows = activeFilter === 'all' ? allRows : allRows.filter(row => row.tier === activeFilter);
+  const rows = activeFilter === 'latest'
+    ? latestRows
+    : activeFilter === 'all' ? allRows : allRows.filter(row => row.tier === activeFilter);
   const fmt = (value, digits = 2) => value == null || Number.isNaN(Number(value)) ? '-' : Number(value).toFixed(digits);
   const fmtPct = value => value == null || Number.isNaN(Number(value)) ? '-' : `${Number(value) >= 0 ? '+' : ''}${Number(value).toFixed(1)}%`;
   const fmtLots = value => value == null || Number.isNaN(Number(value)) ? '-' : Math.round(Number(value)).toLocaleString();
@@ -529,6 +555,9 @@ function renderStrongStockMonitor(strat, main) {
     const themes = (row.themes || []).map(theme => theme.label).filter(Boolean).join(' / ');
     const reasons = (row.reasons || []).slice(0, 4).join(' / ');
     const tierLabel = row.tier === 'leader' ? 'Leader' : 'Watch';
+    const latestTag = row.latest_entered
+      ? `<span class="tag-badge" style="color:var(--amber);border-color:var(--border)">新進 ${escapeHtml(row.first_seen_date || row.date || '')}</span>`
+      : '';
     return `<article class="pool-kcard" data-strong-id="${row.stock_id}" data-period="day">
       <div class="pool-kcard-top">
         <div>
@@ -539,6 +568,7 @@ function renderStrongStockMonitor(strat, main) {
       </div>
       <div class="pool-kcard-tags">
         <span class="tag-badge" style="color:${row.tier === 'leader' ? 'var(--green)' : 'var(--blue)'};border-color:var(--border)">${tierLabel}</span>
+        ${latestTag}
         ${themes ? `<span class="tag-badge" style="color:var(--text3);border-color:var(--border)">${escapeHtml(themes)}</span>` : ''}
       </div>
       <div class="pool-kchart-wrap">
@@ -571,6 +601,7 @@ function renderStrongStockMonitor(strat, main) {
         <div class="toolbar-right">
           <span class="updated-tag">Leader ${summary.leader ?? '-'}</span>
           <span class="updated-tag">Watch ${summary.watch ?? '-'}</span>
+          <span class="updated-tag">Latest ${summary.latest ?? latestRows.length}</span>
           <span class="updated-tag">強勢族群 ${summary.strong_themes ?? '-'}</span>
           <span class="updated-tag">資料 ${data.data_date || '-'}</span>
           ${kbarDate ? `<span class="updated-tag">K棒 ${kbarDate}</span>` : ''}

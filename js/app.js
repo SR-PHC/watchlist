@@ -1115,7 +1115,7 @@ function exportCSV() {
 // ════════════════════════════════════════════════════
 const STRATEGY_RESOURCE_KEYS = {
   performance: ['perf', 'marketIndex', 'yuanta', 'yuantaSnapshots'],
-  ssr: ['decisionPool', 'decisionPoolKbars', 'kbars', 'necklineKbars', 'resonanceKbars', 'confirmedEntryKbars'],
+  ssr: ['decisionPool', 'decisionPoolKbars', 'strongStockMonitor', 'strongStockKbars', 'kbars', 'necklineKbars', 'resonanceKbars', 'confirmedEntryKbars'],
   watchlist: ['momentum', 'entryAnalysis', 'watchlist', 'kbars', 'neckline', 'necklineKbars', 'necklineDailyRank', 'necklineHighMomentum', 'poolResonance', 'resonanceKbars', 'themeTags', 'themeHeatmap'],
   neckline: ['neckline', 'necklineKbars', 'necklineDailyRank', 'necklineHighMomentum'],
   neckline_track: ['necklineTrack'],
