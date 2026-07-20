@@ -40,6 +40,13 @@ function getVisibleNecklineRankRows() {
   return rows;
 }
 
+function necklineStrengthClass(label) {
+  if (label === '強勢優先') return 'rank-strength-priority';
+  if (label === '轉強觀察') return 'rank-strength-watch';
+  if (label === '等待確認') return 'rank-strength-wait';
+  return 'rank-strength-cool';
+}
+
 function cleanupNecklineRankSelection() {
   const visibleIds = new Set((getNecklineRankData().rows || []).map(row => String(row.stock_id)));
   [...NECKLINE_RANK_STATE.selected].forEach(stockId => {
@@ -242,8 +249,7 @@ function renderNeckline(strat, main) {
     const stockId = String(row.stock_id);
     const selected = NECKLINE_RANK_STATE.selected.has(stockId);
     const liveRow = rankWatchMap.get(stockId);
-    const gradeClass = row.score_grade === 'A' ? 'rank-grade-a' : row.score_grade === 'B' ? 'rank-grade-b' : 'rank-grade-c';
-    const bucketClass = row.score_bucket === '優先看' ? 'rank-bucket-hot' : row.score_bucket === '觀察' ? 'rank-bucket-watch' : 'rank-bucket-cool';
+    const strengthClass = necklineStrengthClass(row.strength_label);
     return `<tr class="${selected ? 'neckline-rank-row-selected' : ''}">
       <td><input type="checkbox" ${selected ? 'checked' : ''} onchange="toggleNecklineRankSelect('${stockId}', this.checked)"></td>
       <td><span class="rank-index">${row.rank}</span></td>
@@ -255,14 +261,16 @@ function renderNeckline(strat, main) {
         </div>
       </td>
       <td><span class="rank-score-pill">${fmt(row.score_total, 1)}</span></td>
-      <td><span class="rank-grade-pill ${gradeClass}">${row.score_grade || '-'}</span></td>
-      <td><span class="rank-grade-pill ${bucketClass}">${row.score_bucket || '-'}</span></td>
+      <td><span class="rank-grade-pill ${strengthClass}">${row.strength_label || '-'}</span></td>
       <td>${row.status || '-'}</td>
-      <td>${fmt(row.breakout_to_neckline_pct)}%</td>
-      <td>${fmt(row.pullback_low_vs_neckline_pct)}%</td>
-      <td>${fmt(row.confirm_vol20_ratio, 2)}</td>
-      <td>${row.confirm_close_at_high ? '是' : '否'}</td>
-      <td>${fmt(liveRow?.as_of_price ?? row.current_price)}</td>
+      <td>${fmt(row.pre_entry_20d_ret_pct)}%</td>
+      <td>${fmt(row.latest_gap_ma20_pct)}%</td>
+      <td>${fmt(row.latest_gap_ma60_pct)}%</td>
+      <td>${row.pool_right_top_track ? '是' : '否'}</td>
+      <td>${row.pool_volume_pullback ? '是' : '否'}</td>
+      <td>${fmt(row.big_pct_1000)}%</td>
+      <td>${fmt(row.inst_net_5d, 1)}</td>
+      <td>${fmt(liveRow?.as_of_price ?? row.as_of_price ?? row.current_price)}</td>
       <td class="rank-reason-cell" title="${row.score_reasons || ''}">${row.score_reasons || '-'}</td>
       <td>
         <div class="rank-actions">
@@ -299,7 +307,7 @@ function renderNeckline(strat, main) {
     </div>
     <div class="table-wrap" style="margin-top:16px">
       <div class="table-toolbar">
-        <span class="table-title">日常評分排名</span>
+        <span class="table-title">強勢回測排名</span>
         <div class="toolbar-right neckline-rank-toolbar">
           <span class="updated-tag">已選 ${selectedCount}</span>
           <span class="updated-tag">更新 ${(rankData.updated || '-').slice(0, 16)}</span>
@@ -312,7 +320,7 @@ function renderNeckline(strat, main) {
         </div>
       </div>
       <div class="neckline-rank-hint">
-        這區保留全量樣本供你回溯，只是用分數先幫你縮小範圍。刪除會寫進冷卻清單，之後不會反覆跳回來。
+        新分數已移除 A/B/C，改看進池前轉強、MA20/MA60修復、策略共振、大戶籌碼與法人流向。刪除會寫進冷卻清單，之後不會反覆跳回來。
       </div>
       <div class="table-scroll">
         <table class="neckline-rank-table">
@@ -321,20 +329,22 @@ function renderNeckline(strat, main) {
               <th><input type="checkbox" ${allVisibleSelected ? 'checked' : ''} onchange="toggleNecklineRankSelectAll(this.checked)"></th>
               <th>排名</th>
               <th>代號 / 名稱</th>
-              <th>總分</th>
-              <th>級別</th>
-              <th>分組</th>
+              <th>強勢分</th>
+              <th>標籤</th>
               <th>狀態</th>
-              <th>結構深度</th>
-              <th>守頸線</th>
-              <th>確認量</th>
-              <th>收高</th>
+              <th>20日強弱</th>
+              <th>MA20</th>
+              <th>MA60</th>
+              <th>右上追蹤</th>
+              <th>量縮回檔</th>
+              <th>大戶1000</th>
+              <th>法人5D</th>
               <th>現價</th>
               <th>原因</th>
               <th>操作</th>
             </tr>
           </thead>
-          <tbody>${rankRowsHtml || `<tr><td colspan="14" style="text-align:center;color:var(--text3);padding:24px">目前沒有可顯示的排名資料</td></tr>`}</tbody>
+          <tbody>${rankRowsHtml || `<tr><td colspan="16" style="text-align:center;color:var(--text3);padding:24px">目前沒有可顯示的排名資料</td></tr>`}</tbody>
         </table>
       </div>
     </div>

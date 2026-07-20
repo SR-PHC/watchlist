@@ -1,6 +1,6 @@
 {
   "strategy_id": "volume_pullback",
-  "updated": "2026-07-17T16:45:45+08:00",
+  "updated": "2026-07-18T09:00:23+08:00",
   "model": {
     "ignition_vol_ratio_min": 2.5,
     "lookback_days": 5,
@@ -8,11 +8,11 @@
     "reentry_vol_ratio_min": 1.5
   },
   "summary": {
-    "active": 44,
-    "failed": 33,
-    "reentry": 9,
-    "pullback": 15,
-    "ignition": 20
+    "active": 46,
+    "failed": 34,
+    "reentry": 10,
+    "pullback": 14,
+    "ignition": 22
   },
   "active": [
     {
@@ -277,6 +277,62 @@
       "score_model": "pattern_score_only_v1"
     },
     {
+      "stock_id": "1442",
+      "name": "名軒",
+      "industry": "營建",
+      "market": "",
+      "sources": [
+        "chips",
+        "volume_signal"
+      ],
+      "source_tags": [
+        "持續成長"
+      ],
+      "status": "reentry",
+      "status_label": "再啟動",
+      "score": 71.7,
+      "signal_date": "2026-07-17",
+      "ignition_date": "2026-07-16",
+      "days_since_ignition": 1,
+      "close": 29.55,
+      "high": 29.9,
+      "low": 29.0,
+      "volume_lots": 796,
+      "vol_10d_avg": 426.0,
+      "vol_ratio": 1.87,
+      "ema5": 29.15,
+      "ema20": 28.3,
+      "ignition_close": 29.4,
+      "ignition_high": 30.25,
+      "ignition_low": 28.85,
+      "ignition_volume_lots": 941,
+      "ignition_vol_ratio": 2.69,
+      "pullback_from_ignition_close_pct": 0.51,
+      "support_ok": true,
+      "volume_cools": true,
+      "pattern_state": "值得看圖",
+      "pattern_score": 71.7,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 18.7,
+        "量價": 6,
+        "位置": 15,
+        "籌碼": 5
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "頸線回測",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_retest"
+      ],
+      "key_level": 28.65,
+      "invalidation": 27.79,
+      "pattern_confidence": 0.85,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
       "stock_id": "5876",
       "name": "上海商銀",
       "industry": "金融保險",
@@ -487,15 +543,18 @@
     {
       "stock_id": "2516",
       "name": "新建",
-      "industry": "建材營造",
+      "industry": "營建",
       "market": "TWSE",
       "sources": [
+        "chips",
         "price_breakout_track"
       ],
-      "source_tags": [],
+      "source_tags": [
+        "持續成長"
+      ],
       "status": "pullback",
       "status_label": "回穩觀察",
-      "score": 53.0,
+      "score": 58.0,
       "signal_date": "2026-07-17",
       "ignition_date": "2026-07-14",
       "days_since_ignition": 3,
@@ -516,17 +575,18 @@
       "support_ok": true,
       "volume_cools": true,
       "pattern_state": "先觀察",
-      "pattern_score": 53.0,
+      "pattern_score": 58.0,
       "pattern_subs": {
         "結構": 30,
         "型態": 14.0,
         "量價": 0,
         "位置": 9,
-        "籌碼": 0
+        "籌碼": 5
       },
       "pattern_tags": [
         "均線多頭",
-        "收斂接近pivot"
+        "收斂接近pivot",
+        "大戶上升"
       ],
       "patterns": [
         "tight_pivot"
@@ -957,15 +1017,18 @@
     {
       "stock_id": "8415",
       "name": "大國鋼",
-      "industry": "鋼鐵工業",
+      "industry": "櫃鋼鐵",
       "market": "TPEX",
       "sources": [
+        "chips",
         "price_breakout_track"
       ],
-      "source_tags": [],
+      "source_tags": [
+        "持續成長"
+      ],
       "status": "pullback",
       "status_label": "回穩觀察",
-      "score": 39.4,
+      "score": 44.4,
       "signal_date": "2026-07-17",
       "ignition_date": "2026-07-14",
       "days_since_ignition": 3,
@@ -986,17 +1049,18 @@
       "support_ok": true,
       "volume_cools": true,
       "pattern_state": "先觀察",
-      "pattern_score": 39.4,
+      "pattern_score": 44.4,
       "pattern_subs": {
         "結構": 22,
         "型態": 8.4,
         "量價": 0,
         "位置": 9,
-        "籌碼": 0
+        "籌碼": 5
       },
       "pattern_tags": [
         "均線多頭",
-        "箱頂整理"
+        "箱頂整理",
+        "大戶上升"
       ],
       "patterns": [
         "box_near_top"
@@ -1056,62 +1120,6 @@
       "key_level": 75.9,
       "invalidation": 73.62,
       "pattern_confidence": 0.85,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
-      "stock_id": "2348",
-      "name": "海悅",
-      "industry": "其他",
-      "market": "",
-      "sources": [
-        "chips"
-      ],
-      "source_tags": [
-        "持續成長"
-      ],
-      "status": "pullback",
-      "status_label": "回穩觀察",
-      "score": 53.4,
-      "signal_date": "2026-07-17",
-      "ignition_date": "2026-07-16",
-      "days_since_ignition": 1,
-      "close": 78.0,
-      "high": 79.9,
-      "low": 77.2,
-      "volume_lots": 1027,
-      "vol_10d_avg": 814.0,
-      "vol_ratio": 1.26,
-      "ema5": 77.52,
-      "ema20": 75.1,
-      "ignition_close": 79.9,
-      "ignition_high": 82.3,
-      "ignition_low": 76.4,
-      "ignition_volume_lots": 1868,
-      "ignition_vol_ratio": 2.82,
-      "pullback_from_ignition_close_pct": -2.38,
-      "support_ok": true,
-      "volume_cools": true,
-      "pattern_state": "先觀察",
-      "pattern_score": 53.4,
-      "pattern_subs": {
-        "結構": 27,
-        "型態": 8.4,
-        "量價": 5,
-        "位置": 9,
-        "籌碼": 4
-      },
-      "pattern_tags": [
-        "均線多頭",
-        "箱頂整理",
-        "量縮整理",
-        "大戶上升"
-      ],
-      "patterns": [
-        "box_near_top"
-      ],
-      "key_level": 79.9,
-      "invalidation": null,
-      "pattern_confidence": 0.6,
       "score_model": "pattern_score_only_v1"
     },
     {
@@ -1942,6 +1950,59 @@
       "score_model": "pattern_score_only_v1"
     },
     {
+      "stock_id": "3576",
+      "name": "聯合再生",
+      "industry": "光電",
+      "market": "",
+      "sources": [
+        "chips",
+        "volume_signal"
+      ],
+      "source_tags": [
+        "雙軌觸發",
+        "單周增幅"
+      ],
+      "status": "ignition",
+      "status_label": "點火",
+      "score": 43.0,
+      "signal_date": "2026-07-17",
+      "ignition_date": "2026-07-17",
+      "days_since_ignition": 0,
+      "close": 17.85,
+      "high": 17.85,
+      "low": 16.85,
+      "volume_lots": 59361,
+      "vol_10d_avg": 14979.0,
+      "vol_ratio": 3.96,
+      "ema5": 17.5,
+      "ema20": 17.32,
+      "ignition_close": 17.85,
+      "ignition_high": 17.85,
+      "ignition_low": 16.85,
+      "ignition_volume_lots": 59361,
+      "ignition_vol_ratio": 3.96,
+      "pullback_from_ignition_close_pct": 0.0,
+      "support_ok": true,
+      "volume_cools": false,
+      "pattern_state": "先觀察",
+      "pattern_score": 43.0,
+      "pattern_subs": {
+        "結構": 14,
+        "型態": 0.0,
+        "量價": 15,
+        "位置": 9,
+        "籌碼": 5
+      },
+      "pattern_tags": [
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
       "stock_id": "5306",
       "name": "桂盟",
       "industry": "其他",
@@ -2258,15 +2319,19 @@
     {
       "stock_id": "1808",
       "name": "潤隆",
-      "industry": "建材營造",
+      "industry": "營建",
       "market": "TWSE",
       "sources": [
-        "price_breakout_track"
+        "chips",
+        "price_breakout_track",
+        "volume_signal"
       ],
-      "source_tags": [],
+      "source_tags": [
+        "持續成長"
+      ],
       "status": "ignition",
       "status_label": "點火",
-      "score": 54.4,
+      "score": 60.4,
       "signal_date": "2026-07-17",
       "ignition_date": "2026-07-17",
       "days_since_ignition": 0,
@@ -2287,23 +2352,80 @@
       "support_ok": true,
       "volume_cools": false,
       "pattern_state": "先觀察",
-      "pattern_score": 54.4,
+      "pattern_score": 60.4,
       "pattern_subs": {
         "結構": 22,
         "型態": 8.4,
         "量價": 15,
         "位置": 9,
-        "籌碼": 0
+        "籌碼": 6
       },
       "pattern_tags": [
         "均線多頭",
         "箱頂整理",
-        "量縮整理"
+        "量縮整理",
+        "大戶上升"
       ],
       "patterns": [
         "box_near_top"
       ],
       "key_level": 33.15,
+      "invalidation": null,
+      "pattern_confidence": 0.6,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "1723",
+      "name": "中碳",
+      "industry": "化學",
+      "market": "",
+      "sources": [
+        "chips",
+        "volume_signal"
+      ],
+      "source_tags": [
+        "雙軌觸發"
+      ],
+      "status": "ignition",
+      "status_label": "點火",
+      "score": 59.4,
+      "signal_date": "2026-07-17",
+      "ignition_date": "2026-07-17",
+      "days_since_ignition": 0,
+      "close": 88.2,
+      "high": 91.9,
+      "low": 87.5,
+      "volume_lots": 1969,
+      "vol_10d_avg": 785.0,
+      "vol_ratio": 2.51,
+      "ema5": 87.16,
+      "ema20": 85.35,
+      "ignition_close": 88.2,
+      "ignition_high": 91.9,
+      "ignition_low": 87.5,
+      "ignition_volume_lots": 1969,
+      "ignition_vol_ratio": 2.51,
+      "pullback_from_ignition_close_pct": 0.0,
+      "support_ok": true,
+      "volume_cools": false,
+      "pattern_state": "先觀察",
+      "pattern_score": 59.4,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 8.4,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 5
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "箱頂整理",
+        "大戶上升"
+      ],
+      "patterns": [
+        "box_near_top"
+      ],
+      "key_level": 91.5,
       "invalidation": null,
       "pattern_confidence": 0.6,
       "score_model": "pattern_score_only_v1"
@@ -3212,6 +3334,60 @@
       "key_level": 51.3,
       "invalidation": 49.76,
       "pattern_confidence": 0.9,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "5388",
+      "name": "中磊",
+      "industry": "通信",
+      "market": "",
+      "sources": [
+        "chips"
+      ],
+      "source_tags": [
+        "持續成長",
+        "雙軌觸發",
+        "單周增幅"
+      ],
+      "status": "failed",
+      "status_label": "失敗",
+      "score": 32.0,
+      "signal_date": "2026-07-17",
+      "ignition_date": "2026-07-15",
+      "days_since_ignition": 2,
+      "close": 83.3,
+      "high": 86.2,
+      "low": 83.1,
+      "volume_lots": 4565,
+      "vol_10d_avg": 5650.0,
+      "vol_ratio": 0.81,
+      "ema5": 85.27,
+      "ema20": 83.82,
+      "ignition_close": 89.4,
+      "ignition_high": 91.1,
+      "ignition_low": 86.4,
+      "ignition_volume_lots": 13182,
+      "ignition_vol_ratio": 3.02,
+      "pullback_from_ignition_close_pct": -6.82,
+      "support_ok": false,
+      "volume_cools": true,
+      "pattern_state": "先觀察",
+      "pattern_score": 32.0,
+      "pattern_subs": {
+        "結構": 14,
+        "型態": 0.0,
+        "量價": 5,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
       "score_model": "pattern_score_only_v1"
     },
     {

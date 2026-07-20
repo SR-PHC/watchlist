@@ -19,7 +19,7 @@ function renderRightTop(strat, main) {
           <div class="coming-icon" style="font-size:28px">▲</div>
           <div class="coming-title">資料尚未生成</div>
           <div class="coming-desc">
-            請按頁首「更新資料」觸發 MINI 本機每日掃描，或等待盤後自動排程執行。
+            請按頁首「完整掃描」觸發 MINI 本機每日掃描，或等待盤後自動排程執行。
           </div>
         </div>
       </div>`;

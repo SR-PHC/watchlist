@@ -28,15 +28,15 @@ function renderDailyEntryAnalysis(analysis) {
       <article class="entry-analysis-card">
         <div class="entry-analysis-card-head">
           <div>
-            <div class="entry-analysis-rank">候選 ${candidate.rank || '-'}</div>
+            <div class="entry-analysis-rank">觀察 ${candidate.rank || '-'}</div>
             <div class="entry-analysis-stock">
               <span>${candidate.stock_id || '-'}</span>
               <strong>${candidate.name || '-'}</strong>
             </div>
           </div>
           <div class="entry-analysis-score">
-            <span>型態分</span>
-            <strong>${fmtPrice(candidate.pattern_score)}</strong>
+            <span>狀態</span>
+            <strong>${candidate.pattern_state || candidate.pattern_type || '待確認'}</strong>
           </div>
         </div>
         <div class="entry-analysis-tags">
@@ -88,8 +88,8 @@ function renderDailyEntryAnalysis(analysis) {
     <section class="entry-analysis-panel">
       <div class="entry-analysis-header">
         <div>
-          <div class="entry-analysis-eyebrow">CODEX 盤後決策支援</div>
-          <h2>今日建倉分析</h2>
+          <div class="entry-analysis-eyebrow">CODEX 盤後檢查</div>
+          <h2>今日進場檢查</h2>
         </div>
         <div class="entry-analysis-meta">
           <span>${analysis.analysis_date}</span>
@@ -101,7 +101,7 @@ function renderDailyEntryAnalysis(analysis) {
       ${isStale ? `
         <div class="entry-analysis-warning stale">
           <strong>分析已過期</strong>
-          <span>目前標的池資料為 ${poolUpdated}，但今日建倉分析仍停在 ${analysis.analysis_date}。請確認 Codex 自動化「每日標的池建倉分析」是否仍在執行並有提交 data/daily_entry_analysis.json。</span>
+          <span>目前背景觀察資料為 ${poolUpdated}，但今日進場檢查仍停在 ${analysis.analysis_date}。請確認 Codex 自動化「每日進場檢查」是否仍在執行並有更新 data/daily_entry_analysis.json。</span>
         </div>` : ''}
       <div class="entry-analysis-decision ${decisionClass}">
         <div>
@@ -112,10 +112,10 @@ function renderDailyEntryAnalysis(analysis) {
       </div>
       <div class="entry-analysis-stats">
         <div><span>今日新進</span><strong>${analysis.new_candidate_count ?? '-'}</strong></div>
-        <div><span>人工候選</span><strong>${analysis.qualified_count ?? candidates.length}</strong></div>
+        <div><span>人工檢查</span><strong>${analysis.qualified_count ?? candidates.length}</strong></div>
         <div><span>大盤</span><strong>${analysis.market_context?.taiex_change_pct != null ? `${Number(analysis.market_context.taiex_change_pct) > 0 ? '+' : ''}${Number(analysis.market_context.taiex_change_pct).toFixed(2)}%` : '-'}</strong></div>
       </div>
-      ${candidateCards ? `<div class="entry-analysis-grid">${candidateCards}</div>` : '<div class="entry-analysis-empty">今天沒有合格候選，維持空手等待。</div>'}
+      ${candidateCards ? `<div class="entry-analysis-grid">${candidateCards}</div>` : '<div class="entry-analysis-empty">今天沒有通過檢查的標的，維持空手等待。</div>'}
       ${(analysis.missing_data || []).length ? `
         <div class="entry-analysis-warning">
           <strong>資料提醒</strong>
@@ -337,7 +337,7 @@ function renderSSR(strat, main) {
 
   window.exportFocusCSV = function exportFocusCSV() {
     const headers = [
-      '代號', '名稱', '產業', '市場', '型態狀態', '型態分', '型態標籤',
+      '代號', '名稱', '產業', '市場', '型態狀態', '狀態值', '型態標籤',
       '關鍵價', '失效價', '型態可信度', '收盤', '20日均量', '量比', '週漲跌(%)', '來源', '突破狀態',
     ];
     const csvRows = rows.map(row => {
@@ -384,12 +384,12 @@ function renderSSR(strat, main) {
       ${entryAnalysisHTML}
       <div class="table-wrap">
         <div class="table-toolbar">
-          <span class="table-title">標的池</span>
+          <span class="table-title">背景觀察</span>
           <div class="toolbar-right">
             <span class="updated-tag">值得看圖 ${momentumData.summary?.pattern_watch ?? focusRows.length} / 全 ${momentumData.summary?.total || focusRows.length}</span>
             <span class="updated-tag">20日均量 > 3000</span>
             <span class="updated-tag">K棒 ${kbarCount} 檔 ${kbarDate}</span>
-            <button class="btn-csv" onclick="triggerShioajiPriceUpdate(this)">更新資料</button>
+            <button class="btn-csv" onclick="triggerPriceRefresh(this)">更新報價</button>
             <button class="btn-csv" onclick="exportFocusCSV()">匯出 CSV</button>
           </div>
         </div>
@@ -397,7 +397,7 @@ function renderSSR(strat, main) {
           ${filterButtons}
         </div>
         <div class="pool-kcard-grid">
-          ${cardsHTML || `<div style="grid-column:1/-1;text-align:center;color:var(--text3);padding:28px">目前沒有標的池候選</div>`}
+          ${cardsHTML || `<div style="grid-column:1/-1;text-align:center;color:var(--text3);padding:28px">目前沒有背景觀察標的</div>`}
         </div>
         <div class="table-scroll ${rows.length > 10 ? 'table-vscroll' : ''}">
           <table>
@@ -405,7 +405,7 @@ function renderSSR(strat, main) {
               <tr>
                 <th onclick="ssrSort('stock_id')" style="cursor:pointer">代號 / 名稱${sortIcon('stock_id')}</th>
                 <th>型態狀態</th>
-                <th onclick="ssrSort('score')" style="cursor:pointer">型態分${sortIcon('score')}</th>
+                <th onclick="ssrSort('score')" style="cursor:pointer">狀態值${sortIcon('score')}</th>
                 <th>型態標籤</th>
                 <th>關鍵 / 失效</th>
                 <th onclick="ssrSort('close')" style="cursor:pointer">收盤${sortIcon('close')}</th>
@@ -413,7 +413,7 @@ function renderSSR(strat, main) {
                 <th>操作</th>
               </tr>
             </thead>
-            <tbody>${rowsHTML || `<tr><td colspan="8" style="text-align:center;color:var(--text3);padding:28px">目前沒有標的池候選</td></tr>`}</tbody>
+            <tbody>${rowsHTML || `<tr><td colspan="8" style="text-align:center;color:var(--text3);padding:28px">目前沒有背景觀察標的</td></tr>`}</tbody>
           </table>
         </div>
       </div>
@@ -645,5 +645,5 @@ function drawPoolKChart(canvas, bars, stockId, markerDate = null, guideLevels = 
 }
 
 async function triggerShioajiKbarUpdate(btn) {
-  return triggerShioajiPriceUpdate(btn);
+  return triggerPriceRefresh(btn);
 }

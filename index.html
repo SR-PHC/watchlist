@@ -12,12 +12,23 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png">
 <link rel="shortcut icon" href="assets/icons/favicon.ico">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="manifest" href="site.webmanifest" id="appManifest">
+<script>
+  // 若帶 unlock=perf 參數進站，切換 manifest 讓「加到主畫面」後可直達績效頁
+  (function(){
+    try {
+      if (new URLSearchParams(location.search).get('unlock') === 'perf') {
+        var el = document.getElementById('appManifest');
+        if (el) el.setAttribute('href', 'site-perf.webmanifest');
+      }
+    } catch(e) {}
+  })();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<link rel="stylesheet" href="css/main.css?v=0.6.11">
-<link rel="stylesheet" href="css/portfolio-theme.css?v=0.2.0">
+<link rel="stylesheet" href="css/main.css?v=0.6.19">
+<link rel="stylesheet" href="css/portfolio-theme.css?v=0.2.5">
 </head>
 <body>
 <div class="app-shell">
@@ -27,14 +38,19 @@
       <span class="app-brand-copy"><strong>SR_PC</strong><small>watchlist</small></span>
       <button class="mobile-nav-close" type="button" onclick="toggleMobileNav(false)" aria-label="關閉目錄">×</button>
     </div>
-    <div class="app-search" aria-hidden="true"><span>⌕</span> 快速搜尋</div>
+    <form class="app-search" role="search" onsubmit="submitQuickSearch(event)">
+      <span aria-hidden="true">⌕</span>
+      <input id="quickSearchInput" type="search" autocomplete="off" placeholder="代號 / 名稱" aria-label="快速搜尋股票">
+      <button type="button" class="quick-search-clear" onclick="clearQuickSearch()" aria-label="清除搜尋">×</button>
+      <div id="quickSearchResults" class="quick-search-results" role="listbox"></div>
+    </form>
     <div class="app-nav-label">主要功能</div>
     <nav class="strategy-nav">
       <div class="page-inner" id="strategyNav"></div>
     </nav>
-    <div class="app-system-card">
+    <div class="app-system-card" id="appSystemCard">
       <div><span>DATA SYSTEM</span><i></i></div>
-      <strong>唯讀模式</strong>
+      <strong id="appSystemTitle">唯讀模式</strong>
       <small id="appSyncStatus">等待資料載入</small>
     </div>
   </aside>
@@ -46,10 +62,17 @@
         <button class="mobile-menu-btn" type="button" onclick="toggleMobileNav(true)" aria-label="開啟目錄" aria-controls="strategyNav">☰</button>
         <div class="mobile-brand">SR_PC</div>
         <div class="page-heading">
-          <strong id="pageHeadingTitle">投資決策中心</strong>
+          <strong id="pageHeadingTitle">投資組合總覽</strong>
           <small>選股策略唯讀展示</small>
         </div>
+        <div id="hdrStratBtns" style="display:none">
+          <button id="hdrBtnPerf" onclick="setStrategy('performance')">績效</button>
+        </div>
         <div class="header-quote" id="headerQuote">Aim for moon, you may hit a star.</div>
+        <div class="header-meta">
+          <button id="headerRefreshBtn" class="header-update-btn" onclick="triggerPriceRefresh(this)" title="更新前端所有標的現價、大盤指數與K棒（含頸線），不跑策略掃描，約1-3分鐘">更新報價</button>
+          <button id="headerUpdateBtn" class="header-update-btn" onclick="triggerShioajiPriceUpdate(this)" title="手動觸發 MINI 本地每日掃描：跑全部策略、更新每日工作檯並發LINE通知，較久">更新工作檯</button>
+        </div>
       </div>
     </header>
 
@@ -64,25 +87,26 @@
     <div class="page-layout">
       <main id="mainContent"></main>
       <aside class="watchlist-sidebar" id="rightSidebar" style="display:none">
-        <div id="marketPanel" class="market-panel" style="display:none"></div>
+    <div id="marketPanel" class="market-panel" style="display:none"></div>
       </aside>
     </div>
   </section>
 </div>
 
 <script src="js/public-stub.js"></script>
-<script src="js/app.js?v=0.7.16"></script>
-<script src="js/render-ssr.js?v=0.7.1"></script>
-<script src="js/render-watchlist.js?v=0.1.6"></script>
-<script src="js/render-candidates.js?v=0.1.1"></script>
-<script src="js/render-neckline.js?v=0.2.2"></script>
-<script src="js/render-neckline-track.js?v=0.1.0"></script>
+<script src="js/app.js?v=0.7.35"></script>
+<script src="js/render-ssr.js?v=0.7.3"></script>
+<script src="js/render-watchlist.js?v=0.1.7"></script>
+<script src="js/render-candidates.js?v=0.2.7"></script>
+<script src="js/render-resonance.js?v=0.1.1"></script>
+<script src="js/render-neckline.js?v=0.2.3"></script>
+<script src="js/render-neckline-track.js?v=0.1.1"></script>
 <script src="js/render-chips.js?v=0.5.4"></script>
-<script src="js/render-big-holder-trend.js?v=0.7.4"></script>
+<script src="js/render-big-holder-trend.js?v=0.7.8"></script>
 <script src="js/render-big-holder-trend-track.js?v=0.1.0"></script>
 <script src="js/render-volume.js?v=0.5.1"></script>
 <script src="js/render-volume-pullback.js?v=0.5.1"></script>
-<script src="js/render-right-top.js?v=0.5.4"></script>
+<script src="js/render-right-top.js?v=0.5.5"></script>
 <script src="js/render-right-top-track.js?v=0.5.1"></script>
 </body>
 </html>

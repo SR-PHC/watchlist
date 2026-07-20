@@ -3,18 +3,59 @@
 // ════════════════════════════════════════════════════
 // 公開唯讀展示版：不含績效頁，PERF_UNLOCKED 固定為 false。
 const PERF_UNLOCKED = false;
+
+function runtimeBasePath() {
+  const path = location.pathname || '/';
+  if (path.endsWith('/')) return path;
+  const lastSegment = path.split('/').pop() || '';
+  if (!lastSegment.includes('.')) return `${path}/`;
+  return path.slice(0, path.lastIndexOf('/') + 1);
+}
+
+function resolveRuntimeUrl(relativePath) {
+  return new URL(relativePath, `${location.origin}${runtimeBasePath()}`).toString();
+}
+
 const STRATEGIES = [
   {
+    id: "performance",
+    name: "績效追蹤",
+    shortName: "績效追蹤",
+    icon: "◐",
+    group: null,   // null = 不屬於任何策略群組，獨立置頂
+    available: true,
+    description: "記錄建倉出場，追蹤整體投組績效。",
+    conditions: [],
+  },
+  {
+    id: "pool_resonance",
+    hidden: true,
+    name: "策略共振",
+    shortName: "策略共振",
+    icon: "⚡",
+    group: "decision",
+    available: true,
+    description: "同一檔股票同時被兩套以上追蹤引擎（趨勢／突破／頸線）抓到＝籌碼、動能、型態同步到位；標的隨池子時效到期自動移除，永遠只顯示現在進行式。",
+    conditions: [
+      "來源：趨勢標的、突破標的、頸線追蹤三個追蹤池的現役名單",
+      "門檻：同時在 2 個以上池內，三池全中優先顯示",
+      "驗證：689 檔樣本中單池平均 -1.4%／勝率 37%；雙池 +3.8%／56%；三池 +4.4%／59%",
+      "各池進場價會畫在 K 棒上（虛線），顏色對應池別標籤",
+    ],
+    dataUpdated: "載入中...",
+    dataSource: "三追蹤池交集（平日 17:00 頸線掃描後、週六大戶掃描後更新）",
+  },
+  {
     id: "ssr",
-    name: "候選標的",
-    shortName: "候選標的",
+    name: "每日工作檯",
+    shortName: "工作檯",
     icon: "✦",
     group: "decision",
     available: true,
-    description: "整合原標的池與頸線回測觀察池，在同一頁比較後加入統一自選。",
+    description: "每日工作檯；只放已完成確認流程或需要人工看圖維護的標的，不做排名。",
     conditions: [],
     dataUpdated: "載入中...",
-    dataSource: "前端彙整既有策略結果",
+    dataSource: "頸線確認 + 三池共振 + 趨勢45-65",
   },
   {
     id: "watchlist",
@@ -23,27 +64,11 @@ const STRATEGIES = [
     icon: "◇",
     group: "decision",
     available: true,
-    description: "收納從候選標的人工挑選的股票；多重來源合併為同一筆觀察紀錄。",
+    description: "收納從工作檯或策略來源人工挑選的股票；多重來源合併為同一筆觀察紀錄。",
     conditions: [
-      "來源：標的池與頸線回測",
+      "來源：工作檯、低基期大戶、頸線回測等策略來源",
       "預設觀察 10 個交易日",
       "釘選標的保留",
-    ],
-  },
-  {
-    id: "neckline",
-    hidden: true,
-    name: "頸線回測",
-    shortName: "頸線回測",
-    icon: "⌁",
-    group: "decision",
-    available: true,
-    description: "觀察池：股價回落、貼近精確頸線（±5%）的標的，可釘選持續關注或刪除降噪。",
-    conditions: [
-      "只採用擺動高點頸線，排除較弱的 box_high 回退訊號",
-      "觀察池門檻：拉回低點距精確頸線 ±5% 以內",
-      "刪除後 30 個交易日內不會再自動跳出",
-      "釘選的標的會持續顯示在下方釘選追蹤，不受狀態變化影響",
     ],
   },
   // ── 策略一：籌碼選股 ──
@@ -113,13 +138,13 @@ const STRATEGIES = [
   {
     id: "volume_pullback",
     // SOURCE / BACKUP - DO NOT DELETE:
-    // Volume pullback remains part of 精選觀察 and LINE candidates. Hide the raw
-    // tab to reduce duplicate daily decision surfaces.
+    // Volume pullback is an input under the low-base big-holder workflow. Hide
+    // the raw tab to avoid duplicating the daily decision surface.
     hidden: true,
     name: "量增回測",
     shortName: "量增回測",
     icon: "◎",
-    group: "decision",
+    group: "chips",
     available: true,
     description: "追蹤放量突破後回測不破的標的，鎖定點火後回穩與再啟動。",
     conditions: [
@@ -143,6 +168,22 @@ const STRATEGIES = [
     description: "趨勢大戶入池標的追蹤，記錄入池收盤、現價、損益，觀察期 2 週。釘選標的永久保留。",
     conditions: [],
   },
+  {
+    id: "strong_stock_monitor",
+    name: "強勢雷達",
+    shortName: "強勢雷達",
+    icon: "▲",
+    group: "source",
+    available: true,
+    description: "強勢股與族群同步監控；只作為看圖雷達，不直接視為進場確認。",
+    conditions: [
+      "Leader：接近 60 日高與 20 日高，均線多頭，20 日漲幅與相對大盤強度達標",
+      "Watch：接近確認但量能或位置尚未完全同步",
+      "強勢族群：同族群至少 2 檔 Leader，且 Leader + Watch 至少 3 檔",
+    ],
+    dataUpdated: "載入中...",
+    dataSource: "price_cache + 大盤指數 + 題材標籤",
+  },
   // ── 策略二：突破策略 ──
   {
     id: "right_top",
@@ -164,6 +205,21 @@ const STRATEGIES = [
     dataUpdated: "載入中...",
     dataSource: "FinMind + 集保大戶資料",
     dataKey: "right_top_data",
+  },
+  {
+    id: "neckline",
+    name: "頸線回測",
+    shortName: "頸線回測",
+    icon: "⌁",
+    group: "source",
+    available: true,
+    description: "觀察池：股價回落、貼近精確頸線（±5%）的標的，可釘選持續關注或刪除降噪。",
+    conditions: [
+      "只採用擺動高點頸線，排除較弱的 box_high 回退訊號",
+      "觀察池門檻：拉回低點距精確頸線 ±5% 以內",
+      "刪除後 30 個交易日內不會再自動跳出",
+      "釘選的標的會持續顯示在下方釘選追蹤，不受狀態變化影響",
+    ],
   },
   {
     id: "right_top_track",
@@ -204,6 +260,8 @@ const DATA = {
   stock_kbars_data:     null,
   neckline_candidates_data: null,
   neckline_kbars_data: null,
+  neckline_high_momentum_data: null,
+  stock_list_data:       null,
   performance_data:       null,
   market_index_data:      null,
   yuanta_portfolio:       null,
@@ -214,6 +272,15 @@ const DATA = {
   big_holder_trend_track_data:  null,
   neckline_track_data:          null,
   neckline_daily_rank_data:     null,
+  pool_resonance_data:          null,
+  resonance_kbars_data:         null,
+  confirmed_entry_kbars_data:   null,
+  theme_tags_data:              null,
+  theme_heatmap_data:           null,
+  decision_pool_data:           null,
+  decision_pool_kbars_data:     null,
+  strong_stock_monitor_data:    null,
+  strong_stock_kbars_data:      null,
 };
 let DATE_LABELS = [];
 
@@ -221,6 +288,9 @@ let DATE_LABELS = [];
 //  STATE
 // ════════════════════════════════════════════════════
 function getDefaultStrategyId() {
+  // ?tab=<分頁id> 可直接深連結到指定分頁（例如 ?tab=pool_resonance），方便設書籤。
+  const requested = new URLSearchParams(location.search).get('tab');
+  if (requested && requested !== 'performance' && STRATEGIES.some(s => s.id === requested && s.available && !s.hidden)) return requested;
   return (PERF_UNLOCKED && STRATEGIES.find(s => s.id === "performance" && !s.hidden)?.id)
     || STRATEGIES.find(s => s.id === "ssr" && !s.hidden)?.id
     || STRATEGIES.find(s => s.available && !s.hidden && s.id !== "performance")?.id
@@ -234,6 +304,7 @@ function isVisibleStrategy(id) {
 }
 
 let activeStratId = getDefaultStrategyId();
+let activeSearchStockId = null;
 let sortCol = "chg_2w_1000";
 let sortAsc = false;
 let chipsViewMode = "stock"; // "stock" | "industry"
@@ -342,13 +413,27 @@ function trendBars(trend, label, colorClass) {
     </div>`).join('');
 }
 
+function escapeHtml(value) {
+  return String(value ?? '').replace(/[&<>"']/g, ch => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+  }[ch]));
+}
+
+function normalizeStockId(value) {
+  return String(value ?? '').trim();
+}
+
 // ════════════════════════════════════════════════════
 //  RENDER STRATEGY TABS
 // ════════════════════════════════════════════════════
 const NAV_GROUP_LABELS = {
-  decision:  '決策',
-  source:    '策略',
-  track:     '追蹤',
+  decision:  '工作檯',
+  source:    '策略來源',
+  track:     '追蹤池',
   backup:    '備用觀察',
   ssr:       'SSR',
   chips:     '籌碼選股',
@@ -365,6 +450,7 @@ function _navBadge(s) {
     ).size;
   }
   if (s.id === 'ssr') {
+    if (DATA.decision_pool_data?.summary) return DATA.decision_pool_data.summary.total ?? '—';
     const ids = new Set([
       ...(DATA.momentum_candidates_data?.focus_results || [])
         .filter(row => row && row.pattern_state !== '太遠不追' && row.pattern_state !== '型態破壞')
@@ -379,6 +465,7 @@ function _navBadge(s) {
   if (s.id === 'big_holder_trend_track') return DATA.big_holder_trend_track_data?.active?.length ?? '—';
   if (s.id === 'right_top_track') return DATA.right_top_track_data?.active?.length ?? '—';
   if (s.id === 'neckline_track') return DATA.neckline_track_data?.active?.length ?? '—';
+  if (s.id === 'pool_resonance') return DATA.pool_resonance_data?.rows?.length ?? '—';
   const rows = DATA[s.dataKey] || [];
   return rows.length || (s.dataUpdated === '載入中...' ? '—' : 0);
 }
@@ -451,19 +538,452 @@ function renderNav() {
 function updateAppChrome(strat) {
   const title = document.getElementById('pageHeadingTitle');
   if (title) title.textContent = strat?.id === 'performance' ? '投資組合總覽' : (strat?.name || '投資決策中心');
-  const headerMeta = document.querySelector('.header-meta');
-  if (headerMeta) headerMeta.style.display = strat?.id === 'performance' ? 'none' : '';
-  const sync = document.getElementById('appSyncStatus');
-  const date = DATA.market_index_data?.updated
-    || DATA.watchlist_data?.last_updated
-    || DATA.momentum_candidates_data?.updated;
-  if (sync) sync.textContent = date ? `更新於 ${String(date).slice(0, 10)}` : '等待資料載入';
+  const updateBtn = document.getElementById('headerUpdateBtn');
+  if (updateBtn) updateBtn.style.display = strat?.id === 'performance' ? 'none' : '';
+  if (window._appSystemActionActive) return;
+  const date = DATA.yuanta_portfolio?.meta?.updated_at
+    || DATA.market_index_data?.updated
+    || DATA.performance_data?.last_updated;
+  setAppSystemStatus('ready', '同步正常', date ? `最後更新 ${String(date).slice(0, 16).replace('T', ' ')}` : '資料已連線');
+}
+
+function setAppSystemStatus(state, title, detail) {
+  const card = document.getElementById('appSystemCard');
+  const titleEl = document.getElementById('appSystemTitle');
+  const detailEl = document.getElementById('appSyncStatus');
+  if (card) {
+    card.classList.remove('is-ready', 'is-running', 'is-failed', 'is-skipped');
+    card.classList.add(`is-${state || 'ready'}`);
+  }
+  if (titleEl) titleEl.textContent = title || '同步正常';
+  if (detailEl) detailEl.textContent = detail || '資料已連線';
+}
+
+// ════════════════════════════════════════════════════
+//  QUICK STOCK SEARCH
+// ════════════════════════════════════════════════════
+const QUICK_SEARCH_KEYS = new Set([
+  'stockList',
+  'chips',
+  'bigHolderTrend',
+  'volumeSignal',
+  'volumePullback',
+  'momentum',
+  'entryAnalysis',
+  'watchlist',
+  'kbars',
+  'neckline',
+  'necklineKbars',
+  'necklineHighMomentum',
+  'rightTop',
+  'rightTopTrack',
+  'bigHolderTrendTrack',
+  'necklineTrack',
+  'poolResonance',
+  'perf',
+  'currentPrices',
+]);
+
+const QUICK_SOURCE_LABELS = {
+  chips: '低基期大戶',
+  chips_big_holder: '低基期大戶',
+  big_holder_trend: '趨勢大戶',
+  volume_signal: '量增訊號',
+  volume_pullback: '量增回測',
+  right_top: '突破策略',
+  neckline_retest: '頸線回測',
+  daily_entry_analysis: '每日建倉分析',
+  watchlist: '自選',
+  right_top_track: '突破標的',
+  big_holder_trend_track: '趨勢標的',
+  neckline_track: '頸線追蹤',
+  pool_resonance: '策略共振',
+  performance: '績效持倉',
+  momentum_candidates: '背景標的池',
+};
+
+function quickSourceLabel(source) {
+  return QUICK_SOURCE_LABELS[source] || source || '策略';
+}
+
+async function loadStockListForSearch() {
+  const stockList = await fetchDataJson('stockList', 'data/stock_list_cache.json', new Set(['stockList']), null);
+  if (Array.isArray(stockList)) DATA.stock_list_data = stockList;
+  return DATA.stock_list_data || [];
+}
+
+function assignQuickSearchResource(key, data) {
+  if (!data) return;
+  if (key === 'stockList' && Array.isArray(data)) DATA.stock_list_data = data;
+  if (key === 'chips' && data.results) DATA.chips_big_holder_data = data.results;
+  if (key === 'bigHolderTrend' && data.results) {
+    DATA.big_holder_trend_data = data.results;
+    DATA.big_holder_trend_meta = data;
+  }
+  if (key === 'volumeSignal' && data.results) DATA.volume_signal_data = data.results;
+  if (key === 'volumePullback' && (data.active || data.failed)) DATA.volume_pullback_data = data;
+  if (key === 'momentum' && (data.results || data.focus_results)) DATA.momentum_candidates_data = data;
+  if (key === 'entryAnalysis' && data.analysis_date) DATA.daily_entry_analysis_data = data;
+  if (key === 'watchlist' && (data.active || data.expired)) DATA.watchlist_data = data;
+  if (key === 'kbars' && data.stocks) DATA.stock_kbars_data = data;
+  if (key === 'neckline' && data.summary) DATA.neckline_candidates_data = data;
+  if (key === 'necklineKbars' && data.stocks) DATA.neckline_kbars_data = data;
+  if (key === 'necklineHighMomentum' && data.summary) DATA.neckline_high_momentum_data = data;
+  if (key === 'rightTop' && data.results) {
+    DATA.right_top_data = data.results;
+    DATA.right_top_industry = data.industry_stats || [];
+  }
+  if (key === 'rightTopTrack' && (data.active || data.expired)) DATA.right_top_track_data = data;
+  if (key === 'bigHolderTrendTrack' && (data.active || data.expired)) DATA.big_holder_trend_track_data = data;
+  if (key === 'necklineTrack' && (data.active || data.expired)) DATA.neckline_track_data = data;
+  if (key === 'poolResonance' && Array.isArray(data.rows)) DATA.pool_resonance_data = data;
+  if (key === 'themeTags' && data.by_stock) DATA.theme_tags_data = data;
+  if (key === 'themeHeatmap' && Array.isArray(data.themes)) DATA.theme_heatmap_data = data;
+  if (key === 'perf') DATA.performance_data = data;
+  if (key === 'currentPrices') DATA.current_prices_data = data;
+}
+
+async function loadQuickSearchData() {
+  const progress = null;
+  const entries = [
+    ['stockList', 'data/stock_list_cache.json'],
+    ['chips', 'data/chips_big_holder.json'],
+    ['bigHolderTrend', 'data/big_holder_trend.json'],
+    ['volumeSignal', 'data/volume_signal.json'],
+    ['volumePullback', 'data/volume_pullback.json'],
+    ['momentum', 'data/momentum_candidates.json'],
+    ['entryAnalysis', 'data/daily_entry_analysis.json'],
+    ['watchlist', 'data/watchlist.json'],
+    ['kbars', 'data/shioaji_kbars.json'],
+    ['neckline', 'data/neckline_candidates.json'],
+    ['necklineKbars', 'data/neckline_kbars.json'],
+    ['necklineHighMomentum', 'data/neckline_high_momentum.json'],
+    ['rightTop', 'data/right_top.json'],
+    ['rightTopTrack', 'data/right_top_track.json'],
+    ['bigHolderTrendTrack', 'data/big_holder_trend_track.json'],
+    ['necklineTrack', 'data/neckline_track.json'],
+    ['poolResonance', 'data/pool_resonance.json'],
+    ['themeTags', 'data/stock_theme_tags.json'],
+    ['themeHeatmap', 'data/theme_heatmap.json'],
+    ['perf', 'data/performance.json'],
+    ['currentPrices', 'data/current_prices.json'],
+  ];
+  const loaded = await Promise.all(entries.map(([key, path]) => (
+    fetchDataJson(key, path, QUICK_SEARCH_KEYS, progress).then(data => [key, data])
+  )));
+  loaded.forEach(([key, data]) => assignQuickSearchResource(key, data));
+}
+
+function addStockToMap(map, stockLike) {
+  const stockId = normalizeStockId(stockLike?.stock_id);
+  if (!stockId) return;
+  const existing = map.get(stockId) || { stock_id: stockId, name: '', industry: '', market: '' };
+  map.set(stockId, {
+    ...existing,
+    name: existing.name || stockLike.name || stockLike.stock_name || '',
+    industry: existing.industry || stockLike.industry || '',
+    market: existing.market || stockLike.market || '',
+  });
+}
+
+function buildQuickSearchUniverse() {
+  const map = new Map();
+  (DATA.stock_list_data || []).forEach(row => addStockToMap(map, row));
+  [
+    ...(DATA.chips_big_holder_data || []),
+    ...(DATA.big_holder_trend_data || []),
+    ...(DATA.volume_signal_data || []),
+    ...(DATA.volume_pullback_data?.active || []),
+    ...(DATA.volume_pullback_data?.failed || []),
+    ...(DATA.momentum_candidates_data?.results || []),
+    ...(DATA.momentum_candidates_data?.focus_results || []),
+    ...(DATA.daily_entry_analysis_data?.candidates || []),
+    ...(DATA.watchlist_data?.active || []),
+    ...(DATA.watchlist_data?.expired || []),
+    ...(DATA.neckline_candidates_data?.watch_pool || []),
+    ...(DATA.right_top_data || []),
+    ...(DATA.right_top_track_data?.active || []),
+    ...(DATA.right_top_track_data?.expired || []),
+    ...(DATA.big_holder_trend_track_data?.active || []),
+    ...(DATA.big_holder_trend_track_data?.expired || []),
+    ...(DATA.neckline_track_data?.active || []),
+    ...(DATA.neckline_track_data?.expired || []),
+    ...(DATA.pool_resonance_data?.rows || []),
+    ...(DATA.performance_data?.positions || []),
+  ].forEach(row => addStockToMap(map, row));
+  Object.keys(DATA.stock_kbars_data?.stocks || {}).forEach(stockId => addStockToMap(map, { stock_id: stockId }));
+  Object.keys(DATA.neckline_kbars_data?.stocks || {}).forEach(stockId => addStockToMap(map, { stock_id: stockId }));
+  return [...map.values()].sort((a, b) => a.stock_id.localeCompare(b.stock_id));
+}
+
+function getQuickSearchMatches(query) {
+  const q = String(query || '').trim().toLowerCase();
+  if (!q) return [];
+  return buildQuickSearchUniverse()
+    .map(row => {
+      const id = row.stock_id.toLowerCase();
+      const name = String(row.name || '').toLowerCase();
+      let rank = 9;
+      if (id === q) rank = 0;
+      else if (name === q) rank = 1;
+      else if (id.startsWith(q)) rank = 2;
+      else if (name.startsWith(q)) rank = 3;
+      else if (id.includes(q)) rank = 4;
+      else if (name.includes(q)) rank = 5;
+      return { ...row, rank };
+    })
+    .filter(row => row.rank < 9)
+    .sort((a, b) => a.rank - b.rank || a.stock_id.localeCompare(b.stock_id))
+    .slice(0, 10);
+}
+
+function getQuickSearchBars(stockId) {
+  return DATA.stock_kbars_data?.stocks?.[stockId]?.daily
+    || DATA.neckline_kbars_data?.stocks?.[stockId]?.daily
+    || [];
+}
+
+function getQuickSearchStockMeta(stockId) {
+  return buildQuickSearchUniverse().find(row => String(row.stock_id) === String(stockId))
+    || { stock_id: stockId, name: '', industry: '', market: '' };
+}
+
+function formatQuickSearchDate(value) {
+  const text = String(value || '').trim();
+  if (!text) return '';
+  return text.slice(0, 10);
+}
+
+function quickSearchRowDate(row, fallbackDate = '') {
+  return formatQuickSearchDate(
+    row?.entry_date
+    || row?.added_date
+    || row?.captured_date
+    || row?.as_of_date
+    || row?.dip_date
+    || row?.breakout_date
+    || row?.price_date
+    || row?.latest_price_date
+    || row?.date
+    || row?.week_date
+    || fallbackDate
+  );
+}
+
+function quickSearchWatchlistDate(row) {
+  const details = row?.source_details || {};
+  return formatQuickSearchDate(
+    row?.added_date
+    || details.neckline_retest?.captured_date
+    || details.stock_pool?.captured_date
+  );
+}
+
+function collectQuickSearchStrategies(stockId) {
+  const id = String(stockId);
+  const matches = new Map();
+  const add = (key, detail = '', date = '') => {
+    const label = quickSourceLabel(key);
+    if (!matches.has(label)) matches.set(label, { label, events: [] });
+    const normalized = {
+      date: formatQuickSearchDate(date),
+      detail: String(detail || '').trim(),
+    };
+    const item = matches.get(label);
+    const duplicate = item.events.some(event => event.date === normalized.date && event.detail === normalized.detail);
+    if (!duplicate) item.events.push(normalized);
+  };
+  const hasId = row => String(row?.stock_id) === id;
+  const addRows = (rows, key, fallbackDate, detailFn, dateFn) => (rows || [])
+    .filter(hasId)
+    .forEach(row => add(key, detailFn?.(row) || '', dateFn?.(row) || quickSearchRowDate(row, fallbackDate)));
+
+  addRows(DATA.chips_big_holder_data, 'chips_big_holder', STRATEGIES.find(s => s.id === 'chips_big_holder')?.dataUpdated, row => row.signal_label || row.tags?.[0] || '');
+  addRows(DATA.big_holder_trend_data, 'big_holder_trend', DATA.big_holder_trend_meta?.source_date || DATA.big_holder_trend_meta?.updated, row => row.signal_label || row.sources?.join(' / ') || '');
+  addRows(DATA.volume_signal_data, 'volume_signal', STRATEGIES.find(s => s.id === 'volume_signal')?.dataUpdated, row => row.signal || row.tags?.[0] || '');
+  addRows(DATA.volume_pullback_data?.active, 'volume_pullback', DATA.volume_pullback_data?.updated, row => row.status_label || row.stage || '');
+  addRows(DATA.neckline_candidates_data?.watch_pool, 'neckline_retest', DATA.neckline_candidates_data?.updated, row => row.entry_type_label || row.signal_label || '');
+  addRows(DATA.right_top_data, 'right_top', STRATEGIES.find(s => s.id === 'right_top')?.dataUpdated, row => row.breakout_stage_label || row.signal_types?.join(' / ') || '');
+  addRows(DATA.daily_entry_analysis_data?.candidates, 'daily_entry_analysis', DATA.daily_entry_analysis_data?.analysis_date, row => row.recommendation || '');
+  addRows(DATA.watchlist_data?.active, 'watchlist', DATA.watchlist_data?.last_updated, row => row.source_strategy || '', quickSearchWatchlistDate);
+  addRows(DATA.right_top_track_data?.active, 'right_top_track', DATA.right_top_track_data?.last_updated, row => row.status || '');
+  addRows(DATA.big_holder_trend_track_data?.active, 'big_holder_trend_track', DATA.big_holder_trend_track_data?.last_updated, row => row.status || '');
+  addRows(DATA.neckline_track_data?.active, 'neckline_track', DATA.neckline_track_data?.last_updated, row => row.status || '');
+  addRows((DATA.performance_data?.positions || []).filter(row => !row.confirmed), 'performance', DATA.performance_data?.last_updated, row => row.status || '');
+
+  (DATA.momentum_candidates_data?.focus_results || [])
+    .filter(hasId)
+    .forEach(row => {
+      const selectedDate = quickSearchRowDate(row, DATA.momentum_candidates_data?.updated);
+      add('momentum_candidates', row.pattern_state || '', selectedDate);
+      (row.sources || []).forEach(source => add(source, row.pattern_state || '', selectedDate));
+    });
+
+  return [...matches.values()].map(item => ({
+    label: item.label,
+    events: item.events
+      .filter(event => event.date || event.detail)
+      .sort((a, b) => String(b.date || '').localeCompare(String(a.date || ''))),
+  })).sort((a, b) => String(b.events[0]?.date || '').localeCompare(String(a.events[0]?.date || '')));
+}
+
+function renderQuickSearchDropdown(matches, query) {
+  const box = document.getElementById('quickSearchResults');
+  if (!box) return;
+  if (!String(query || '').trim()) {
+    box.classList.remove('active');
+    box.innerHTML = '';
+    return;
+  }
+  if (!matches.length) {
+    box.innerHTML = `<div class="quick-search-empty">找不到符合「${escapeHtml(query)}」的標的</div>`;
+    box.classList.add('active');
+    return;
+  }
+  box.innerHTML = matches.map(row => {
+    return `<button type="button" class="quick-search-item" role="option" onclick="selectQuickSearchStock('${escapeHtml(row.stock_id)}')">
+      <span class="quick-search-code">${escapeHtml(row.stock_id)}</span>
+      <span class="quick-search-name">${escapeHtml(row.name || '名稱待補')}</span>
+    </button>`;
+  }).join('');
+  box.classList.add('active');
+}
+
+async function updateQuickSearchResults() {
+  const input = document.getElementById('quickSearchInput');
+  if (!input) return;
+  await loadStockListForSearch();
+  const matches = getQuickSearchMatches(input.value);
+  renderQuickSearchDropdown(matches, input.value);
+}
+
+function clearQuickSearch() {
+  const input = document.getElementById('quickSearchInput');
+  if (input) {
+    input.value = '';
+    input.focus();
+  }
+  renderQuickSearchDropdown([], '');
+}
+
+async function submitQuickSearch(event) {
+  event?.preventDefault();
+  const input = document.getElementById('quickSearchInput');
+  await loadStockListForSearch();
+  const first = getQuickSearchMatches(input?.value || '')[0];
+  if (first) selectQuickSearchStock(first.stock_id);
+}
+
+async function selectQuickSearchStock(stockId) {
+  activeSearchStockId = normalizeStockId(stockId);
+  activeStratId = 'quick_search';
+  expandedRow = null;
+  renderNav();
+  toggleMobileNav(false);
+  renderQuickSearchLoading(activeSearchStockId);
+  await loadQuickSearchData();
+  renderStrategy();
+}
+
+function renderQuickSearchLoading(stockId) {
+  const main = document.getElementById('mainContent');
+  if (!main) return;
+  main.innerHTML = `<div class="coming-soon">
+    <div class="coming-icon">⌕</div>
+    <div class="coming-title">搜尋 ${escapeHtml(stockId)} 資料中…</div>
+    <div class="coming-desc">正在彙整標的名稱、策略歸屬與可用 K 棒。</div>
+  </div>`;
+}
+
+function setQuickSearchKPeriod(stockId, period) {
+  const card = document.querySelector(`.pool-kcard[data-search-stock-id="${stockId}"]`);
+  if (!card) return;
+  card.dataset.period = period;
+  card.querySelectorAll('.pool-period-switch button').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent === ({ day: '日', week: '週', month: '月' }[period]));
+  });
+  drawQuickSearchKChart(stockId);
+}
+
+function drawQuickSearchKChart(stockId) {
+  if (typeof drawPoolKChart !== 'function' || typeof aggregatePoolBars !== 'function') return;
+  const card = document.querySelector(`.pool-kcard[data-search-stock-id="${stockId}"]`);
+  if (!card) return;
+  const period = card.dataset.period || 'day';
+  const bars = getQuickSearchBars(stockId);
+  drawPoolKChart(card.querySelector('canvas'), aggregatePoolBars(bars, period), `search-${stockId}`);
+}
+
+function renderQuickSearchPage() {
+  const main = document.getElementById('mainContent');
+  const stockId = activeSearchStockId;
+  if (!main || !stockId) return;
+  const stock = getQuickSearchStockMeta(stockId);
+  const bars = getQuickSearchBars(stockId);
+  const strategies = collectQuickSearchStrategies(stockId);
+  const latest = bars.at(-1) || null;
+  updateAppChrome({ id: 'quick_search', name: '快速搜尋' });
+
+  const strategyHtml = strategies.length
+    ? strategies.map(item => `<div class="search-strategy-chip">
+        <div class="search-strategy-main">
+          <strong>${escapeHtml(item.label)}</strong>
+          <span>${escapeHtml(item.events[0]?.date || '日期待補')}</span>
+        </div>
+        ${item.events.length ? `<div class="search-strategy-events">${item.events.map(event => `
+          <div class="search-strategy-event">
+            <time>${escapeHtml(event.date || '日期待補')}</time>
+            <span>${escapeHtml(event.detail || '入選')}</span>
+          </div>`).join('')}</div>` : ''}
+      </div>`).join('')
+    : '<div class="search-empty-panel">目前沒有歸屬在已載入的策略名單。</div>';
+
+  main.innerHTML = `<section class="strategy-panel active search-page">
+    <div class="strat-header search-header">
+      <div>
+        <div class="strat-title">${escapeHtml(stock.stock_id)} ${escapeHtml(stock.name || '')}</div>
+        <div class="strat-desc">${escapeHtml([stock.industry, stock.market].filter(Boolean).join(' / ') || '標的基本資料待補')}</div>
+      </div>
+      <button class="btn-csv" onclick="setStrategy('${getDefaultStrategyId()}')">返回總覽</button>
+    </div>
+    <div class="summary-row search-summary-row">
+      <div class="summary-card"><div class="summary-label">策略歸屬</div><div class="summary-value">${strategies.length}</div><div class="summary-sub">目前資料集中命中</div></div>
+      <div class="summary-card"><div class="summary-label">K 棒資料</div><div class="summary-value">${bars.length ? '有' : '無'}</div><div class="summary-sub">${bars.length ? `${escapeHtml(bars[0]?.date || '')} - ${escapeHtml(latest?.date || '')}` : '尚未產生 K 棒'}</div></div>
+      <div class="summary-card"><div class="summary-label">最新收盤</div><div class="summary-value">${latest ? Number(latest.close).toFixed(2) : '—'}</div><div class="summary-sub">${escapeHtml(latest?.date || '')}</div></div>
+    </div>
+    <div class="search-result-grid">
+      <div class="table-wrap search-strategy-panel">
+        <div class="table-toolbar"><span class="table-title">策略歸屬</span></div>
+        <div class="search-strategy-list">${strategyHtml}</div>
+      </div>
+      <div class="pool-kcard search-kcard" data-search-stock-id="${escapeHtml(stockId)}" data-period="day">
+        <div class="pool-kcard-top">
+          <div class="pool-kcard-id"><span class="stock-code">${escapeHtml(stock.stock_id)}</span><strong>${escapeHtml(stock.name || '名稱待補')}</strong></div>
+          <div class="pool-kcard-score"><span>Close</span><strong>${latest ? Number(latest.close).toFixed(2) : '—'}</strong><em>${escapeHtml(latest?.date || '')}</em></div>
+        </div>
+        <div class="pool-kchart-wrap">
+          <canvas></canvas>
+          <div class="pool-kchart-empty" data-empty="search-${escapeHtml(stockId)}">尚無 K 棒資料</div>
+          <div class="pool-period-switch">
+            <button type="button" class="active" onclick="setQuickSearchKPeriod('${escapeHtml(stockId)}','day')">日</button>
+            <button type="button" onclick="setQuickSearchKPeriod('${escapeHtml(stockId)}','week')">週</button>
+            <button type="button" onclick="setQuickSearchKPeriod('${escapeHtml(stockId)}','month')">月</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+  setTimeout(() => drawQuickSearchKChart(stockId), 40);
 }
 
 // ════════════════════════════════════════════════════
 //  RENDER ACTIVE STRATEGY
 // ════════════════════════════════════════════════════
 function renderStrategy() {
+  if (activeStratId === 'quick_search') {
+    renderQuickSearchPage();
+    return;
+  }
   if (!isVisibleStrategy(activeStratId)) activeStratId = getDefaultStrategyId();
   const strat = STRATEGIES.find(s => s.id === activeStratId);
   const main = document.getElementById('mainContent');
@@ -484,12 +1004,14 @@ function renderStrategy() {
   if (strat.id === 'neckline')         { renderNeckline(strat, main);        return; }
   if (strat.id === 'chips_big_holder') { renderChipsHolder(strat, main);    return; }
   if (strat.id === 'big_holder_trend') { renderBigHolderTrend(strat, main); return; }
+  if (strat.id === 'strong_stock_monitor') { renderStrongStockMonitor(strat, main); return; }
   if (strat.id === 'volume_signal')    { renderVolumeSignal(strat, main);   return; }
   if (strat.id === 'volume_pullback')  { renderVolumePullback(strat, main); return; }
   if (strat.id === 'big_holder_trend_track'){ renderBigHolderTrendTrack(strat, main);   return; }
   if (strat.id === 'right_top')             { renderRightTop(strat, main);               return; }
   if (strat.id === 'right_top_track')       { renderRightTopTrack(strat, main);          return; }
   if (strat.id === 'neckline_track')        { renderNecklineTrack(strat, main);          return; }
+  if (strat.id === 'pool_resonance')        { renderPoolResonance(strat, main);          return; }
   if (strat.id === 'performance')      { renderPerformance(strat, main);    return; }
 }
 
@@ -506,6 +1028,7 @@ async function setStrategy(id) {
   if (id === "performance" && !PERF_UNLOCKED) return;
   if (!isVisibleStrategy(id)) id = getDefaultStrategyId();
   activeStratId = id;
+  activeSearchStockId = null;
   expandedRow = null;
   renderNav();
   toggleMobileNav(false);
@@ -592,17 +1115,19 @@ function exportCSV() {
 // ════════════════════════════════════════════════════
 const STRATEGY_RESOURCE_KEYS = {
   performance: ['perf', 'marketIndex', 'yuanta', 'yuantaSnapshots'],
-  ssr: ['momentum', 'entryAnalysis', 'watchlist', 'kbars', 'neckline', 'necklineKbars'],
-  watchlist: ['momentum', 'entryAnalysis', 'watchlist', 'kbars', 'neckline', 'necklineKbars'],
-  neckline: ['neckline', 'necklineKbars', 'necklineDailyRank'],
+  ssr: ['decisionPool', 'decisionPoolKbars', 'kbars', 'necklineKbars', 'resonanceKbars', 'confirmedEntryKbars'],
+  watchlist: ['momentum', 'entryAnalysis', 'watchlist', 'kbars', 'neckline', 'necklineKbars', 'necklineDailyRank', 'necklineHighMomentum', 'poolResonance', 'resonanceKbars', 'themeTags', 'themeHeatmap'],
+  neckline: ['neckline', 'necklineKbars', 'necklineDailyRank', 'necklineHighMomentum'],
   neckline_track: ['necklineTrack'],
   chips_big_holder: ['chips'],
-  big_holder_trend: ['bigHolderTrend'],
+  big_holder_trend: ['bigHolderTrend', 'kbars'],
+  strong_stock_monitor: ['strongStockMonitor', 'strongStockKbars', 'kbars', 'themeTags'],
   volume_signal: ['volumeSignal'],
   volume_pullback: ['volumePullback', 'momentum'],
   big_holder_trend_track: ['bigHolderTrendTrack'],
   right_top: ['rightTop'],
   right_top_track: ['rightTopTrack'],
+  pool_resonance: ['poolResonance', 'resonanceKbars', 'watchlist', 'necklineHighMomentum', 'themeTags', 'themeHeatmap'],
 };
 
 const JSON_CACHE = new Map();
@@ -612,12 +1137,14 @@ const RESOURCE_LABELS = {
   bigHolderTrend: '趨勢大戶',
   volumeSignal: '量增訊號',
   volumePullback: '量增回測',
-  momentum: '標的池',
+  momentum: '背景標的池',
   entryAnalysis: '建倉分析',
   watchlist: '自選清單',
   neckline: '頸線回測',
   necklineKbars: '頸線 K 棒',
+  necklineHighMomentum: '高點動能',
   kbars: 'K 棒資料',
+  stockList: '股票清單',
   perf: '績效資料',
   marketIndex: '大盤指數',
   rightTop: '突破策略',
@@ -625,9 +1152,18 @@ const RESOURCE_LABELS = {
   bigHolderTrendTrack: '趨勢追蹤',
   necklineTrack: '頸線追蹤',
   necklineDailyRank: '頸線日排名',
+  poolResonance: '策略共振',
+  resonanceKbars: '共振 K 棒',
+  confirmedEntryKbars: '確認進場 K 棒',
+  themeTags: '個股題材',
+  themeHeatmap: '族群熱度',
   yuanta: '元大帳戶',
   yuantaSnapshots: '帳戶快照',
   currentPrices: '最新價格',
+  decisionPool: '每日工作檯',
+  decisionPoolKbars: '決策池 K 棒',
+  strongStockMonitor: '強勢雷達',
+  strongStockKbars: '強勢雷達 K 棒',
 };
 let loadProgressSerial = 0;
 let loadProgressHideTimer = null;
@@ -699,7 +1235,7 @@ async function fetchDataJson(key, path, requestedKeys, tracker) {
   if (JSON_CACHE.has(key)) return JSON_CACHE.get(key);
   if (JSON_REQUESTS.has(key)) return trackDataRequest(JSON_REQUESTS.get(key), tracker, key);
 
-  const request = fetch(path)
+  const request = fetch(path, { cache: 'no-store' })
     .then(response => {
       if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
       return response.json();
@@ -737,7 +1273,7 @@ async function loadData(strategyId = activeStratId) {
   const progress = beginLoadProgress(strategyId, requestedKeys);
 
   try {
-    const [chipsRes, bhtRes, vsRes, vpbRes, mcRes, entryAnalysisRes, wlRes, intradayRes, kbRes, perfRes, miRes, rtRes, rttRes, bhttRes, yuantaRes, yuantaSnapshotsRes, necklineRes, necklineKbarsRes, nteRes, necklineDailyRankRes] = await Promise.all([
+    const [chipsRes, bhtRes, vsRes, vpbRes, mcRes, entryAnalysisRes, wlRes, intradayRes, kbRes, perfRes, miRes, rtRes, rttRes, bhttRes, yuantaRes, yuantaSnapshotsRes, necklineRes, necklineKbarsRes, nteRes, necklineDailyRankRes, necklineHighMomentumRes, poolResonanceRes, resonanceKbarsRes, confirmedEntryKbarsRes, themeTagsRes, themeHeatmapRes, decisionPoolRes, decisionPoolKbarsRes, strongStockMonitorRes, strongStockKbarsRes] = await Promise.all([
       fetchDataJson('chips', 'data/chips_big_holder.json', requestedKeys, progress),
       fetchDataJson('bigHolderTrend', 'data/big_holder_trend.json', requestedKeys, progress),
       fetchDataJson('volumeSignal', 'data/volume_signal.json', requestedKeys, progress),
@@ -758,6 +1294,16 @@ async function loadData(strategyId = activeStratId) {
       fetchDataJson('necklineKbars', 'data/neckline_kbars.json', requestedKeys, progress),
       fetchDataJson('necklineTrack', 'data/neckline_track.json', requestedKeys, progress),
       fetchDataJson('necklineDailyRank', 'data/neckline_daily_rank.json', requestedKeys, progress),
+      fetchDataJson('necklineHighMomentum', 'data/neckline_high_momentum.json', requestedKeys, progress),
+      fetchDataJson('poolResonance', 'data/pool_resonance.json', requestedKeys, progress),
+      fetchDataJson('resonanceKbars', 'data/resonance_kbars.json', requestedKeys, progress),
+      fetchDataJson('confirmedEntryKbars', 'data/confirmed_entry_kbars.json', requestedKeys, progress),
+      fetchDataJson('themeTags', 'data/stock_theme_tags.json', requestedKeys, progress),
+      fetchDataJson('themeHeatmap', 'data/theme_heatmap.json', requestedKeys, progress),
+      fetchDataJson('decisionPool', 'data/decision_pool.json', requestedKeys, progress),
+      fetchDataJson('decisionPoolKbars', 'data/decision_pool_kbars.json', requestedKeys, progress),
+      fetchDataJson('strongStockMonitor', 'data/strong_stock_monitor.json', requestedKeys, progress),
+      fetchDataJson('strongStockKbars', 'data/strong_stock_kbars.json', requestedKeys, progress),
     ]);
 
     if (chipsRes && chipsRes.results) {
@@ -832,6 +1378,52 @@ async function loadData(strategyId = activeStratId) {
       DATA.neckline_daily_rank_data = necklineDailyRankRes;
     }
 
+    if (necklineHighMomentumRes && necklineHighMomentumRes.summary) {
+      DATA.neckline_high_momentum_data = necklineHighMomentumRes;
+    }
+
+    if (poolResonanceRes && Array.isArray(poolResonanceRes.rows)) {
+      DATA.pool_resonance_data = poolResonanceRes;
+      const strat = STRATEGIES.find(s => s.id === 'pool_resonance');
+      if (strat) strat.dataUpdated = (poolResonanceRes.updated || '').slice(0, 10) || strat.dataUpdated;
+    }
+
+    if (confirmedEntryKbarsRes && confirmedEntryKbarsRes.stocks) {
+      DATA.confirmed_entry_kbars_data = confirmedEntryKbarsRes;
+    }
+
+    if (resonanceKbarsRes && resonanceKbarsRes.stocks) {
+      DATA.resonance_kbars_data = resonanceKbarsRes;
+    }
+
+    if (themeTagsRes && themeTagsRes.by_stock) {
+      DATA.theme_tags_data = themeTagsRes;
+    }
+
+    if (themeHeatmapRes && Array.isArray(themeHeatmapRes.themes)) {
+      DATA.theme_heatmap_data = themeHeatmapRes;
+    }
+
+    if (decisionPoolRes && Array.isArray(decisionPoolRes.rows)) {
+      DATA.decision_pool_data = decisionPoolRes;
+      const strat = STRATEGIES.find(s => s.id === 'ssr');
+      if (strat) strat.dataUpdated = (decisionPoolRes.data_date || decisionPoolRes.updated || '').slice(0, 10) || strat.dataUpdated;
+    }
+
+    if (decisionPoolKbarsRes && decisionPoolKbarsRes.stocks) {
+      DATA.decision_pool_kbars_data = decisionPoolKbarsRes;
+    }
+
+    if (strongStockMonitorRes && Array.isArray(strongStockMonitorRes.rows)) {
+      DATA.strong_stock_monitor_data = strongStockMonitorRes;
+      const strat = STRATEGIES.find(s => s.id === 'strong_stock_monitor');
+      if (strat) strat.dataUpdated = (strongStockMonitorRes.data_date || strongStockMonitorRes.updated || '').slice(0, 10) || strat.dataUpdated;
+    }
+
+    if (strongStockKbarsRes && strongStockKbarsRes.stocks) {
+      DATA.strong_stock_kbars_data = strongStockKbarsRes;
+    }
+
     if (perfRes) {
       DATA.performance_data = perfRes;
     }
@@ -856,7 +1448,7 @@ async function loadData(strategyId = activeStratId) {
     }
 
     const ssrStrat = STRATEGIES.find(s => s.id === 'ssr');
-    if (ssrStrat) {
+    if (ssrStrat && !DATA.decision_pool_data) {
       const dates = ['chips_big_holder', 'right_top']
         .map(id => STRATEGIES.find(s => s.id === id)?.dataUpdated)
         .filter(d => d && d !== '載入中...');
@@ -901,6 +1493,9 @@ async function loadData(strategyId = activeStratId) {
           // DISABLED / BACKUP - DO NOT DELETE: institutional momentum price patching is paused while the tab is hidden.
           if (typeof _applyPriceToAnalysis === 'function') _applyPriceToAnalysis(cpData.prices);
           if (typeof _applyPriceToWatchlist === 'function') _applyPriceToWatchlist(cpData.prices);
+          if (typeof _applyPriceToNeckline === 'function') _applyPriceToNeckline(cpData.prices);
+          if (typeof _applyPriceToNecklineTrack === 'function') _applyPriceToNecklineTrack(cpData.prices);
+          if (typeof _applyPriceToResonance === 'function') _applyPriceToResonance(cpData.prices);
           if (typeof _applyPriceToPerf === 'function') await _applyPriceToPerf(cpData.prices, cpData.date, false);
         }
     }
@@ -915,10 +1510,37 @@ async function loadData(strategyId = activeStratId) {
   }
 }
 
+function initQuickSearch() {
+  const input = document.getElementById('quickSearchInput');
+  if (!input) return;
+  let timer = null;
+  input.addEventListener('input', () => {
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(() => updateQuickSearchResults(), 120);
+  });
+  input.addEventListener('focus', () => {
+    if (input.value.trim()) updateQuickSearchResults();
+  });
+  input.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      renderQuickSearchDropdown([], '');
+      input.blur();
+    }
+  });
+  document.addEventListener('click', event => {
+    const form = document.querySelector('.app-search');
+    if (form && !form.contains(event.target)) renderQuickSearchDropdown([], '');
+  });
+}
+
 // app.js is loaded before the page renderers. With warm local caches, loadData()
 // can otherwise finish before render-perf.js/render-candidates.js are defined.
 if (document.readyState === 'loading') {
-  window.addEventListener('DOMContentLoaded', () => loadData(), { once: true });
+  window.addEventListener('DOMContentLoaded', () => {
+    initQuickSearch();
+    loadData();
+  }, { once: true });
 } else {
+  initQuickSearch();
   loadData();
 }

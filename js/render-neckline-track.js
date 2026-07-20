@@ -138,9 +138,9 @@ function renderNecklineTrack(strat, main) {
       <div class="summary-sub">筆結束追蹤</div>
     </div>
     <div class="summary-card">
-      <div class="summary-label">資料日期</div>
-      <div class="summary-value" style="font-size:16px;font-family:var(--mono)">${trackData.last_updated || '—'}</div>
-      <div class="summary-sub">最後更新</div>
+      <div class="summary-label">現價日期</div>
+      <div class="summary-value" style="font-size:16px;font-family:var(--mono)">${DATA.current_prices_data?.date || trackData.last_updated || '—'}</div>
+      <div class="summary-sub">掃描 ${trackData.last_updated || '—'}</div>
     </div>
   </div>`;
 

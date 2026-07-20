@@ -46,6 +46,27 @@ function getBigHolderTrendFilteredRows(data) {
   return data.filter(activeFilter.test);
 }
 
+function setBigHolderTrendKPeriod(stockId, period) {
+  const card = document.querySelector(`.pool-kcard[data-bht-stock-id="${stockId}"]`);
+  if (!card) return;
+  card.dataset.period = period;
+  card.querySelectorAll('.pool-period-switch button').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent === ({ day: '日', week: '週', month: '月' }[period]));
+  });
+  const rows = DATA.stock_kbars_data?.stocks?.[stockId]?.daily || [];
+  drawPoolKChart(card.querySelector('canvas'), aggregatePoolBars(rows, period), `bht-${stockId}`);
+}
+
+function drawBigHolderTrendKCharts(rows) {
+  rows.forEach(row => {
+    const card = document.querySelector(`.pool-kcard[data-bht-stock-id="${row.stock_id}"]`);
+    if (!card) return;
+    const period = card.dataset.period || 'day';
+    const bars = DATA.stock_kbars_data?.stocks?.[row.stock_id]?.daily || [];
+    drawPoolKChart(card.querySelector('canvas'), aggregatePoolBars(bars, period), `bht-${row.stock_id}`);
+  });
+}
+
 function renderBigHolderTrend(strat, main) {
   const data = DATA.big_holder_trend_data || [];
   if (!data.length) {
@@ -128,6 +149,57 @@ function renderBigHolderTrend(strat, main) {
     : 0;
   const sourceDate = strat.dataUpdated || '—';
   const priceUpdated = DATA.big_holder_trend_meta?.price_updated || data[0]?.latest_price_date || sourceDate;
+  const kbarUpdated = (DATA.stock_kbars_data?.updated || DATA.stock_kbars_data?.date || '').slice(0, 16) || '-';
+  const isCardMode = activeFilter.id === 'stat_week_0_10';
+
+  const detailCards = rows.map(row => {
+    const latestClose = row.latest_close ?? row.close;
+    const signalTags = [
+      '45-65週漲',
+      ...(row.tags || []).slice(0, 2),
+    ];
+    const trend1000 = (row.big_trend_1000 || []).slice(-4).map(v => fmtPct(v)).join(' / ') || '—';
+    const trend400 = (row.big_trend_400 || []).slice(-4).map(v => fmtPct(v)).join(' / ') || '—';
+    return `<article class="pool-kcard" data-bht-stock-id="${escapeHtml(row.stock_id)}" data-period="day">
+      <div class="bht-banner-card">
+        <div class="bht-banner-head">
+          <a href="https://www.tradingview.com/chart/?symbol=${getTVSymbol(row)}"
+            onclick="openTV('${getTVSymbol(row)}', event)"
+            class="bht-banner-link">
+            <div class="pool-kcard-id">
+              <span class="stock-code">${escapeHtml(row.stock_id)}</span>
+              <span class="stock-name">${escapeHtml(row.name || '-')}</span>
+            </div>
+          </a>
+          <div class="stock-industry">${escapeHtml(row.industry || '-')}</div>
+          <div class="pool-kcard-tags bht-banner-tags">
+            ${signalTags.map(tag => `<span class="tag-badge" style="color:${tag === '45-65週漲' ? 'var(--amber)' : 'var(--text3)'};border-color:var(--border)">${escapeHtml(tag)}</span>`).join('')}
+          </div>
+          <div class="bht-trend-lines">
+            <div><span>千張</span><strong>${trend1000}</strong></div>
+            <div><span>400張</span><strong>${trend400}</strong></div>
+          </div>
+        </div>
+        <div class="pool-kchart-wrap bht-banner-chart">
+          <canvas></canvas>
+          <div class="pool-kchart-empty" data-empty="bht-${escapeHtml(row.stock_id)}">尚未更新 K 棒</div>
+          <div class="pool-period-switch">
+            <button class="active" onclick="setBigHolderTrendKPeriod('${escapeHtml(row.stock_id)}','day')">日</button>
+            <button onclick="setBigHolderTrendKPeriod('${escapeHtml(row.stock_id)}','week')">週</button>
+            <button onclick="setBigHolderTrendKPeriod('${escapeHtml(row.stock_id)}','month')">月</button>
+          </div>
+        </div>
+        <div class="pool-kcard-detail bht-banner-metrics">
+          <div><span>入池</span><strong>${fmt(row.entry_close ?? row.close, 1)}</strong></div>
+          <div><span>現價</span><strong>${fmt(latestClose, 1)}</strong></div>
+          <div><span>入池後</span><strong class="${(row.since_entry_pct ?? 0) >= 0 ? 'pos' : 'neg'}">${fmtPct(row.since_entry_pct)}</strong></div>
+          <div><span>週漲幅</span><strong>${fmtPct(row.week_chg_pct)}</strong></div>
+          <div><span>60日</span><strong class="pos">${fmtPct(row.max_gain_60d)}</strong></div>
+          <div><span>20均量</span><strong>${fmtLots(row.vol_20d_avg)}</strong></div>
+        </div>
+      </div>
+    </article>`;
+  }).join('');
 
   const tableRows = rows.map(row => {
     const score = row.pattern_score ?? row.score;
@@ -205,6 +277,22 @@ function renderBigHolderTrend(strat, main) {
           <div class="summary-sub">收盤更新 ${priceUpdated}</div>
         </div>
       </div>
+      ${isCardMode ? `
+        <div class="table-wrap">
+          <div class="table-toolbar">
+            <div class="bht-toolbar-left">
+              <span class="table-title">45-65 週漲 0-10 個股卡</span>
+              <div class="bht-filter-group">${filterButtons}</div>
+            </div>
+            <div class="toolbar-right">
+              <span class="updated-tag">篩選：${sourceDate}　收盤：${priceUpdated}</span>
+              <span class="updated-tag">K棒 ${kbarUpdated}</span>
+              <button class="btn-csv" onclick="exportCSVBigHolderTrend()" title="匯出 CSV">↥ 匯出 CSV</button>
+            </div>
+          </div>
+          <div class="pool-kcard-grid bht-banner-grid">${detailCards}</div>
+        </div>
+      ` : `
       <div class="table-wrap">
         <div class="table-toolbar">
           <div class="bht-toolbar-left">
@@ -234,7 +322,12 @@ function renderBigHolderTrend(strat, main) {
           </table>
         </div>
       </div>
+      `}
     </div>`;
+
+  if (isCardMode && rows.length) {
+    setTimeout(() => drawBigHolderTrendKCharts(rows), 40);
+  }
 }
 
 function bigHolderTrendSort(col) {

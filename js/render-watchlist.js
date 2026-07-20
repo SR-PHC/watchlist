@@ -15,7 +15,7 @@ function _watchlistSourceLabel(row) {
     right_top: '突破',
     neckline_retest: '頸線回測',
   };
-  return (row.sources || []).map(src => labels[src] || src).join(' / ') || '標的池';
+  return (row.sources || []).map(src => labels[src] || src).join(' / ') || '工作檯';
 }
 
 function _watchlistDaysRemaining(row) {
@@ -46,7 +46,7 @@ async function addStockPoolToWatchlist(stockId) {
   const row = (DATA.momentum_candidates_data?.focus_results || [])
     .find(item => String(item.stock_id) === String(stockId));
   if (!row) {
-    alert('找不到標的池資料');
+    alert('找不到工作檯資料');
     return;
   }
 
@@ -220,6 +220,8 @@ function renderWatchlist(strat, main) {
     .map(row => {
       const pnl = Number(row.pnl_pct || 0);
       const tags = (row.pattern_tags || []).slice(0, 5);
+      const themeLabels = candidateThemeLabels(row.stock_id);
+      const roleLabels = candidateThemeRoleLabels(row.stock_id);
       return `<article class="pool-kcard" data-watch-id="${row.id}">
         <div class="pool-kcard-top">
           <div>
@@ -228,16 +230,17 @@ function renderWatchlist(strat, main) {
               <span class="stock-name">${row.name || '-'}</span>
             </div>
             <div class="stock-industry">${row.industry || '-'}</div>
+            ${renderCandidateThemeBadges(row.stock_id)}
           </div>
           <div class="pool-kcard-score">
             <span>現價</span>
             <strong>${fmtNum(row.current_price ?? row.entry_price, 2)}</strong>
-            <em>(${fmtNum(row.pattern_score, 1)})</em>
+            <em>${row.added_date || ''}</em>
           </div>
         </div>
         <div class="pool-kcard-tags">
           <span class="tag-badge" style="color:var(--green);border-color:var(--border)">自選 ${row.added_date || '-'}</span>
-          <span class="tag-badge" style="color:var(--blue);border-color:var(--border)">${row.source_strategy || '候選標的'}</span>
+          <span class="tag-badge" style="color:var(--blue);border-color:var(--border)">${row.source_strategy || '工作檯'}</span>
           <span class="tag-badge" style="color:${pnl >= 0 ? 'var(--market-up)' : 'var(--market-down)'};border-color:var(--border)">${fmtPct(pnl, 1)}</span>
           ${tags.map(tag => `<span class="tag-badge" style="color:var(--text3);border-color:var(--border)">${tag}</span>`).join('')}
         </div>
@@ -255,6 +258,8 @@ function renderWatchlist(strat, main) {
           <div><span>剩餘日</span><strong>${row.pinned ? '釘選' : (_watchlistDaysRemaining(row) ?? '-')}</strong></div>
           <div><span>關鍵價</span><strong>${fmtNum(row.key_level, 2)}</strong></div>
           <div><span>失效價</span><strong class="neg">${fmtNum(row.invalidation, 2)}</strong></div>
+          <div><span>題材</span><strong>${themeLabels.join(' / ') || '-'}</strong></div>
+          <div><span>角色</span><strong>${roleLabels.join(' / ') || '-'}</strong></div>
         </div>
         <div class="pool-kcard-actions">
           <button class="perf-btn sidebar-mini-btn" onclick="watchlistTogglePin('${row.id}')">${row.pinned ? '取消釘選' : '釘選'}</button>
@@ -271,15 +276,17 @@ function renderWatchlist(strat, main) {
     .map(row => {
       const pnl = Number(row.pnl_pct || 0);
       const tags = (row.pattern_tags || []).slice(0, 4);
+      const themeLabels = candidateThemeLabels(row.stock_id, 3);
       return `<tr>
         <td>
           <div class="stock-code">${row.stock_id}</div>
           <div class="stock-name">${row.name || '-'}</div>
           <div class="stock-industry" style="font-size:10px;color:var(--text3)">${row.industry || '-'}</div>
+          <div class="stock-industry" style="font-size:10px;color:var(--text2)">${themeLabels.join(' / ') || '-'}</div>
         </td>
-        <td><span class="priority-badge blue">${row.source_strategy || '標的池'}</span></td>
+        <td><span class="priority-badge blue">${row.source_strategy || '工作檯'}</span></td>
         <td style="font-family:var(--mono);white-space:nowrap">${row.added_date || '-'}</td>
-        <td style="font-family:var(--mono);font-weight:700">${fmtNum(row.pattern_score, 1)}</td>
+        <td>${row.pattern_state || row.status || '-'}</td>
         <td style="font-family:var(--mono);white-space:nowrap">${fmtNum(row.entry_price, 2)}<span class="watchlist-mobile-date">${row.added_date || '-'}</span></td>
         <td style="font-family:var(--mono);white-space:nowrap">${fmtNum(row.current_price, 2)}<span class="watchlist-mobile-date">${currentPriceDate}</span></td>
         <td><span class="${pnl >= 0 ? 'pos' : 'neg'}" style="font-family:var(--mono);font-weight:700">${fmtPct(pnl, 1)}</span></td>
@@ -299,7 +306,7 @@ function renderWatchlist(strat, main) {
     <div class="strategy-panel active">
       <div class="strat-header">
         <div class="strat-title">${strat.icon} ${strat.name}</div>
-        <div class="strat-desc">從候選標的人工加入；預設觀察 10 個交易日，釘選標的不自動剔除，多重來源只保留一筆。</div>
+        <div class="strat-desc">從工作檯或策略來源人工加入；預設觀察 10 個交易日，釘選標的不自動剔除，多重來源只保留一筆。</div>
       </div>
 
       <div class="summary-row">
@@ -346,7 +353,7 @@ function renderWatchlist(strat, main) {
           </div>
         </div>
         <div style="padding:10px 14px;border-bottom:1px solid var(--border);font-size:12px;color:var(--text3);line-height:1.7">
-          自選統一收納你從「候選標的」人工加入的股票；同一股票若同時符合標的池與頸線回測，只保留一筆並合併來源快照。
+          自選統一收納你從「工作檯」或策略來源人工加入的股票；同一股票若同時符合多個來源，只保留一筆並合併來源快照。
         </div>
         <div class="table-scroll ${activeRows.length > 10 ? 'table-vscroll' : ''}">
           <table id="watchlistTable">
@@ -355,7 +362,7 @@ function renderWatchlist(strat, main) {
                 <th>代號 / 名稱</th>
                 <th>來源</th>
                 <th>加入日</th>
-                <th>型態分</th>
+                <th>狀態</th>
                 <th>入選收盤</th>
                 <th>現價</th>
                 <th>績效</th>
@@ -364,7 +371,7 @@ function renderWatchlist(strat, main) {
                 <th>操作</th>
               </tr>
             </thead>
-            <tbody>${rows || `<tr><td colspan="10" style="text-align:center;color:var(--text3);padding:28px">目前沒有自選標的，請先從候選標的加入。</td></tr>`}</tbody>
+            <tbody>${rows || `<tr><td colspan="10" style="text-align:center;color:var(--text3);padding:28px">目前沒有自選標的，請先從工作檯或策略來源加入。</td></tr>`}</tbody>
           </table>
         </div>
       </div>
