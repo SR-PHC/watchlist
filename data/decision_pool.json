@@ -1,26 +1,98 @@
 {
- "updated": "2026-07-23T17:01:02+08:00",
- "data_date": "2026-07-23",
+ "updated": "2026-07-24T17:01:02+08:00",
+ "data_date": "2026-07-24",
  "criteria": {
   "neckline_confirmed": "neckline_track.active entry_date == neckline_candidates.updated",
   "resonance": "pool_resonance.level >= 3（三池共振）, resonance_date <= 3 trading days, first_entry_date <= 10 trading days, current >= MA20, first-entry drawdown >= -8%",
   "trend_45_65": "big_holder_trend.stat_bucket_60d == \"45-65\", 0% <= week_chg_pct <= 10%, pullback_from_60d_high_pct >= -15%, vol_20d_avg >= 1000"
  },
  "summary": {
-  "total": 8,
-  "neckline_confirmed": 1,
-  "resonance": 4,
+  "total": 7,
+  "neckline_confirmed": 3,
+  "resonance": 2,
   "trend_45_65": 3,
   "excluded": {
-   "resonance": 3,
+   "resonance": 6,
    "trend_45_65": 15
   }
  },
  "rows": [
   {
-   "stock_id": "2206",
-   "name": "三陽工業",
-   "industry": "汽車工業",
+   "stock_id": "4541",
+   "name": "晟田",
+   "industry": "其他",
+   "reasons": [
+    "neckline_confirmed",
+    "resonance"
+   ],
+   "reason_labels": [
+    "頸線當日進場",
+    "三池共振"
+   ],
+   "status": "今日進場",
+   "current_price": 71.4,
+   "signal_date": "2026-07-24",
+   "volume": 19569.0,
+   "vol_20d_avg": 13394.85,
+   "sources": [
+    {
+     "stock_id": "4541",
+     "name": "晟田",
+     "industry": "其他",
+     "entry_date": "2026-07-24",
+     "expire_date": "2026-08-07",
+     "days_remaining": 11,
+     "entry_price": 71.4,
+     "current_price": 71.4,
+     "pnl_pct": 0.0,
+     "entry_type_label": "急殺型",
+     "early_type_label": "盤中過前高",
+     "neckline_price": 69.5,
+     "pinned": false
+    },
+    {
+     "stock_id": "4541",
+     "name": "晟田",
+     "industry": "櫃其他",
+     "level": 3,
+     "pools": {
+      "趨勢": {
+       "entry_date": "2026-07-13",
+       "entry_price": 61.0,
+       "current_price": 71.4,
+       "pnl_pct": 17.05,
+       "expire_date": "2026-07-27",
+       "days_remaining": 3
+      },
+      "突破": {
+       "entry_date": "2026-07-17",
+       "entry_price": 72.6,
+       "current_price": 71.4,
+       "pnl_pct": -1.65,
+       "expire_date": "2026-07-31",
+       "days_remaining": 6
+      },
+      "頸線": {
+       "entry_date": "2026-07-24",
+       "entry_price": 71.4,
+       "current_price": 71.4,
+       "pnl_pct": 0.0,
+       "expire_date": "2026-08-07",
+       "days_remaining": 11
+      }
+     },
+     "current_price": 71.4,
+     "resonance_date": "2026-07-24",
+     "first_entry_date": "2026-07-13",
+     "pool_names": "趨勢 / 突破 / 頸線",
+     "workbench_filter": "新鮮共振且結構未破"
+    }
+   ]
+  },
+  {
+   "stock_id": "1216",
+   "name": "統一",
+   "industry": "食品工業",
    "reasons": [
     "neckline_confirmed"
    ],
@@ -28,80 +100,58 @@
     "頸線當日進場"
    ],
    "status": "今日進場",
-   "current_price": 60.7,
-   "signal_date": "2026-07-23",
-   "volume": 1184.0,
-   "vol_20d_avg": 1534.85,
+   "current_price": 77.4,
+   "signal_date": "2026-07-24",
+   "volume": 15559.0,
+   "vol_20d_avg": 19140.25,
    "sources": [
     {
-     "stock_id": "2206",
-     "name": "三陽工業",
-     "industry": "汽車工業",
-     "entry_date": "2026-07-23",
-     "expire_date": "2026-08-06",
+     "stock_id": "1216",
+     "name": "統一",
+     "industry": "食品工業",
+     "entry_date": "2026-07-24",
+     "expire_date": "2026-08-07",
      "days_remaining": 11,
-     "entry_price": 60.7,
-     "current_price": 60.7,
+     "entry_price": 77.4,
+     "current_price": 77.4,
      "pnl_pct": 0.0,
-     "entry_type_label": "急殺型",
+     "entry_type_label": "緩降型",
      "early_type_label": null,
-     "neckline_price": 60.4,
+     "neckline_price": 76.7,
      "pinned": false
     }
    ]
   },
   {
-   "stock_id": "2395",
-   "name": "研華",
-   "industry": "電腦",
+   "stock_id": "6753",
+   "name": "龍德造船",
+   "industry": "航運業",
    "reasons": [
-    "resonance"
+    "neckline_confirmed"
    ],
    "reason_labels": [
-    "三池共振"
+    "頸線當日進場"
    ],
-   "status": "三池共振",
-   "current_price": 600.0,
-   "signal_date": "2026-07-20",
-   "volume": 3861.0,
-   "vol_20d_avg": 3538.75,
+   "status": "今日進場",
+   "current_price": 140.0,
+   "signal_date": "2026-07-24",
+   "volume": 3777.0,
+   "vol_20d_avg": 5522.45,
    "sources": [
     {
-     "stock_id": "2395",
-     "name": "研華",
-     "industry": "電腦",
-     "level": 3,
-     "pools": {
-      "趨勢": {
-       "entry_date": "2026-07-18",
-       "entry_price": 513.0,
-       "current_price": 600.0,
-       "pnl_pct": 16.96,
-       "expire_date": "2026-08-01",
-       "days_remaining": 9
-      },
-      "突破": {
-       "entry_date": "2026-07-15",
-       "entry_price": 533.0,
-       "current_price": 600.0,
-       "pnl_pct": 12.57,
-       "expire_date": "2026-07-29",
-       "days_remaining": 5
-      },
-      "頸線": {
-       "entry_date": "2026-07-20",
-       "entry_price": 519.0,
-       "current_price": 600.0,
-       "pnl_pct": 15.61,
-       "expire_date": "2026-08-03",
-       "days_remaining": 8
-      }
-     },
-     "current_price": 600.0,
-     "resonance_date": "2026-07-20",
-     "first_entry_date": "2026-07-15",
-     "pool_names": "趨勢 / 突破 / 頸線",
-     "workbench_filter": "新鮮共振且結構未破"
+     "stock_id": "6753",
+     "name": "龍德造船",
+     "industry": "航運業",
+     "entry_date": "2026-07-24",
+     "expire_date": "2026-08-07",
+     "days_remaining": 11,
+     "entry_price": 140.0,
+     "current_price": 140.0,
+     "pnl_pct": 0.0,
+     "entry_type_label": "急殺型",
+     "early_type_label": null,
+     "neckline_price": 139.0,
+     "pinned": false
     }
    ]
   },
@@ -118,8 +168,8 @@
    "status": "三池共振",
    "current_price": 12.85,
    "signal_date": "2026-07-21",
-   "volume": 4921.0,
-   "vol_20d_avg": 4169.65,
+   "volume": 3465.0,
+   "vol_20d_avg": 4223.75,
    "sources": [
     {
      "stock_id": "2836",
@@ -133,7 +183,7 @@
        "current_price": 12.85,
        "pnl_pct": 3.21,
        "expire_date": "2026-07-27",
-       "days_remaining": 4
+       "days_remaining": 3
       },
       "突破": {
        "entry_date": "2026-07-21",
@@ -141,7 +191,7 @@
        "current_price": 12.85,
        "pnl_pct": 1.58,
        "expire_date": "2026-08-04",
-       "days_remaining": 9
+       "days_remaining": 8
       },
       "頸線": {
        "entry_date": "2026-07-13",
@@ -149,122 +199,12 @@
        "current_price": 12.85,
        "pnl_pct": 2.39,
        "expire_date": "2026-07-27",
-       "days_remaining": 3
+       "days_remaining": 2
       }
      },
      "current_price": 12.85,
      "resonance_date": "2026-07-21",
      "first_entry_date": "2026-07-13",
-     "pool_names": "趨勢 / 突破 / 頸線",
-     "workbench_filter": "新鮮共振且結構未破"
-    }
-   ]
-  },
-  {
-   "stock_id": "3033",
-   "name": "威健",
-   "industry": "通路",
-   "reasons": [
-    "resonance"
-   ],
-   "reason_labels": [
-    "三池共振"
-   ],
-   "status": "三池共振",
-   "current_price": 50.5,
-   "signal_date": "2026-07-21",
-   "volume": 5056.0,
-   "vol_20d_avg": 12705.4,
-   "sources": [
-    {
-     "stock_id": "3033",
-     "name": "威健",
-     "industry": "通路",
-     "level": 3,
-     "pools": {
-      "趨勢": {
-       "entry_date": "2026-07-13",
-       "entry_price": 49.6,
-       "current_price": 50.5,
-       "pnl_pct": 1.81,
-       "expire_date": "2026-07-27",
-       "days_remaining": 4
-      },
-      "突破": {
-       "entry_date": "2026-07-15",
-       "entry_price": 55.6,
-       "current_price": 50.5,
-       "pnl_pct": -9.17,
-       "expire_date": "2026-07-29",
-       "days_remaining": 5
-      },
-      "頸線": {
-       "entry_date": "2026-07-21",
-       "entry_price": 48.8,
-       "current_price": 50.5,
-       "pnl_pct": 3.48,
-       "expire_date": "2026-08-04",
-       "days_remaining": 9
-      }
-     },
-     "current_price": 50.5,
-     "resonance_date": "2026-07-21",
-     "first_entry_date": "2026-07-13",
-     "pool_names": "趨勢 / 突破 / 頸線",
-     "workbench_filter": "新鮮共振且結構未破"
-    }
-   ]
-  },
-  {
-   "stock_id": "3413",
-   "name": "京鼎",
-   "industry": "半導",
-   "reasons": [
-    "resonance"
-   ],
-   "reason_labels": [
-    "三池共振"
-   ],
-   "status": "三池共振",
-   "current_price": 341.0,
-   "signal_date": "2026-07-20",
-   "volume": 3975.0,
-   "vol_20d_avg": 4309.2,
-   "sources": [
-    {
-     "stock_id": "3413",
-     "name": "京鼎",
-     "industry": "半導",
-     "level": 3,
-     "pools": {
-      "趨勢": {
-       "entry_date": "2026-07-20",
-       "entry_price": 359.0,
-       "current_price": 341.0,
-       "pnl_pct": -5.01,
-       "expire_date": "2026-08-03",
-       "days_remaining": 11
-      },
-      "突破": {
-       "entry_date": "2026-07-17",
-       "entry_price": 371.0,
-       "current_price": 341.0,
-       "pnl_pct": -8.09,
-       "expire_date": "2026-07-31",
-       "days_remaining": 7
-      },
-      "頸線": {
-       "entry_date": "2026-07-15",
-       "entry_price": 348.0,
-       "current_price": 341.0,
-       "pnl_pct": -2.01,
-       "expire_date": "2026-07-29",
-       "days_remaining": 5
-      }
-     },
-     "current_price": 341.0,
-     "resonance_date": "2026-07-20",
-     "first_entry_date": "2026-07-15",
      "pool_names": "趨勢 / 突破 / 頸線",
      "workbench_filter": "新鮮共振且結構未破"
     }
@@ -281,9 +221,9 @@
     "趨勢大戶45-65"
    ],
    "status": "趨勢45-65",
-   "current_price": 27.2,
-   "signal_date": "2026-07-23",
-   "volume": 4659.0,
+   "current_price": 26.25,
+   "signal_date": "2026-07-24",
+   "volume": 5147.0,
    "vol_20d_avg": 5025.0,
    "sources": [
     {
@@ -323,12 +263,12 @@
       "big_holder_trend"
      ],
      "price_date": "2026-07-17",
-     "close": 27.2,
+     "close": 26.25,
      "entry_date": "2026-07-17",
      "entry_close": 26.05,
-     "latest_price_date": "2026-07-23",
-     "latest_close": 27.2,
-     "since_entry_pct": 4.41,
+     "latest_price_date": "2026-07-24",
+     "latest_close": 26.25,
+     "since_entry_pct": 0.77,
      "ema20": 24.27,
      "ema60": 21.56,
      "ema120": 19.98,
@@ -340,115 +280,6 @@
      "pullback_from_60d_high_pct": -7.13,
      "vol_20d_avg": 5025,
      "week_chg_pct": 6.76,
-     "price_filter_pass": true,
-     "stat_bucket_60d": "45-65",
-     "stat_edge": true,
-     "stat_edge_id": "max_gain_60d_45_65",
-     "stat_edge_label": "60日45-65統計優勢區",
-     "stat_edge_range": [
-      45.0,
-      65.0
-     ],
-     "stat_edge_basis": "big_holder_trend 60日最大漲幅分箱回測：45-65% 區間入池後平均漲幅與勝率較佳",
-     "stat_week_0_10": true,
-     "stat_week_0_10_id": "max_gain_45_65_week_0_10",
-     "stat_week_0_10_label": "45-65週漲0-10",
-     "stat_week_0_10_basis": "60日漲幅45-65%、週漲幅0-10%",
-     "pattern_state": "先觀察",
-     "pattern_score": 46.4,
-     "pattern_subs": {
-      "結構": 27,
-      "型態": 8.4,
-      "量價": 0,
-      "位置": 7,
-      "籌碼": 4
-     },
-     "pattern_tags": [
-      "均線多頭",
-      "箱頂整理",
-      "大戶上升"
-     ],
-     "patterns": [
-      "box_near_top"
-     ],
-     "key_level": 28.3,
-     "invalidation": null,
-     "pattern_confidence": 0.6,
-     "score": 46.4,
-     "score_model": "pattern_score_only_v1",
-     "workbench_filter": "45-65週漲0-10、回落<=15%、量>=1000"
-    }
-   ]
-  },
-  {
-   "stock_id": "1710",
-   "name": "東聯",
-   "industry": "化學",
-   "reasons": [
-    "trend_45_65"
-   ],
-   "reason_labels": [
-    "趨勢大戶45-65"
-   ],
-   "status": "趨勢45-65",
-   "current_price": 16.8,
-   "signal_date": "2026-07-23",
-   "volume": 11599.0,
-   "vol_20d_avg": 16777.0,
-   "sources": [
-    {
-     "stock_id": "1710",
-     "name": "東聯",
-     "industry": "化學",
-     "market_cap": 209.5,
-     "big_pct_1000": 57.54,
-     "big_pct_400": 62.76,
-     "chg_1w_1000": 0.14,
-     "chg_1w_400": 0.11,
-     "big_trend_1000": [
-      56.36,
-      57.32,
-      57.46,
-      57.54
-     ],
-     "big_trend_400": [
-      61.57,
-      62.56,
-      62.69,
-      62.76
-     ],
-     "date_labels": [
-      "06/26",
-      "07/03",
-      "07/09",
-      "07/17"
-     ],
-     "tags": [
-      "千張4週連增",
-      "400張4週連增"
-     ],
-     "signal_score": 5,
-     "sources": [
-      "big_holder_trend"
-     ],
-     "price_date": "2026-07-17",
-     "close": 16.8,
-     "entry_date": "2026-07-17",
-     "entry_close": 16.4,
-     "latest_price_date": "2026-07-23",
-     "latest_close": 16.8,
-     "since_entry_pct": 2.44,
-     "ema20": 16.14,
-     "ema60": 14.86,
-     "ema120": 14.13,
-     "ema200": 13.64,
-     "bullish_aligned": true,
-     "high_60d": 18.85,
-     "low_60d": 11.5,
-     "max_gain_60d": 63.91,
-     "pullback_from_60d_high_pct": -13.0,
-     "vol_20d_avg": 16777,
-     "week_chg_pct": 0.0,
      "price_filter_pass": true,
      "stat_bucket_60d": "45-65",
      "stat_edge": true,
@@ -487,6 +318,112 @@
    ]
   },
   {
+   "stock_id": "1710",
+   "name": "東聯",
+   "industry": "化學",
+   "reasons": [
+    "trend_45_65"
+   ],
+   "reason_labels": [
+    "趨勢大戶45-65"
+   ],
+   "status": "趨勢45-65",
+   "current_price": 15.75,
+   "signal_date": "2026-07-24",
+   "volume": 9383.0,
+   "vol_20d_avg": 16777.0,
+   "sources": [
+    {
+     "stock_id": "1710",
+     "name": "東聯",
+     "industry": "化學",
+     "market_cap": 209.5,
+     "big_pct_1000": 57.54,
+     "big_pct_400": 62.76,
+     "chg_1w_1000": 0.14,
+     "chg_1w_400": 0.11,
+     "big_trend_1000": [
+      56.36,
+      57.32,
+      57.46,
+      57.54
+     ],
+     "big_trend_400": [
+      61.57,
+      62.56,
+      62.69,
+      62.76
+     ],
+     "date_labels": [
+      "06/26",
+      "07/03",
+      "07/09",
+      "07/17"
+     ],
+     "tags": [
+      "千張4週連增",
+      "400張4週連增"
+     ],
+     "signal_score": 5,
+     "sources": [
+      "big_holder_trend"
+     ],
+     "price_date": "2026-07-17",
+     "close": 15.75,
+     "entry_date": "2026-07-17",
+     "entry_close": 16.4,
+     "latest_price_date": "2026-07-24",
+     "latest_close": 15.75,
+     "since_entry_pct": -3.96,
+     "ema20": 16.14,
+     "ema60": 14.86,
+     "ema120": 14.13,
+     "ema200": 13.64,
+     "bullish_aligned": true,
+     "high_60d": 18.85,
+     "low_60d": 11.5,
+     "max_gain_60d": 63.91,
+     "pullback_from_60d_high_pct": -13.0,
+     "vol_20d_avg": 16777,
+     "week_chg_pct": 0.0,
+     "price_filter_pass": true,
+     "stat_bucket_60d": "45-65",
+     "stat_edge": true,
+     "stat_edge_id": "max_gain_60d_45_65",
+     "stat_edge_label": "60日45-65統計優勢區",
+     "stat_edge_range": [
+      45.0,
+      65.0
+     ],
+     "stat_edge_basis": "big_holder_trend 60日最大漲幅分箱回測：45-65% 區間入池後平均漲幅與勝率較佳",
+     "stat_week_0_10": true,
+     "stat_week_0_10_id": "max_gain_45_65_week_0_10",
+     "stat_week_0_10_label": "45-65週漲0-10",
+     "stat_week_0_10_basis": "60日漲幅45-65%、週漲幅0-10%",
+     "pattern_state": "先觀察",
+     "pattern_score": 35.0,
+     "pattern_subs": {
+      "結構": 19,
+      "型態": 0.0,
+      "量價": 5,
+      "位置": 7,
+      "籌碼": 4
+     },
+     "pattern_tags": [
+      "均線多頭",
+      "大戶上升"
+     ],
+     "patterns": [],
+     "key_level": null,
+     "invalidation": null,
+     "pattern_confidence": 1.0,
+     "score": 35.0,
+     "score_model": "pattern_score_only_v1",
+     "workbench_filter": "45-65週漲0-10、回落<=15%、量>=1000"
+    }
+   ]
+  },
+  {
    "stock_id": "8028",
    "name": "昇陽半導體",
    "industry": "半導",
@@ -498,8 +435,8 @@
    ],
    "status": "趨勢45-65",
    "current_price": 300.5,
-   "signal_date": "2026-07-23",
-   "volume": 1363.0,
+   "signal_date": "2026-07-24",
+   "volume": 965.0,
    "vol_20d_avg": 7975.0,
    "sources": [
     {
@@ -541,7 +478,7 @@
      "close": 300.5,
      "entry_date": "2026-07-17",
      "entry_close": 315.0,
-     "latest_price_date": "2026-07-23",
+     "latest_price_date": "2026-07-24",
      "latest_close": 300.5,
      "since_entry_pct": -4.6,
      "ema20": 313.79,
@@ -570,22 +507,23 @@
      "stat_week_0_10_label": "45-65週漲0-10",
      "stat_week_0_10_basis": "60日漲幅45-65%、週漲幅0-10%",
      "pattern_state": "先觀察",
-     "pattern_score": 18.0,
+     "pattern_score": 28.0,
      "pattern_subs": {
-      "結構": 0,
+      "結構": 5,
       "型態": 0.0,
-      "量價": 5,
+      "量價": 10,
       "位置": 9,
       "籌碼": 4
      },
      "pattern_tags": [
+      "量縮整理",
       "大戶上升"
      ],
      "patterns": [],
      "key_level": null,
      "invalidation": null,
      "pattern_confidence": 1.0,
-     "score": 18.0,
+     "score": 28.0,
      "score_model": "pattern_score_only_v1",
      "workbench_filter": "45-65週漲0-10、回落<=15%、量>=1000"
     }
