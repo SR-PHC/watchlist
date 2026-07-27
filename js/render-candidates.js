@@ -102,6 +102,24 @@ function renderHighMomentumBadges(high, compact = false) {
     .join('');
 }
 
+function candidateHollowPattern(stockId, signalDate = '') {
+  const id = String(stockId || '').trim();
+  if (!id) return null;
+  const rows = DATA.neckline_daily_rank_data?.rows || [];
+  const item = rows.find(row => String(row.stock_id) === id || String(row.stock_id).padStart(4, '0') === id.padStart(4, '0'));
+  if (!item?.is_hollow_pattern) return null;
+  if (signalDate && item.entry_date && item.entry_date !== signalDate) return null;
+  return item;
+}
+
+function renderHollowPatternBadge(row) {
+  if (!(row.reasons || []).includes('neckline_confirmed')) return '';
+  const hollow = candidateHollowPattern(row.stock_id, row.signal_date);
+  if (!hollow) return '';
+  const title = hollow.hollow_pattern_reason || 'KD低檔、量縮回測、確認未追高';
+  return `<span class="tag-badge" style="color:#10221f;background:#57d4c6;border-color:#57d4c6;font-weight:800" title="${escapeHtml(title)}">凹洞型態</span>`;
+}
+
 function candidateResonanceText(row) {
   if (!row) return '';
   const level = Number(row.level || Object.keys(row.pools || {}).length || 0);
@@ -429,6 +447,7 @@ function renderUnifiedCandidates(strat, main) {
       </div>
       <div class="pool-kcard-tags">
         <span class="tag-badge" style="color:var(--green);border-color:var(--border)">${rowLabel}</span>
+        ${!isStrongLatest ? renderHollowPatternBadge(row) : ''}
         <span class="tag-badge" style="color:var(--text3);border-color:var(--border)">${rowStatus}</span>
       </div>
       <div class="pool-kchart-wrap">
