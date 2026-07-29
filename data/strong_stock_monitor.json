@@ -1,6 +1,6 @@
 {
- "updated": "2026-07-28T16:47:48+08:00",
- "data_date": "2026-07-28",
+ "updated": "2026-07-29T16:46:55+08:00",
+ "data_date": "2026-07-29",
  "strategy_id": "strong_stock_monitor_v1",
  "criteria": {
   "leader": "close >= 90% of 60d high, close near 20d high, close >= MA20 >= MA60, MA20 5d slope positive, 20d return >= 8%, relative 20d >= 3%, vol20 >= 1000, 0.8 <= vol_ratio <= 4",
@@ -10,38 +10,38 @@
   "benchmark": "TAIEX"
  },
  "summary": {
-  "total": 23,
-  "leader": 5,
-  "watch": 18,
-  "latest": 13,
-  "latest_leader": 4,
-  "latest_watch": 9,
-  "strong_themes": 1,
+  "total": 27,
+  "leader": 16,
+  "watch": 11,
+  "latest": 17,
+  "latest_leader": 10,
+  "latest_watch": 7,
+  "strong_themes": 3,
   "excluded": {
    "non_common_stock": 8,
-   "condition_not_met": 1962
+   "condition_not_met": 1946
   }
  },
  "rows": [
   {
-   "stock_id": "4566",
-   "name": "時碩工業",
+   "stock_id": "1526",
+   "name": "日馳",
    "industry": "電機機械",
    "market": "TWSE",
    "tier": "leader",
-   "date": "2026-07-28",
-   "close": 71.1,
-   "ret_5d_pct": 3.04,
-   "ret_20d_pct": 16.56,
-   "relative_5d_pct": 8.99,
-   "relative_20d_pct": 24.11,
-   "ma20": 66.56,
-   "ma60": 65.44,
-   "ma20_slope_5d_pct": 3.36,
-   "high20": 76.3,
-   "high60": 76.3,
-   "vol20": 2501.0,
-   "vol_ratio": 1.48,
+   "date": "2026-07-29",
+   "close": 18.9,
+   "ret_5d_pct": 16.31,
+   "ret_20d_pct": 32.63,
+   "relative_5d_pct": 26.99,
+   "relative_20d_pct": 45.83,
+   "ma20": 15.73,
+   "ma60": 15.08,
+   "ma20_slope_5d_pct": 5.27,
+   "high20": 19.4,
+   "high60": 19.4,
+   "vol20": 1248.0,
+   "vol_ratio": 2.68,
    "reasons": [
     "接近60日高",
     "20日高附近",
@@ -58,31 +58,77 @@
      "category": ""
     }
    ],
-   "first_seen_date": "2026-07-24",
-   "days_since_first_seen": 2,
+   "first_seen_date": "2026-07-29",
+   "days_since_first_seen": 0,
+   "latest_entered": true,
+   "previous_tier": null,
+   "tier_changed": false
+  },
+  {
+   "stock_id": "2332",
+   "name": "友訊",
+   "industry": "通信網路業",
+   "market": "TWSE",
+   "tier": "leader",
+   "date": "2026-07-29",
+   "close": 24.0,
+   "ret_5d_pct": 0.42,
+   "ret_20d_pct": 31.15,
+   "relative_5d_pct": 11.1,
+   "relative_20d_pct": 44.34,
+   "ma20": 22.04,
+   "ma60": 17.94,
+   "ma20_slope_5d_pct": 6.55,
+   "high20": 26.45,
+   "high60": 26.45,
+   "vol20": 48110.0,
+   "vol_ratio": 1.6,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日漲幅達標",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "networking_communication",
+     "label": "通訊網路",
+     "category": ""
+    },
+    {
+     "id": "robotics",
+     "label": "機器人",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-29",
+   "days_since_first_seen": 0,
    "latest_entered": true,
    "previous_tier": "leader",
    "tier_changed": false
   },
   {
-   "stock_id": "6669",
-   "name": "緯穎",
+   "stock_id": "6243",
+   "name": "迅杰",
    "industry": "電子工業",
    "market": "TWSE",
    "tier": "leader",
-   "date": "2026-07-28",
-   "close": 5315.0,
-   "ret_5d_pct": 6.3,
-   "ret_20d_pct": 16.05,
-   "relative_5d_pct": 12.24,
-   "relative_20d_pct": 23.6,
-   "ma20": 5120.75,
-   "ma60": 5120.0,
-   "ma20_slope_5d_pct": 5.21,
-   "high20": 5835.0,
-   "high60": 5880.0,
-   "vol20": 1838.0,
-   "vol_ratio": 1.04,
+   "date": "2026-07-29",
+   "close": 51.2,
+   "ret_5d_pct": 2.2,
+   "ret_20d_pct": 28.32,
+   "relative_5d_pct": 12.87,
+   "relative_20d_pct": 41.52,
+   "ma20": 44.86,
+   "ma60": 38.2,
+   "ma20_slope_5d_pct": 4.39,
+   "high20": 55.5,
+   "high60": 55.5,
+   "vol20": 4414.0,
+   "vol_ratio": 2.32,
    "reasons": [
     "接近60日高",
     "20日高附近",
@@ -99,16 +145,103 @@
      "category": ""
     },
     {
-     "id": "ai_server",
-     "label": "AI伺服器",
+     "id": "power_semiconductor",
+     "label": "功率半導體",
+     "category": ""
+    },
+    {
+     "id": "ic_design",
+     "label": "IC設計",
      "category": ""
     }
    ],
-   "first_seen_date": "2026-07-28",
+   "first_seen_date": "2026-07-29",
    "days_since_first_seen": 0,
    "latest_entered": true,
-   "previous_tier": null,
+   "previous_tier": "leader",
    "tier_changed": false
+  },
+  {
+   "stock_id": "8050",
+   "name": "廣積",
+   "industry": "電腦及週邊設備業",
+   "market": "TPEX",
+   "tier": "leader",
+   "date": "2026-07-29",
+   "close": 60.8,
+   "ret_5d_pct": -0.65,
+   "ret_20d_pct": 16.25,
+   "relative_5d_pct": 10.02,
+   "relative_20d_pct": 29.45,
+   "ma20": 58.78,
+   "ma60": 55.23,
+   "ma20_slope_5d_pct": 3.36,
+   "high20": 65.0,
+   "high60": 66.1,
+   "vol20": 2881.0,
+   "vol_ratio": 2.78,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日漲幅達標",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "computer_peripherals",
+     "label": "電腦週邊",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-21",
+   "days_since_first_seen": 6,
+   "latest_entered": false,
+   "previous_tier": "watch",
+   "tier_changed": true
+  },
+  {
+   "stock_id": "5490",
+   "name": "同亨",
+   "industry": "電腦及週邊設備業",
+   "market": "TPEX",
+   "tier": "leader",
+   "date": "2026-07-29",
+   "close": 33.15,
+   "ret_5d_pct": -0.9,
+   "ret_20d_pct": 16.11,
+   "relative_5d_pct": 9.78,
+   "relative_20d_pct": 29.31,
+   "ma20": 30.77,
+   "ma60": 29.42,
+   "ma20_slope_5d_pct": 3.35,
+   "high20": 35.1,
+   "high60": 35.1,
+   "vol20": 1606.0,
+   "vol_ratio": 2.64,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日漲幅達標",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "computer_peripherals",
+     "label": "電腦週邊",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-21",
+   "days_since_first_seen": 6,
+   "latest_entered": false,
+   "previous_tier": "watch",
+   "tier_changed": true
   },
   {
    "stock_id": "6603",
@@ -116,19 +249,19 @@
    "industry": "電機機械",
    "market": "TPEX",
    "tier": "leader",
-   "date": "2026-07-28",
-   "close": 25.6,
-   "ret_5d_pct": 3.85,
-   "ret_20d_pct": 13.02,
-   "relative_5d_pct": 9.8,
-   "relative_20d_pct": 20.57,
-   "ma20": 24.98,
-   "ma60": 23.86,
-   "ma20_slope_5d_pct": 1.3,
+   "date": "2026-07-29",
+   "close": 26.2,
+   "ret_5d_pct": 8.04,
+   "ret_20d_pct": 14.41,
+   "relative_5d_pct": 18.72,
+   "relative_20d_pct": 27.61,
+   "ma20": 25.14,
+   "ma60": 23.88,
+   "ma20_slope_5d_pct": 1.98,
    "high20": 27.15,
    "high60": 27.15,
-   "vol20": 1593.0,
-   "vol_ratio": 1.1,
+   "vol20": 1743.0,
+   "vol_ratio": 2.03,
    "reasons": [
     "接近60日高",
     "20日高附近",
@@ -146,30 +279,30 @@
     }
    ],
    "first_seen_date": "2026-07-27",
-   "days_since_first_seen": 1,
+   "days_since_first_seen": 2,
    "latest_entered": true,
    "previous_tier": "leader",
    "tier_changed": false
   },
   {
-   "stock_id": "5388",
-   "name": "中磊",
-   "industry": "電子工業",
+   "stock_id": "2867",
+   "name": "三商壽",
+   "industry": "金融保險",
    "market": "TWSE",
    "tier": "leader",
-   "date": "2026-07-28",
-   "close": 86.4,
-   "ret_5d_pct": 1.53,
-   "ret_20d_pct": 11.63,
-   "relative_5d_pct": 7.47,
-   "relative_20d_pct": 19.18,
-   "ma20": 84.77,
-   "ma60": 83.93,
-   "ma20_slope_5d_pct": 2.8,
-   "high20": 94.7,
-   "high60": 94.7,
-   "vol20": 5026.0,
-   "vol_ratio": 0.99,
+   "date": "2026-07-29",
+   "close": 9.37,
+   "ret_5d_pct": 0.97,
+   "ret_20d_pct": 12.35,
+   "relative_5d_pct": 11.65,
+   "relative_20d_pct": 25.55,
+   "ma20": 8.97,
+   "ma60": 8.32,
+   "ma20_slope_5d_pct": 2.43,
+   "high20": 9.65,
+   "high60": 9.65,
+   "vol20": 18321.0,
+   "vol_ratio": 2.19,
    "reasons": [
     "接近60日高",
     "20日高附近",
@@ -181,16 +314,139 @@
    ],
    "themes": [
     {
-     "id": "electronics_components",
-     "label": "電子零組件",
+     "id": "finance_insurance",
+     "label": "金融保險",
      "category": ""
     }
    ],
-   "first_seen_date": "2026-07-24",
-   "days_since_first_seen": 2,
+   "first_seen_date": "2026-07-20",
+   "days_since_first_seen": 7,
+   "latest_entered": false,
+   "previous_tier": "watch",
+   "tier_changed": true
+  },
+  {
+   "stock_id": "2905",
+   "name": "三商",
+   "industry": "貿易百貨",
+   "market": "TWSE",
+   "tier": "leader",
+   "date": "2026-07-29",
+   "close": 16.45,
+   "ret_5d_pct": 3.46,
+   "ret_20d_pct": 11.15,
+   "relative_5d_pct": 14.14,
+   "relative_20d_pct": 24.34,
+   "ma20": 15.53,
+   "ma60": 14.57,
+   "ma20_slope_5d_pct": 2.07,
+   "high20": 16.45,
+   "high60": 16.45,
+   "vol20": 1088.0,
+   "vol_ratio": 2.15,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日漲幅達標",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "retail_trade",
+     "label": "貿易百貨",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-29",
+   "days_since_first_seen": 0,
    "latest_entered": true,
-   "previous_tier": "leader",
+   "previous_tier": null,
    "tier_changed": false
+  },
+  {
+   "stock_id": "9921",
+   "name": "巨大",
+   "industry": "其他",
+   "market": "TWSE",
+   "tier": "leader",
+   "date": "2026-07-29",
+   "close": 87.4,
+   "ret_5d_pct": 3.31,
+   "ret_20d_pct": 11.05,
+   "relative_5d_pct": 13.99,
+   "relative_20d_pct": 24.25,
+   "ma20": 81.48,
+   "ma60": 75.23,
+   "ma20_slope_5d_pct": 3.28,
+   "high20": 92.0,
+   "high60": 92.0,
+   "vol20": 2924.0,
+   "vol_ratio": 0.95,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日漲幅達標",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "other_diversified",
+     "label": "其他多元",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-16",
+   "days_since_first_seen": 9,
+   "latest_entered": false,
+   "previous_tier": "watch",
+   "tier_changed": true
+  },
+  {
+   "stock_id": "2637",
+   "name": "慧洋-KY",
+   "industry": "航運業",
+   "market": "TWSE",
+   "tier": "leader",
+   "date": "2026-07-29",
+   "close": 80.4,
+   "ret_5d_pct": -3.83,
+   "ret_20d_pct": 10.74,
+   "relative_5d_pct": 6.85,
+   "relative_20d_pct": 23.94,
+   "ma20": 80.28,
+   "ma60": 77.19,
+   "ma20_slope_5d_pct": 2.62,
+   "high20": 88.0,
+   "high60": 88.0,
+   "vol20": 3114.0,
+   "vol_ratio": 0.83,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日漲幅達標",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "shipping_transport",
+     "label": "航運運輸",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-21",
+   "days_since_first_seen": 6,
+   "latest_entered": false,
+   "previous_tier": "watch",
+   "tier_changed": true
   },
   {
    "stock_id": "2880",
@@ -198,19 +454,19 @@
    "industry": "金融保險",
    "market": "TWSE",
    "tier": "leader",
-   "date": "2026-07-28",
-   "close": 41.4,
-   "ret_5d_pct": 1.47,
-   "ret_20d_pct": 10.99,
-   "relative_5d_pct": 7.42,
-   "relative_20d_pct": 18.54,
-   "ma20": 39.4,
-   "ma60": 35.89,
+   "date": "2026-07-29",
+   "close": 41.8,
+   "ret_5d_pct": 1.33,
+   "ret_20d_pct": 10.0,
+   "relative_5d_pct": 12.01,
+   "relative_20d_pct": 23.2,
+   "ma20": 39.59,
+   "ma60": 36.05,
    "ma20_slope_5d_pct": 2.5,
-   "high20": 41.95,
-   "high60": 41.95,
-   "vol20": 22622.0,
-   "vol_ratio": 0.96,
+   "high20": 42.5,
+   "high60": 42.5,
+   "vol20": 23507.0,
+   "vol_ratio": 1.48,
    "reasons": [
     "接近60日高",
     "20日高附近",
@@ -228,10 +484,215 @@
     }
    ],
    "first_seen_date": "2026-07-21",
-   "days_since_first_seen": 5,
+   "days_since_first_seen": 6,
    "latest_entered": false,
    "previous_tier": "leader",
    "tier_changed": false
+  },
+  {
+   "stock_id": "4566",
+   "name": "時碩工業",
+   "industry": "電機機械",
+   "market": "TWSE",
+   "tier": "leader",
+   "date": "2026-07-29",
+   "close": 69.7,
+   "ret_5d_pct": 1.9,
+   "ret_20d_pct": 9.94,
+   "relative_5d_pct": 12.58,
+   "relative_20d_pct": 23.13,
+   "ma20": 66.88,
+   "ma60": 65.4,
+   "ma20_slope_5d_pct": 3.48,
+   "high20": 76.3,
+   "high60": 76.3,
+   "vol20": 2644.0,
+   "vol_ratio": 1.37,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日漲幅達標",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "machinery_robotics",
+     "label": "機械自動化",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-24",
+   "days_since_first_seen": 3,
+   "latest_entered": true,
+   "previous_tier": "leader",
+   "tier_changed": false
+  },
+  {
+   "stock_id": "2539",
+   "name": "櫻花建",
+   "industry": "建材營造",
+   "market": "TWSE",
+   "tier": "leader",
+   "date": "2026-07-29",
+   "close": 42.65,
+   "ret_5d_pct": 6.62,
+   "ret_20d_pct": 9.64,
+   "relative_5d_pct": 17.3,
+   "relative_20d_pct": 22.84,
+   "ma20": 40.3,
+   "ma60": 38.83,
+   "ma20_slope_5d_pct": 1.49,
+   "high20": 43.7,
+   "high60": 43.7,
+   "vol20": 1141.0,
+   "vol_ratio": 3.71,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日漲幅達標",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "construction_real_estate",
+     "label": "營建資產",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-29",
+   "days_since_first_seen": 0,
+   "latest_entered": true,
+   "previous_tier": "watch",
+   "tier_changed": true
+  },
+  {
+   "stock_id": "2106",
+   "name": "建大",
+   "industry": "橡膠工業",
+   "market": "TWSE",
+   "tier": "leader",
+   "date": "2026-07-29",
+   "close": 18.25,
+   "ret_5d_pct": 3.11,
+   "ret_20d_pct": 8.31,
+   "relative_5d_pct": 13.79,
+   "relative_20d_pct": 21.5,
+   "ma20": 17.79,
+   "ma60": 17.45,
+   "ma20_slope_5d_pct": 1.59,
+   "high20": 18.65,
+   "high60": 18.75,
+   "vol20": 1157.0,
+   "vol_ratio": 1.71,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日漲幅達標",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "plastic_rubber",
+     "label": "塑橡膠",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-27",
+   "days_since_first_seen": 2,
+   "latest_entered": true,
+   "previous_tier": "watch",
+   "tier_changed": true
+  },
+  {
+   "stock_id": "2886",
+   "name": "兆豐金",
+   "industry": "金融保險",
+   "market": "TWSE",
+   "tier": "leader",
+   "date": "2026-07-29",
+   "close": 49.9,
+   "ret_5d_pct": 3.53,
+   "ret_20d_pct": 8.24,
+   "relative_5d_pct": 14.21,
+   "relative_20d_pct": 21.44,
+   "ma20": 47.44,
+   "ma60": 43.77,
+   "ma20_slope_5d_pct": 1.68,
+   "high20": 50.5,
+   "high60": 50.5,
+   "vol20": 35828.0,
+   "vol_ratio": 1.26,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日漲幅達標",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "finance_insurance",
+     "label": "金融保險",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-27",
+   "days_since_first_seen": 2,
+   "latest_entered": true,
+   "previous_tier": "watch",
+   "tier_changed": true
+  },
+  {
+   "stock_id": "2912",
+   "name": "統一超",
+   "industry": "貿易百貨",
+   "market": "TWSE",
+   "tier": "leader",
+   "date": "2026-07-29",
+   "close": 241.0,
+   "ret_5d_pct": 0.63,
+   "ret_20d_pct": 8.07,
+   "relative_5d_pct": 11.3,
+   "relative_20d_pct": 21.27,
+   "ma20": 239.07,
+   "ma60": 229.65,
+   "ma20_slope_5d_pct": 1.59,
+   "high20": 249.0,
+   "high60": 250.0,
+   "vol20": 3812.0,
+   "vol_ratio": 1.31,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日漲幅達標",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "retail_trade",
+     "label": "貿易百貨",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-29",
+   "days_since_first_seen": 0,
+   "latest_entered": true,
+   "previous_tier": "watch",
+   "tier_changed": true
   },
   {
    "stock_id": "1467",
@@ -239,19 +700,19 @@
    "industry": "紡織纖維",
    "market": "TWSE",
    "tier": "watch",
-   "date": "2026-07-28",
-   "close": 10.25,
-   "ret_5d_pct": -2.38,
-   "ret_20d_pct": 42.96,
-   "relative_5d_pct": 3.56,
-   "relative_20d_pct": 50.5,
-   "ma20": 9.15,
-   "ma60": 7.87,
-   "ma20_slope_5d_pct": 9.09,
+   "date": "2026-07-29",
+   "close": 10.2,
+   "ret_5d_pct": 2.0,
+   "ret_20d_pct": 39.73,
+   "relative_5d_pct": 12.68,
+   "relative_20d_pct": 52.92,
+   "ma20": 9.29,
+   "ma60": 7.92,
+   "ma20_slope_5d_pct": 8.95,
    "high20": 10.65,
    "high60": 10.65,
-   "vol20": 1372.0,
-   "vol_ratio": 0.71,
+   "vol20": 1403.0,
+   "vol_ratio": 0.63,
    "reasons": [
     "接近60日高",
     "20日高附近",
@@ -268,210 +729,10 @@
     }
    ],
    "first_seen_date": "2026-07-21",
-   "days_since_first_seen": 5,
-   "latest_entered": false,
-   "previous_tier": "watch",
-   "tier_changed": false
-  },
-  {
-   "stock_id": "5227",
-   "name": "立凱-KY",
-   "industry": "電子零組件業",
-   "market": "TPEX",
-   "tier": "watch",
-   "date": "2026-07-28",
-   "close": 41.6,
-   "ret_5d_pct": 17.51,
-   "ret_20d_pct": 22.9,
-   "relative_5d_pct": 23.46,
-   "relative_20d_pct": 30.44,
-   "ma20": 35.02,
-   "ma60": 30.11,
-   "ma20_slope_5d_pct": 2.65,
-   "high20": 42.6,
-   "high60": 46.7,
-   "vol20": 1064.0,
-   "vol_ratio": 1.55,
-   "reasons": [
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "量能未萎縮",
-    "20日漲幅達標",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "electronics_components",
-     "label": "電子零組件",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-28",
-   "days_since_first_seen": 0,
-   "latest_entered": true,
-   "previous_tier": null,
-   "tier_changed": false
-  },
-  {
-   "stock_id": "8050",
-   "name": "廣積",
-   "industry": "電腦及週邊設備業",
-   "market": "TPEX",
-   "tier": "watch",
-   "date": "2026-07-28",
-   "close": 58.5,
-   "ret_5d_pct": -3.31,
-   "ret_20d_pct": 13.59,
-   "relative_5d_pct": 2.64,
-   "relative_20d_pct": 21.14,
-   "ma20": 58.36,
-   "ma60": 54.94,
-   "ma20_slope_5d_pct": 3.14,
-   "high20": 65.0,
-   "high60": 66.1,
-   "vol20": 2509.0,
-   "vol_ratio": 1.02,
-   "reasons": [
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "量能未萎縮",
-    "20日漲幅達標",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "computer_peripherals",
-     "label": "電腦週邊",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-21",
-   "days_since_first_seen": 5,
-   "latest_entered": false,
-   "previous_tier": "leader",
-   "tier_changed": true
-  },
-  {
-   "stock_id": "5490",
-   "name": "同亨",
-   "industry": "電腦及週邊設備業",
-   "market": "TPEX",
-   "tier": "watch",
-   "date": "2026-07-28",
-   "close": 32.25,
-   "ret_5d_pct": 1.9,
-   "ret_20d_pct": 13.16,
-   "relative_5d_pct": 7.84,
-   "relative_20d_pct": 20.71,
-   "ma20": 30.54,
-   "ma60": 29.33,
-   "ma20_slope_5d_pct": 3.49,
-   "high20": 35.1,
-   "high60": 35.1,
-   "vol20": 1414.0,
-   "vol_ratio": 0.61,
-   "reasons": [
-    "接近60日高",
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "20日漲幅達標",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "computer_peripherals",
-     "label": "電腦週邊",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-21",
-   "days_since_first_seen": 5,
-   "latest_entered": false,
-   "previous_tier": "watch",
-   "tier_changed": false
-  },
-  {
-   "stock_id": "2637",
-   "name": "慧洋-KY",
-   "industry": "航運業",
-   "market": "TWSE",
-   "tier": "watch",
-   "date": "2026-07-28",
-   "close": 81.9,
-   "ret_5d_pct": 0.99,
-   "ret_20d_pct": 12.81,
-   "relative_5d_pct": 6.93,
-   "relative_20d_pct": 20.36,
-   "ma20": 79.89,
-   "ma60": 77.06,
-   "ma20_slope_5d_pct": 2.57,
-   "high20": 88.0,
-   "high60": 88.0,
-   "vol20": 3081.0,
-   "vol_ratio": 0.7,
-   "reasons": [
-    "接近60日高",
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "20日漲幅達標",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "shipping_transport",
-     "label": "航運運輸",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-21",
-   "days_since_first_seen": 5,
-   "latest_entered": false,
-   "previous_tier": "watch",
-   "tier_changed": false
-  },
-  {
-   "stock_id": "2867",
-   "name": "三商壽",
-   "industry": "金融保險",
-   "market": "TWSE",
-   "tier": "watch",
-   "date": "2026-07-28",
-   "close": 9.35,
-   "ret_5d_pct": -1.68,
-   "ret_20d_pct": 11.31,
-   "relative_5d_pct": 4.26,
-   "relative_20d_pct": 18.86,
-   "ma20": 8.92,
-   "ma60": 8.29,
-   "ma20_slope_5d_pct": 2.16,
-   "high20": 9.65,
-   "high60": 9.65,
-   "vol20": 16933.0,
-   "vol_ratio": 0.79,
-   "reasons": [
-    "接近60日高",
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "20日漲幅達標",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "finance_insurance",
-     "label": "金融保險",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-20",
    "days_since_first_seen": 6,
    "latest_entered": false,
-   "previous_tier": "leader",
-   "tier_changed": true
+   "previous_tier": "watch",
+   "tier_changed": false
   },
   {
    "stock_id": "6214",
@@ -479,25 +740,24 @@
    "industry": "資訊服務業",
    "market": "TWSE",
    "tier": "watch",
-   "date": "2026-07-28",
-   "close": 143.0,
-   "ret_5d_pct": 1.06,
-   "ret_20d_pct": 10.85,
-   "relative_5d_pct": 7.0,
-   "relative_20d_pct": 18.4,
-   "ma20": 138.38,
-   "ma60": 135.04,
-   "ma20_slope_5d_pct": 2.33,
+   "date": "2026-07-29",
+   "close": 144.0,
+   "ret_5d_pct": 1.77,
+   "ret_20d_pct": 7.46,
+   "relative_5d_pct": 12.45,
+   "relative_20d_pct": 20.66,
+   "ma20": 138.88,
+   "ma60": 135.42,
+   "ma20_slope_5d_pct": 2.26,
    "high20": 147.0,
    "high60": 162.0,
-   "vol20": 1643.0,
-   "vol_ratio": 1.06,
+   "vol20": 1687.0,
+   "vol_ratio": 2.0,
    "reasons": [
     "20日高附近",
     "MA20在MA60上方且上彎",
     "20日均量足夠",
     "量能未萎縮",
-    "20日漲幅達標",
     "20日相對大盤強"
    ],
    "themes": [
@@ -508,50 +768,130 @@
     }
    ],
    "first_seen_date": "2026-07-22",
+   "days_since_first_seen": 5,
+   "latest_entered": false,
+   "previous_tier": "watch",
+   "tier_changed": false
+  },
+  {
+   "stock_id": "2006",
+   "name": "東和鋼鐵",
+   "industry": "鋼鐵工業",
+   "market": "TWSE",
+   "tier": "watch",
+   "date": "2026-07-29",
+   "close": 72.4,
+   "ret_5d_pct": 1.83,
+   "ret_20d_pct": 7.42,
+   "relative_5d_pct": 12.51,
+   "relative_20d_pct": 20.61,
+   "ma20": 70.55,
+   "ma60": 68.36,
+   "ma20_slope_5d_pct": 0.99,
+   "high20": 73.3,
+   "high60": 73.3,
+   "vol20": 2633.0,
+   "vol_ratio": 0.88,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "steel_materials",
+     "label": "鋼鐵材料",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-29",
+   "days_since_first_seen": 0,
+   "latest_entered": true,
+   "previous_tier": "watch",
+   "tier_changed": false
+  },
+  {
+   "stock_id": "2615",
+   "name": "萬海",
+   "industry": "航運業",
+   "market": "TWSE",
+   "tier": "watch",
+   "date": "2026-07-29",
+   "close": 85.0,
+   "ret_5d_pct": -0.12,
+   "ret_20d_pct": 7.32,
+   "relative_5d_pct": 10.56,
+   "relative_20d_pct": 20.52,
+   "ma20": 81.61,
+   "ma60": 80.89,
+   "ma20_slope_5d_pct": 2.06,
+   "high20": 87.9,
+   "high60": 87.9,
+   "vol20": 11526.0,
+   "vol_ratio": 1.42,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "shipping_transport",
+     "label": "航運運輸",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-23",
    "days_since_first_seen": 4,
    "latest_entered": false,
    "previous_tier": "watch",
    "tier_changed": false
   },
   {
-   "stock_id": "9921",
-   "name": "巨大",
-   "industry": "其他",
+   "stock_id": "2027",
+   "name": "大成鋼",
+   "industry": "鋼鐵工業",
    "market": "TWSE",
    "tier": "watch",
-   "date": "2026-07-28",
-   "close": 85.0,
-   "ret_5d_pct": 0.47,
-   "ret_20d_pct": 10.25,
-   "relative_5d_pct": 6.42,
-   "relative_20d_pct": 17.79,
-   "ma20": 81.05,
-   "ma60": 74.92,
-   "ma20_slope_5d_pct": 3.44,
-   "high20": 92.0,
-   "high60": 92.0,
-   "vol20": 2879.0,
-   "vol_ratio": 0.56,
+   "date": "2026-07-29",
+   "close": 43.25,
+   "ret_5d_pct": -1.14,
+   "ret_20d_pct": 7.19,
+   "relative_5d_pct": 9.54,
+   "relative_20d_pct": 20.38,
+   "ma20": 41.55,
+   "ma60": 41.36,
+   "ma20_slope_5d_pct": 2.03,
+   "high20": 45.5,
+   "high60": 45.5,
+   "vol20": 18556.0,
+   "vol_ratio": 1.37,
    "reasons": [
     "接近60日高",
     "20日高附近",
     "MA20在MA60上方且上彎",
     "20日均量足夠",
-    "20日漲幅達標",
+    "量能未萎縮",
     "20日相對大盤強"
    ],
    "themes": [
     {
-     "id": "other_diversified",
-     "label": "其他多元",
+     "id": "steel_materials",
+     "label": "鋼鐵材料",
      "category": ""
     }
    ],
-   "first_seen_date": "2026-07-16",
-   "days_since_first_seen": 8,
-   "latest_entered": false,
-   "previous_tier": "watch",
-   "tier_changed": false
+   "first_seen_date": "2026-07-29",
+   "days_since_first_seen": 0,
+   "latest_entered": true,
+   "previous_tier": "leader",
+   "tier_changed": true
   },
   {
    "stock_id": "3231",
@@ -559,25 +899,24 @@
    "industry": "電子工業",
    "market": "TWSE",
    "tier": "watch",
-   "date": "2026-07-28",
-   "close": 170.0,
-   "ret_5d_pct": 13.71,
-   "ret_20d_pct": 10.03,
-   "relative_5d_pct": 19.66,
-   "relative_20d_pct": 17.58,
-   "ma20": 155.68,
-   "ma60": 154.14,
-   "ma20_slope_5d_pct": 2.64,
+   "date": "2026-07-29",
+   "close": 169.5,
+   "ret_5d_pct": 3.35,
+   "ret_20d_pct": 6.94,
+   "relative_5d_pct": 14.03,
+   "relative_20d_pct": 20.14,
+   "ma20": 156.22,
+   "ma60": 154.62,
+   "ma20_slope_5d_pct": 2.81,
    "high20": 184.0,
    "high60": 201.0,
-   "vol20": 58958.0,
-   "vol_ratio": 1.41,
+   "vol20": 65365.0,
+   "vol_ratio": 2.38,
    "reasons": [
     "20日高附近",
     "MA20在MA60上方且上彎",
     "20日均量足夠",
     "量能未萎縮",
-    "20日漲幅達標",
     "20日相對大盤強"
    ],
    "themes": [
@@ -593,7 +932,167 @@
     }
    ],
    "first_seen_date": "2026-07-24",
+   "days_since_first_seen": 3,
+   "latest_entered": true,
+   "previous_tier": "watch",
+   "tier_changed": false
+  },
+  {
+   "stock_id": "2892",
+   "name": "第一金",
+   "industry": "金融保險",
+   "market": "TWSE",
+   "tier": "watch",
+   "date": "2026-07-29",
+   "close": 34.8,
+   "ret_5d_pct": 1.16,
+   "ret_20d_pct": 6.26,
+   "relative_5d_pct": 11.84,
+   "relative_20d_pct": 19.46,
+   "ma20": 33.79,
+   "ma60": 31.15,
+   "ma20_slope_5d_pct": 1.43,
+   "high20": 35.1,
+   "high60": 35.1,
+   "vol20": 40868.0,
+   "vol_ratio": 1.22,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "finance_insurance",
+     "label": "金融保險",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-27",
    "days_since_first_seen": 2,
+   "latest_entered": true,
+   "previous_tier": "watch",
+   "tier_changed": false
+  },
+  {
+   "stock_id": "2884",
+   "name": "玉山金",
+   "industry": "金融保險",
+   "market": "TWSE",
+   "tier": "watch",
+   "date": "2026-07-29",
+   "close": 36.5,
+   "ret_5d_pct": 1.25,
+   "ret_20d_pct": 5.95,
+   "relative_5d_pct": 11.93,
+   "relative_20d_pct": 19.15,
+   "ma20": 35.1,
+   "ma60": 33.69,
+   "ma20_slope_5d_pct": 0.98,
+   "high20": 37.2,
+   "high60": 37.2,
+   "vol20": 49333.0,
+   "vol_ratio": 1.56,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "finance_insurance",
+     "label": "金融保險",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-27",
+   "days_since_first_seen": 2,
+   "latest_entered": true,
+   "previous_tier": "watch",
+   "tier_changed": false
+  },
+  {
+   "stock_id": "9938",
+   "name": "百和",
+   "industry": "其他",
+   "market": "TWSE",
+   "tier": "watch",
+   "date": "2026-07-29",
+   "close": 46.6,
+   "ret_5d_pct": -1.06,
+   "ret_20d_pct": 5.07,
+   "relative_5d_pct": 9.62,
+   "relative_20d_pct": 18.27,
+   "ma20": 46.23,
+   "ma60": 44.97,
+   "ma20_slope_5d_pct": 1.48,
+   "high20": 47.9,
+   "high60": 47.9,
+   "vol20": 1981.0,
+   "vol_ratio": 1.48,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "other_diversified",
+     "label": "其他多元",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-29",
+   "days_since_first_seen": 0,
+   "latest_entered": true,
+   "previous_tier": "leader",
+   "tier_changed": true
+  },
+  {
+   "stock_id": "5880",
+   "name": "合庫金",
+   "industry": "金融保險",
+   "market": "TWSE",
+   "tier": "watch",
+   "date": "2026-07-29",
+   "close": 26.1,
+   "ret_5d_pct": 2.15,
+   "ret_20d_pct": 5.03,
+   "relative_5d_pct": 12.83,
+   "relative_20d_pct": 18.23,
+   "ma20": 25.34,
+   "ma60": 24.11,
+   "ma20_slope_5d_pct": 1.07,
+   "high20": 26.2,
+   "high60": 26.2,
+   "vol20": 19464.0,
+   "vol_ratio": 2.36,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "finance_insurance",
+     "label": "金融保險",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-29",
+   "days_since_first_seen": 0,
    "latest_entered": true,
    "previous_tier": "watch",
    "tier_changed": false
@@ -604,25 +1103,25 @@
    "industry": "電腦及週邊設備業",
    "market": "TWSE",
    "tier": "watch",
-   "date": "2026-07-28",
-   "close": 89.2,
-   "ret_5d_pct": 3.6,
-   "ret_20d_pct": 8.38,
-   "relative_5d_pct": 9.55,
-   "relative_20d_pct": 15.93,
-   "ma20": 87.35,
-   "ma60": 80.19,
-   "ma20_slope_5d_pct": 2.77,
+   "date": "2026-07-29",
+   "close": 88.0,
+   "ret_5d_pct": -3.19,
+   "ret_20d_pct": 5.01,
+   "relative_5d_pct": 7.49,
+   "relative_20d_pct": 18.21,
+   "ma20": 87.56,
+   "ma60": 80.48,
+   "ma20_slope_5d_pct": 2.48,
    "high20": 95.7,
    "high60": 95.7,
-   "vol20": 2896.0,
-   "vol_ratio": 0.75,
+   "vol20": 2984.0,
+   "vol_ratio": 0.99,
    "reasons": [
     "接近60日高",
     "20日高附近",
     "MA20在MA60上方且上彎",
     "20日均量足夠",
-    "20日漲幅達標",
+    "量能未萎縮",
     "20日相對大盤強"
    ],
    "themes": [
@@ -633,394 +1132,192 @@
     }
    ],
    "first_seen_date": "2026-07-22",
-   "days_since_first_seen": 4,
+   "days_since_first_seen": 5,
    "latest_entered": false,
-   "previous_tier": "leader",
-   "tier_changed": true
-  },
-  {
-   "stock_id": "2106",
-   "name": "建大",
-   "industry": "橡膠工業",
-   "market": "TWSE",
-   "tier": "watch",
-   "date": "2026-07-28",
-   "close": 18.4,
-   "ret_5d_pct": 2.51,
-   "ret_20d_pct": 7.6,
-   "relative_5d_pct": 8.45,
-   "relative_20d_pct": 15.15,
-   "ma20": 17.71,
-   "ma60": 17.43,
-   "ma20_slope_5d_pct": 1.42,
-   "high20": 18.65,
-   "high60": 18.75,
-   "vol20": 1105.0,
-   "vol_ratio": 2.35,
-   "reasons": [
-    "接近60日高",
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "量能未萎縮",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "plastic_rubber",
-     "label": "塑橡膠",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-27",
-   "days_since_first_seen": 1,
-   "latest_entered": true,
-   "previous_tier": "watch",
-   "tier_changed": false
-  },
-  {
-   "stock_id": "2886",
-   "name": "兆豐金",
-   "industry": "金融保險",
-   "market": "TWSE",
-   "tier": "watch",
-   "date": "2026-07-28",
-   "close": 49.45,
-   "ret_5d_pct": 1.75,
-   "ret_20d_pct": 7.03,
-   "relative_5d_pct": 7.69,
-   "relative_20d_pct": 14.58,
-   "ma20": 47.25,
-   "ma60": 43.59,
-   "ma20_slope_5d_pct": 1.6,
-   "high20": 49.95,
-   "high60": 49.95,
-   "vol20": 37154.0,
-   "vol_ratio": 0.99,
-   "reasons": [
-    "接近60日高",
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "量能未萎縮",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "finance_insurance",
-     "label": "金融保險",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-27",
-   "days_since_first_seen": 1,
-   "latest_entered": true,
-   "previous_tier": "watch",
-   "tier_changed": false
-  },
-  {
-   "stock_id": "2615",
-   "name": "萬海",
-   "industry": "航運業",
-   "market": "TWSE",
-   "tier": "watch",
-   "date": "2026-07-28",
-   "close": 83.6,
-   "ret_5d_pct": -1.88,
-   "ret_20d_pct": 6.36,
-   "relative_5d_pct": 4.07,
-   "relative_20d_pct": 13.91,
-   "ma20": 81.32,
-   "ma60": 80.73,
-   "ma20_slope_5d_pct": 2.1,
-   "high20": 87.9,
-   "high60": 87.9,
-   "vol20": 10954.0,
-   "vol_ratio": 0.6,
-   "reasons": [
-    "接近60日高",
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "shipping_transport",
-     "label": "航運運輸",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-23",
-   "days_since_first_seen": 3,
-   "latest_entered": true,
-   "previous_tier": "leader",
-   "tier_changed": true
-  },
-  {
-   "stock_id": "2836",
-   "name": "高雄銀",
-   "industry": "金融保險",
-   "market": "TWSE",
-   "tier": "watch",
-   "date": "2026-07-28",
-   "close": 13.0,
-   "ret_5d_pct": 2.77,
-   "ret_20d_pct": 6.12,
-   "relative_5d_pct": 8.71,
-   "relative_20d_pct": 13.67,
-   "ma20": 12.57,
-   "ma60": 12.19,
-   "ma20_slope_5d_pct": 1.23,
-   "high20": 13.0,
-   "high60": 13.0,
-   "vol20": 5118.0,
-   "vol_ratio": 2.51,
-   "reasons": [
-    "接近60日高",
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "量能未萎縮",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "finance_insurance",
-     "label": "金融保險",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-27",
-   "days_since_first_seen": 1,
-   "latest_entered": true,
-   "previous_tier": "watch",
-   "tier_changed": false
-  },
-  {
-   "stock_id": "2892",
-   "name": "第一金",
-   "industry": "金融保險",
-   "market": "TWSE",
-   "tier": "watch",
-   "date": "2026-07-28",
-   "close": 34.8,
-   "ret_5d_pct": 1.02,
-   "ret_20d_pct": 5.45,
-   "relative_5d_pct": 6.96,
-   "relative_20d_pct": 13.0,
-   "ma20": 33.69,
-   "ma60": 31.04,
-   "ma20_slope_5d_pct": 1.42,
-   "high20": 35.1,
-   "high60": 35.1,
-   "vol20": 41074.0,
-   "vol_ratio": 1.04,
-   "reasons": [
-    "接近60日高",
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "量能未萎縮",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "finance_insurance",
-     "label": "金融保險",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-27",
-   "days_since_first_seen": 1,
-   "latest_entered": true,
-   "previous_tier": "watch",
-   "tier_changed": false
-  },
-  {
-   "stock_id": "2889",
-   "name": "國票金",
-   "industry": "金融保險",
-   "market": "TWSE",
-   "tier": "watch",
-   "date": "2026-07-28",
-   "close": 15.6,
-   "ret_5d_pct": -1.27,
-   "ret_20d_pct": 5.41,
-   "relative_5d_pct": 4.68,
-   "relative_20d_pct": 12.95,
-   "ma20": 15.51,
-   "ma60": 15.04,
-   "ma20_slope_5d_pct": 1.26,
-   "high20": 16.1,
-   "high60": 16.1,
-   "vol20": 7329.0,
-   "vol_ratio": 0.75,
-   "reasons": [
-    "接近60日高",
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "finance_insurance",
-     "label": "金融保險",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-24",
-   "days_since_first_seen": 2,
-   "latest_entered": true,
-   "previous_tier": "watch",
-   "tier_changed": false
-  },
-  {
-   "stock_id": "2425",
-   "name": "承啟",
-   "industry": "電子工業",
-   "market": "TWSE",
-   "tier": "watch",
-   "date": "2026-07-28",
-   "close": 43.3,
-   "ret_5d_pct": 4.34,
-   "ret_20d_pct": 5.35,
-   "relative_5d_pct": 10.28,
-   "relative_20d_pct": 12.9,
-   "ma20": 43.09,
-   "ma60": 38.09,
-   "ma20_slope_5d_pct": 3.15,
-   "high20": 48.05,
-   "high60": 48.05,
-   "vol20": 4504.0,
-   "vol_ratio": 0.9,
-   "reasons": [
-    "接近60日高",
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "量能未萎縮",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "electronics_components",
-     "label": "電子零組件",
-     "category": ""
-    },
-    {
-     "id": "ai_server",
-     "label": "AI伺服器",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-22",
-   "days_since_first_seen": 4,
-   "latest_entered": false,
-   "previous_tier": "leader",
-   "tier_changed": true
-  },
-  {
-   "stock_id": "2884",
-   "name": "玉山金",
-   "industry": "金融保險",
-   "market": "TWSE",
-   "tier": "watch",
-   "date": "2026-07-28",
-   "close": 36.25,
-   "ret_5d_pct": -1.89,
-   "ret_20d_pct": 5.07,
-   "relative_5d_pct": 4.05,
-   "relative_20d_pct": 12.62,
-   "ma20": 34.99,
-   "ma60": 33.6,
-   "ma20_slope_5d_pct": 0.72,
-   "high20": 37.2,
-   "high60": 37.2,
-   "vol20": 48912.0,
-   "vol_ratio": 0.66,
-   "reasons": [
-    "接近60日高",
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "finance_insurance",
-     "label": "金融保險",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-27",
-   "days_since_first_seen": 1,
-   "latest_entered": true,
    "previous_tier": "watch",
    "tier_changed": false
   }
  ],
  "latest_rows": [
   {
-   "stock_id": "5227",
-   "name": "立凱-KY",
-   "industry": "電子零組件業",
-   "market": "TPEX",
+   "stock_id": "9938",
+   "name": "百和",
+   "industry": "其他",
+   "market": "TWSE",
    "tier": "watch",
-   "date": "2026-07-28",
-   "close": 41.6,
-   "ret_5d_pct": 17.51,
-   "ret_20d_pct": 22.9,
-   "relative_5d_pct": 23.46,
-   "relative_20d_pct": 30.44,
-   "ma20": 35.02,
-   "ma60": 30.11,
-   "ma20_slope_5d_pct": 2.65,
-   "high20": 42.6,
-   "high60": 46.7,
-   "vol20": 1064.0,
-   "vol_ratio": 1.55,
+   "date": "2026-07-29",
+   "close": 46.6,
+   "ret_5d_pct": -1.06,
+   "ret_20d_pct": 5.07,
+   "relative_5d_pct": 9.62,
+   "relative_20d_pct": 18.27,
+   "ma20": 46.23,
+   "ma60": 44.97,
+   "ma20_slope_5d_pct": 1.48,
+   "high20": 47.9,
+   "high60": 47.9,
+   "vol20": 1981.0,
+   "vol_ratio": 1.48,
    "reasons": [
+    "接近60日高",
     "20日高附近",
     "MA20在MA60上方且上彎",
     "20日均量足夠",
     "量能未萎縮",
-    "20日漲幅達標",
     "20日相對大盤強"
    ],
    "themes": [
     {
-     "id": "electronics_components",
-     "label": "電子零組件",
+     "id": "other_diversified",
+     "label": "其他多元",
      "category": ""
     }
    ],
-   "first_seen_date": "2026-07-28",
+   "first_seen_date": "2026-07-29",
    "days_since_first_seen": 0,
    "latest_entered": true,
-   "previous_tier": null,
+   "previous_tier": "leader",
+   "tier_changed": true
+  },
+  {
+   "stock_id": "5880",
+   "name": "合庫金",
+   "industry": "金融保險",
+   "market": "TWSE",
+   "tier": "watch",
+   "date": "2026-07-29",
+   "close": 26.1,
+   "ret_5d_pct": 2.15,
+   "ret_20d_pct": 5.03,
+   "relative_5d_pct": 12.83,
+   "relative_20d_pct": 18.23,
+   "ma20": 25.34,
+   "ma60": 24.11,
+   "ma20_slope_5d_pct": 1.07,
+   "high20": 26.2,
+   "high60": 26.2,
+   "vol20": 19464.0,
+   "vol_ratio": 2.36,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "finance_insurance",
+     "label": "金融保險",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-29",
+   "days_since_first_seen": 0,
+   "latest_entered": true,
+   "previous_tier": "watch",
    "tier_changed": false
   },
   {
-   "stock_id": "6669",
-   "name": "緯穎",
+   "stock_id": "2027",
+   "name": "大成鋼",
+   "industry": "鋼鐵工業",
+   "market": "TWSE",
+   "tier": "watch",
+   "date": "2026-07-29",
+   "close": 43.25,
+   "ret_5d_pct": -1.14,
+   "ret_20d_pct": 7.19,
+   "relative_5d_pct": 9.54,
+   "relative_20d_pct": 20.38,
+   "ma20": 41.55,
+   "ma60": 41.36,
+   "ma20_slope_5d_pct": 2.03,
+   "high20": 45.5,
+   "high60": 45.5,
+   "vol20": 18556.0,
+   "vol_ratio": 1.37,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "steel_materials",
+     "label": "鋼鐵材料",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-29",
+   "days_since_first_seen": 0,
+   "latest_entered": true,
+   "previous_tier": "leader",
+   "tier_changed": true
+  },
+  {
+   "stock_id": "2006",
+   "name": "東和鋼鐵",
+   "industry": "鋼鐵工業",
+   "market": "TWSE",
+   "tier": "watch",
+   "date": "2026-07-29",
+   "close": 72.4,
+   "ret_5d_pct": 1.83,
+   "ret_20d_pct": 7.42,
+   "relative_5d_pct": 12.51,
+   "relative_20d_pct": 20.61,
+   "ma20": 70.55,
+   "ma60": 68.36,
+   "ma20_slope_5d_pct": 0.99,
+   "high20": 73.3,
+   "high60": 73.3,
+   "vol20": 2633.0,
+   "vol_ratio": 0.88,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "steel_materials",
+     "label": "鋼鐵材料",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-29",
+   "days_since_first_seen": 0,
+   "latest_entered": true,
+   "previous_tier": "watch",
+   "tier_changed": false
+  },
+  {
+   "stock_id": "6243",
+   "name": "迅杰",
    "industry": "電子工業",
    "market": "TWSE",
    "tier": "leader",
-   "date": "2026-07-28",
-   "close": 5315.0,
-   "ret_5d_pct": 6.3,
-   "ret_20d_pct": 16.05,
-   "relative_5d_pct": 12.24,
-   "relative_20d_pct": 23.6,
-   "ma20": 5120.75,
-   "ma60": 5120.0,
-   "ma20_slope_5d_pct": 5.21,
-   "high20": 5835.0,
-   "high60": 5880.0,
-   "vol20": 1838.0,
-   "vol_ratio": 1.04,
+   "date": "2026-07-29",
+   "close": 51.2,
+   "ret_5d_pct": 2.2,
+   "ret_20d_pct": 28.32,
+   "relative_5d_pct": 12.87,
+   "relative_20d_pct": 41.52,
+   "ma20": 44.86,
+   "ma60": 38.2,
+   "ma20_slope_5d_pct": 4.39,
+   "high20": 55.5,
+   "high60": 55.5,
+   "vol20": 4414.0,
+   "vol_ratio": 2.32,
    "reasons": [
     "接近60日高",
     "20日高附近",
@@ -1037,12 +1334,227 @@
      "category": ""
     },
     {
-     "id": "ai_server",
-     "label": "AI伺服器",
+     "id": "power_semiconductor",
+     "label": "功率半導體",
+     "category": ""
+    },
+    {
+     "id": "ic_design",
+     "label": "IC設計",
      "category": ""
     }
    ],
-   "first_seen_date": "2026-07-28",
+   "first_seen_date": "2026-07-29",
+   "days_since_first_seen": 0,
+   "latest_entered": true,
+   "previous_tier": "leader",
+   "tier_changed": false
+  },
+  {
+   "stock_id": "2912",
+   "name": "統一超",
+   "industry": "貿易百貨",
+   "market": "TWSE",
+   "tier": "leader",
+   "date": "2026-07-29",
+   "close": 241.0,
+   "ret_5d_pct": 0.63,
+   "ret_20d_pct": 8.07,
+   "relative_5d_pct": 11.3,
+   "relative_20d_pct": 21.27,
+   "ma20": 239.07,
+   "ma60": 229.65,
+   "ma20_slope_5d_pct": 1.59,
+   "high20": 249.0,
+   "high60": 250.0,
+   "vol20": 3812.0,
+   "vol_ratio": 1.31,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日漲幅達標",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "retail_trade",
+     "label": "貿易百貨",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-29",
+   "days_since_first_seen": 0,
+   "latest_entered": true,
+   "previous_tier": "watch",
+   "tier_changed": true
+  },
+  {
+   "stock_id": "2905",
+   "name": "三商",
+   "industry": "貿易百貨",
+   "market": "TWSE",
+   "tier": "leader",
+   "date": "2026-07-29",
+   "close": 16.45,
+   "ret_5d_pct": 3.46,
+   "ret_20d_pct": 11.15,
+   "relative_5d_pct": 14.14,
+   "relative_20d_pct": 24.34,
+   "ma20": 15.53,
+   "ma60": 14.57,
+   "ma20_slope_5d_pct": 2.07,
+   "high20": 16.45,
+   "high60": 16.45,
+   "vol20": 1088.0,
+   "vol_ratio": 2.15,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日漲幅達標",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "retail_trade",
+     "label": "貿易百貨",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-29",
+   "days_since_first_seen": 0,
+   "latest_entered": true,
+   "previous_tier": null,
+   "tier_changed": false
+  },
+  {
+   "stock_id": "2539",
+   "name": "櫻花建",
+   "industry": "建材營造",
+   "market": "TWSE",
+   "tier": "leader",
+   "date": "2026-07-29",
+   "close": 42.65,
+   "ret_5d_pct": 6.62,
+   "ret_20d_pct": 9.64,
+   "relative_5d_pct": 17.3,
+   "relative_20d_pct": 22.84,
+   "ma20": 40.3,
+   "ma60": 38.83,
+   "ma20_slope_5d_pct": 1.49,
+   "high20": 43.7,
+   "high60": 43.7,
+   "vol20": 1141.0,
+   "vol_ratio": 3.71,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日漲幅達標",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "construction_real_estate",
+     "label": "營建資產",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-29",
+   "days_since_first_seen": 0,
+   "latest_entered": true,
+   "previous_tier": "watch",
+   "tier_changed": true
+  },
+  {
+   "stock_id": "2332",
+   "name": "友訊",
+   "industry": "通信網路業",
+   "market": "TWSE",
+   "tier": "leader",
+   "date": "2026-07-29",
+   "close": 24.0,
+   "ret_5d_pct": 0.42,
+   "ret_20d_pct": 31.15,
+   "relative_5d_pct": 11.1,
+   "relative_20d_pct": 44.34,
+   "ma20": 22.04,
+   "ma60": 17.94,
+   "ma20_slope_5d_pct": 6.55,
+   "high20": 26.45,
+   "high60": 26.45,
+   "vol20": 48110.0,
+   "vol_ratio": 1.6,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日漲幅達標",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "networking_communication",
+     "label": "通訊網路",
+     "category": ""
+    },
+    {
+     "id": "robotics",
+     "label": "機器人",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-29",
+   "days_since_first_seen": 0,
+   "latest_entered": true,
+   "previous_tier": "leader",
+   "tier_changed": false
+  },
+  {
+   "stock_id": "1526",
+   "name": "日馳",
+   "industry": "電機機械",
+   "market": "TWSE",
+   "tier": "leader",
+   "date": "2026-07-29",
+   "close": 18.9,
+   "ret_5d_pct": 16.31,
+   "ret_20d_pct": 32.63,
+   "relative_5d_pct": 26.99,
+   "relative_20d_pct": 45.83,
+   "ma20": 15.73,
+   "ma60": 15.08,
+   "ma20_slope_5d_pct": 5.27,
+   "high20": 19.4,
+   "high60": 19.4,
+   "vol20": 1248.0,
+   "vol_ratio": 2.68,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日漲幅達標",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "machinery_robotics",
+     "label": "機械自動化",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-29",
    "days_since_first_seen": 0,
    "latest_entered": true,
    "previous_tier": null,
@@ -1054,19 +1566,19 @@
    "industry": "金融保險",
    "market": "TWSE",
    "tier": "watch",
-   "date": "2026-07-28",
+   "date": "2026-07-29",
    "close": 34.8,
-   "ret_5d_pct": 1.02,
-   "ret_20d_pct": 5.45,
-   "relative_5d_pct": 6.96,
-   "relative_20d_pct": 13.0,
-   "ma20": 33.69,
-   "ma60": 31.04,
-   "ma20_slope_5d_pct": 1.42,
+   "ret_5d_pct": 1.16,
+   "ret_20d_pct": 6.26,
+   "relative_5d_pct": 11.84,
+   "relative_20d_pct": 19.46,
+   "ma20": 33.79,
+   "ma60": 31.15,
+   "ma20_slope_5d_pct": 1.43,
    "high20": 35.1,
    "high60": 35.1,
-   "vol20": 41074.0,
-   "vol_ratio": 1.04,
+   "vol20": 40868.0,
+   "vol_ratio": 1.22,
    "reasons": [
     "接近60日高",
     "20日高附近",
@@ -1083,47 +1595,7 @@
     }
    ],
    "first_seen_date": "2026-07-27",
-   "days_since_first_seen": 1,
-   "latest_entered": true,
-   "previous_tier": "watch",
-   "tier_changed": false
-  },
-  {
-   "stock_id": "2886",
-   "name": "兆豐金",
-   "industry": "金融保險",
-   "market": "TWSE",
-   "tier": "watch",
-   "date": "2026-07-28",
-   "close": 49.45,
-   "ret_5d_pct": 1.75,
-   "ret_20d_pct": 7.03,
-   "relative_5d_pct": 7.69,
-   "relative_20d_pct": 14.58,
-   "ma20": 47.25,
-   "ma60": 43.59,
-   "ma20_slope_5d_pct": 1.6,
-   "high20": 49.95,
-   "high60": 49.95,
-   "vol20": 37154.0,
-   "vol_ratio": 0.99,
-   "reasons": [
-    "接近60日高",
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "量能未萎縮",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "finance_insurance",
-     "label": "金融保險",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-27",
-   "days_since_first_seen": 1,
+   "days_since_first_seen": 2,
    "latest_entered": true,
    "previous_tier": "watch",
    "tier_changed": false
@@ -1134,58 +1606,19 @@
    "industry": "金融保險",
    "market": "TWSE",
    "tier": "watch",
-   "date": "2026-07-28",
-   "close": 36.25,
-   "ret_5d_pct": -1.89,
-   "ret_20d_pct": 5.07,
-   "relative_5d_pct": 4.05,
-   "relative_20d_pct": 12.62,
-   "ma20": 34.99,
-   "ma60": 33.6,
-   "ma20_slope_5d_pct": 0.72,
+   "date": "2026-07-29",
+   "close": 36.5,
+   "ret_5d_pct": 1.25,
+   "ret_20d_pct": 5.95,
+   "relative_5d_pct": 11.93,
+   "relative_20d_pct": 19.15,
+   "ma20": 35.1,
+   "ma60": 33.69,
+   "ma20_slope_5d_pct": 0.98,
    "high20": 37.2,
    "high60": 37.2,
-   "vol20": 48912.0,
-   "vol_ratio": 0.66,
-   "reasons": [
-    "接近60日高",
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "finance_insurance",
-     "label": "金融保險",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-27",
-   "days_since_first_seen": 1,
-   "latest_entered": true,
-   "previous_tier": "watch",
-   "tier_changed": false
-  },
-  {
-   "stock_id": "2836",
-   "name": "高雄銀",
-   "industry": "金融保險",
-   "market": "TWSE",
-   "tier": "watch",
-   "date": "2026-07-28",
-   "close": 13.0,
-   "ret_5d_pct": 2.77,
-   "ret_20d_pct": 6.12,
-   "relative_5d_pct": 8.71,
-   "relative_20d_pct": 13.67,
-   "ma20": 12.57,
-   "ma60": 12.19,
-   "ma20_slope_5d_pct": 1.23,
-   "high20": 13.0,
-   "high60": 13.0,
-   "vol20": 5118.0,
-   "vol_ratio": 2.51,
+   "vol20": 49333.0,
+   "vol_ratio": 1.56,
    "reasons": [
     "接近60日高",
     "20日高附近",
@@ -1202,47 +1635,7 @@
     }
    ],
    "first_seen_date": "2026-07-27",
-   "days_since_first_seen": 1,
-   "latest_entered": true,
-   "previous_tier": "watch",
-   "tier_changed": false
-  },
-  {
-   "stock_id": "2106",
-   "name": "建大",
-   "industry": "橡膠工業",
-   "market": "TWSE",
-   "tier": "watch",
-   "date": "2026-07-28",
-   "close": 18.4,
-   "ret_5d_pct": 2.51,
-   "ret_20d_pct": 7.6,
-   "relative_5d_pct": 8.45,
-   "relative_20d_pct": 15.15,
-   "ma20": 17.71,
-   "ma60": 17.43,
-   "ma20_slope_5d_pct": 1.42,
-   "high20": 18.65,
-   "high60": 18.75,
-   "vol20": 1105.0,
-   "vol_ratio": 2.35,
-   "reasons": [
-    "接近60日高",
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "量能未萎縮",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "plastic_rubber",
-     "label": "塑橡膠",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-27",
-   "days_since_first_seen": 1,
+   "days_since_first_seen": 2,
    "latest_entered": true,
    "previous_tier": "watch",
    "tier_changed": false
@@ -1253,19 +1646,19 @@
    "industry": "電機機械",
    "market": "TPEX",
    "tier": "leader",
-   "date": "2026-07-28",
-   "close": 25.6,
-   "ret_5d_pct": 3.85,
-   "ret_20d_pct": 13.02,
-   "relative_5d_pct": 9.8,
-   "relative_20d_pct": 20.57,
-   "ma20": 24.98,
-   "ma60": 23.86,
-   "ma20_slope_5d_pct": 1.3,
+   "date": "2026-07-29",
+   "close": 26.2,
+   "ret_5d_pct": 8.04,
+   "ret_20d_pct": 14.41,
+   "relative_5d_pct": 18.72,
+   "relative_20d_pct": 27.61,
+   "ma20": 25.14,
+   "ma60": 23.88,
+   "ma20_slope_5d_pct": 1.98,
    "high20": 27.15,
    "high60": 27.15,
-   "vol20": 1593.0,
-   "vol_ratio": 1.1,
+   "vol20": 1743.0,
+   "vol_ratio": 2.03,
    "reasons": [
     "接近60日高",
     "20日高附近",
@@ -1283,10 +1676,92 @@
     }
    ],
    "first_seen_date": "2026-07-27",
-   "days_since_first_seen": 1,
+   "days_since_first_seen": 2,
    "latest_entered": true,
    "previous_tier": "leader",
    "tier_changed": false
+  },
+  {
+   "stock_id": "2886",
+   "name": "兆豐金",
+   "industry": "金融保險",
+   "market": "TWSE",
+   "tier": "leader",
+   "date": "2026-07-29",
+   "close": 49.9,
+   "ret_5d_pct": 3.53,
+   "ret_20d_pct": 8.24,
+   "relative_5d_pct": 14.21,
+   "relative_20d_pct": 21.44,
+   "ma20": 47.44,
+   "ma60": 43.77,
+   "ma20_slope_5d_pct": 1.68,
+   "high20": 50.5,
+   "high60": 50.5,
+   "vol20": 35828.0,
+   "vol_ratio": 1.26,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日漲幅達標",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "finance_insurance",
+     "label": "金融保險",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-27",
+   "days_since_first_seen": 2,
+   "latest_entered": true,
+   "previous_tier": "watch",
+   "tier_changed": true
+  },
+  {
+   "stock_id": "2106",
+   "name": "建大",
+   "industry": "橡膠工業",
+   "market": "TWSE",
+   "tier": "leader",
+   "date": "2026-07-29",
+   "close": 18.25,
+   "ret_5d_pct": 3.11,
+   "ret_20d_pct": 8.31,
+   "relative_5d_pct": 13.79,
+   "relative_20d_pct": 21.5,
+   "ma20": 17.79,
+   "ma60": 17.45,
+   "ma20_slope_5d_pct": 1.59,
+   "high20": 18.65,
+   "high60": 18.75,
+   "vol20": 1157.0,
+   "vol_ratio": 1.71,
+   "reasons": [
+    "接近60日高",
+    "20日高附近",
+    "MA20在MA60上方且上彎",
+    "20日均量足夠",
+    "量能未萎縮",
+    "20日漲幅達標",
+    "20日相對大盤強"
+   ],
+   "themes": [
+    {
+     "id": "plastic_rubber",
+     "label": "塑橡膠",
+     "category": ""
+    }
+   ],
+   "first_seen_date": "2026-07-27",
+   "days_since_first_seen": 2,
+   "latest_entered": true,
+   "previous_tier": "watch",
+   "tier_changed": true
   },
   {
    "stock_id": "3231",
@@ -1294,25 +1769,24 @@
    "industry": "電子工業",
    "market": "TWSE",
    "tier": "watch",
-   "date": "2026-07-28",
-   "close": 170.0,
-   "ret_5d_pct": 13.71,
-   "ret_20d_pct": 10.03,
-   "relative_5d_pct": 19.66,
-   "relative_20d_pct": 17.58,
-   "ma20": 155.68,
-   "ma60": 154.14,
-   "ma20_slope_5d_pct": 2.64,
+   "date": "2026-07-29",
+   "close": 169.5,
+   "ret_5d_pct": 3.35,
+   "ret_20d_pct": 6.94,
+   "relative_5d_pct": 14.03,
+   "relative_20d_pct": 20.14,
+   "ma20": 156.22,
+   "ma60": 154.62,
+   "ma20_slope_5d_pct": 2.81,
    "high20": 184.0,
    "high60": 201.0,
-   "vol20": 58958.0,
-   "vol_ratio": 1.41,
+   "vol20": 65365.0,
+   "vol_ratio": 2.38,
    "reasons": [
     "20日高附近",
     "MA20在MA60上方且上彎",
     "20日均量足夠",
     "量能未萎縮",
-    "20日漲幅達標",
     "20日相對大盤強"
    ],
    "themes": [
@@ -1328,89 +1802,9 @@
     }
    ],
    "first_seen_date": "2026-07-24",
-   "days_since_first_seen": 2,
+   "days_since_first_seen": 3,
    "latest_entered": true,
    "previous_tier": "watch",
-   "tier_changed": false
-  },
-  {
-   "stock_id": "2889",
-   "name": "國票金",
-   "industry": "金融保險",
-   "market": "TWSE",
-   "tier": "watch",
-   "date": "2026-07-28",
-   "close": 15.6,
-   "ret_5d_pct": -1.27,
-   "ret_20d_pct": 5.41,
-   "relative_5d_pct": 4.68,
-   "relative_20d_pct": 12.95,
-   "ma20": 15.51,
-   "ma60": 15.04,
-   "ma20_slope_5d_pct": 1.26,
-   "high20": 16.1,
-   "high60": 16.1,
-   "vol20": 7329.0,
-   "vol_ratio": 0.75,
-   "reasons": [
-    "接近60日高",
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "finance_insurance",
-     "label": "金融保險",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-24",
-   "days_since_first_seen": 2,
-   "latest_entered": true,
-   "previous_tier": "watch",
-   "tier_changed": false
-  },
-  {
-   "stock_id": "5388",
-   "name": "中磊",
-   "industry": "電子工業",
-   "market": "TWSE",
-   "tier": "leader",
-   "date": "2026-07-28",
-   "close": 86.4,
-   "ret_5d_pct": 1.53,
-   "ret_20d_pct": 11.63,
-   "relative_5d_pct": 7.47,
-   "relative_20d_pct": 19.18,
-   "ma20": 84.77,
-   "ma60": 83.93,
-   "ma20_slope_5d_pct": 2.8,
-   "high20": 94.7,
-   "high60": 94.7,
-   "vol20": 5026.0,
-   "vol_ratio": 0.99,
-   "reasons": [
-    "接近60日高",
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "量能未萎縮",
-    "20日漲幅達標",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "electronics_components",
-     "label": "電子零組件",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-24",
-   "days_since_first_seen": 2,
-   "latest_entered": true,
-   "previous_tier": "leader",
    "tier_changed": false
   },
   {
@@ -1419,19 +1813,19 @@
    "industry": "電機機械",
    "market": "TWSE",
    "tier": "leader",
-   "date": "2026-07-28",
-   "close": 71.1,
-   "ret_5d_pct": 3.04,
-   "ret_20d_pct": 16.56,
-   "relative_5d_pct": 8.99,
-   "relative_20d_pct": 24.11,
-   "ma20": 66.56,
-   "ma60": 65.44,
-   "ma20_slope_5d_pct": 3.36,
+   "date": "2026-07-29",
+   "close": 69.7,
+   "ret_5d_pct": 1.9,
+   "ret_20d_pct": 9.94,
+   "relative_5d_pct": 12.58,
+   "relative_20d_pct": 23.13,
+   "ma20": 66.88,
+   "ma60": 65.4,
+   "ma20_slope_5d_pct": 3.48,
    "high20": 76.3,
    "high60": 76.3,
-   "vol20": 2501.0,
-   "vol_ratio": 1.48,
+   "vol20": 2644.0,
+   "vol_ratio": 1.37,
    "reasons": [
     "接近60日高",
     "20日高附近",
@@ -1449,277 +1843,376 @@
     }
    ],
    "first_seen_date": "2026-07-24",
-   "days_since_first_seen": 2,
-   "latest_entered": true,
-   "previous_tier": "leader",
-   "tier_changed": false
-  },
-  {
-   "stock_id": "2615",
-   "name": "萬海",
-   "industry": "航運業",
-   "market": "TWSE",
-   "tier": "watch",
-   "date": "2026-07-28",
-   "close": 83.6,
-   "ret_5d_pct": -1.88,
-   "ret_20d_pct": 6.36,
-   "relative_5d_pct": 4.07,
-   "relative_20d_pct": 13.91,
-   "ma20": 81.32,
-   "ma60": 80.73,
-   "ma20_slope_5d_pct": 2.1,
-   "high20": 87.9,
-   "high60": 87.9,
-   "vol20": 10954.0,
-   "vol_ratio": 0.6,
-   "reasons": [
-    "接近60日高",
-    "20日高附近",
-    "MA20在MA60上方且上彎",
-    "20日均量足夠",
-    "20日相對大盤強"
-   ],
-   "themes": [
-    {
-     "id": "shipping_transport",
-     "label": "航運運輸",
-     "category": ""
-    }
-   ],
-   "first_seen_date": "2026-07-23",
    "days_since_first_seen": 3,
    "latest_entered": true,
    "previous_tier": "leader",
-   "tier_changed": true
+   "tier_changed": false
   }
  ],
  "themes": [
   {
-   "theme_id": "electronics_components",
-   "label": "電子零組件",
-   "leader_count": 2,
+   "theme_id": "finance_insurance",
+   "label": "金融保險",
+   "leader_count": 3,
    "watch_count": 3,
    "members": [
     {
-     "stock_id": "6669",
-     "name": "緯穎",
+     "stock_id": "2867",
+     "name": "三商壽",
      "tier": "leader",
-     "ret_20d_pct": 16.05,
-     "relative_20d_pct": 23.6
+     "ret_20d_pct": 12.35,
+     "relative_20d_pct": 25.55
     },
-    {
-     "stock_id": "5388",
-     "name": "中磊",
-     "tier": "leader",
-     "ret_20d_pct": 11.63,
-     "relative_20d_pct": 19.18
-    },
-    {
-     "stock_id": "5227",
-     "name": "立凱-KY",
-     "tier": "watch",
-     "ret_20d_pct": 22.9,
-     "relative_20d_pct": 30.44
-    },
-    {
-     "stock_id": "3231",
-     "name": "緯創",
-     "tier": "watch",
-     "ret_20d_pct": 10.03,
-     "relative_20d_pct": 17.58
-    },
-    {
-     "stock_id": "2425",
-     "name": "承啟",
-     "tier": "watch",
-     "ret_20d_pct": 5.35,
-     "relative_20d_pct": 12.9
-    }
-   ],
-   "strong_theme": true,
-   "member_count": 5,
-   "avg_ret_20d_pct": 13.19,
-   "avg_relative_20d_pct": 20.74
-  },
-  {
-   "theme_id": "machinery_robotics",
-   "label": "機械自動化",
-   "leader_count": 2,
-   "watch_count": 0,
-   "members": [
-    {
-     "stock_id": "4566",
-     "name": "時碩工業",
-     "tier": "leader",
-     "ret_20d_pct": 16.56,
-     "relative_20d_pct": 24.11
-    },
-    {
-     "stock_id": "6603",
-     "name": "富強鑫",
-     "tier": "leader",
-     "ret_20d_pct": 13.02,
-     "relative_20d_pct": 20.57
-    }
-   ],
-   "strong_theme": false,
-   "member_count": 2,
-   "avg_ret_20d_pct": 14.79,
-   "avg_relative_20d_pct": 22.34
-  },
-  {
-   "theme_id": "finance_insurance",
-   "label": "金融保險",
-   "leader_count": 1,
-   "watch_count": 6,
-   "members": [
     {
      "stock_id": "2880",
      "name": "華南金",
      "tier": "leader",
-     "ret_20d_pct": 10.99,
-     "relative_20d_pct": 18.54
-    },
-    {
-     "stock_id": "2867",
-     "name": "三商壽",
-     "tier": "watch",
-     "ret_20d_pct": 11.31,
-     "relative_20d_pct": 18.86
+     "ret_20d_pct": 10.0,
+     "relative_20d_pct": 23.2
     },
     {
      "stock_id": "2886",
      "name": "兆豐金",
-     "tier": "watch",
-     "ret_20d_pct": 7.03,
-     "relative_20d_pct": 14.58
-    },
-    {
-     "stock_id": "2836",
-     "name": "高雄銀",
-     "tier": "watch",
-     "ret_20d_pct": 6.12,
-     "relative_20d_pct": 13.67
+     "tier": "leader",
+     "ret_20d_pct": 8.24,
+     "relative_20d_pct": 21.44
     },
     {
      "stock_id": "2892",
      "name": "第一金",
      "tier": "watch",
-     "ret_20d_pct": 5.45,
-     "relative_20d_pct": 13.0
-    },
-    {
-     "stock_id": "2889",
-     "name": "國票金",
-     "tier": "watch",
-     "ret_20d_pct": 5.41,
-     "relative_20d_pct": 12.95
+     "ret_20d_pct": 6.26,
+     "relative_20d_pct": 19.46
     },
     {
      "stock_id": "2884",
      "name": "玉山金",
      "tier": "watch",
-     "ret_20d_pct": 5.07,
-     "relative_20d_pct": 12.62
+     "ret_20d_pct": 5.95,
+     "relative_20d_pct": 19.15
+    },
+    {
+     "stock_id": "5880",
+     "name": "合庫金",
+     "tier": "watch",
+     "ret_20d_pct": 5.03,
+     "relative_20d_pct": 18.23
     }
    ],
-   "strong_theme": false,
-   "member_count": 7,
-   "avg_ret_20d_pct": 7.34,
-   "avg_relative_20d_pct": 14.89
+   "strong_theme": true,
+   "member_count": 6,
+   "avg_ret_20d_pct": 7.97,
+   "avg_relative_20d_pct": 21.17
   },
   {
-   "theme_id": "ai_server",
-   "label": "AI伺服器",
-   "leader_count": 1,
-   "watch_count": 2,
+   "theme_id": "machinery_robotics",
+   "label": "機械自動化",
+   "leader_count": 3,
+   "watch_count": 0,
    "members": [
     {
-     "stock_id": "6669",
-     "name": "緯穎",
+     "stock_id": "1526",
+     "name": "日馳",
      "tier": "leader",
-     "ret_20d_pct": 16.05,
-     "relative_20d_pct": 23.6
+     "ret_20d_pct": 32.63,
+     "relative_20d_pct": 45.83
     },
     {
-     "stock_id": "3231",
-     "name": "緯創",
-     "tier": "watch",
-     "ret_20d_pct": 10.03,
-     "relative_20d_pct": 17.58
+     "stock_id": "6603",
+     "name": "富強鑫",
+     "tier": "leader",
+     "ret_20d_pct": 14.41,
+     "relative_20d_pct": 27.61
     },
     {
-     "stock_id": "2425",
-     "name": "承啟",
-     "tier": "watch",
-     "ret_20d_pct": 5.35,
-     "relative_20d_pct": 12.9
+     "stock_id": "4566",
+     "name": "時碩工業",
+     "tier": "leader",
+     "ret_20d_pct": 9.94,
+     "relative_20d_pct": 23.13
     }
    ],
-   "strong_theme": false,
+   "strong_theme": true,
    "member_count": 3,
-   "avg_ret_20d_pct": 10.48,
-   "avg_relative_20d_pct": 18.03
+   "avg_ret_20d_pct": 18.99,
+   "avg_relative_20d_pct": 32.19
   },
   {
    "theme_id": "computer_peripherals",
    "label": "電腦週邊",
-   "leader_count": 0,
-   "watch_count": 3,
+   "leader_count": 2,
+   "watch_count": 1,
    "members": [
     {
      "stock_id": "8050",
      "name": "廣積",
-     "tier": "watch",
-     "ret_20d_pct": 13.59,
-     "relative_20d_pct": 21.14
+     "tier": "leader",
+     "ret_20d_pct": 16.25,
+     "relative_20d_pct": 29.45
     },
     {
      "stock_id": "5490",
      "name": "同亨",
-     "tier": "watch",
-     "ret_20d_pct": 13.16,
-     "relative_20d_pct": 20.71
+     "tier": "leader",
+     "ret_20d_pct": 16.11,
+     "relative_20d_pct": 29.31
     },
     {
      "stock_id": "3022",
      "name": "威強電",
      "tier": "watch",
-     "ret_20d_pct": 8.38,
-     "relative_20d_pct": 15.93
+     "ret_20d_pct": 5.01,
+     "relative_20d_pct": 18.21
+    }
+   ],
+   "strong_theme": true,
+   "member_count": 3,
+   "avg_ret_20d_pct": 12.46,
+   "avg_relative_20d_pct": 25.66
+  },
+  {
+   "theme_id": "retail_trade",
+   "label": "貿易百貨",
+   "leader_count": 2,
+   "watch_count": 0,
+   "members": [
+    {
+     "stock_id": "2905",
+     "name": "三商",
+     "tier": "leader",
+     "ret_20d_pct": 11.15,
+     "relative_20d_pct": 24.34
+    },
+    {
+     "stock_id": "2912",
+     "name": "統一超",
+     "tier": "leader",
+     "ret_20d_pct": 8.07,
+     "relative_20d_pct": 21.27
     }
    ],
    "strong_theme": false,
-   "member_count": 3,
-   "avg_ret_20d_pct": 11.71,
-   "avg_relative_20d_pct": 19.26
+   "member_count": 2,
+   "avg_ret_20d_pct": 9.61,
+   "avg_relative_20d_pct": 22.8
+  },
+  {
+   "theme_id": "electronics_components",
+   "label": "電子零組件",
+   "leader_count": 1,
+   "watch_count": 1,
+   "members": [
+    {
+     "stock_id": "6243",
+     "name": "迅杰",
+     "tier": "leader",
+     "ret_20d_pct": 28.32,
+     "relative_20d_pct": 41.52
+    },
+    {
+     "stock_id": "3231",
+     "name": "緯創",
+     "tier": "watch",
+     "ret_20d_pct": 6.94,
+     "relative_20d_pct": 20.14
+    }
+   ],
+   "strong_theme": false,
+   "member_count": 2,
+   "avg_ret_20d_pct": 17.63,
+   "avg_relative_20d_pct": 30.83
   },
   {
    "theme_id": "shipping_transport",
    "label": "航運運輸",
-   "leader_count": 0,
-   "watch_count": 2,
+   "leader_count": 1,
+   "watch_count": 1,
    "members": [
     {
      "stock_id": "2637",
      "name": "慧洋-KY",
-     "tier": "watch",
-     "ret_20d_pct": 12.81,
-     "relative_20d_pct": 20.36
+     "tier": "leader",
+     "ret_20d_pct": 10.74,
+     "relative_20d_pct": 23.94
     },
     {
      "stock_id": "2615",
      "name": "萬海",
      "tier": "watch",
-     "ret_20d_pct": 6.36,
-     "relative_20d_pct": 13.91
+     "ret_20d_pct": 7.32,
+     "relative_20d_pct": 20.52
     }
    ],
    "strong_theme": false,
    "member_count": 2,
-   "avg_ret_20d_pct": 9.59,
-   "avg_relative_20d_pct": 17.13
+   "avg_ret_20d_pct": 9.03,
+   "avg_relative_20d_pct": 22.23
+  },
+  {
+   "theme_id": "other_diversified",
+   "label": "其他多元",
+   "leader_count": 1,
+   "watch_count": 1,
+   "members": [
+    {
+     "stock_id": "9921",
+     "name": "巨大",
+     "tier": "leader",
+     "ret_20d_pct": 11.05,
+     "relative_20d_pct": 24.25
+    },
+    {
+     "stock_id": "9938",
+     "name": "百和",
+     "tier": "watch",
+     "ret_20d_pct": 5.07,
+     "relative_20d_pct": 18.27
+    }
+   ],
+   "strong_theme": false,
+   "member_count": 2,
+   "avg_ret_20d_pct": 8.06,
+   "avg_relative_20d_pct": 21.26
+  },
+  {
+   "theme_id": "robotics",
+   "label": "機器人",
+   "leader_count": 1,
+   "watch_count": 0,
+   "members": [
+    {
+     "stock_id": "2332",
+     "name": "友訊",
+     "tier": "leader",
+     "ret_20d_pct": 31.15,
+     "relative_20d_pct": 44.34
+    }
+   ],
+   "strong_theme": false,
+   "member_count": 1,
+   "avg_ret_20d_pct": 31.15,
+   "avg_relative_20d_pct": 44.34
+  },
+  {
+   "theme_id": "networking_communication",
+   "label": "通訊網路",
+   "leader_count": 1,
+   "watch_count": 0,
+   "members": [
+    {
+     "stock_id": "2332",
+     "name": "友訊",
+     "tier": "leader",
+     "ret_20d_pct": 31.15,
+     "relative_20d_pct": 44.34
+    }
+   ],
+   "strong_theme": false,
+   "member_count": 1,
+   "avg_ret_20d_pct": 31.15,
+   "avg_relative_20d_pct": 44.34
+  },
+  {
+   "theme_id": "ic_design",
+   "label": "IC設計",
+   "leader_count": 1,
+   "watch_count": 0,
+   "members": [
+    {
+     "stock_id": "6243",
+     "name": "迅杰",
+     "tier": "leader",
+     "ret_20d_pct": 28.32,
+     "relative_20d_pct": 41.52
+    }
+   ],
+   "strong_theme": false,
+   "member_count": 1,
+   "avg_ret_20d_pct": 28.32,
+   "avg_relative_20d_pct": 41.52
+  },
+  {
+   "theme_id": "power_semiconductor",
+   "label": "功率半導體",
+   "leader_count": 1,
+   "watch_count": 0,
+   "members": [
+    {
+     "stock_id": "6243",
+     "name": "迅杰",
+     "tier": "leader",
+     "ret_20d_pct": 28.32,
+     "relative_20d_pct": 41.52
+    }
+   ],
+   "strong_theme": false,
+   "member_count": 1,
+   "avg_ret_20d_pct": 28.32,
+   "avg_relative_20d_pct": 41.52
+  },
+  {
+   "theme_id": "construction_real_estate",
+   "label": "營建資產",
+   "leader_count": 1,
+   "watch_count": 0,
+   "members": [
+    {
+     "stock_id": "2539",
+     "name": "櫻花建",
+     "tier": "leader",
+     "ret_20d_pct": 9.64,
+     "relative_20d_pct": 22.84
+    }
+   ],
+   "strong_theme": false,
+   "member_count": 1,
+   "avg_ret_20d_pct": 9.64,
+   "avg_relative_20d_pct": 22.84
+  },
+  {
+   "theme_id": "plastic_rubber",
+   "label": "塑橡膠",
+   "leader_count": 1,
+   "watch_count": 0,
+   "members": [
+    {
+     "stock_id": "2106",
+     "name": "建大",
+     "tier": "leader",
+     "ret_20d_pct": 8.31,
+     "relative_20d_pct": 21.5
+    }
+   ],
+   "strong_theme": false,
+   "member_count": 1,
+   "avg_ret_20d_pct": 8.31,
+   "avg_relative_20d_pct": 21.5
+  },
+  {
+   "theme_id": "steel_materials",
+   "label": "鋼鐵材料",
+   "leader_count": 0,
+   "watch_count": 2,
+   "members": [
+    {
+     "stock_id": "2006",
+     "name": "東和鋼鐵",
+     "tier": "watch",
+     "ret_20d_pct": 7.42,
+     "relative_20d_pct": 20.61
+    },
+    {
+     "stock_id": "2027",
+     "name": "大成鋼",
+     "tier": "watch",
+     "ret_20d_pct": 7.19,
+     "relative_20d_pct": 20.38
+    }
+   ],
+   "strong_theme": false,
+   "member_count": 2,
+   "avg_ret_20d_pct": 7.3,
+   "avg_relative_20d_pct": 20.49
   },
   {
    "theme_id": "textile_apparel",
@@ -1731,14 +2224,14 @@
      "stock_id": "1467",
      "name": "南緯",
      "tier": "watch",
-     "ret_20d_pct": 42.96,
-     "relative_20d_pct": 50.5
+     "ret_20d_pct": 39.73,
+     "relative_20d_pct": 52.92
     }
    ],
    "strong_theme": false,
    "member_count": 1,
-   "avg_ret_20d_pct": 42.96,
-   "avg_relative_20d_pct": 50.5
+   "avg_ret_20d_pct": 39.73,
+   "avg_relative_20d_pct": 52.92
   },
   {
    "theme_id": "cloud_software",
@@ -1750,52 +2243,33 @@
      "stock_id": "6214",
      "name": "精誠",
      "tier": "watch",
-     "ret_20d_pct": 10.85,
-     "relative_20d_pct": 18.4
+     "ret_20d_pct": 7.46,
+     "relative_20d_pct": 20.66
     }
    ],
    "strong_theme": false,
    "member_count": 1,
-   "avg_ret_20d_pct": 10.85,
-   "avg_relative_20d_pct": 18.4
+   "avg_ret_20d_pct": 7.46,
+   "avg_relative_20d_pct": 20.66
   },
   {
-   "theme_id": "other_diversified",
-   "label": "其他多元",
+   "theme_id": "ai_server",
+   "label": "AI伺服器",
    "leader_count": 0,
    "watch_count": 1,
    "members": [
     {
-     "stock_id": "9921",
-     "name": "巨大",
+     "stock_id": "3231",
+     "name": "緯創",
      "tier": "watch",
-     "ret_20d_pct": 10.25,
-     "relative_20d_pct": 17.79
+     "ret_20d_pct": 6.94,
+     "relative_20d_pct": 20.14
     }
    ],
    "strong_theme": false,
    "member_count": 1,
-   "avg_ret_20d_pct": 10.25,
-   "avg_relative_20d_pct": 17.79
-  },
-  {
-   "theme_id": "plastic_rubber",
-   "label": "塑橡膠",
-   "leader_count": 0,
-   "watch_count": 1,
-   "members": [
-    {
-     "stock_id": "2106",
-     "name": "建大",
-     "tier": "watch",
-     "ret_20d_pct": 7.6,
-     "relative_20d_pct": 15.15
-    }
-   ],
-   "strong_theme": false,
-   "member_count": 1,
-   "avg_ret_20d_pct": 7.6,
-   "avg_relative_20d_pct": 15.15
+   "avg_ret_20d_pct": 6.94,
+   "avg_relative_20d_pct": 20.14
   }
  ]
 }
