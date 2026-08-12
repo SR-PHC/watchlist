@@ -1,22 +1,248 @@
 {
- "updated": "2026-08-11T17:01:20+08:00",
- "data_date": "2026-08-11",
+ "updated": "2026-08-12T17:01:18+08:00",
+ "data_date": "2026-08-12",
  "criteria": {
   "neckline_confirmed": "neckline_track.active entry_date == neckline_candidates.updated",
   "resonance": "pool_resonance.level >= 3（三池共振）, resonance_date <= 3 trading days, first_entry_date <= 10 trading days, current >= MA20, first-entry drawdown >= -8%",
   "trend_45_65": "big_holder_trend.stat_bucket_60d == \"45-65\", 0% <= week_chg_pct <= 10%, pullback_from_60d_high_pct >= -15%, vol_20d_avg >= 1000"
  },
  "summary": {
-  "total": 11,
-  "neckline_confirmed": 0,
-  "resonance": 7,
+  "total": 15,
+  "neckline_confirmed": 4,
+  "resonance": 8,
   "trend_45_65": 4,
   "excluded": {
-   "resonance": 2,
+   "resonance": 3,
    "trend_45_65": 8
   }
  },
  "rows": [
+  {
+   "stock_id": "3653",
+   "name": "健策",
+   "industry": "電子工業",
+   "reasons": [
+    "neckline_confirmed",
+    "resonance"
+   ],
+   "reason_labels": [
+    "頸線當日進場",
+    "三池共振"
+   ],
+   "status": "今日進場",
+   "current_price": 4470.0,
+   "signal_date": "2026-08-12",
+   "volume": 816.0,
+   "vol_20d_avg": 1693.0,
+   "sources": [
+    {
+     "stock_id": "3653",
+     "name": "健策",
+     "industry": "電子工業",
+     "entry_date": "2026-08-12",
+     "expire_date": "2026-08-26",
+     "days_remaining": 11,
+     "entry_price": 4470.0,
+     "current_price": 4470.0,
+     "pnl_pct": 0.0,
+     "entry_type_label": "急殺型",
+     "early_type_label": "盤中過前高",
+     "neckline_price": 4195.0,
+     "pinned": false
+    },
+    {
+     "stock_id": "3653",
+     "name": "健策",
+     "industry": "電零",
+     "level": 3,
+     "pools": {
+      "趨勢": {
+       "entry_date": "2026-08-08",
+       "entry_price": 4380.0,
+       "current_price": 4470.0,
+       "pnl_pct": 2.05,
+       "expire_date": "2026-08-22",
+       "days_remaining": 10
+      },
+      "突破": {
+       "entry_date": "2026-08-06",
+       "entry_price": 4450.0,
+       "current_price": 4470.0,
+       "pnl_pct": 0.45,
+       "expire_date": "2026-08-20",
+       "days_remaining": 7
+      },
+      "頸線": {
+       "entry_date": "2026-08-12",
+       "entry_price": 4470.0,
+       "current_price": 4470.0,
+       "pnl_pct": 0.0,
+       "expire_date": "2026-08-26",
+       "days_remaining": 11
+      }
+     },
+     "current_price": 4470.0,
+     "resonance_date": "2026-08-12",
+     "first_entry_date": "2026-08-06",
+     "pool_names": "趨勢 / 突破 / 頸線",
+     "workbench_filter": "新鮮共振且結構未破"
+    }
+   ]
+  },
+  {
+   "stock_id": "2101",
+   "name": "南港",
+   "industry": "橡膠工業",
+   "reasons": [
+    "neckline_confirmed"
+   ],
+   "reason_labels": [
+    "頸線當日進場"
+   ],
+   "status": "今日進場",
+   "current_price": 34.3,
+   "signal_date": "2026-08-12",
+   "volume": 1391.0,
+   "vol_20d_avg": 1961.35,
+   "sources": [
+    {
+     "stock_id": "2101",
+     "name": "南港",
+     "industry": "橡膠工業",
+     "entry_date": "2026-08-12",
+     "expire_date": "2026-08-26",
+     "days_remaining": 11,
+     "entry_price": 34.3,
+     "current_price": 34.3,
+     "pnl_pct": 0.0,
+     "entry_type_label": "急殺型",
+     "early_type_label": "盤中過前高",
+     "neckline_price": 34.1,
+     "pinned": false
+    }
+   ]
+  },
+  {
+   "stock_id": "2347",
+   "name": "聯強",
+   "industry": "電子工業",
+   "reasons": [
+    "neckline_confirmed"
+   ],
+   "reason_labels": [
+    "頸線當日進場"
+   ],
+   "status": "今日進場",
+   "current_price": 91.6,
+   "signal_date": "2026-08-12",
+   "volume": 5781.0,
+   "vol_20d_avg": 5418.95,
+   "sources": [
+    {
+     "stock_id": "2347",
+     "name": "聯強",
+     "industry": "電子工業",
+     "entry_date": "2026-08-12",
+     "expire_date": "2026-08-26",
+     "days_remaining": 11,
+     "entry_price": 91.5,
+     "current_price": 91.6,
+     "pnl_pct": 0.11,
+     "entry_type_label": "緩降型",
+     "early_type_label": "盤中過前高",
+     "neckline_price": 89.8,
+     "pinned": false
+    }
+   ]
+  },
+  {
+   "stock_id": "6005",
+   "name": "群益證",
+   "industry": "金融保險",
+   "reasons": [
+    "neckline_confirmed"
+   ],
+   "reason_labels": [
+    "頸線當日進場"
+   ],
+   "status": "今日進場",
+   "current_price": 30.6,
+   "signal_date": "2026-08-12",
+   "volume": 9097.0,
+   "vol_20d_avg": 10097.75,
+   "sources": [
+    {
+     "stock_id": "6005",
+     "name": "群益證",
+     "industry": "金融保險",
+     "entry_date": "2026-08-12",
+     "expire_date": "2026-08-26",
+     "days_remaining": 11,
+     "entry_price": 30.2,
+     "current_price": 30.6,
+     "pnl_pct": 1.32,
+     "entry_type_label": "緩降型",
+     "early_type_label": "盤中過前高",
+     "neckline_price": 29.6,
+     "pinned": false
+    }
+   ]
+  },
+  {
+   "stock_id": "1709",
+   "name": "和益",
+   "industry": "化學",
+   "reasons": [
+    "resonance"
+   ],
+   "reason_labels": [
+    "三池共振"
+   ],
+   "status": "三池共振",
+   "current_price": 28.0,
+   "signal_date": "2026-08-12",
+   "volume": 5162.0,
+   "vol_20d_avg": 4665.8,
+   "sources": [
+    {
+     "stock_id": "1709",
+     "name": "和益",
+     "industry": "化學",
+     "level": 3,
+     "pools": {
+      "趨勢": {
+       "entry_date": "2026-08-06",
+       "entry_price": 27.65,
+       "current_price": 28.0,
+       "pnl_pct": 1.27,
+       "expire_date": "2026-08-20",
+       "days_remaining": 8
+      },
+      "突破": {
+       "entry_date": "2026-08-12",
+       "entry_price": 28.0,
+       "current_price": 28.0,
+       "pnl_pct": 0.0,
+       "expire_date": "2026-08-26",
+       "days_remaining": 11
+      },
+      "頸線": {
+       "entry_date": "2026-08-03",
+       "entry_price": 22.95,
+       "current_price": 28.0,
+       "pnl_pct": 22.0,
+       "expire_date": "2026-08-17",
+       "days_remaining": 4
+      }
+     },
+     "current_price": 28.0,
+     "resonance_date": "2026-08-12",
+     "first_entry_date": "2026-08-03",
+     "pool_names": "趨勢 / 突破 / 頸線",
+     "workbench_filter": "新鮮共振且結構未破"
+    }
+   ]
+  },
   {
    "stock_id": "2301",
    "name": "光寶科",
@@ -28,10 +254,10 @@
     "三池共振"
    ],
    "status": "三池共振",
-   "current_price": 268.5,
+   "current_price": 259.5,
    "signal_date": "2026-08-10",
-   "volume": 48868.0,
-   "vol_20d_avg": 28937.85,
+   "volume": 36948.0,
+   "vol_20d_avg": 30090.3,
    "sources": [
     {
      "stock_id": "2301",
@@ -42,29 +268,29 @@
       "趨勢": {
        "entry_date": "2026-08-10",
        "entry_price": 271.5,
-       "current_price": 268.5,
-       "pnl_pct": -1.1,
+       "current_price": 259.5,
+       "pnl_pct": -4.42,
        "expire_date": "2026-08-24",
-       "days_remaining": 13
+       "days_remaining": 12
       },
       "突破": {
        "entry_date": "2026-08-04",
        "entry_price": 252.0,
-       "current_price": 268.5,
-       "pnl_pct": 6.55,
+       "current_price": 259.5,
+       "pnl_pct": 2.98,
        "expire_date": "2026-08-18",
-       "days_remaining": 6
+       "days_remaining": 5
       },
       "頸線": {
        "entry_date": "2026-07-30",
        "entry_price": 190.0,
-       "current_price": 268.5,
-       "pnl_pct": 41.32,
+       "current_price": 259.5,
+       "pnl_pct": 36.58,
        "expire_date": "2026-08-13",
-       "days_remaining": 3
+       "days_remaining": 2
       }
      },
-     "current_price": 268.5,
+     "current_price": 259.5,
      "resonance_date": "2026-08-10",
      "first_entry_date": "2026-07-30",
      "pool_names": "趨勢 / 突破 / 頸線",
@@ -83,10 +309,10 @@
     "三池共振"
    ],
    "status": "三池共振",
-   "current_price": 140.5,
+   "current_price": 143.0,
    "signal_date": "2026-08-08",
-   "volume": 8642.0,
-   "vol_20d_avg": 7417.05,
+   "volume": 4375.0,
+   "vol_20d_avg": 7367.7,
    "sources": [
     {
      "stock_id": "2359",
@@ -97,86 +323,31 @@
       "趨勢": {
        "entry_date": "2026-08-08",
        "entry_price": 143.5,
-       "current_price": 140.5,
-       "pnl_pct": -2.09,
+       "current_price": 143.0,
+       "pnl_pct": -0.35,
        "expire_date": "2026-08-22",
-       "days_remaining": 11
+       "days_remaining": 10
       },
       "突破": {
        "entry_date": "2026-08-06",
        "entry_price": 144.5,
-       "current_price": 140.5,
-       "pnl_pct": -2.77,
+       "current_price": 143.0,
+       "pnl_pct": -1.04,
        "expire_date": "2026-08-20",
-       "days_remaining": 8
+       "days_remaining": 7
       },
       "頸線": {
        "entry_date": "2026-08-03",
        "entry_price": 131.0,
-       "current_price": 140.5,
-       "pnl_pct": 7.25,
+       "current_price": 143.0,
+       "pnl_pct": 9.16,
        "expire_date": "2026-08-17",
-       "days_remaining": 5
+       "days_remaining": 4
       }
      },
-     "current_price": 140.5,
+     "current_price": 143.0,
      "resonance_date": "2026-08-08",
      "first_entry_date": "2026-08-03",
-     "pool_names": "趨勢 / 突破 / 頸線",
-     "workbench_filter": "新鮮共振且結構未破"
-    }
-   ]
-  },
-  {
-   "stock_id": "2362",
-   "name": "藍天",
-   "industry": "電腦",
-   "reasons": [
-    "resonance"
-   ],
-   "reason_labels": [
-    "三池共振"
-   ],
-   "status": "三池共振",
-   "current_price": 47.3,
-   "signal_date": "2026-08-06",
-   "volume": 1973.0,
-   "vol_20d_avg": 2114.4,
-   "sources": [
-    {
-     "stock_id": "2362",
-     "name": "藍天",
-     "industry": "電腦",
-     "level": 3,
-     "pools": {
-      "趨勢": {
-       "entry_date": "2026-08-01",
-       "entry_price": 41.95,
-       "current_price": 47.3,
-       "pnl_pct": 12.75,
-       "expire_date": "2026-08-15",
-       "days_remaining": 4
-      },
-      "突破": {
-       "entry_date": "2026-08-06",
-       "entry_price": 51.1,
-       "current_price": 47.3,
-       "pnl_pct": -7.44,
-       "expire_date": "2026-08-20",
-       "days_remaining": 8
-      },
-      "頸線": {
-       "entry_date": "2026-07-31",
-       "entry_price": 42.7,
-       "current_price": 47.3,
-       "pnl_pct": 10.77,
-       "expire_date": "2026-08-14",
-       "days_remaining": 4
-      }
-     },
-     "current_price": 47.3,
-     "resonance_date": "2026-08-06",
-     "first_entry_date": "2026-07-31",
      "pool_names": "趨勢 / 突破 / 頸線",
      "workbench_filter": "新鮮共振且結構未破"
     }
@@ -193,10 +364,10 @@
     "三池共振"
    ],
    "status": "三池共振",
-   "current_price": 87.3,
+   "current_price": 88.0,
    "signal_date": "2026-08-10",
-   "volume": 1574.0,
-   "vol_20d_avg": 2459.3,
+   "volume": 1488.0,
+   "vol_20d_avg": 2433.7,
    "sources": [
     {
      "stock_id": "2637",
@@ -207,29 +378,29 @@
       "趨勢": {
        "entry_date": "2026-08-01",
        "entry_price": 78.3,
-       "current_price": 87.3,
-       "pnl_pct": 11.49,
+       "current_price": 88.0,
+       "pnl_pct": 12.39,
        "expire_date": "2026-08-15",
-       "days_remaining": 4
+       "days_remaining": 3
       },
       "突破": {
        "entry_date": "2026-08-10",
        "entry_price": 88.1,
-       "current_price": 87.3,
-       "pnl_pct": -0.91,
+       "current_price": 88.0,
+       "pnl_pct": -0.11,
        "expire_date": "2026-08-24",
-       "days_remaining": 10
+       "days_remaining": 9
       },
       "頸線": {
        "entry_date": "2026-08-03",
        "entry_price": 83.0,
-       "current_price": 87.3,
-       "pnl_pct": 5.18,
+       "current_price": 88.0,
+       "pnl_pct": 6.02,
        "expire_date": "2026-08-17",
-       "days_remaining": 5
+       "days_remaining": 4
       }
      },
-     "current_price": 87.3,
+     "current_price": 88.0,
      "resonance_date": "2026-08-10",
      "first_entry_date": "2026-08-01",
      "pool_names": "趨勢 / 突破 / 頸線",
@@ -248,10 +419,10 @@
     "三池共振"
    ],
    "status": "三池共振",
-   "current_price": 267.5,
+   "current_price": 274.0,
    "signal_date": "2026-08-10",
-   "volume": 5555.0,
-   "vol_20d_avg": 11319.95,
+   "volume": 3672.0,
+   "vol_20d_avg": 10868.05,
    "sources": [
     {
      "stock_id": "3006",
@@ -262,29 +433,29 @@
       "趨勢": {
        "entry_date": "2026-08-08",
        "entry_price": 256.5,
-       "current_price": 267.5,
-       "pnl_pct": 4.29,
+       "current_price": 274.0,
+       "pnl_pct": 6.82,
        "expire_date": "2026-08-22",
-       "days_remaining": 11
+       "days_remaining": 10
       },
       "突破": {
        "entry_date": "2026-08-10",
        "entry_price": 275.5,
-       "current_price": 267.5,
-       "pnl_pct": -2.9,
+       "current_price": 274.0,
+       "pnl_pct": -0.54,
        "expire_date": "2026-08-24",
-       "days_remaining": 10
+       "days_remaining": 9
       },
       "頸線": {
        "entry_date": "2026-07-31",
        "entry_price": 180.0,
-       "current_price": 267.5,
-       "pnl_pct": 48.61,
+       "current_price": 274.0,
+       "pnl_pct": 52.22,
        "expire_date": "2026-08-14",
-       "days_remaining": 4
+       "days_remaining": 3
       }
      },
-     "current_price": 267.5,
+     "current_price": 274.0,
      "resonance_date": "2026-08-10",
      "first_entry_date": "2026-07-31",
      "pool_names": "趨勢 / 突破 / 頸線",
@@ -303,10 +474,10 @@
     "三池共振"
    ],
    "status": "三池共振",
-   "current_price": 119.5,
+   "current_price": 122.0,
    "signal_date": "2026-08-08",
-   "volume": 12865.0,
-   "vol_20d_avg": 24592.2,
+   "volume": 8672.0,
+   "vol_20d_avg": 23279.55,
    "sources": [
     {
      "stock_id": "5351",
@@ -317,29 +488,29 @@
       "趨勢": {
        "entry_date": "2026-08-08",
        "entry_price": 104.0,
-       "current_price": 119.5,
-       "pnl_pct": 14.9,
+       "current_price": 122.0,
+       "pnl_pct": 17.31,
        "expire_date": "2026-08-22",
-       "days_remaining": 11
+       "days_remaining": 10
       },
       "突破": {
        "entry_date": "2026-08-07",
        "entry_price": 104.0,
-       "current_price": 119.5,
-       "pnl_pct": 14.9,
+       "current_price": 122.0,
+       "pnl_pct": 17.31,
        "expire_date": "2026-08-21",
-       "days_remaining": 9
+       "days_remaining": 8
       },
       "頸線": {
        "entry_date": "2026-08-03",
        "entry_price": 79.9,
-       "current_price": 119.5,
-       "pnl_pct": 49.56,
+       "current_price": 122.0,
+       "pnl_pct": 52.69,
        "expire_date": "2026-08-17",
-       "days_remaining": 5
+       "days_remaining": 4
       }
      },
-     "current_price": 119.5,
+     "current_price": 122.0,
      "resonance_date": "2026-08-08",
      "first_entry_date": "2026-08-03",
      "pool_names": "趨勢 / 突破 / 頸線",
@@ -358,10 +529,10 @@
     "三池共振"
    ],
    "status": "三池共振",
-   "current_price": 143.0,
+   "current_price": 146.0,
    "signal_date": "2026-08-10",
-   "volume": 6401.0,
-   "vol_20d_avg": 3376.8,
+   "volume": 2233.0,
+   "vol_20d_avg": 3458.8,
    "sources": [
     {
      "stock_id": "6206",
@@ -372,29 +543,29 @@
       "趨勢": {
        "entry_date": "2026-08-08",
        "entry_price": 144.0,
-       "current_price": 143.0,
-       "pnl_pct": -0.69,
+       "current_price": 146.0,
+       "pnl_pct": 1.39,
        "expire_date": "2026-08-22",
-       "days_remaining": 11
+       "days_remaining": 10
       },
       "突破": {
        "entry_date": "2026-08-04",
        "entry_price": 140.0,
-       "current_price": 143.0,
-       "pnl_pct": 2.14,
+       "current_price": 146.0,
+       "pnl_pct": 4.29,
        "expire_date": "2026-08-18",
-       "days_remaining": 6
+       "days_remaining": 5
       },
       "頸線": {
        "entry_date": "2026-08-10",
        "entry_price": 147.5,
-       "current_price": 143.0,
-       "pnl_pct": -3.05,
+       "current_price": 146.0,
+       "pnl_pct": -1.02,
        "expire_date": "2026-08-24",
-       "days_remaining": 10
+       "days_remaining": 9
       }
      },
-     "current_price": 143.0,
+     "current_price": 146.0,
      "resonance_date": "2026-08-10",
      "first_entry_date": "2026-08-04",
      "pool_names": "趨勢 / 突破 / 頸線",
@@ -413,9 +584,9 @@
     "趨勢大戶45-65"
    ],
    "status": "趨勢45-65",
-   "current_price": 839.0,
-   "signal_date": "2026-08-11",
-   "volume": 3062.0,
+   "current_price": 852.0,
+   "signal_date": "2026-08-12",
+   "volume": 3093.0,
    "vol_20d_avg": 4780.0,
    "sources": [
     {
@@ -453,12 +624,12 @@
       "big_holder_trend"
      ],
      "price_date": "2026-08-07",
-     "close": 839.0,
+     "close": 852.0,
      "entry_date": "2026-08-07",
      "entry_close": 817.0,
-     "latest_price_date": "2026-08-11",
-     "latest_close": 839.0,
-     "since_entry_pct": 2.69,
+     "latest_price_date": "2026-08-12",
+     "latest_close": 852.0,
+     "since_entry_pct": 4.28,
      "ema20": 770.65,
      "ema60": 731.02,
      "ema120": 689.34,
@@ -484,13 +655,13 @@
      "stat_week_0_10_id": "max_gain_45_65_week_0_10",
      "stat_week_0_10_label": "45-65週漲0-10",
      "stat_week_0_10_basis": "60日漲幅45-65%、週漲幅0-10%",
-     "pattern_state": "值得看圖",
-     "pattern_score": 69.8,
+     "pattern_state": "先觀察",
+     "pattern_score": 65.8,
      "pattern_subs": {
       "結構": 27,
       "型態": 19.8,
       "量價": 10,
-      "位置": 9,
+      "位置": 5,
       "籌碼": 4
      },
      "pattern_tags": [
@@ -505,7 +676,7 @@
      "key_level": 780.0,
      "invalidation": 756.6,
      "pattern_confidence": 0.9,
-     "score": 69.8,
+     "score": 65.8,
      "score_model": "pattern_score_only_v1",
      "workbench_filter": "45-65週漲0-10、回落<=15%、量>=1000"
     }
@@ -522,9 +693,9 @@
     "趨勢大戶45-65"
    ],
    "status": "趨勢45-65",
-   "current_price": 31.05,
-   "signal_date": "2026-08-11",
-   "volume": 21438.0,
+   "current_price": 31.2,
+   "signal_date": "2026-08-12",
+   "volume": 29201.0,
    "vol_20d_avg": 49299.0,
    "sources": [
     {
@@ -563,12 +734,12 @@
       "big_holder_trend"
      ],
      "price_date": "2026-08-07",
-     "close": 31.05,
+     "close": 31.2,
      "entry_date": "2026-08-07",
      "entry_close": 30.85,
-     "latest_price_date": "2026-08-11",
-     "latest_close": 31.05,
-     "since_entry_pct": 0.65,
+     "latest_price_date": "2026-08-12",
+     "latest_close": 31.2,
+     "since_entry_pct": 1.13,
      "ema20": 30.17,
      "ema60": 27.94,
      "ema120": 25.08,
@@ -595,27 +766,27 @@
      "stat_week_0_10_label": "45-65週漲0-10",
      "stat_week_0_10_basis": "60日漲幅45-65%、週漲幅0-10%",
      "pattern_state": "先觀察",
-     "pattern_score": 62.0,
+     "pattern_score": 56.4,
      "pattern_subs": {
       "結構": 25,
-      "型態": 14.0,
+      "型態": 8.4,
       "量價": 10,
       "位置": 9,
       "籌碼": 4
      },
      "pattern_tags": [
       "均線多頭",
-      "收斂接近pivot",
+      "箱頂整理",
       "量縮整理",
       "大戶上升"
      ],
      "patterns": [
-      "tight_pivot"
+      "box_near_top"
      ],
      "key_level": 31.75,
-     "invalidation": 29.53,
-     "pattern_confidence": 0.7,
-     "score": 62.0,
+     "invalidation": null,
+     "pattern_confidence": 0.6,
+     "score": 56.4,
      "score_model": "pattern_score_only_v1",
      "workbench_filter": "45-65週漲0-10、回落<=15%、量>=1000"
     }
@@ -632,9 +803,9 @@
     "趨勢大戶45-65"
    ],
    "status": "趨勢45-65",
-   "current_price": 191.0,
-   "signal_date": "2026-08-11",
-   "volume": 34518.0,
+   "current_price": 193.5,
+   "signal_date": "2026-08-12",
+   "volume": 43109.0,
    "vol_20d_avg": 98294.0,
    "sources": [
     {
@@ -673,12 +844,12 @@
       "big_holder_trend"
      ],
      "price_date": "2026-08-07",
-     "close": 191.0,
+     "close": 193.5,
      "entry_date": "2026-08-07",
      "entry_close": 183.5,
-     "latest_price_date": "2026-08-11",
-     "latest_close": 191.0,
-     "since_entry_pct": 4.09,
+     "latest_price_date": "2026-08-12",
+     "latest_close": 193.5,
+     "since_entry_pct": 5.45,
      "ema20": 172.45,
      "ema60": 160.2,
      "ema120": 151.88,
@@ -704,27 +875,28 @@
      "stat_week_0_10_id": "max_gain_45_65_week_0_10",
      "stat_week_0_10_label": "45-65週漲0-10",
      "stat_week_0_10_basis": "60日漲幅45-65%、週漲幅0-10%",
-     "pattern_state": "值得看圖",
-     "pattern_score": 65.7,
+     "pattern_state": "先觀察",
+     "pattern_score": 49.4,
      "pattern_subs": {
       "結構": 27,
-      "型態": 18.7,
+      "型態": 8.4,
       "量價": 5,
-      "位置": 11,
+      "位置": 5,
       "籌碼": 4
      },
      "pattern_tags": [
       "均線多頭",
-      "頸線回測",
+      "箱頂整理",
+      "量縮整理",
       "大戶上升"
      ],
      "patterns": [
-      "w_bottom_retest"
+      "box_near_top"
      ],
-     "key_level": 184.0,
-     "invalidation": 178.48,
-     "pattern_confidence": 0.85,
-     "score": 65.7,
+     "key_level": 202.5,
+     "invalidation": null,
+     "pattern_confidence": 0.6,
+     "score": 49.4,
      "score_model": "pattern_score_only_v1",
      "workbench_filter": "45-65週漲0-10、回落<=15%、量>=1000"
     }
@@ -741,9 +913,9 @@
     "趨勢大戶45-65"
    ],
    "status": "趨勢45-65",
-   "current_price": 234.5,
-   "signal_date": "2026-08-11",
-   "volume": 4354.0,
+   "current_price": 232.0,
+   "signal_date": "2026-08-12",
+   "volume": 4783.0,
    "vol_20d_avg": 8025.0,
    "sources": [
     {
@@ -782,12 +954,12 @@
       "big_holder_trend"
      ],
      "price_date": "2026-08-07",
-     "close": 234.5,
+     "close": 232.0,
      "entry_date": "2026-08-07",
      "entry_close": 235.5,
-     "latest_price_date": "2026-08-11",
-     "latest_close": 234.5,
-     "since_entry_pct": -0.42,
+     "latest_price_date": "2026-08-12",
+     "latest_close": 232.0,
+     "since_entry_pct": -1.49,
      "ema20": 214.33,
      "ema60": 205.41,
      "ema120": 187.74,
