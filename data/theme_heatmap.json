@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T16:47:34+08:00",
+  "updated": "2026-08-13T16:46:46+08:00",
   "input": "stress_rebound_leaders.json",
   "theme_source": {
     "theme_baskets": "../config/theme_baskets.json",
@@ -9,7 +9,7 @@
     "total": 80,
     "limited_to": 80,
     "stress_watchlist_total": 281,
-    "rebound_confirmed_total": 253,
+    "rebound_confirmed_total": 251,
     "stress_watchlist": 80,
     "rebound_confirmed": 80,
     "stress_days": 48,
@@ -382,14 +382,14 @@
       "theme_id": "food_consumer",
       "label": "食品消費",
       "category": "官方產業",
-      "count": 5,
-      "confirmed_count": 3,
-      "stress_red_count": 111,
-      "avg_combined_score": 22.49,
-      "avg_resilience_score": 34.17,
-      "avg_leadership_score": 0.8,
-      "avg_stress_relative_ret_pct": 2.15,
-      "avg_rebound_relative_ret_pct": -1.99,
+      "count": 4,
+      "confirmed_count": 2,
+      "stress_red_count": 91,
+      "avg_combined_score": 22.52,
+      "avg_resilience_score": 34.26,
+      "avg_leadership_score": 0.73,
+      "avg_stress_relative_ret_pct": 2.17,
+      "avg_rebound_relative_ret_pct": -2.0,
       "top_members": [
         {
           "stock_id": "1216",
@@ -441,26 +441,6 @@
           "leadership_score": 2.77,
           "avg_stress_relative_ret_pct": 1.98,
           "avg_rebound_relative_ret_pct": -1.77,
-          "theme_roles": [
-            "食品"
-          ],
-          "theme_subthemes": [],
-          "theme_strength": "medium",
-          "theme_confidence": 0.58,
-          "theme_source": [
-            "industry_rule"
-          ]
-        },
-        {
-          "stock_id": "1218",
-          "name": "泰山",
-          "industry": "食品工業",
-          "stage": "rebound_confirmed",
-          "combined_score": 22.35,
-          "resilience_score": 33.81,
-          "leadership_score": 1.07,
-          "avg_stress_relative_ret_pct": 2.03,
-          "avg_rebound_relative_ret_pct": -1.99,
           "theme_roles": [
             "食品"
           ],
@@ -558,41 +538,6 @@
           "avg_rebound_relative_ret_pct": -1.33,
           "theme_roles": [
             "光電"
-          ],
-          "theme_subthemes": [],
-          "theme_strength": "medium",
-          "theme_confidence": 0.55,
-          "theme_source": [
-            "industry_rule"
-          ]
-        }
-      ]
-    },
-    {
-      "theme_id": "electronics_components",
-      "label": "電子零組件",
-      "category": "官方產業",
-      "count": 1,
-      "confirmed_count": 1,
-      "stress_red_count": 16,
-      "avg_combined_score": 22.11,
-      "avg_resilience_score": 31.27,
-      "avg_leadership_score": 5.09,
-      "avg_stress_relative_ret_pct": 1.01,
-      "avg_rebound_relative_ret_pct": -0.93,
-      "top_members": [
-        {
-          "stock_id": "5488",
-          "name": "松普",
-          "industry": "電子零組件業",
-          "stage": "rebound_confirmed",
-          "combined_score": 22.11,
-          "resilience_score": 31.27,
-          "leadership_score": 5.09,
-          "avg_stress_relative_ret_pct": 1.01,
-          "avg_rebound_relative_ret_pct": -0.93,
-          "theme_roles": [
-            "電子零組件"
           ],
           "theme_subthemes": [],
           "theme_strength": "medium",
@@ -1549,6 +1494,61 @@
       ]
     },
     {
+      "theme_id": "electronics_components",
+      "label": "電子零組件",
+      "category": "官方產業",
+      "count": 2,
+      "confirmed_count": 1,
+      "stress_red_count": 31,
+      "avg_combined_score": 20.17,
+      "avg_resilience_score": 30.07,
+      "avg_leadership_score": 1.79,
+      "avg_stress_relative_ret_pct": 1.14,
+      "avg_rebound_relative_ret_pct": -1.42,
+      "top_members": [
+        {
+          "stock_id": "5488",
+          "name": "松普",
+          "industry": "電子零組件業",
+          "stage": "rebound_confirmed",
+          "combined_score": 22.11,
+          "resilience_score": 31.27,
+          "leadership_score": 5.09,
+          "avg_stress_relative_ret_pct": 1.01,
+          "avg_rebound_relative_ret_pct": -0.93,
+          "theme_roles": [
+            "電子零組件"
+          ],
+          "theme_subthemes": [],
+          "theme_strength": "medium",
+          "theme_confidence": 0.55,
+          "theme_source": [
+            "industry_rule"
+          ]
+        },
+        {
+          "stock_id": "6108",
+          "name": "競國",
+          "industry": "電子工業",
+          "stage": "stress_preselect",
+          "combined_score": 18.24,
+          "resilience_score": 28.87,
+          "leadership_score": -1.51,
+          "avg_stress_relative_ret_pct": 1.27,
+          "avg_rebound_relative_ret_pct": -1.9,
+          "theme_roles": [
+            "電子工業"
+          ],
+          "theme_subthemes": [],
+          "theme_strength": "weak",
+          "theme_confidence": 0.45,
+          "theme_source": [
+            "industry_rule"
+          ]
+        }
+      ]
+    },
+    {
       "theme_id": "utility_energy",
       "label": "油電燃氣",
       "category": "官方產業",
@@ -1680,8 +1680,8 @@
       "name": "遠傳",
       "industry": "通信網路業",
       "market": "TWSE",
-      "latest_close": 101.0,
-      "latest_date": "2026-08-12",
+      "latest_close": 99.5,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -2955,8 +2955,8 @@
       "name": "台灣大",
       "industry": "通信網路業",
       "market": "TWSE",
-      "latest_close": 109.5,
-      "latest_date": "2026-08-12",
+      "latest_close": 108.5,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -4218,8 +4218,8 @@
       "name": "華票",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 16.2,
-      "latest_date": "2026-08-12",
+      "latest_close": 16.25,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -5483,7 +5483,7 @@
       "industry": "通信網路業",
       "market": "TWSE",
       "latest_close": 136.0,
-      "latest_date": "2026-08-12",
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -6740,8 +6740,8 @@
       "name": "上海商銀",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 42.85,
-      "latest_date": "2026-08-12",
+      "latest_close": 42.25,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-09-30",
@@ -8003,7 +8003,7 @@
       "industry": "食品工業",
       "market": "TWSE",
       "latest_close": 76.3,
-      "latest_date": "2026-08-12",
+      "latest_date": "2026-08-13",
       "stage": "stress_preselect",
       "first_stress_date": "2025-07-22",
       "confirm_date": null,
@@ -9216,8 +9216,8 @@
       "name": "兆豐金",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 48.7,
-      "latest_date": "2026-08-12",
+      "latest_close": 45.85,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-09-30",
@@ -10486,8 +10486,8 @@
       "name": "王道銀行",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 10.1,
-      "latest_date": "2026-08-12",
+      "latest_close": 10.15,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -11776,8 +11776,8 @@
       "name": "卜蜂",
       "industry": "食品工業",
       "market": "TWSE",
-      "latest_close": 108.5,
-      "latest_date": "2026-08-12",
+      "latest_close": 107.5,
+      "latest_date": "2026-08-13",
       "stage": "stress_preselect",
       "first_stress_date": "2025-07-22",
       "confirm_date": null,
@@ -13014,8 +13014,8 @@
       "name": "國票金",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 15.2,
-      "latest_date": "2026-08-12",
+      "latest_close": 15.55,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -14292,8 +14292,8 @@
       "name": "聯邦銀",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 19.9,
-      "latest_date": "2026-08-12",
+      "latest_close": 20.15,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -15578,8 +15578,8 @@
       "name": "遠東銀",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 13.1,
-      "latest_date": "2026-08-12",
+      "latest_close": 13.2,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -16844,8 +16844,8 @@
       "name": "華南金",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 43.2,
-      "latest_date": "2026-08-12",
+      "latest_close": 39.1,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-09-30",
@@ -18110,8 +18110,8 @@
       "name": "愛山林",
       "industry": "建材營造",
       "market": "TWSE",
-      "latest_close": 44.5,
-      "latest_date": "2026-08-12",
+      "latest_close": 44.8,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -19333,8 +19333,8 @@
       "name": "永豐金",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 39.85,
-      "latest_date": "2026-08-12",
+      "latest_close": 39.95,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-09-30",
@@ -20640,8 +20640,8 @@
       "name": "台新新光金",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 35.65,
-      "latest_date": "2026-08-12",
+      "latest_close": 36.2,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -21933,8 +21933,8 @@
       "name": "永豐餘",
       "industry": "造紙工業",
       "market": "TWSE",
-      "latest_close": 30.15,
-      "latest_date": "2026-08-12",
+      "latest_close": 29.9,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -23178,8 +23178,8 @@
       "name": "三陽工業",
       "industry": "汽車工業",
       "market": "TWSE",
-      "latest_close": 60.8,
-      "latest_date": "2026-08-12",
+      "latest_close": 60.9,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -24425,1246 +24425,12 @@
       ]
     },
     {
-      "stock_id": "1218",
-      "name": "泰山",
-      "industry": "食品工業",
-      "market": "TWSE",
-      "latest_close": 15.55,
-      "latest_date": "2026-08-12",
-      "stage": "rebound_confirmed",
-      "first_stress_date": "2025-07-22",
-      "confirm_date": "2025-08-21",
-      "resilience_score": 33.81,
-      "leadership_score": 1.07,
-      "combined_score": 22.35,
-      "stress_days_tested": 44,
-      "rebound_days_tested": 46,
-      "avg_stress_relative_ret_pct": 2.03,
-      "avg_rebound_relative_ret_pct": -1.99,
-      "stress_red_count": 20,
-      "lower_shadow_count": 16,
-      "tags": [
-        "下影線承接",
-        "反彈勝大盤",
-        "反彈有量",
-        "壓力日收紅",
-        "守MA20",
-        "守MA60",
-        "接近20日高",
-        "收在高檔",
-        "放量下跌",
-        "未破20日低",
-        "站上MA20",
-        "跌幅明顯小於大盤",
-        "量未失控"
-      ],
-      "stress_events": [
-        {
-          "date": "2025-07-22",
-          "stock_ret_pct": -1.32,
-          "index_ret_pct": -1.51,
-          "relative_ret_pct": 0.19,
-          "lower_shadow_ratio": 0.29,
-          "close_location": 0.29,
-          "vol_ratio": null,
-          "score": 4.77,
-          "tags": [
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2025-08-20",
-          "stock_ret_pct": 0.0,
-          "index_ret_pct": -2.99,
-          "relative_ret_pct": 2.99,
-          "lower_shadow_ratio": 0.67,
-          "close_location": 0.67,
-          "vol_ratio": 1.16,
-          "score": 50.96,
-          "tags": [
-            "壓力日收紅",
-            "下影線承接",
-            "收在高檔",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2025-08-28",
-          "stock_ret_pct": 0.54,
-          "index_ret_pct": -1.16,
-          "relative_ret_pct": 1.69,
-          "lower_shadow_ratio": 0.25,
-          "close_location": 0.75,
-          "vol_ratio": 0.73,
-          "score": 37.77,
-          "tags": [
-            "壓力日收紅",
-            "收在高檔",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2025-09-26",
-          "stock_ret_pct": -0.52,
-          "index_ret_pct": -1.7,
-          "relative_ret_pct": 1.18,
-          "lower_shadow_ratio": 0.67,
-          "close_location": 0.67,
-          "vol_ratio": 0.77,
-          "score": 37.73,
-          "tags": [
-            "下影線承接",
-            "收在高檔",
-            "守MA20",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2025-10-13",
-          "stock_ret_pct": -0.26,
-          "index_ret_pct": -1.39,
-          "relative_ret_pct": 1.13,
-          "lower_shadow_ratio": 0.0,
-          "close_location": 0.75,
-          "vol_ratio": 1.67,
-          "score": 25.52,
-          "tags": [
-            "收在高檔",
-            "守MA20",
-            "未破20日低"
-          ]
-        },
-        {
-          "date": "2025-10-17",
-          "stock_ret_pct": -0.52,
-          "index_ret_pct": -1.25,
-          "relative_ret_pct": 0.73,
-          "lower_shadow_ratio": 0.17,
-          "close_location": 0.17,
-          "vol_ratio": 0.64,
-          "score": 18.9,
-          "tags": [
-            "守MA60",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2025-11-05",
-          "stock_ret_pct": 0.83,
-          "index_ret_pct": -1.42,
-          "relative_ret_pct": 2.25,
-          "lower_shadow_ratio": 0.75,
-          "close_location": 0.75,
-          "vol_ratio": 0.46,
-          "score": 48.01,
-          "tags": [
-            "壓力日收紅",
-            "下影線承接",
-            "收在高檔",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2025-11-14",
-          "stock_ret_pct": 0.0,
-          "index_ret_pct": -1.81,
-          "relative_ret_pct": 1.81,
-          "lower_shadow_ratio": 0.0,
-          "close_location": 0.8,
-          "vol_ratio": 0.43,
-          "score": 38.25,
-          "tags": [
-            "壓力日收紅",
-            "收在高檔",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2025-11-18",
-          "stock_ret_pct": -0.82,
-          "index_ret_pct": -2.52,
-          "relative_ret_pct": 1.69,
-          "lower_shadow_ratio": 0.33,
-          "close_location": 0.33,
-          "vol_ratio": 1.37,
-          "score": 21.78,
-          "tags": [
-            "跌幅明顯小於大盤",
-            "未破20日低"
-          ]
-        },
-        {
-          "date": "2025-11-21",
-          "stock_ret_pct": -0.55,
-          "index_ret_pct": -3.61,
-          "relative_ret_pct": 3.06,
-          "lower_shadow_ratio": 0.2,
-          "close_location": 0.4,
-          "vol_ratio": 0.88,
-          "score": 24.24,
-          "tags": [
-            "跌幅明顯小於大盤",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2025-12-01",
-          "stock_ret_pct": 0.0,
-          "index_ret_pct": -1.03,
-          "relative_ret_pct": 1.03,
-          "lower_shadow_ratio": 0.25,
-          "close_location": 0.75,
-          "vol_ratio": 0.52,
-          "score": 43.11,
-          "tags": [
-            "壓力日收紅",
-            "收在高檔",
-            "守MA20",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2025-12-11",
-          "stock_ret_pct": 0.0,
-          "index_ret_pct": -1.32,
-          "relative_ret_pct": 1.32,
-          "lower_shadow_ratio": 0.0,
-          "close_location": 0.0,
-          "vol_ratio": 0.75,
-          "score": 30.3,
-          "tags": [
-            "壓力日收紅",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2025-12-15",
-          "stock_ret_pct": 0.0,
-          "index_ret_pct": -1.17,
-          "relative_ret_pct": 1.17,
-          "lower_shadow_ratio": 0.5,
-          "close_location": 0.5,
-          "vol_ratio": 0.83,
-          "score": 45.7,
-          "tags": [
-            "壓力日收紅",
-            "下影線承接",
-            "守MA20",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2025-12-16",
-          "stock_ret_pct": 0.0,
-          "index_ret_pct": -1.19,
-          "relative_ret_pct": 1.19,
-          "lower_shadow_ratio": 0.33,
-          "close_location": 1.0,
-          "vol_ratio": 0.99,
-          "score": 43.74,
-          "tags": [
-            "壓力日收紅",
-            "收在高檔",
-            "守MA20",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2026-01-21",
-          "stock_ret_pct": -0.54,
-          "index_ret_pct": -1.62,
-          "relative_ret_pct": 1.07,
-          "lower_shadow_ratio": 0.67,
-          "close_location": 0.67,
-          "vol_ratio": 1.4,
-          "score": 33.29,
-          "tags": [
-            "下影線承接",
-            "收在高檔",
-            "守MA20",
-            "未破20日低"
-          ]
-        },
-        {
-          "date": "2026-01-30",
-          "stock_ret_pct": -1.08,
-          "index_ret_pct": -1.45,
-          "relative_ret_pct": 0.37,
-          "lower_shadow_ratio": 0.0,
-          "close_location": 0.0,
-          "vol_ratio": 0.67,
-          "score": 17.47,
-          "tags": [
-            "守MA60",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2026-02-02",
-          "stock_ret_pct": -0.82,
-          "index_ret_pct": -1.37,
-          "relative_ret_pct": 0.55,
-          "lower_shadow_ratio": 0.25,
-          "close_location": 0.25,
-          "vol_ratio": 0.87,
-          "score": 13.2,
-          "tags": [
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2026-02-05",
-          "stock_ret_pct": 0.55,
-          "index_ret_pct": -1.51,
-          "relative_ret_pct": 2.06,
-          "lower_shadow_ratio": 0.2,
-          "close_location": 0.8,
-          "vol_ratio": 0.86,
-          "score": 44.25,
-          "tags": [
-            "壓力日收紅",
-            "收在高檔",
-            "守MA60",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2026-03-03",
-          "stock_ret_pct": -0.28,
-          "index_ret_pct": -2.2,
-          "relative_ret_pct": 1.92,
-          "lower_shadow_ratio": 0.5,
-          "close_location": 0.5,
-          "vol_ratio": 1.42,
-          "score": 30.69,
-          "tags": [
-            "跌幅明顯小於大盤",
-            "下影線承接",
-            "未破20日低"
-          ]
-        },
-        {
-          "date": "2026-03-04",
-          "stock_ret_pct": -1.38,
-          "index_ret_pct": -4.35,
-          "relative_ret_pct": 2.97,
-          "lower_shadow_ratio": 0.0,
-          "close_location": 0.0,
-          "vol_ratio": 2.45,
-          "score": 9.89,
-          "tags": [
-            "跌幅明顯小於大盤",
-            "放量下跌"
-          ]
-        },
-        {
-          "date": "2026-03-09",
-          "stock_ret_pct": -1.1,
-          "index_ret_pct": -4.43,
-          "relative_ret_pct": 3.33,
-          "lower_shadow_ratio": 0.5,
-          "close_location": 0.5,
-          "vol_ratio": 1.88,
-          "score": 29.31,
-          "tags": [
-            "跌幅明顯小於大盤",
-            "下影線承接"
-          ]
-        },
-        {
-          "date": "2026-03-12",
-          "stock_ret_pct": 3.25,
-          "index_ret_pct": -1.56,
-          "relative_ret_pct": 4.81,
-          "lower_shadow_ratio": 0.0,
-          "close_location": 0.82,
-          "vol_ratio": 4.28,
-          "score": 54.25,
-          "tags": [
-            "壓力日收紅",
-            "收在高檔",
-            "守MA20",
-            "未破20日低"
-          ]
-        },
-        {
-          "date": "2026-03-19",
-          "stock_ret_pct": -0.78,
-          "index_ret_pct": -1.92,
-          "relative_ret_pct": 1.14,
-          "lower_shadow_ratio": 0.2,
-          "close_location": 0.2,
-          "vol_ratio": 0.73,
-          "score": 23.56,
-          "tags": [
-            "守MA20",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2026-03-23",
-          "stock_ret_pct": -0.26,
-          "index_ret_pct": -2.45,
-          "relative_ret_pct": 2.19,
-          "lower_shadow_ratio": 0.4,
-          "close_location": 0.6,
-          "vol_ratio": 0.67,
-          "score": 43.74,
-          "tags": [
-            "跌幅明顯小於大盤",
-            "下影線承接",
-            "守MA20",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2026-03-30",
-          "stock_ret_pct": 0.26,
-          "index_ret_pct": -1.8,
-          "relative_ret_pct": 2.05,
-          "lower_shadow_ratio": 0.5,
-          "close_location": 0.67,
-          "vol_ratio": 0.88,
-          "score": 55.22,
-          "tags": [
-            "壓力日收紅",
-            "下影線承接",
-            "收在高檔",
-            "守MA20",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2026-03-31",
-          "stock_ret_pct": -0.26,
-          "index_ret_pct": -2.45,
-          "relative_ret_pct": 2.19,
-          "lower_shadow_ratio": 0.4,
-          "close_location": 0.4,
-          "vol_ratio": 0.86,
-          "score": 43.75,
-          "tags": [
-            "跌幅明顯小於大盤",
-            "下影線承接",
-            "守MA20",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2026-04-02",
-          "stock_ret_pct": -0.26,
-          "index_ret_pct": -1.82,
-          "relative_ret_pct": 1.56,
-          "lower_shadow_ratio": 0.25,
-          "close_location": 0.25,
-          "vol_ratio": 0.54,
-          "score": 33.24,
-          "tags": [
-            "跌幅明顯小於大盤",
-            "守MA20",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2026-05-13",
-          "stock_ret_pct": 0.0,
-          "index_ret_pct": -1.25,
-          "relative_ret_pct": 1.25,
-          "lower_shadow_ratio": 1.0,
-          "close_location": 1.0,
-          "vol_ratio": 0.49,
-          "score": 49.0,
-          "tags": [
-            "壓力日收紅",
-            "下影線承接",
-            "收在高檔",
-            "守MA60",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2026-05-15",
-          "stock_ret_pct": -1.6,
-          "index_ret_pct": -1.39,
-          "relative_ret_pct": -0.21,
-          "lower_shadow_ratio": 0.1,
-          "close_location": 0.1,
-          "vol_ratio": 1.53,
-          "score": -0.85,
-          "tags": []
-        },
-        {
-          "date": "2026-05-19",
-          "stock_ret_pct": 0.82,
-          "index_ret_pct": -1.75,
-          "relative_ret_pct": 2.57,
-          "lower_shadow_ratio": 0.0,
-          "close_location": 0.67,
-          "vol_ratio": 0.62,
-          "score": 41.27,
-          "tags": [
-            "壓力日收紅",
-            "收在高檔",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2026-05-28",
-          "stock_ret_pct": 0.27,
-          "index_ret_pct": -1.4,
-          "relative_ret_pct": 1.67,
-          "lower_shadow_ratio": 0.0,
-          "close_location": 0.33,
-          "vol_ratio": 1.52,
-          "score": 27.69,
-          "tags": [
-            "壓力日收紅",
-            "未破20日低"
-          ]
-        },
-        {
-          "date": "2026-06-04",
-          "stock_ret_pct": -0.51,
-          "index_ret_pct": -1.68,
-          "relative_ret_pct": 1.17,
-          "lower_shadow_ratio": 0.4,
-          "close_location": 0.4,
-          "vol_ratio": 1.24,
-          "score": 27.69,
-          "tags": [
-            "下影線承接",
-            "守MA20",
-            "未破20日低"
-          ]
-        },
-        {
-          "date": "2026-06-05",
-          "stock_ret_pct": -0.77,
-          "index_ret_pct": -1.33,
-          "relative_ret_pct": 0.56,
-          "lower_shadow_ratio": 0.29,
-          "close_location": 0.29,
-          "vol_ratio": 1.9,
-          "score": 17.23,
-          "tags": [
-            "守MA20",
-            "未破20日低"
-          ]
-        },
-        {
-          "date": "2026-06-08",
-          "stock_ret_pct": 0.26,
-          "index_ret_pct": -3.48,
-          "relative_ret_pct": 3.74,
-          "lower_shadow_ratio": 0.18,
-          "close_location": 0.91,
-          "vol_ratio": 1.67,
-          "score": 49.95,
-          "tags": [
-            "壓力日收紅",
-            "收在高檔",
-            "守MA20",
-            "未破20日低"
-          ]
-        },
-        {
-          "date": "2026-06-10",
-          "stock_ret_pct": -0.26,
-          "index_ret_pct": -3.31,
-          "relative_ret_pct": 3.05,
-          "lower_shadow_ratio": 0.33,
-          "close_location": 0.33,
-          "vol_ratio": 1.39,
-          "score": 35.2,
-          "tags": [
-            "跌幅明顯小於大盤",
-            "守MA20",
-            "未破20日低"
-          ]
-        },
-        {
-          "date": "2026-06-23",
-          "stock_ret_pct": 0.28,
-          "index_ret_pct": -1.34,
-          "relative_ret_pct": 1.62,
-          "lower_shadow_ratio": 0.67,
-          "close_location": 0.67,
-          "vol_ratio": 0.41,
-          "score": 38.49,
-          "tags": [
-            "壓力日收紅",
-            "下影線承接",
-            "收在高檔",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2026-06-24",
-          "stock_ret_pct": 0.56,
-          "index_ret_pct": -2.24,
-          "relative_ret_pct": 2.8,
-          "lower_shadow_ratio": 0.33,
-          "close_location": 1.0,
-          "vol_ratio": 0.62,
-          "score": 42.22,
-          "tags": [
-            "壓力日收紅",
-            "收在高檔",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2026-06-26",
-          "stock_ret_pct": -1.11,
-          "index_ret_pct": -3.64,
-          "relative_ret_pct": 2.53,
-          "lower_shadow_ratio": 0.0,
-          "close_location": 0.0,
-          "vol_ratio": 0.64,
-          "score": 29.1,
-          "tags": [
-            "跌幅明顯小於大盤",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2026-07-07",
-          "stock_ret_pct": -0.29,
-          "index_ret_pct": -2.31,
-          "relative_ret_pct": 2.02,
-          "lower_shadow_ratio": 0.33,
-          "close_location": 0.33,
-          "vol_ratio": 0.48,
-          "score": 27.1,
-          "tags": [
-            "跌幅明顯小於大盤",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2026-07-14",
-          "stock_ret_pct": -1.23,
-          "index_ret_pct": -1.42,
-          "relative_ret_pct": 0.18,
-          "lower_shadow_ratio": 0.4,
-          "close_location": 0.4,
-          "vol_ratio": 1.57,
-          "score": 8.73,
-          "tags": [
-            "下影線承接"
-          ]
-        },
-        {
-          "date": "2026-07-17",
-          "stock_ret_pct": -1.8,
-          "index_ret_pct": -6.47,
-          "relative_ret_pct": 4.68,
-          "lower_shadow_ratio": 0.2,
-          "close_location": 0.2,
-          "vol_ratio": 0.91,
-          "score": 37.71,
-          "tags": [
-            "跌幅明顯小於大盤",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2026-07-24",
-          "stock_ret_pct": 1.57,
-          "index_ret_pct": -2.67,
-          "relative_ret_pct": 4.23,
-          "lower_shadow_ratio": 0.0,
-          "close_location": 1.0,
-          "vol_ratio": 0.57,
-          "score": 47.94,
-          "tags": [
-            "壓力日收紅",
-            "收在高檔",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2026-07-28",
-          "stock_ret_pct": 0.32,
-          "index_ret_pct": -4.65,
-          "relative_ret_pct": 4.97,
-          "lower_shadow_ratio": 0.67,
-          "close_location": 1.0,
-          "vol_ratio": 0.91,
-          "score": 58.88,
-          "tags": [
-            "壓力日收紅",
-            "下影線承接",
-            "收在高檔",
-            "未破20日低",
-            "量未失控"
-          ]
-        },
-        {
-          "date": "2026-07-29",
-          "stock_ret_pct": 0.95,
-          "index_ret_pct": -3.76,
-          "relative_ret_pct": 4.71,
-          "lower_shadow_ratio": 0.5,
-          "close_location": 0.5,
-          "vol_ratio": 1.27,
-          "score": 47.82,
-          "tags": [
-            "壓力日收紅",
-            "下影線承接",
-            "未破20日低"
-          ]
-        }
-      ],
-      "rebound_events": [
-        {
-          "date": "2025-07-23",
-          "stock_ret_pct": 0.8,
-          "index_ret_pct": 1.44,
-          "relative_ret_pct": -0.64,
-          "vol_ratio": null,
-          "score": -2.23,
-          "tags": []
-        },
-        {
-          "date": "2025-08-21",
-          "stock_ret_pct": 0.53,
-          "index_ret_pct": 1.43,
-          "relative_ret_pct": -0.89,
-          "vol_ratio": 1.04,
-          "score": 9.88,
-          "tags": [
-            "接近20日高",
-            "反彈有量"
-          ]
-        },
-        {
-          "date": "2025-08-25",
-          "stock_ret_pct": 0.0,
-          "index_ret_pct": 2.16,
-          "relative_ret_pct": -2.16,
-          "vol_ratio": 0.82,
-          "score": 0.45,
-          "tags": [
-            "接近20日高"
-          ]
-        },
-        {
-          "date": "2025-09-30",
-          "stock_ret_pct": 0.26,
-          "index_ret_pct": 0.94,
-          "relative_ret_pct": -0.68,
-          "vol_ratio": 0.63,
-          "score": 2.63,
-          "tags": [
-            "站上MA20"
-          ]
-        },
-        {
-          "date": "2025-10-02",
-          "stock_ret_pct": -0.26,
-          "index_ret_pct": 1.52,
-          "relative_ret_pct": -1.78,
-          "vol_ratio": 0.5,
-          "score": -1.25,
-          "tags": [
-            "站上MA20"
-          ]
-        },
-        {
-          "date": "2025-10-15",
-          "stock_ret_pct": 2.09,
-          "index_ret_pct": 1.8,
-          "relative_ret_pct": 0.29,
-          "vol_ratio": 5.7,
-          "score": 22.03,
-          "tags": [
-            "反彈勝大盤",
-            "接近20日高",
-            "站上MA20"
-          ]
-        },
-        {
-          "date": "2025-10-16",
-          "stock_ret_pct": -2.05,
-          "index_ret_pct": 1.36,
-          "relative_ret_pct": -3.42,
-          "vol_ratio": 1.45,
-          "score": -6.96,
-          "tags": [
-            "反彈有量"
-          ]
-        },
-        {
-          "date": "2025-10-20",
-          "stock_ret_pct": -1.05,
-          "index_ret_pct": 1.41,
-          "relative_ret_pct": -2.47,
-          "vol_ratio": 1.1,
-          "score": -3.64,
-          "tags": [
-            "反彈有量"
-          ]
-        },
-        {
-          "date": "2025-11-06",
-          "stock_ret_pct": 0.82,
-          "index_ret_pct": 0.66,
-          "relative_ret_pct": 0.17,
-          "vol_ratio": 0.24,
-          "score": 8.58,
-          "tags": [
-            "反彈勝大盤"
-          ]
-        },
-        {
-          "date": "2025-11-17",
-          "stock_ret_pct": -1.36,
-          "index_ret_pct": 0.18,
-          "relative_ret_pct": -1.54,
-          "vol_ratio": 1.01,
-          "score": -0.38,
-          "tags": [
-            "反彈有量"
-          ]
-        },
-        {
-          "date": "2025-11-20",
-          "stock_ret_pct": 0.56,
-          "index_ret_pct": 3.18,
-          "relative_ret_pct": -2.63,
-          "vol_ratio": 0.49,
-          "score": -9.19,
-          "tags": []
-        },
-        {
-          "date": "2025-11-25",
-          "stock_ret_pct": 0.0,
-          "index_ret_pct": 1.54,
-          "relative_ret_pct": -1.54,
-          "vol_ratio": 0.32,
-          "score": -5.39,
-          "tags": []
-        },
-        {
-          "date": "2025-11-26",
-          "stock_ret_pct": 0.83,
-          "index_ret_pct": 1.85,
-          "relative_ret_pct": -1.02,
-          "vol_ratio": 0.62,
-          "score": 1.43,
-          "tags": [
-            "站上MA20"
-          ]
-        },
-        {
-          "date": "2025-12-02",
-          "stock_ret_pct": 0.55,
-          "index_ret_pct": 0.81,
-          "relative_ret_pct": -0.26,
-          "vol_ratio": 1.23,
-          "score": 17.08,
-          "tags": [
-            "接近20日高",
-            "站上MA20",
-            "反彈有量"
-          ]
-        },
-        {
-          "date": "2025-12-03",
-          "stock_ret_pct": -0.82,
-          "index_ret_pct": 0.83,
-          "relative_ret_pct": -1.65,
-          "vol_ratio": 1.0,
-          "score": 2.23,
-          "tags": [
-            "接近20日高"
-          ]
-        },
-        {
-          "date": "2025-12-12",
-          "stock_ret_pct": 0.83,
-          "index_ret_pct": 0.62,
-          "relative_ret_pct": 0.21,
-          "vol_ratio": 1.71,
-          "score": 26.74,
-          "tags": [
-            "反彈勝大盤",
-            "接近20日高",
-            "站上MA20",
-            "反彈有量"
-          ]
-        },
-        {
-          "date": "2025-12-19",
-          "stock_ret_pct": 0.55,
-          "index_ret_pct": 0.83,
-          "relative_ret_pct": -0.28,
-          "vol_ratio": 0.6,
-          "score": 12.04,
-          "tags": [
-            "接近20日高",
-            "站上MA20"
-          ]
-        },
-        {
-          "date": "2026-01-22",
-          "stock_ret_pct": 0.55,
-          "index_ret_pct": 1.6,
-          "relative_ret_pct": -1.05,
-          "vol_ratio": 1.22,
-          "score": 14.32,
-          "tags": [
-            "接近20日高",
-            "站上MA20",
-            "反彈有量"
-          ]
-        },
-        {
-          "date": "2026-02-03",
-          "stock_ret_pct": 0.28,
-          "index_ret_pct": 1.81,
-          "relative_ret_pct": -1.53,
-          "vol_ratio": 1.14,
-          "score": -0.36,
-          "tags": [
-            "反彈有量"
-          ]
-        },
-        {
-          "date": "2026-02-09",
-          "stock_ret_pct": 0.0,
-          "index_ret_pct": 1.96,
-          "relative_ret_pct": -1.96,
-          "vol_ratio": 0.91,
-          "score": -6.85,
-          "tags": []
-        },
-        {
-          "date": "2026-02-10",
-          "stock_ret_pct": 0.0,
-          "index_ret_pct": 2.06,
-          "relative_ret_pct": -2.06,
-          "vol_ratio": 0.91,
-          "score": -7.22,
-          "tags": []
-        },
-        {
-          "date": "2026-03-05",
-          "stock_ret_pct": 0.28,
-          "index_ret_pct": 2.57,
-          "relative_ret_pct": -2.29,
-          "vol_ratio": 0.67,
-          "score": -8.02,
-          "tags": []
-        },
-        {
-          "date": "2026-03-10",
-          "stock_ret_pct": 1.68,
-          "index_ret_pct": 2.06,
-          "relative_ret_pct": -0.38,
-          "vol_ratio": 1.82,
-          "score": 16.66,
-          "tags": [
-            "接近20日高",
-            "站上MA20",
-            "反彈有量"
-          ]
-        },
-        {
-          "date": "2026-03-11",
-          "stock_ret_pct": 1.37,
-          "index_ret_pct": 4.1,
-          "relative_ret_pct": -2.72,
-          "vol_ratio": 1.98,
-          "score": 8.47,
-          "tags": [
-            "接近20日高",
-            "站上MA20",
-            "反彈有量"
-          ]
-        },
-        {
-          "date": "2026-03-17",
-          "stock_ret_pct": -0.26,
-          "index_ret_pct": 1.48,
-          "relative_ret_pct": -1.74,
-          "vol_ratio": 1.0,
-          "score": 6.9,
-          "tags": [
-            "接近20日高",
-            "站上MA20"
-          ]
-        },
-        {
-          "date": "2026-03-25",
-          "stock_ret_pct": 0.0,
-          "index_ret_pct": 2.54,
-          "relative_ret_pct": -2.54,
-          "vol_ratio": 0.54,
-          "score": 4.13,
-          "tags": [
-            "接近20日高",
-            "站上MA20"
-          ]
-        },
-        {
-          "date": "2026-04-01",
-          "stock_ret_pct": 1.04,
-          "index_ret_pct": 4.58,
-          "relative_ret_pct": -3.54,
-          "vol_ratio": 0.72,
-          "score": 0.61,
-          "tags": [
-            "接近20日高",
-            "站上MA20"
-          ]
-        },
-        {
-          "date": "2026-04-07",
-          "stock_ret_pct": 0.26,
-          "index_ret_pct": 2.02,
-          "relative_ret_pct": -1.76,
-          "vol_ratio": 0.61,
-          "score": 6.84,
-          "tags": [
-            "接近20日高",
-            "站上MA20"
-          ]
-        },
-        {
-          "date": "2026-04-08",
-          "stock_ret_pct": -0.26,
-          "index_ret_pct": 4.61,
-          "relative_ret_pct": -4.87,
-          "vol_ratio": 0.89,
-          "score": -4.03,
-          "tags": [
-            "接近20日高",
-            "站上MA20"
-          ]
-        },
-        {
-          "date": "2026-05-14",
-          "stock_ret_pct": -0.79,
-          "index_ret_pct": 0.91,
-          "relative_ret_pct": -1.71,
-          "vol_ratio": 0.57,
-          "score": -5.97,
-          "tags": []
-        },
-        {
-          "date": "2026-05-21",
-          "stock_ret_pct": 0.81,
-          "index_ret_pct": 3.37,
-          "relative_ret_pct": -2.55,
-          "vol_ratio": 0.53,
-          "score": -8.94,
-          "tags": []
-        },
-        {
-          "date": "2026-05-22",
-          "stock_ret_pct": 0.27,
-          "index_ret_pct": 2.18,
-          "relative_ret_pct": -1.91,
-          "vol_ratio": 0.78,
-          "score": -6.67,
-          "tags": []
-        },
-        {
-          "date": "2026-05-29",
-          "stock_ret_pct": 1.35,
-          "index_ret_pct": 2.51,
-          "relative_ret_pct": -1.16,
-          "vol_ratio": 1.4,
-          "score": 5.93,
-          "tags": [
-            "站上MA20",
-            "反彈有量"
-          ]
-        },
-        {
-          "date": "2026-06-01",
-          "stock_ret_pct": 2.93,
-          "index_ret_pct": 1.35,
-          "relative_ret_pct": 1.58,
-          "vol_ratio": 3.16,
-          "score": 26.53,
-          "tags": [
-            "反彈勝大盤",
-            "接近20日高",
-            "站上MA20"
-          ]
-        },
-        {
-          "date": "2026-06-09",
-          "stock_ret_pct": 0.0,
-          "index_ret_pct": 2.76,
-          "relative_ret_pct": -2.76,
-          "vol_ratio": 1.81,
-          "score": 8.33,
-          "tags": [
-            "接近20日高",
-            "站上MA20",
-            "反彈有量"
-          ]
-        },
-        {
-          "date": "2026-06-12",
-          "stock_ret_pct": -6.25,
-          "index_ret_pct": 2.36,
-          "relative_ret_pct": -8.61,
-          "vol_ratio": 2.43,
-          "score": -13.0,
-          "tags": [
-            "反彈有量"
-          ]
-        },
-        {
-          "date": "2026-06-15",
-          "stock_ret_pct": -0.28,
-          "index_ret_pct": 2.78,
-          "relative_ret_pct": -3.06,
-          "vol_ratio": 1.36,
-          "score": -5.7,
-          "tags": [
-            "反彈有量"
-          ]
-        },
-        {
-          "date": "2026-06-25",
-          "stock_ret_pct": 0.0,
-          "index_ret_pct": 0.46,
-          "relative_ret_pct": -0.46,
-          "vol_ratio": 0.54,
-          "score": -1.61,
-          "tags": []
-        },
-        {
-          "date": "2026-06-29",
-          "stock_ret_pct": 1.41,
-          "index_ret_pct": 0.96,
-          "relative_ret_pct": 0.45,
-          "vol_ratio": 0.32,
-          "score": 9.57,
-          "tags": [
-            "反彈勝大盤"
-          ]
-        },
-        {
-          "date": "2026-06-30",
-          "stock_ret_pct": -0.83,
-          "index_ret_pct": 2.5,
-          "relative_ret_pct": -3.34,
-          "vol_ratio": 0.48,
-          "score": -11.67,
-          "tags": []
-        },
-        {
-          "date": "2026-07-01",
-          "stock_ret_pct": -0.28,
-          "index_ret_pct": 1.94,
-          "relative_ret_pct": -2.22,
-          "vol_ratio": 0.59,
-          "score": -7.76,
-          "tags": []
-        },
-        {
-          "date": "2026-07-08",
-          "stock_ret_pct": -0.87,
-          "index_ret_pct": 0.56,
-          "relative_ret_pct": -1.43,
-          "vol_ratio": 0.99,
-          "score": -5.01,
-          "tags": []
-        },
-        {
-          "date": "2026-07-15",
-          "stock_ret_pct": 1.56,
-          "index_ret_pct": 2.0,
-          "relative_ret_pct": -0.43,
-          "vol_ratio": 0.91,
-          "score": -1.52,
-          "tags": []
-        },
-        {
-          "date": "2026-07-21",
-          "stock_ret_pct": -0.31,
-          "index_ret_pct": 4.2,
-          "relative_ret_pct": -4.51,
-          "vol_ratio": 0.56,
-          "score": -15.77,
-          "tags": []
-        },
-        {
-          "date": "2026-07-22",
-          "stock_ret_pct": -1.53,
-          "index_ret_pct": 1.34,
-          "relative_ret_pct": -2.87,
-          "vol_ratio": 1.0,
-          "score": -10.06,
-          "tags": []
-        },
-        {
-          "date": "2026-07-31",
-          "stock_ret_pct": -1.85,
-          "index_ret_pct": 7.98,
-          "relative_ret_pct": -9.83,
-          "vol_ratio": 1.26,
-          "score": -13.0,
-          "tags": [
-            "反彈有量"
-          ]
-        }
-      ],
-      "themes": [
-        {
-          "id": "food_consumer",
-          "label": "食品消費",
-          "strength": "medium",
-          "roles": [
-            "食品"
-          ],
-          "subthemes": [],
-          "confidence": 0.58,
-          "source": [
-            "industry_rule"
-          ]
-        }
-      ]
-    },
-    {
       "stock_id": "5904",
       "name": "寶雅",
       "industry": "貿易百貨",
       "market": "TPEX",
-      "latest_close": 82.5,
-      "latest_date": "2026-08-12",
+      "latest_close": 81.8,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -26898,8 +25664,8 @@
       "name": "大成",
       "industry": "食品工業",
       "market": "TWSE",
-      "latest_close": 53.0,
-      "latest_date": "2026-08-12",
+      "latest_close": 52.4,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -28133,8 +26899,8 @@
       "name": "玉山金",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 36.75,
-      "latest_date": "2026-08-12",
+      "latest_close": 37.3,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-09-30",
@@ -29365,8 +28131,8 @@
       "name": "中信金",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 66.6,
-      "latest_date": "2026-08-12",
+      "latest_close": 66.5,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -30655,8 +29421,8 @@
       "name": "華固",
       "industry": "建材營造",
       "market": "TWSE",
-      "latest_close": 93.6,
-      "latest_date": "2026-08-12",
+      "latest_close": 93.4,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -31878,8 +30644,8 @@
       "name": "佳格",
       "industry": "食品工業",
       "market": "TWSE",
-      "latest_close": 28.7,
-      "latest_date": "2026-08-12",
+      "latest_close": 28.9,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -33121,8 +31887,8 @@
       "name": "利奇",
       "industry": "電機機械",
       "market": "TWSE",
-      "latest_close": 12.05,
-      "latest_date": "2026-08-12",
+      "latest_close": 11.65,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -34349,8 +33115,8 @@
       "name": "東和鋼鐵",
       "industry": "鋼鐵工業",
       "market": "TWSE",
-      "latest_close": 83.8,
-      "latest_date": "2026-08-12",
+      "latest_close": 85.4,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -35611,8 +34377,8 @@
       "name": "亞聚",
       "industry": "塑膠工業",
       "market": "TWSE",
-      "latest_close": 13.7,
-      "latest_date": "2026-08-12",
+      "latest_close": 13.6,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -36848,8 +35614,8 @@
       "name": "中再保",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 36.7,
-      "latest_date": "2026-08-12",
+      "latest_close": 37.85,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -38129,8 +36895,8 @@
       "name": "巨大",
       "industry": "其他",
       "market": "TWSE",
-      "latest_close": 109.0,
-      "latest_date": "2026-08-12",
+      "latest_close": 105.0,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -39358,8 +38124,8 @@
       "name": "元大金",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 68.6,
-      "latest_date": "2026-08-12",
+      "latest_close": 69.7,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -40650,7 +39416,7 @@
       "industry": "金融保險",
       "market": "TWSE",
       "latest_close": 18.65,
-      "latest_date": "2026-08-12",
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -41881,7 +40647,7 @@
       "industry": "金融保險",
       "market": "TWSE",
       "latest_close": 11.9,
-      "latest_date": "2026-08-12",
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -43134,8 +41900,8 @@
       "name": "春源",
       "industry": "鋼鐵工業",
       "market": "TWSE",
-      "latest_close": 22.95,
-      "latest_date": "2026-08-12",
+      "latest_close": 22.7,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -44395,7 +43161,7 @@
       "industry": "金融保險",
       "market": "TWSE",
       "latest_close": 33.15,
-      "latest_date": "2026-08-12",
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-09-30",
@@ -45622,8 +44388,8 @@
       "name": "和益",
       "industry": "化學工業",
       "market": "TWSE",
-      "latest_close": 28.0,
-      "latest_date": "2026-08-12",
+      "latest_close": 30.65,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -46880,8 +45646,8 @@
       "name": "遠百",
       "industry": "貿易百貨",
       "market": "TWSE",
-      "latest_close": 22.0,
-      "latest_date": "2026-08-12",
+      "latest_close": 21.75,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -48130,8 +46896,8 @@
       "name": "彰銀",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 23.7,
-      "latest_date": "2026-08-12",
+      "latest_close": 23.55,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-09-30",
@@ -49387,8 +48153,8 @@
       "name": "台聚",
       "industry": "塑膠工業",
       "market": "TWSE",
-      "latest_close": 12.1,
-      "latest_date": "2026-08-12",
+      "latest_close": 12.2,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -50625,8 +49391,8 @@
       "name": "統一超",
       "industry": "貿易百貨",
       "market": "TWSE",
-      "latest_close": 219.5,
-      "latest_date": "2026-08-12",
+      "latest_close": 217.0,
+      "latest_date": "2026-08-13",
       "stage": "stress_preselect",
       "first_stress_date": "2025-07-22",
       "confirm_date": null,
@@ -51825,8 +50591,8 @@
       "name": "聯成",
       "industry": "塑膠工業",
       "market": "TWSE",
-      "latest_close": 11.4,
-      "latest_date": "2026-08-12",
+      "latest_close": 11.95,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -53059,8 +51825,8 @@
       "name": "正隆",
       "industry": "造紙工業",
       "market": "TWSE",
-      "latest_close": 25.15,
-      "latest_date": "2026-08-12",
+      "latest_close": 24.65,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-10-16",
@@ -54286,8 +53052,8 @@
       "name": "興農",
       "industry": "化學工業",
       "market": "TWSE",
-      "latest_close": 39.1,
-      "latest_date": "2026-08-12",
+      "latest_close": 39.15,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -55524,8 +54290,8 @@
       "name": "美利達",
       "industry": "其他",
       "market": "TWSE",
-      "latest_close": 93.3,
-      "latest_date": "2026-08-12",
+      "latest_close": 85.5,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -56754,8 +55520,8 @@
       "name": "燁輝",
       "industry": "鋼鐵工業",
       "market": "TWSE",
-      "latest_close": 13.8,
-      "latest_date": "2026-08-12",
+      "latest_close": 13.7,
+      "latest_date": "2026-08-13",
       "stage": "stress_preselect",
       "first_stress_date": "2025-07-22",
       "confirm_date": null,
@@ -57964,8 +56730,8 @@
       "name": "櫻花建",
       "industry": "建材營造",
       "market": "TWSE",
-      "latest_close": 42.15,
-      "latest_date": "2026-08-12",
+      "latest_close": 41.8,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -59189,8 +57955,8 @@
       "name": "松普",
       "industry": "電子零組件業",
       "market": "TPEX",
-      "latest_close": 13.65,
-      "latest_date": "2026-08-12",
+      "latest_close": 13.05,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -60447,8 +59213,8 @@
       "name": "臺企銀",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 16.5,
-      "latest_date": "2026-08-12",
+      "latest_close": 16.45,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -61699,8 +60465,8 @@
       "name": "光鼎",
       "industry": "光電業",
       "market": "TWSE",
-      "latest_close": 20.3,
-      "latest_date": "2026-08-12",
+      "latest_close": 19.6,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -62957,8 +61723,8 @@
       "name": "台橡",
       "industry": "橡膠工業",
       "market": "TWSE",
-      "latest_close": 27.35,
-      "latest_date": "2026-08-12",
+      "latest_close": 28.1,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -64184,8 +62950,8 @@
       "name": "合庫金",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 24.1,
-      "latest_date": "2026-08-12",
+      "latest_close": 24.2,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-09-30",
@@ -65421,8 +64187,8 @@
       "name": "國建",
       "industry": "建材營造",
       "market": "TWSE",
-      "latest_close": 23.15,
-      "latest_date": "2026-08-12",
+      "latest_close": 23.0,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -66650,8 +65416,8 @@
       "name": "宏全",
       "industry": "其他",
       "market": "TWSE",
-      "latest_close": 134.0,
-      "latest_date": "2026-08-12",
+      "latest_close": 135.0,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -67871,8 +66637,8 @@
       "name": "元創精密",
       "industry": "光電業",
       "market": "TPEX",
-      "latest_close": 38.0,
-      "latest_date": "2026-08-12",
+      "latest_close": 38.3,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -69122,8 +67888,8 @@
       "name": "彰源",
       "industry": "鋼鐵工業",
       "market": "TWSE",
-      "latest_close": 21.55,
-      "latest_date": "2026-08-12",
+      "latest_close": 21.75,
+      "latest_date": "2026-08-13",
       "stage": "stress_preselect",
       "first_stress_date": "2025-07-22",
       "confirm_date": null,
@@ -70344,8 +69110,8 @@
       "name": "三商",
       "industry": "貿易百貨",
       "market": "TWSE",
-      "latest_close": 16.4,
-      "latest_date": "2026-08-12",
+      "latest_close": 16.2,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -71592,8 +70358,8 @@
       "name": "遠東新",
       "industry": "紡織纖維",
       "market": "TWSE",
-      "latest_close": 27.55,
-      "latest_date": "2026-08-12",
+      "latest_close": 26.95,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -72836,8 +71602,8 @@
       "name": "冠德",
       "industry": "建材營造",
       "market": "TWSE",
-      "latest_close": 35.25,
-      "latest_date": "2026-08-12",
+      "latest_close": 35.3,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -74064,8 +72830,8 @@
       "name": "華夏",
       "industry": "塑膠工業",
       "market": "TWSE",
-      "latest_close": 11.75,
-      "latest_date": "2026-08-12",
+      "latest_close": 11.95,
+      "latest_date": "2026-08-13",
       "stage": "stress_preselect",
       "first_stress_date": "2025-07-22",
       "confirm_date": null,
@@ -75278,8 +74044,8 @@
       "name": "台肥",
       "industry": "化學生技醫療",
       "market": "TWSE",
-      "latest_close": 46.1,
-      "latest_date": "2026-08-12",
+      "latest_close": 45.65,
+      "latest_date": "2026-08-13",
       "stage": "stress_preselect",
       "first_stress_date": "2025-07-22",
       "confirm_date": null,
@@ -76470,8 +75236,8 @@
       "name": "和桐",
       "industry": "化學工業",
       "market": "TWSE",
-      "latest_close": 17.4,
-      "latest_date": "2026-08-12",
+      "latest_close": 16.7,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -77724,8 +76490,8 @@
       "name": "長榮航",
       "industry": "航運業",
       "market": "TWSE",
-      "latest_close": 42.15,
-      "latest_date": "2026-08-12",
+      "latest_close": 41.0,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -78955,8 +77721,8 @@
       "name": "興富發",
       "industry": "建材營造",
       "market": "TWSE",
-      "latest_close": 44.8,
-      "latest_date": "2026-08-12",
+      "latest_close": 46.4,
+      "latest_date": "2026-08-13",
       "stage": "stress_preselect",
       "first_stress_date": "2025-07-22",
       "confirm_date": null,
@@ -80142,8 +78908,8 @@
       "name": "億光",
       "industry": "光電業",
       "market": "TWSE",
-      "latest_close": 63.3,
-      "latest_date": "2026-08-12",
+      "latest_close": 65.2,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -81379,8 +80145,8 @@
       "name": "國泰金",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 99.7,
-      "latest_date": "2026-08-12",
+      "latest_close": 99.5,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -82644,8 +81410,8 @@
       "name": "富邦金",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 127.0,
-      "latest_date": "2026-08-12",
+      "latest_close": 128.5,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -83902,8 +82668,8 @@
       "name": "建大",
       "industry": "橡膠工業",
       "market": "TWSE",
-      "latest_close": 18.2,
-      "latest_date": "2026-08-12",
+      "latest_close": 17.6,
+      "latest_date": "2026-08-13",
       "stage": "stress_preselect",
       "first_stress_date": "2025-07-22",
       "confirm_date": null,
@@ -85111,8 +83877,8 @@
       "name": "統一實",
       "industry": "其他",
       "market": "TWSE",
-      "latest_close": 14.9,
-      "latest_date": "2026-08-12",
+      "latest_close": 15.0,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -86318,8 +85084,8 @@
       "name": "新美齊",
       "industry": "電腦及週邊設備業",
       "market": "TWSE",
-      "latest_close": 19.6,
-      "latest_date": "2026-08-12",
+      "latest_close": 19.55,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -87554,8 +86320,8 @@
       "name": "亞泥",
       "industry": "水泥工業",
       "market": "TWSE",
-      "latest_close": 32.35,
-      "latest_date": "2026-08-12",
+      "latest_close": 31.7,
+      "latest_date": "2026-08-13",
       "stage": "stress_preselect",
       "first_stress_date": "2025-07-22",
       "confirm_date": null,
@@ -88770,8 +87536,8 @@
       "name": "中鼎",
       "industry": "其他",
       "market": "TWSE",
-      "latest_close": 42.0,
-      "latest_date": "2026-08-12",
+      "latest_close": 42.2,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -90003,8 +88769,8 @@
       "name": "凱基金",
       "industry": "金融保險",
       "market": "TWSE",
-      "latest_close": 31.2,
-      "latest_date": "2026-08-12",
+      "latest_close": 31.5,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -91275,7 +90041,7 @@
       "industry": "化學工業",
       "market": "TWSE",
       "latest_close": 49.3,
-      "latest_date": "2026-08-12",
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -92514,8 +91280,8 @@
       "name": "晟德",
       "industry": "生技醫療業",
       "market": "TPEX",
-      "latest_close": 35.1,
-      "latest_date": "2026-08-12",
+      "latest_close": 34.7,
+      "latest_date": "2026-08-13",
       "stage": "stress_preselect",
       "first_stress_date": "2025-07-22",
       "confirm_date": null,
@@ -93731,8 +92497,8 @@
       "name": "潤泰全",
       "industry": "貿易百貨",
       "market": "TWSE",
-      "latest_close": 54.5,
-      "latest_date": "2026-08-12",
+      "latest_close": 54.1,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -94956,8 +93722,8 @@
       "name": "達麗",
       "industry": "建材營造",
       "market": "TWSE",
-      "latest_close": 47.7,
-      "latest_date": "2026-08-12",
+      "latest_close": 47.35,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-07-23",
@@ -96157,12 +94923,1225 @@
       ]
     },
     {
+      "stock_id": "6108",
+      "name": "競國",
+      "industry": "電子工業",
+      "market": "TWSE",
+      "latest_close": 21.7,
+      "latest_date": "2026-08-13",
+      "stage": "stress_preselect",
+      "first_stress_date": "2025-07-22",
+      "confirm_date": null,
+      "resilience_score": 28.87,
+      "leadership_score": -1.51,
+      "combined_score": 18.24,
+      "stress_days_tested": 44,
+      "rebound_days_tested": 46,
+      "avg_stress_relative_ret_pct": 1.27,
+      "avg_rebound_relative_ret_pct": -1.9,
+      "stress_red_count": 15,
+      "lower_shadow_count": 13,
+      "tags": [
+        "下影線承接",
+        "反彈勝大盤",
+        "反彈強",
+        "反彈有量",
+        "壓力日收紅",
+        "守MA20",
+        "守MA60",
+        "接近20日高",
+        "收在高檔",
+        "放量下跌",
+        "未破20日低",
+        "爆量但收不強",
+        "站上MA20",
+        "跌幅明顯小於大盤",
+        "量未失控"
+      ],
+      "stress_events": [
+        {
+          "date": "2025-07-22",
+          "stock_ret_pct": 0.0,
+          "index_ret_pct": -1.51,
+          "relative_ret_pct": 1.51,
+          "lower_shadow_ratio": 0.67,
+          "close_location": 0.67,
+          "vol_ratio": null,
+          "score": 38.04,
+          "tags": [
+            "壓力日收紅",
+            "下影線承接",
+            "收在高檔",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2025-08-20",
+          "stock_ret_pct": 0.0,
+          "index_ret_pct": -2.99,
+          "relative_ret_pct": 2.99,
+          "lower_shadow_ratio": 0.67,
+          "close_location": 0.67,
+          "vol_ratio": 0.62,
+          "score": 58.96,
+          "tags": [
+            "壓力日收紅",
+            "下影線承接",
+            "收在高檔",
+            "守MA20",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2025-08-28",
+          "stock_ret_pct": -6.37,
+          "index_ret_pct": -1.16,
+          "relative_ret_pct": -5.21,
+          "lower_shadow_ratio": 0.11,
+          "close_location": 0.11,
+          "vol_ratio": 1.92,
+          "score": -13.0,
+          "tags": [
+            "未破20日低"
+          ]
+        },
+        {
+          "date": "2025-09-26",
+          "stock_ret_pct": -1.71,
+          "index_ret_pct": -1.7,
+          "relative_ret_pct": -0.0,
+          "lower_shadow_ratio": 0.0,
+          "close_location": 0.0,
+          "vol_ratio": 0.52,
+          "score": 18.99,
+          "tags": [
+            "守MA20",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2025-10-13",
+          "stock_ret_pct": -2.89,
+          "index_ret_pct": -1.39,
+          "relative_ret_pct": -1.51,
+          "lower_shadow_ratio": 0.0,
+          "close_location": 0.86,
+          "vol_ratio": 1.42,
+          "score": 14.97,
+          "tags": [
+            "收在高檔",
+            "守MA20",
+            "未破20日低"
+          ]
+        },
+        {
+          "date": "2025-10-17",
+          "stock_ret_pct": 0.68,
+          "index_ret_pct": -1.25,
+          "relative_ret_pct": 1.93,
+          "lower_shadow_ratio": 0.2,
+          "close_location": 0.6,
+          "vol_ratio": 0.56,
+          "score": 40.7,
+          "tags": [
+            "壓力日收紅",
+            "守MA20",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2025-11-05",
+          "stock_ret_pct": 5.79,
+          "index_ret_pct": -1.42,
+          "relative_ret_pct": 7.21,
+          "lower_shadow_ratio": 0.0,
+          "close_location": 0.4,
+          "vol_ratio": 0.31,
+          "score": 53.85,
+          "tags": [
+            "壓力日收紅",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2025-11-14",
+          "stock_ret_pct": -1.1,
+          "index_ret_pct": -1.81,
+          "relative_ret_pct": 0.71,
+          "lower_shadow_ratio": 0.0,
+          "close_location": 0.0,
+          "vol_ratio": 0.82,
+          "score": 13.86,
+          "tags": [
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2025-11-18",
+          "stock_ret_pct": -1.52,
+          "index_ret_pct": -2.52,
+          "relative_ret_pct": 1.0,
+          "lower_shadow_ratio": 0.5,
+          "close_location": 0.5,
+          "vol_ratio": 0.69,
+          "score": 22.99,
+          "tags": [
+            "下影線承接",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2025-11-21",
+          "stock_ret_pct": -1.94,
+          "index_ret_pct": -3.61,
+          "relative_ret_pct": 1.68,
+          "lower_shadow_ratio": 0.13,
+          "close_location": 0.13,
+          "vol_ratio": 0.61,
+          "score": 18.71,
+          "tags": [
+            "跌幅明顯小於大盤",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2025-12-01",
+          "stock_ret_pct": 8.2,
+          "index_ret_pct": -1.03,
+          "relative_ret_pct": 9.23,
+          "lower_shadow_ratio": 0.0,
+          "close_location": 0.83,
+          "vol_ratio": 5.6,
+          "score": 67.0,
+          "tags": [
+            "壓力日收紅",
+            "收在高檔",
+            "守MA20",
+            "未破20日低"
+          ]
+        },
+        {
+          "date": "2025-12-11",
+          "stock_ret_pct": -3.4,
+          "index_ret_pct": -1.32,
+          "relative_ret_pct": -2.08,
+          "lower_shadow_ratio": 0.06,
+          "close_location": 0.06,
+          "vol_ratio": 1.46,
+          "score": 6.69,
+          "tags": [
+            "守MA20",
+            "未破20日低"
+          ]
+        },
+        {
+          "date": "2025-12-15",
+          "stock_ret_pct": 0.69,
+          "index_ret_pct": -1.17,
+          "relative_ret_pct": 1.87,
+          "lower_shadow_ratio": 0.22,
+          "close_location": 0.67,
+          "vol_ratio": 0.67,
+          "score": 46.46,
+          "tags": [
+            "壓力日收紅",
+            "收在高檔",
+            "守MA20",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2025-12-16",
+          "stock_ret_pct": -2.41,
+          "index_ret_pct": -1.19,
+          "relative_ret_pct": -1.22,
+          "lower_shadow_ratio": 0.08,
+          "close_location": 0.08,
+          "vol_ratio": 0.95,
+          "score": 14.12,
+          "tags": [
+            "守MA20",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-01-21",
+          "stock_ret_pct": 0.68,
+          "index_ret_pct": -1.62,
+          "relative_ret_pct": 2.29,
+          "lower_shadow_ratio": 0.83,
+          "close_location": 0.83,
+          "vol_ratio": 0.97,
+          "score": 56.17,
+          "tags": [
+            "壓力日收紅",
+            "下影線承接",
+            "收在高檔",
+            "守MA20",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-01-30",
+          "stock_ret_pct": -1.61,
+          "index_ret_pct": -1.45,
+          "relative_ret_pct": -0.16,
+          "lower_shadow_ratio": 0.43,
+          "close_location": 0.43,
+          "vol_ratio": 0.67,
+          "score": 26.36,
+          "tags": [
+            "下影線承接",
+            "守MA20",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-02-02",
+          "stock_ret_pct": -5.25,
+          "index_ret_pct": -1.37,
+          "relative_ret_pct": -3.87,
+          "lower_shadow_ratio": 0.12,
+          "close_location": 0.12,
+          "vol_ratio": 0.69,
+          "score": -4.5,
+          "tags": [
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-02-05",
+          "stock_ret_pct": -1.02,
+          "index_ret_pct": -1.51,
+          "relative_ret_pct": 0.5,
+          "lower_shadow_ratio": 0.0,
+          "close_location": 0.0,
+          "vol_ratio": 0.14,
+          "score": 17.98,
+          "tags": [
+            "守MA60",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-03-03",
+          "stock_ret_pct": 2.3,
+          "index_ret_pct": -2.2,
+          "relative_ret_pct": 4.49,
+          "lower_shadow_ratio": 0.5,
+          "close_location": 0.75,
+          "vol_ratio": 1.99,
+          "score": 60.97,
+          "tags": [
+            "壓力日收紅",
+            "下影線承接",
+            "收在高檔",
+            "守MA20",
+            "未破20日低"
+          ]
+        },
+        {
+          "date": "2026-03-04",
+          "stock_ret_pct": -1.92,
+          "index_ret_pct": -4.35,
+          "relative_ret_pct": 2.43,
+          "lower_shadow_ratio": 0.5,
+          "close_location": 0.5,
+          "vol_ratio": 2.54,
+          "score": 30.73,
+          "tags": [
+            "跌幅明顯小於大盤",
+            "下影線承接",
+            "守MA20",
+            "未破20日低",
+            "放量下跌"
+          ]
+        },
+        {
+          "date": "2026-03-09",
+          "stock_ret_pct": 2.24,
+          "index_ret_pct": -4.43,
+          "relative_ret_pct": 6.68,
+          "lower_shadow_ratio": 0.17,
+          "close_location": 0.96,
+          "vol_ratio": 4.63,
+          "score": 61.7,
+          "tags": [
+            "壓力日收紅",
+            "收在高檔",
+            "守MA20",
+            "未破20日低"
+          ]
+        },
+        {
+          "date": "2026-03-12",
+          "stock_ret_pct": 4.15,
+          "index_ret_pct": -1.56,
+          "relative_ret_pct": 5.71,
+          "lower_shadow_ratio": 0.07,
+          "close_location": 0.86,
+          "vol_ratio": 3.13,
+          "score": 57.86,
+          "tags": [
+            "壓力日收紅",
+            "收在高檔",
+            "守MA20",
+            "未破20日低"
+          ]
+        },
+        {
+          "date": "2026-03-19",
+          "stock_ret_pct": -1.46,
+          "index_ret_pct": -1.92,
+          "relative_ret_pct": 0.46,
+          "lower_shadow_ratio": 0.37,
+          "close_location": 0.37,
+          "vol_ratio": 1.49,
+          "score": 24.83,
+          "tags": [
+            "下影線承接",
+            "守MA20",
+            "未破20日低"
+          ]
+        },
+        {
+          "date": "2026-03-23",
+          "stock_ret_pct": -2.36,
+          "index_ret_pct": -2.45,
+          "relative_ret_pct": 0.09,
+          "lower_shadow_ratio": 0.0,
+          "close_location": 0.3,
+          "vol_ratio": 0.5,
+          "score": 19.36,
+          "tags": [
+            "守MA20",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-03-30",
+          "stock_ret_pct": 0.0,
+          "index_ret_pct": -1.8,
+          "relative_ret_pct": 1.8,
+          "lower_shadow_ratio": 0.75,
+          "close_location": 1.0,
+          "vol_ratio": 0.41,
+          "score": 54.18,
+          "tags": [
+            "壓力日收紅",
+            "下影線承接",
+            "收在高檔",
+            "守MA20",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-03-31",
+          "stock_ret_pct": -1.52,
+          "index_ret_pct": -2.45,
+          "relative_ret_pct": 0.93,
+          "lower_shadow_ratio": 0.17,
+          "close_location": 0.17,
+          "vol_ratio": 0.54,
+          "score": 22.7,
+          "tags": [
+            "守MA20",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-04-02",
+          "stock_ret_pct": 0.31,
+          "index_ret_pct": -1.82,
+          "relative_ret_pct": 2.12,
+          "lower_shadow_ratio": 0.33,
+          "close_location": 0.5,
+          "vol_ratio": 0.37,
+          "score": 38.5,
+          "tags": [
+            "壓力日收紅",
+            "守MA60",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-05-13",
+          "stock_ret_pct": -3.93,
+          "index_ret_pct": -1.25,
+          "relative_ret_pct": -2.68,
+          "lower_shadow_ratio": 0.2,
+          "close_location": 0.2,
+          "vol_ratio": 0.6,
+          "score": 8.28,
+          "tags": [
+            "守MA20",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-05-15",
+          "stock_ret_pct": -1.85,
+          "index_ret_pct": -1.39,
+          "relative_ret_pct": -0.46,
+          "lower_shadow_ratio": 0.11,
+          "close_location": 0.11,
+          "vol_ratio": 0.34,
+          "score": 14.16,
+          "tags": [
+            "守MA60",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-05-19",
+          "stock_ret_pct": -0.27,
+          "index_ret_pct": -1.75,
+          "relative_ret_pct": 1.48,
+          "lower_shadow_ratio": 0.0,
+          "close_location": 0.38,
+          "vol_ratio": 0.19,
+          "score": 21.93,
+          "tags": [
+            "守MA60",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-05-28",
+          "stock_ret_pct": 2.54,
+          "index_ret_pct": -1.4,
+          "relative_ret_pct": 3.95,
+          "lower_shadow_ratio": 0.03,
+          "close_location": 0.24,
+          "vol_ratio": 1.18,
+          "score": 48.79,
+          "tags": [
+            "壓力日收紅",
+            "守MA20",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-06-04",
+          "stock_ret_pct": -1.77,
+          "index_ret_pct": -1.68,
+          "relative_ret_pct": -0.09,
+          "lower_shadow_ratio": 0.12,
+          "close_location": 0.12,
+          "vol_ratio": 0.37,
+          "score": 15.64,
+          "tags": [
+            "守MA60",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-06-05",
+          "stock_ret_pct": 1.03,
+          "index_ret_pct": -1.33,
+          "relative_ret_pct": 2.36,
+          "lower_shadow_ratio": 0.36,
+          "close_location": 0.86,
+          "vol_ratio": 0.55,
+          "score": 56.44,
+          "tags": [
+            "壓力日收紅",
+            "下影線承接",
+            "收在高檔",
+            "守MA20",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-06-08",
+          "stock_ret_pct": -3.57,
+          "index_ret_pct": -3.48,
+          "relative_ret_pct": -0.09,
+          "lower_shadow_ratio": 0.45,
+          "close_location": 0.85,
+          "vol_ratio": 1.1,
+          "score": 29.63,
+          "tags": [
+            "下影線承接",
+            "收在高檔",
+            "守MA60",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-06-10",
+          "stock_ret_pct": -2.92,
+          "index_ret_pct": -3.31,
+          "relative_ret_pct": 0.39,
+          "lower_shadow_ratio": 0.07,
+          "close_location": 0.07,
+          "vol_ratio": 0.5,
+          "score": 12.56,
+          "tags": [
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-06-23",
+          "stock_ret_pct": -1.05,
+          "index_ret_pct": -1.34,
+          "relative_ret_pct": 0.3,
+          "lower_shadow_ratio": 0.67,
+          "close_location": 0.67,
+          "vol_ratio": 0.7,
+          "score": 31.18,
+          "tags": [
+            "下影線承接",
+            "收在高檔",
+            "守MA60",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-06-24",
+          "stock_ret_pct": -0.26,
+          "index_ret_pct": -2.24,
+          "relative_ret_pct": 1.98,
+          "lower_shadow_ratio": 0.67,
+          "close_location": 0.67,
+          "vol_ratio": 0.41,
+          "score": 45.92,
+          "tags": [
+            "跌幅明顯小於大盤",
+            "下影線承接",
+            "收在高檔",
+            "守MA60",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-06-26",
+          "stock_ret_pct": -2.42,
+          "index_ret_pct": -3.64,
+          "relative_ret_pct": 1.22,
+          "lower_shadow_ratio": 0.08,
+          "close_location": 0.08,
+          "vol_ratio": 0.64,
+          "score": 15.88,
+          "tags": [
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-07-07",
+          "stock_ret_pct": -3.42,
+          "index_ret_pct": -2.31,
+          "relative_ret_pct": -1.11,
+          "lower_shadow_ratio": 0.0,
+          "close_location": 0.0,
+          "vol_ratio": 0.63,
+          "score": 6.57,
+          "tags": [
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-07-14",
+          "stock_ret_pct": -3.86,
+          "index_ret_pct": -1.42,
+          "relative_ret_pct": -2.44,
+          "lower_shadow_ratio": 0.29,
+          "close_location": 0.29,
+          "vol_ratio": 1.42,
+          "score": -9.76,
+          "tags": []
+        },
+        {
+          "date": "2026-07-17",
+          "stock_ret_pct": -5.44,
+          "index_ret_pct": -6.47,
+          "relative_ret_pct": 1.03,
+          "lower_shadow_ratio": 0.0,
+          "close_location": 0.0,
+          "vol_ratio": 1.17,
+          "score": 8.12,
+          "tags": [
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-07-24",
+          "stock_ret_pct": 0.6,
+          "index_ret_pct": -2.67,
+          "relative_ret_pct": 3.26,
+          "lower_shadow_ratio": 0.25,
+          "close_location": 1.0,
+          "vol_ratio": 0.59,
+          "score": 44.05,
+          "tags": [
+            "壓力日收紅",
+            "收在高檔",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-07-28",
+          "stock_ret_pct": -2.66,
+          "index_ret_pct": -4.65,
+          "relative_ret_pct": 1.99,
+          "lower_shadow_ratio": 0.0,
+          "close_location": 0.0,
+          "vol_ratio": 0.99,
+          "score": 26.97,
+          "tags": [
+            "跌幅明顯小於大盤",
+            "未破20日低",
+            "量未失控"
+          ]
+        },
+        {
+          "date": "2026-07-29",
+          "stock_ret_pct": -0.61,
+          "index_ret_pct": -3.76,
+          "relative_ret_pct": 3.15,
+          "lower_shadow_ratio": 0.33,
+          "close_location": 0.33,
+          "vol_ratio": 1.12,
+          "score": 24.61,
+          "tags": [
+            "跌幅明顯小於大盤",
+            "量未失控"
+          ]
+        }
+      ],
+      "rebound_events": [
+        {
+          "date": "2025-07-23",
+          "stock_ret_pct": 0.0,
+          "index_ret_pct": 1.44,
+          "relative_ret_pct": -1.44,
+          "vol_ratio": null,
+          "score": -5.04,
+          "tags": []
+        },
+        {
+          "date": "2025-08-21",
+          "stock_ret_pct": 0.32,
+          "index_ret_pct": 1.43,
+          "relative_ret_pct": -1.1,
+          "vol_ratio": 0.84,
+          "score": 1.15,
+          "tags": [
+            "站上MA20"
+          ]
+        },
+        {
+          "date": "2025-08-25",
+          "stock_ret_pct": -0.32,
+          "index_ret_pct": 2.16,
+          "relative_ret_pct": -2.48,
+          "vol_ratio": 0.93,
+          "score": -3.68,
+          "tags": [
+            "站上MA20"
+          ]
+        },
+        {
+          "date": "2025-09-30",
+          "stock_ret_pct": 1.39,
+          "index_ret_pct": 0.94,
+          "relative_ret_pct": 0.45,
+          "vol_ratio": 0.48,
+          "score": 14.57,
+          "tags": [
+            "反彈勝大盤",
+            "站上MA20"
+          ]
+        },
+        {
+          "date": "2025-10-02",
+          "stock_ret_pct": -1.04,
+          "index_ret_pct": 1.52,
+          "relative_ret_pct": -2.56,
+          "vol_ratio": 0.78,
+          "score": -3.97,
+          "tags": [
+            "站上MA20"
+          ]
+        },
+        {
+          "date": "2025-10-15",
+          "stock_ret_pct": -1.67,
+          "index_ret_pct": 1.8,
+          "relative_ret_pct": -3.47,
+          "vol_ratio": 0.74,
+          "score": -7.16,
+          "tags": [
+            "站上MA20"
+          ]
+        },
+        {
+          "date": "2025-10-16",
+          "stock_ret_pct": 0.68,
+          "index_ret_pct": 1.36,
+          "relative_ret_pct": -0.68,
+          "vol_ratio": 0.71,
+          "score": 2.61,
+          "tags": [
+            "站上MA20"
+          ]
+        },
+        {
+          "date": "2025-10-20",
+          "stock_ret_pct": -1.01,
+          "index_ret_pct": 1.41,
+          "relative_ret_pct": -2.42,
+          "vol_ratio": 0.59,
+          "score": -3.48,
+          "tags": [
+            "站上MA20"
+          ]
+        },
+        {
+          "date": "2025-11-06",
+          "stock_ret_pct": 0.73,
+          "index_ret_pct": 0.66,
+          "relative_ret_pct": 0.07,
+          "vol_ratio": 0.47,
+          "score": 8.25,
+          "tags": [
+            "反彈勝大盤"
+          ]
+        },
+        {
+          "date": "2025-11-17",
+          "stock_ret_pct": -2.59,
+          "index_ret_pct": 0.18,
+          "relative_ret_pct": -2.77,
+          "vol_ratio": 0.86,
+          "score": -9.71,
+          "tags": []
+        },
+        {
+          "date": "2025-11-20",
+          "stock_ret_pct": 0.78,
+          "index_ret_pct": 3.18,
+          "relative_ret_pct": -2.4,
+          "vol_ratio": 0.78,
+          "score": -8.41,
+          "tags": []
+        },
+        {
+          "date": "2025-11-25",
+          "stock_ret_pct": -0.39,
+          "index_ret_pct": 1.54,
+          "relative_ret_pct": -1.93,
+          "vol_ratio": 1.51,
+          "score": -1.74,
+          "tags": [
+            "反彈有量"
+          ]
+        },
+        {
+          "date": "2025-11-26",
+          "stock_ret_pct": 0.78,
+          "index_ret_pct": 1.85,
+          "relative_ret_pct": -1.07,
+          "vol_ratio": 0.92,
+          "score": -3.74,
+          "tags": []
+        },
+        {
+          "date": "2025-12-02",
+          "stock_ret_pct": 0.0,
+          "index_ret_pct": 0.81,
+          "relative_ret_pct": -0.81,
+          "vol_ratio": 4.54,
+          "score": 2.16,
+          "tags": [
+            "接近20日高",
+            "站上MA20",
+            "爆量但收不強"
+          ]
+        },
+        {
+          "date": "2025-12-03",
+          "stock_ret_pct": 0.0,
+          "index_ret_pct": 0.83,
+          "relative_ret_pct": -0.83,
+          "vol_ratio": 0.62,
+          "score": 2.1,
+          "tags": [
+            "站上MA20"
+          ]
+        },
+        {
+          "date": "2025-12-12",
+          "stock_ret_pct": 1.76,
+          "index_ret_pct": 0.62,
+          "relative_ret_pct": 1.14,
+          "vol_ratio": 0.52,
+          "score": 17.0,
+          "tags": [
+            "反彈勝大盤",
+            "站上MA20"
+          ]
+        },
+        {
+          "date": "2025-12-19",
+          "stock_ret_pct": -2.72,
+          "index_ret_pct": 0.83,
+          "relative_ret_pct": -3.55,
+          "vol_ratio": 0.49,
+          "score": -12.43,
+          "tags": []
+        },
+        {
+          "date": "2026-01-22",
+          "stock_ret_pct": 0.0,
+          "index_ret_pct": 1.6,
+          "relative_ret_pct": -1.6,
+          "vol_ratio": 0.82,
+          "score": -0.6,
+          "tags": [
+            "站上MA20"
+          ]
+        },
+        {
+          "date": "2026-02-03",
+          "stock_ret_pct": 0.0,
+          "index_ret_pct": 1.81,
+          "relative_ret_pct": -1.81,
+          "vol_ratio": 0.36,
+          "score": -6.32,
+          "tags": []
+        },
+        {
+          "date": "2026-02-09",
+          "stock_ret_pct": -1.74,
+          "index_ret_pct": 1.96,
+          "relative_ret_pct": -3.7,
+          "vol_ratio": 0.58,
+          "score": -12.94,
+          "tags": []
+        },
+        {
+          "date": "2026-02-10",
+          "stock_ret_pct": 0.0,
+          "index_ret_pct": 2.06,
+          "relative_ret_pct": -2.06,
+          "vol_ratio": 0.4,
+          "score": -7.22,
+          "tags": []
+        },
+        {
+          "date": "2026-03-05",
+          "stock_ret_pct": -0.33,
+          "index_ret_pct": 2.57,
+          "relative_ret_pct": -2.9,
+          "vol_ratio": 1.38,
+          "score": -0.14,
+          "tags": [
+            "站上MA20",
+            "反彈有量"
+          ]
+        },
+        {
+          "date": "2026-03-10",
+          "stock_ret_pct": -1.25,
+          "index_ret_pct": 2.06,
+          "relative_ret_pct": -3.31,
+          "vol_ratio": 2.17,
+          "score": 6.4,
+          "tags": [
+            "接近20日高",
+            "站上MA20",
+            "反彈有量"
+          ]
+        },
+        {
+          "date": "2026-03-11",
+          "stock_ret_pct": -0.63,
+          "index_ret_pct": 4.1,
+          "relative_ret_pct": -4.73,
+          "vol_ratio": 1.05,
+          "score": -6.56,
+          "tags": [
+            "站上MA20",
+            "反彈有量"
+          ]
+        },
+        {
+          "date": "2026-03-17",
+          "stock_ret_pct": 4.11,
+          "index_ret_pct": 1.48,
+          "relative_ret_pct": 2.63,
+          "vol_ratio": 1.78,
+          "score": 43.21,
+          "tags": [
+            "反彈勝大盤",
+            "反彈強",
+            "接近20日高",
+            "站上MA20",
+            "反彈有量"
+          ]
+        },
+        {
+          "date": "2026-03-25",
+          "stock_ret_pct": 0.3,
+          "index_ret_pct": 2.54,
+          "relative_ret_pct": -2.23,
+          "vol_ratio": 0.41,
+          "score": -2.81,
+          "tags": [
+            "站上MA20"
+          ]
+        },
+        {
+          "date": "2026-04-01",
+          "stock_ret_pct": 0.0,
+          "index_ret_pct": 4.58,
+          "relative_ret_pct": -4.58,
+          "vol_ratio": 0.4,
+          "score": -16.02,
+          "tags": []
+        },
+        {
+          "date": "2026-04-07",
+          "stock_ret_pct": -2.46,
+          "index_ret_pct": 2.02,
+          "relative_ret_pct": -4.48,
+          "vol_ratio": 0.4,
+          "score": -15.68,
+          "tags": []
+        },
+        {
+          "date": "2026-04-08",
+          "stock_ret_pct": 2.84,
+          "index_ret_pct": 4.61,
+          "relative_ret_pct": -1.77,
+          "vol_ratio": 0.47,
+          "score": -6.19,
+          "tags": []
+        },
+        {
+          "date": "2026-05-14",
+          "stock_ret_pct": -3.07,
+          "index_ret_pct": 0.91,
+          "relative_ret_pct": -3.98,
+          "vol_ratio": 0.7,
+          "score": -13.93,
+          "tags": []
+        },
+        {
+          "date": "2026-05-21",
+          "stock_ret_pct": 1.32,
+          "index_ret_pct": 3.37,
+          "relative_ret_pct": -2.05,
+          "vol_ratio": 0.22,
+          "score": -7.18,
+          "tags": []
+        },
+        {
+          "date": "2026-05-22",
+          "stock_ret_pct": 1.04,
+          "index_ret_pct": 2.18,
+          "relative_ret_pct": -1.14,
+          "vol_ratio": 0.38,
+          "score": -3.98,
+          "tags": []
+        },
+        {
+          "date": "2026-05-29",
+          "stock_ret_pct": -1.24,
+          "index_ret_pct": 2.51,
+          "relative_ret_pct": -3.75,
+          "vol_ratio": 0.79,
+          "score": -13.14,
+          "tags": []
+        },
+        {
+          "date": "2026-06-01",
+          "stock_ret_pct": 0.25,
+          "index_ret_pct": 1.35,
+          "relative_ret_pct": -1.1,
+          "vol_ratio": 0.6,
+          "score": -3.85,
+          "tags": []
+        },
+        {
+          "date": "2026-06-09",
+          "stock_ret_pct": -0.26,
+          "index_ret_pct": 2.76,
+          "relative_ret_pct": -3.03,
+          "vol_ratio": 0.56,
+          "score": -10.59,
+          "tags": []
+        },
+        {
+          "date": "2026-06-12",
+          "stock_ret_pct": 3.29,
+          "index_ret_pct": 2.36,
+          "relative_ret_pct": 0.92,
+          "vol_ratio": 0.95,
+          "score": 19.24,
+          "tags": [
+            "反彈勝大盤",
+            "反彈強"
+          ]
+        },
+        {
+          "date": "2026-06-15",
+          "stock_ret_pct": 3.71,
+          "index_ret_pct": 2.78,
+          "relative_ret_pct": 0.93,
+          "vol_ratio": 0.85,
+          "score": 24.27,
+          "tags": [
+            "反彈勝大盤",
+            "反彈強",
+            "站上MA20"
+          ]
+        },
+        {
+          "date": "2026-06-25",
+          "stock_ret_pct": -1.33,
+          "index_ret_pct": 0.46,
+          "relative_ret_pct": -1.79,
+          "vol_ratio": 0.26,
+          "score": -6.25,
+          "tags": []
+        },
+        {
+          "date": "2026-06-29",
+          "stock_ret_pct": -0.28,
+          "index_ret_pct": 0.96,
+          "relative_ret_pct": -1.24,
+          "vol_ratio": 0.46,
+          "score": -4.33,
+          "tags": []
+        },
+        {
+          "date": "2026-06-30",
+          "stock_ret_pct": 3.87,
+          "index_ret_pct": 2.5,
+          "relative_ret_pct": 1.37,
+          "vol_ratio": 1.47,
+          "score": 25.78,
+          "tags": [
+            "反彈勝大盤",
+            "反彈強",
+            "反彈有量"
+          ]
+        },
+        {
+          "date": "2026-07-01",
+          "stock_ret_pct": -3.46,
+          "index_ret_pct": 1.94,
+          "relative_ret_pct": -5.39,
+          "vol_ratio": 1.16,
+          "score": -13.0,
+          "tags": [
+            "反彈有量"
+          ]
+        },
+        {
+          "date": "2026-07-08",
+          "stock_ret_pct": 0.0,
+          "index_ret_pct": 0.56,
+          "relative_ret_pct": -0.56,
+          "vol_ratio": 0.47,
+          "score": -1.96,
+          "tags": []
+        },
+        {
+          "date": "2026-07-15",
+          "stock_ret_pct": 1.72,
+          "index_ret_pct": 2.0,
+          "relative_ret_pct": -0.28,
+          "vol_ratio": 1.03,
+          "score": 4.03,
+          "tags": [
+            "反彈有量"
+          ]
+        },
+        {
+          "date": "2026-07-21",
+          "stock_ret_pct": 1.83,
+          "index_ret_pct": 4.2,
+          "relative_ret_pct": -2.37,
+          "vol_ratio": 0.97,
+          "score": -8.3,
+          "tags": []
+        },
+        {
+          "date": "2026-07-22",
+          "stock_ret_pct": -0.6,
+          "index_ret_pct": 1.34,
+          "relative_ret_pct": -1.94,
+          "vol_ratio": 0.96,
+          "score": -6.79,
+          "tags": []
+        },
+        {
+          "date": "2026-07-31",
+          "stock_ret_pct": 2.46,
+          "index_ret_pct": 7.98,
+          "relative_ret_pct": -5.52,
+          "vol_ratio": 1.47,
+          "score": -13.0,
+          "tags": [
+            "反彈有量"
+          ]
+        }
+      ],
+      "themes": [
+        {
+          "id": "electronics_components",
+          "label": "電子零組件",
+          "strength": "weak",
+          "roles": [
+            "電子工業"
+          ],
+          "subthemes": [],
+          "confidence": 0.45,
+          "source": [
+            "industry_rule"
+          ]
+        }
+      ]
+    },
+    {
       "stock_id": "2027",
       "name": "大成鋼",
       "industry": "鋼鐵工業",
       "market": "TWSE",
-      "latest_close": 46.85,
-      "latest_date": "2026-08-12",
+      "latest_close": 50.4,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -97397,8 +97376,8 @@
       "name": "台汽電",
       "industry": "油電燃氣業",
       "market": "TWSE",
-      "latest_close": 56.8,
-      "latest_date": "2026-08-12",
+      "latest_close": 55.8,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-08-21",
@@ -98629,8 +98608,8 @@
       "name": "裕融",
       "industry": "其他",
       "market": "TWSE",
-      "latest_close": 85.7,
-      "latest_date": "2026-08-12",
+      "latest_close": 86.1,
+      "latest_date": "2026-08-13",
       "stage": "stress_preselect",
       "first_stress_date": "2025-07-22",
       "confirm_date": null,
@@ -99833,8 +99812,8 @@
       "name": "風青",
       "industry": "電器電纜",
       "market": "TPEX",
-      "latest_close": 62.5,
-      "latest_date": "2026-08-12",
+      "latest_close": 56.3,
+      "latest_date": "2026-08-13",
       "stage": "rebound_confirmed",
       "first_stress_date": "2025-07-22",
       "confirm_date": "2025-09-30",
