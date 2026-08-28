@@ -1,6 +1,6 @@
 {
   "strategy_id": "momentum_candidates",
-  "updated": "2026-08-27T16:46:54+08:00",
+  "updated": "2026-08-28T16:47:45+08:00",
   "model": {
     "version": "pattern_score_only_v1",
     "sources": [
@@ -14,85 +14,63 @@
     "liquidity_rule": "vol_20d_avg > 3000"
   },
   "summary": {
-    "total": 40,
+    "total": 42,
     "pre_filter_total": 93,
-    "liquidity_filtered": 53,
+    "liquidity_filtered": 51,
     "liquidity_rule": "vol_20d_avg > 3000",
-    "focus": 10,
+    "focus": 11,
     "pattern_watch": 4,
-    "pattern_observe": 32,
-    "pattern_extended": 4,
+    "pattern_observe": 27,
+    "pattern_extended": 11,
     "pattern_broken": 0
   },
   "focus_results": [
     {
-      "stock_id": "2889",
-      "name": "國票金",
-      "industry": "金融保險",
-      "market": "TWSE",
-      "close": 16.2,
-      "entry_price": 16.2,
-      "current_price": 16.2,
+      "stock_id": "2486",
+      "name": "一詮",
+      "industry": "光電",
+      "market": "",
+      "close": 261.0,
+      "entry_price": 243.5,
+      "current_price": 261.0,
       "sources": [
-        "right_top"
+        "big_holder_trend"
       ],
       "tags": [
-        "盤整突破",
-        "動能突破",
-        "日線啟動",
-        "低乖離",
-        "雙重符合",
-        "週量強放大",
-        "日量強放大"
+        "千張單週激增"
       ],
       "metrics": {
-        "vol_20d_avg": 8140.1,
-        "daily_vol_today": 36309.0,
-        "daily_vol_5d_avg": 8343.2,
-        "daily_vol_ratio": 4.3,
-        "vol_ratio": 2.6,
-        "change_pct": 2.86,
-        "big_pct_1000": 70.71,
-        "big_pct_400": 73.32,
-        "breakout_key_level": 15.8,
-        "breakout_distance_pct": 2.53
+        "week_chg_pct": 7.98,
+        "big_pct_1000": 33.75,
+        "big_pct_400": 40.92,
+        "max_gain_60d": 63.45,
+        "pullback_from_60d_high_pct": -12.88,
+        "vol_20d_avg": 8543.0,
+        "since_entry_pct": 7.19
       },
-      "breakout_stage": "confirmed_breakout",
-      "breakout_stage_label": "突破確認",
-      "breakout_key_level": 15.8,
-      "breakout_distance_pct": 2.53,
-      "signal_types": [
-        "consolidation",
-        "momentum"
-      ],
-      "is_pre_breakout": false,
-      "is_consolidation_breakout": true,
-      "is_momentum_breakout": true,
-      "is_price_breakout": false,
       "source_count": 1,
       "pattern_state": "值得看圖",
-      "pattern_score": 77,
+      "pattern_score": 70.8,
       "pattern_subs": {
         "結構": 27,
-        "型態": 25,
-        "量價": 10,
+        "型態": 19.8,
+        "量價": 5,
         "位置": 15,
-        "籌碼": 0
+        "籌碼": 4
       },
       "pattern_tags": [
         "均線多頭",
-        "長盤突破首日",
-        "平台突破回測"
+        "W底突破頸線",
+        "大戶上升"
       ],
       "patterns": [
-        "long_consolidation_breakout",
-        "platform_breakout_retest"
+        "w_bottom_breakout"
       ],
-      "key_level": 16.1,
-      "invalidation": 15.62,
-      "pattern_confidence": 1.0,
+      "key_level": 249.5,
+      "invalidation": 242.01,
+      "pattern_confidence": 0.9,
       "focus_candidate": true,
-      "score": 77,
+      "score": 70.8,
       "score_model": "pattern_score_only_v1"
     },
     {
@@ -100,9 +78,9 @@
       "name": "大成鋼",
       "industry": "鋼鐵",
       "market": "",
-      "close": 48.65,
+      "close": 48.4,
       "entry_price": 50.3,
-      "current_price": 48.65,
+      "current_price": 48.4,
       "sources": [
         "big_holder_trend"
       ],
@@ -117,7 +95,7 @@
         "max_gain_60d": 29.16,
         "pullback_from_60d_high_pct": -0.4,
         "vol_20d_avg": 22762.0,
-        "since_entry_pct": -3.28
+        "since_entry_pct": -3.78
       },
       "source_count": 1,
       "pattern_state": "值得看圖",
@@ -146,120 +124,112 @@
       "score_model": "pattern_score_only_v1"
     },
     {
-      "stock_id": "2486",
-      "name": "一詮",
-      "industry": "光電",
+      "stock_id": "6214",
+      "name": "精誠",
+      "industry": "資服",
       "market": "",
-      "close": 259.0,
-      "entry_price": 243.5,
-      "current_price": 259.0,
+      "close": 181.0,
+      "entry_price": 179.5,
+      "current_price": 181.0,
       "sources": [
         "big_holder_trend"
       ],
       "tags": [
-        "千張單週激增"
+        "千張單週激增",
+        "400張單週激增"
       ],
       "metrics": {
-        "week_chg_pct": 7.98,
-        "big_pct_1000": 33.75,
-        "big_pct_400": 40.92,
-        "max_gain_60d": 63.45,
-        "pullback_from_60d_high_pct": -12.88,
-        "vol_20d_avg": 8543.0,
-        "since_entry_pct": 6.37
+        "week_chg_pct": 4.36,
+        "big_pct_1000": 53.78,
+        "big_pct_400": 62.81,
+        "max_gain_60d": 40.62,
+        "pullback_from_60d_high_pct": -0.28,
+        "vol_20d_avg": 4276.0,
+        "since_entry_pct": 0.84
       },
       "source_count": 1,
       "pattern_state": "值得看圖",
-      "pattern_score": 64.7,
+      "pattern_score": 69.8,
       "pattern_subs": {
         "結構": 27,
-        "型態": 18.7,
-        "量價": 0,
-        "位置": 15,
+        "型態": 19.8,
+        "量價": 10,
+        "位置": 9,
         "籌碼": 4
       },
       "pattern_tags": [
         "均線多頭",
-        "頸線回測",
-        "大戶上升"
-      ],
-      "patterns": [
-        "w_bottom_retest"
-      ],
-      "key_level": 249.5,
-      "invalidation": 242.01,
-      "pattern_confidence": 0.85,
-      "focus_candidate": true,
-      "score": 64.7,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
-      "stock_id": "2881",
-      "name": "富邦金",
-      "industry": "金融",
-      "market": "TWSE",
-      "close": 141.5,
-      "entry_price": 134.0,
-      "current_price": 141.5,
-      "sources": [
-        "big_holder_trend",
-        "right_top"
-      ],
-      "tags": [
-        "400張4週連增",
-        "價格突破",
-        "60日新高",
-        "EMA多頭",
-        "400張同步"
-      ],
-      "metrics": {
-        "week_chg_pct": 3.47,
-        "big_pct_1000": 84.28,
-        "big_pct_400": 86.49,
-        "max_gain_60d": 25.91,
-        "pullback_from_60d_high_pct": -3.25,
-        "vol_20d_avg": 20446.3,
-        "since_entry_pct": 5.6,
-        "price_vol_ratio": 1.4,
-        "vol_ratio": 0.6,
-        "change_pct": 5.6,
-        "breakout_key_level": 141.5,
-        "breakout_distance_pct": 0.0
-      },
-      "breakout_stage": "confirmed_breakout",
-      "breakout_stage_label": "突破確認",
-      "breakout_key_level": 141.5,
-      "breakout_distance_pct": 0.0,
-      "signal_types": [
-        "price"
-      ],
-      "is_pre_breakout": false,
-      "is_consolidation_breakout": false,
-      "is_momentum_breakout": false,
-      "is_price_breakout": true,
-      "source_count": 2,
-      "pattern_state": "值得看圖",
-      "pattern_score": 55.8,
-      "pattern_subs": {
-        "結構": 22,
-        "型態": 19.8,
-        "量價": 0,
-        "位置": 9,
-        "籌碼": 5
-      },
-      "pattern_tags": [
-        "均線多頭",
         "W底突破頸線",
+        "量縮整理",
         "大戶上升"
       ],
       "patterns": [
         "w_bottom_breakout"
       ],
-      "key_level": 132.5,
-      "invalidation": 128.53,
+      "key_level": 154.5,
+      "invalidation": 149.87,
       "pattern_confidence": 0.9,
       "focus_candidate": true,
-      "score": 55.8,
+      "score": 69.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2889",
+      "name": "國票金",
+      "industry": "金融保險",
+      "market": "TWSE",
+      "close": 15.9,
+      "entry_price": 15.9,
+      "current_price": 15.9,
+      "sources": [
+        "right_top"
+      ],
+      "tags": [
+        "盤整突破",
+        "週量強放大"
+      ],
+      "metrics": {
+        "vol_20d_avg": 8747.0,
+        "vol_ratio": 3.5,
+        "change_pct": 0.95,
+        "big_pct_1000": 70.71,
+        "big_pct_400": 73.32,
+        "breakout_key_level": 15.8,
+        "breakout_distance_pct": 0.63
+      },
+      "breakout_stage": "confirmed_breakout",
+      "breakout_stage_label": "突破確認",
+      "breakout_key_level": 15.8,
+      "breakout_distance_pct": 0.63,
+      "signal_types": [
+        "consolidation"
+      ],
+      "is_pre_breakout": false,
+      "is_consolidation_breakout": true,
+      "is_momentum_breakout": false,
+      "is_price_breakout": false,
+      "source_count": 1,
+      "pattern_state": "值得看圖",
+      "pattern_score": 67.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 21.8,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 0
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "平台突破回測"
+      ],
+      "patterns": [
+        "platform_breakout_retest"
+      ],
+      "key_level": 16.1,
+      "invalidation": 15.62,
+      "pattern_confidence": 0.95,
+      "focus_candidate": true,
+      "score": 67.8,
       "score_model": "pattern_score_only_v1"
     },
     {
@@ -336,107 +306,37 @@
       "score_model": "pattern_score_only_v1"
     },
     {
-      "stock_id": "2030",
-      "name": "彰源",
-      "industry": "鋼鐵",
+      "stock_id": "2421",
+      "name": "建準",
+      "industry": "電子工業",
       "market": "TWSE",
-      "close": 23.0,
-      "entry_price": 22.3,
-      "current_price": 23.0,
+      "close": 163.5,
+      "entry_price": 163.5,
+      "current_price": 163.5,
       "sources": [
-        "big_holder_trend",
         "right_top"
       ],
       "tags": [
-        "400張4週連增",
         "準突破",
         "接近60日高",
-        "400張同步",
         "量能升溫"
       ],
       "metrics": {
-        "week_chg_pct": 8.52,
-        "big_pct_1000": 46.88,
-        "big_pct_400": 52.17,
-        "max_gain_60d": 32.34,
-        "pullback_from_60d_high_pct": 0.0,
-        "vol_20d_avg": 3536.4,
-        "since_entry_pct": 3.14,
-        "price_vol_ratio": 1.2,
-        "vol_ratio": 2.1,
-        "change_pct": 3.14,
-        "breakout_key_level": 23.65,
-        "breakout_distance_pct": -2.75,
-        "pre_breakout_key_level": 23.65,
-        "pre_breakout_distance_pct": -2.75
+        "vol_20d_avg": 3568.1,
+        "price_vol_ratio": 1.5,
+        "vol_ratio": 1.3,
+        "change_pct": 14.74,
+        "big_pct_1000": 48.35,
+        "big_pct_400": 59.14,
+        "breakout_key_level": 168.5,
+        "breakout_distance_pct": -2.97,
+        "pre_breakout_key_level": 168.5,
+        "pre_breakout_distance_pct": -2.97
       },
       "breakout_stage": "pre_breakout",
       "breakout_stage_label": "準突破",
-      "breakout_key_level": 23.65,
-      "breakout_distance_pct": -2.75,
-      "signal_types": [
-        "pre_price"
-      ],
-      "is_pre_breakout": true,
-      "is_consolidation_breakout": false,
-      "is_momentum_breakout": false,
-      "is_price_breakout": false,
-      "source_count": 2,
-      "pattern_state": "先觀察",
-      "pattern_score": 61.8,
-      "pattern_subs": {
-        "結構": 27,
-        "型態": 19.8,
-        "量價": 5,
-        "位置": 5,
-        "籌碼": 5
-      },
-      "pattern_tags": [
-        "均線多頭",
-        "W底突破頸線",
-        "大戶上升"
-      ],
-      "patterns": [
-        "w_bottom_breakout"
-      ],
-      "key_level": 21.9,
-      "invalidation": 21.24,
-      "pattern_confidence": 0.9,
-      "focus_candidate": true,
-      "score": 61.8,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
-      "stock_id": "2301",
-      "name": "光寶科",
-      "industry": "電腦及週邊設備業",
-      "market": "TWSE",
-      "close": 301.0,
-      "entry_price": 301.0,
-      "current_price": 301.0,
-      "sources": [
-        "right_top"
-      ],
-      "tags": [
-        "準突破",
-        "接近60日高"
-      ],
-      "metrics": {
-        "vol_20d_avg": 39052.1,
-        "price_vol_ratio": 1.1,
-        "vol_ratio": 1.2,
-        "change_pct": 15.33,
-        "big_pct_1000": 76.14,
-        "big_pct_400": 81.53,
-        "breakout_key_level": 307.0,
-        "breakout_distance_pct": -1.95,
-        "pre_breakout_key_level": 307.0,
-        "pre_breakout_distance_pct": -1.95
-      },
-      "breakout_stage": "pre_breakout",
-      "breakout_stage_label": "準突破",
-      "breakout_key_level": 307.0,
-      "breakout_distance_pct": -1.95,
+      "breakout_key_level": 168.5,
+      "breakout_distance_pct": -2.97,
       "signal_types": [
         "pre_price"
       ],
@@ -446,36 +346,36 @@
       "is_price_breakout": false,
       "source_count": 1,
       "pattern_state": "先觀察",
-      "pattern_score": 48.8,
+      "pattern_score": 63.7,
       "pattern_subs": {
         "結構": 27,
-        "型態": 19.8,
-        "量價": 0,
-        "位置": 2,
+        "型態": 18.7,
+        "量價": 10,
+        "位置": 8,
         "籌碼": 0
       },
       "pattern_tags": [
         "均線多頭",
-        "W底突破頸線"
+        "頸線回測"
       ],
       "patterns": [
-        "w_bottom_breakout"
+        "w_bottom_retest"
       ],
-      "key_level": 286.5,
-      "invalidation": 277.9,
-      "pattern_confidence": 0.9,
+      "key_level": 157.5,
+      "invalidation": 152.78,
+      "pattern_confidence": 0.85,
       "focus_candidate": true,
-      "score": 48.8,
+      "score": 63.7,
       "score_model": "pattern_score_only_v1"
     },
     {
-      "stock_id": "2845",
-      "name": "遠東銀",
-      "industry": "金融",
+      "stock_id": "1101",
+      "name": "台泥",
+      "industry": "水泥",
       "market": "TWSE",
-      "close": 13.45,
-      "entry_price": 13.65,
-      "current_price": 13.45,
+      "close": 24.3,
+      "entry_price": 24.85,
+      "current_price": 24.3,
       "sources": [
         "chips",
         "right_top"
@@ -483,31 +383,31 @@
       "tags": [
         "持續成長",
         "準突破",
-        "接近60日高",
-        "量能升溫"
+        "接近週線箱頂",
+        "千張大戶連增",
+        "400張同步"
       ],
       "metrics": {
-        "market_cap": 402.1,
-        "bbw": 5.03,
-        "week_chg_pct": -1.1,
-        "big_pct_1000": 70.55,
-        "big_pct_400": 75.38,
-        "deviation": 5.73,
-        "vol_20d_avg": 9683.0,
-        "price_vol_ratio": 1.2,
-        "vol_ratio": 0.8,
-        "change_pct": -1.47,
-        "breakout_key_level": 13.65,
-        "breakout_distance_pct": -1.47,
-        "pre_breakout_key_level": 13.65,
-        "pre_breakout_distance_pct": -1.47
+        "market_cap": 2224.6,
+        "bbw": 5.39,
+        "week_chg_pct": -2.21,
+        "big_pct_1000": 52.69,
+        "big_pct_400": 56.54,
+        "deviation": 1.71,
+        "vol_20d_avg": 26771.6,
+        "vol_ratio": 1.1,
+        "change_pct": -2.21,
+        "breakout_key_level": 24.85,
+        "breakout_distance_pct": -2.21,
+        "pre_breakout_key_level": 24.85,
+        "pre_breakout_distance_pct": -2.21
       },
       "breakout_stage": "pre_breakout",
       "breakout_stage_label": "準突破",
-      "breakout_key_level": 13.65,
-      "breakout_distance_pct": -1.47,
+      "breakout_key_level": 24.85,
+      "breakout_distance_pct": -2.21,
       "signal_types": [
-        "pre_price"
+        "pre_consolidation"
       ],
       "is_pre_breakout": true,
       "is_consolidation_breakout": false,
@@ -515,11 +415,138 @@
       "is_price_breakout": false,
       "source_count": 2,
       "pattern_state": "先觀察",
-      "pattern_score": 44.4,
+      "pattern_score": 50.0,
       "pattern_subs": {
         "結構": 22,
-        "型態": 8.4,
+        "型態": 14.0,
         "量價": 0,
+        "位置": 9,
+        "籌碼": 5
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "收斂接近pivot",
+        "大戶上升"
+      ],
+      "patterns": [
+        "tight_pivot"
+      ],
+      "key_level": 25.7,
+      "invalidation": 23.9,
+      "pattern_confidence": 0.7,
+      "focus_candidate": true,
+      "score": 50.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "1316",
+      "name": "上曜",
+      "industry": "建材營造",
+      "market": "TWSE",
+      "close": 11.15,
+      "entry_price": 11.15,
+      "current_price": 11.15,
+      "sources": [
+        "right_top"
+      ],
+      "tags": [
+        "準突破",
+        "接近週線箱頂",
+        "週量升溫"
+      ],
+      "metrics": {
+        "vol_20d_avg": 4222.1,
+        "vol_ratio": 3.9,
+        "change_pct": -0.45,
+        "big_pct_1000": 33.17,
+        "big_pct_400": 42.79,
+        "breakout_key_level": 11.2,
+        "breakout_distance_pct": -0.45,
+        "pre_breakout_key_level": 11.2,
+        "pre_breakout_distance_pct": -0.45
+      },
+      "breakout_stage": "pre_breakout",
+      "breakout_stage_label": "準突破",
+      "breakout_key_level": 11.2,
+      "breakout_distance_pct": -0.45,
+      "signal_types": [
+        "pre_consolidation"
+      ],
+      "is_pre_breakout": true,
+      "is_consolidation_breakout": false,
+      "is_momentum_breakout": false,
+      "is_price_breakout": false,
+      "source_count": 1,
+      "pattern_state": "先觀察",
+      "pattern_score": 45.0,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 0.0,
+        "量價": 11,
+        "位置": 7,
+        "籌碼": 0
+      },
+      "pattern_tags": [
+        "均線多頭"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "focus_candidate": true,
+      "score": 45.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2845",
+      "name": "遠東銀",
+      "industry": "金融",
+      "market": "TWSE",
+      "close": 13.4,
+      "entry_price": 13.65,
+      "current_price": 13.4,
+      "sources": [
+        "chips",
+        "right_top"
+      ],
+      "tags": [
+        "持續成長",
+        "準突破",
+        "接近週線箱頂"
+      ],
+      "metrics": {
+        "market_cap": 402.1,
+        "bbw": 5.03,
+        "week_chg_pct": -1.83,
+        "big_pct_1000": 70.55,
+        "big_pct_400": 75.38,
+        "deviation": 5.73,
+        "vol_20d_avg": 9452.4,
+        "vol_ratio": 1.1,
+        "change_pct": -1.83,
+        "breakout_key_level": 13.65,
+        "breakout_distance_pct": -1.83,
+        "pre_breakout_key_level": 13.65,
+        "pre_breakout_distance_pct": -1.83
+      },
+      "breakout_stage": "pre_breakout",
+      "breakout_stage_label": "準突破",
+      "breakout_key_level": 13.65,
+      "breakout_distance_pct": -1.83,
+      "signal_types": [
+        "pre_consolidation"
+      ],
+      "is_pre_breakout": true,
+      "is_consolidation_breakout": false,
+      "is_momentum_breakout": false,
+      "is_price_breakout": false,
+      "source_count": 2,
+      "pattern_state": "先觀察",
+      "pattern_score": 42.4,
+      "pattern_subs": {
+        "結構": 14,
+        "型態": 8.4,
+        "量價": 6,
         "位置": 9,
         "籌碼": 5
       },
@@ -535,17 +562,17 @@
       "invalidation": null,
       "pattern_confidence": 0.6,
       "focus_candidate": true,
-      "score": 44.4,
+      "score": 42.4,
       "score_model": "pattern_score_only_v1"
     },
     {
-      "stock_id": "3006",
-      "name": "晶豪科",
+      "stock_id": "3189",
+      "name": "景碩",
       "industry": "半導體業",
       "market": "TWSE",
-      "close": 274.0,
-      "entry_price": 274.0,
-      "current_price": 274.0,
+      "close": 899.0,
+      "entry_price": 899.0,
+      "current_price": 899.0,
       "sources": [
         "right_top"
       ],
@@ -555,21 +582,21 @@
         "量能升溫"
       ],
       "metrics": {
-        "vol_20d_avg": 11819.5,
+        "vol_20d_avg": 16151.8,
         "price_vol_ratio": 1.2,
-        "vol_ratio": 0.7,
-        "change_pct": 6.82,
-        "big_pct_1000": 48.57,
-        "big_pct_400": 58.71,
-        "breakout_key_level": 282.0,
-        "breakout_distance_pct": -2.84,
-        "pre_breakout_key_level": 282.0,
-        "pre_breakout_distance_pct": -2.84
+        "vol_ratio": 0.9,
+        "change_pct": 10.85,
+        "big_pct_1000": 68.17,
+        "big_pct_400": 73.44,
+        "breakout_key_level": 914.0,
+        "breakout_distance_pct": -1.64,
+        "pre_breakout_key_level": 914.0,
+        "pre_breakout_distance_pct": -1.64
       },
       "breakout_stage": "pre_breakout",
       "breakout_stage_label": "準突破",
-      "breakout_key_level": 282.0,
-      "breakout_distance_pct": -2.84,
+      "breakout_key_level": 914.0,
+      "breakout_distance_pct": -1.64,
       "signal_types": [
         "pre_price"
       ],
@@ -579,12 +606,12 @@
       "is_price_breakout": false,
       "source_count": 1,
       "pattern_state": "先觀察",
-      "pattern_score": 44.4,
+      "pattern_score": 42.4,
       "pattern_subs": {
         "結構": 27,
         "型態": 8.4,
         "量價": 0,
-        "位置": 9,
+        "位置": 7,
         "籌碼": 0
       },
       "pattern_tags": [
@@ -594,45 +621,47 @@
       "patterns": [
         "box_near_top"
       ],
-      "key_level": 285.5,
+      "key_level": 939.0,
       "invalidation": null,
       "pattern_confidence": 0.6,
       "focus_candidate": true,
-      "score": 44.4,
+      "score": 42.4,
       "score_model": "pattern_score_only_v1"
     },
     {
-      "stock_id": "2851",
-      "name": "中再保",
-      "industry": "金融保險",
-      "market": "TWSE",
-      "close": 45.7,
-      "entry_price": 45.7,
-      "current_price": 45.7,
+      "stock_id": "4931",
+      "name": "新盛力",
+      "industry": "電腦及週邊設備業",
+      "market": "TPEX",
+      "close": 272.5,
+      "entry_price": 272.5,
+      "current_price": 272.5,
       "sources": [
         "right_top"
       ],
       "tags": [
         "準突破",
         "接近60日高",
+        "千張大戶連增",
+        "400張同步",
         "量能升溫"
       ],
       "metrics": {
-        "vol_20d_avg": 4020.7,
-        "price_vol_ratio": 2.4,
-        "vol_ratio": 1.8,
-        "change_pct": -2.97,
-        "big_pct_1000": 66.07,
-        "big_pct_400": 71.51,
-        "breakout_key_level": 47.1,
-        "breakout_distance_pct": -2.97,
-        "pre_breakout_key_level": 47.1,
-        "pre_breakout_distance_pct": -2.97
+        "vol_20d_avg": 7080.9,
+        "price_vol_ratio": 1.5,
+        "vol_ratio": 1.1,
+        "change_pct": -2.68,
+        "big_pct_1000": 24.71,
+        "big_pct_400": 40.24,
+        "breakout_key_level": 280.0,
+        "breakout_distance_pct": -2.68,
+        "pre_breakout_key_level": 280.0,
+        "pre_breakout_distance_pct": -2.68
       },
       "breakout_stage": "pre_breakout",
       "breakout_stage_label": "準突破",
-      "breakout_key_level": 47.1,
-      "breakout_distance_pct": -2.97,
+      "breakout_key_level": 280.0,
+      "breakout_distance_pct": -2.68,
       "signal_types": [
         "pre_price"
       ],
@@ -642,11 +671,11 @@
       "is_price_breakout": false,
       "source_count": 1,
       "pattern_state": "先觀察",
-      "pattern_score": 32.0,
+      "pattern_score": 42.0,
       "pattern_subs": {
         "結構": 22,
         "型態": 0.0,
-        "量價": 5,
+        "量價": 15,
         "位置": 5,
         "籌碼": 0
       },
@@ -658,79 +687,57 @@
       "invalidation": null,
       "pattern_confidence": 1.0,
       "focus_candidate": true,
-      "score": 32.0,
+      "score": 42.0,
       "score_model": "pattern_score_only_v1"
     }
   ],
   "results": [
     {
-      "stock_id": "2889",
-      "name": "國票金",
-      "industry": "金融保險",
-      "market": "TWSE",
-      "close": 16.2,
-      "entry_price": 16.2,
-      "current_price": 16.2,
+      "stock_id": "2486",
+      "name": "一詮",
+      "industry": "光電",
+      "market": "",
+      "close": 261.0,
+      "entry_price": 243.5,
+      "current_price": 261.0,
       "sources": [
-        "right_top"
+        "big_holder_trend"
       ],
       "tags": [
-        "盤整突破",
-        "動能突破",
-        "日線啟動",
-        "低乖離",
-        "雙重符合",
-        "週量強放大",
-        "日量強放大"
+        "千張單週激增"
       ],
       "metrics": {
-        "vol_20d_avg": 8140.1,
-        "daily_vol_today": 36309.0,
-        "daily_vol_5d_avg": 8343.2,
-        "daily_vol_ratio": 4.3,
-        "vol_ratio": 2.6,
-        "change_pct": 2.86,
-        "big_pct_1000": 70.71,
-        "big_pct_400": 73.32,
-        "breakout_key_level": 15.8,
-        "breakout_distance_pct": 2.53
+        "week_chg_pct": 7.98,
+        "big_pct_1000": 33.75,
+        "big_pct_400": 40.92,
+        "max_gain_60d": 63.45,
+        "pullback_from_60d_high_pct": -12.88,
+        "vol_20d_avg": 8543.0,
+        "since_entry_pct": 7.19
       },
-      "breakout_stage": "confirmed_breakout",
-      "breakout_stage_label": "突破確認",
-      "breakout_key_level": 15.8,
-      "breakout_distance_pct": 2.53,
-      "signal_types": [
-        "consolidation",
-        "momentum"
-      ],
-      "is_pre_breakout": false,
-      "is_consolidation_breakout": true,
-      "is_momentum_breakout": true,
-      "is_price_breakout": false,
       "source_count": 1,
       "pattern_state": "值得看圖",
-      "pattern_score": 77,
+      "pattern_score": 70.8,
       "pattern_subs": {
         "結構": 27,
-        "型態": 25,
-        "量價": 10,
+        "型態": 19.8,
+        "量價": 5,
         "位置": 15,
-        "籌碼": 0
+        "籌碼": 4
       },
       "pattern_tags": [
         "均線多頭",
-        "長盤突破首日",
-        "平台突破回測"
+        "W底突破頸線",
+        "大戶上升"
       ],
       "patterns": [
-        "long_consolidation_breakout",
-        "platform_breakout_retest"
+        "w_bottom_breakout"
       ],
-      "key_level": 16.1,
-      "invalidation": 15.62,
-      "pattern_confidence": 1.0,
+      "key_level": 249.5,
+      "invalidation": 242.01,
+      "pattern_confidence": 0.9,
       "focus_candidate": true,
-      "score": 77,
+      "score": 70.8,
       "score_model": "pattern_score_only_v1"
     },
     {
@@ -738,9 +745,9 @@
       "name": "大成鋼",
       "industry": "鋼鐵",
       "market": "",
-      "close": 48.65,
+      "close": 48.4,
       "entry_price": 50.3,
-      "current_price": 48.65,
+      "current_price": 48.4,
       "sources": [
         "big_holder_trend"
       ],
@@ -755,7 +762,7 @@
         "max_gain_60d": 29.16,
         "pullback_from_60d_high_pct": -0.4,
         "vol_20d_avg": 22762.0,
-        "since_entry_pct": -3.28
+        "since_entry_pct": -3.78
       },
       "source_count": 1,
       "pattern_state": "值得看圖",
@@ -784,130 +791,13 @@
       "score_model": "pattern_score_only_v1"
     },
     {
-      "stock_id": "2486",
-      "name": "一詮",
-      "industry": "光電",
+      "stock_id": "6214",
+      "name": "精誠",
+      "industry": "資服",
       "market": "",
-      "close": 259.0,
-      "entry_price": 243.5,
-      "current_price": 259.0,
-      "sources": [
-        "big_holder_trend"
-      ],
-      "tags": [
-        "千張單週激增"
-      ],
-      "metrics": {
-        "week_chg_pct": 7.98,
-        "big_pct_1000": 33.75,
-        "big_pct_400": 40.92,
-        "max_gain_60d": 63.45,
-        "pullback_from_60d_high_pct": -12.88,
-        "vol_20d_avg": 8543.0,
-        "since_entry_pct": 6.37
-      },
-      "source_count": 1,
-      "pattern_state": "值得看圖",
-      "pattern_score": 64.7,
-      "pattern_subs": {
-        "結構": 27,
-        "型態": 18.7,
-        "量價": 0,
-        "位置": 15,
-        "籌碼": 4
-      },
-      "pattern_tags": [
-        "均線多頭",
-        "頸線回測",
-        "大戶上升"
-      ],
-      "patterns": [
-        "w_bottom_retest"
-      ],
-      "key_level": 249.5,
-      "invalidation": 242.01,
-      "pattern_confidence": 0.85,
-      "focus_candidate": true,
-      "score": 64.7,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
-      "stock_id": "2881",
-      "name": "富邦金",
-      "industry": "金融",
-      "market": "TWSE",
-      "close": 141.5,
-      "entry_price": 134.0,
-      "current_price": 141.5,
-      "sources": [
-        "big_holder_trend",
-        "right_top"
-      ],
-      "tags": [
-        "400張4週連增",
-        "價格突破",
-        "60日新高",
-        "EMA多頭",
-        "400張同步"
-      ],
-      "metrics": {
-        "week_chg_pct": 3.47,
-        "big_pct_1000": 84.28,
-        "big_pct_400": 86.49,
-        "max_gain_60d": 25.91,
-        "pullback_from_60d_high_pct": -3.25,
-        "vol_20d_avg": 20446.3,
-        "since_entry_pct": 5.6,
-        "price_vol_ratio": 1.4,
-        "vol_ratio": 0.6,
-        "change_pct": 5.6,
-        "breakout_key_level": 141.5,
-        "breakout_distance_pct": 0.0
-      },
-      "breakout_stage": "confirmed_breakout",
-      "breakout_stage_label": "突破確認",
-      "breakout_key_level": 141.5,
-      "breakout_distance_pct": 0.0,
-      "signal_types": [
-        "price"
-      ],
-      "is_pre_breakout": false,
-      "is_consolidation_breakout": false,
-      "is_momentum_breakout": false,
-      "is_price_breakout": true,
-      "source_count": 2,
-      "pattern_state": "值得看圖",
-      "pattern_score": 55.8,
-      "pattern_subs": {
-        "結構": 22,
-        "型態": 19.8,
-        "量價": 0,
-        "位置": 9,
-        "籌碼": 5
-      },
-      "pattern_tags": [
-        "均線多頭",
-        "W底突破頸線",
-        "大戶上升"
-      ],
-      "patterns": [
-        "w_bottom_breakout"
-      ],
-      "key_level": 132.5,
-      "invalidation": 128.53,
-      "pattern_confidence": 0.9,
-      "focus_candidate": true,
-      "score": 55.8,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
-      "stock_id": "2634",
-      "name": "漢翔",
-      "industry": "航運",
-      "market": "",
-      "close": 70.3,
-      "entry_price": 69.3,
-      "current_price": 70.3,
+      "close": 181.0,
+      "entry_price": 179.5,
+      "current_price": 181.0,
       "sources": [
         "big_holder_trend"
       ],
@@ -916,22 +806,22 @@
         "400張單週激增"
       ],
       "metrics": {
-        "week_chg_pct": -1.84,
-        "big_pct_1000": 53.55,
-        "big_pct_400": 55.68,
-        "max_gain_60d": 62.89,
-        "pullback_from_60d_high_pct": -5.46,
-        "vol_20d_avg": 46948.0,
-        "since_entry_pct": 1.44
+        "week_chg_pct": 4.36,
+        "big_pct_1000": 53.78,
+        "big_pct_400": 62.81,
+        "max_gain_60d": 40.62,
+        "pullback_from_60d_high_pct": -0.28,
+        "vol_20d_avg": 4276.0,
+        "since_entry_pct": 0.84
       },
       "source_count": 1,
-      "pattern_state": "先觀察",
-      "pattern_score": 73.8,
+      "pattern_state": "值得看圖",
+      "pattern_score": 69.8,
       "pattern_subs": {
         "結構": 27,
         "型態": 19.8,
-        "量價": 16,
-        "位置": 7,
+        "量價": 10,
+        "位置": 9,
         "籌碼": 4
       },
       "pattern_tags": [
@@ -943,11 +833,70 @@
       "patterns": [
         "w_bottom_breakout"
       ],
-      "key_level": 64.5,
-      "invalidation": 62.56,
+      "key_level": 154.5,
+      "invalidation": 149.87,
       "pattern_confidence": 0.9,
-      "focus_candidate": false,
-      "score": 73.8,
+      "focus_candidate": true,
+      "score": 69.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2889",
+      "name": "國票金",
+      "industry": "金融保險",
+      "market": "TWSE",
+      "close": 15.9,
+      "entry_price": 15.9,
+      "current_price": 15.9,
+      "sources": [
+        "right_top"
+      ],
+      "tags": [
+        "盤整突破",
+        "週量強放大"
+      ],
+      "metrics": {
+        "vol_20d_avg": 8747.0,
+        "vol_ratio": 3.5,
+        "change_pct": 0.95,
+        "big_pct_1000": 70.71,
+        "big_pct_400": 73.32,
+        "breakout_key_level": 15.8,
+        "breakout_distance_pct": 0.63
+      },
+      "breakout_stage": "confirmed_breakout",
+      "breakout_stage_label": "突破確認",
+      "breakout_key_level": 15.8,
+      "breakout_distance_pct": 0.63,
+      "signal_types": [
+        "consolidation"
+      ],
+      "is_pre_breakout": false,
+      "is_consolidation_breakout": true,
+      "is_momentum_breakout": false,
+      "is_price_breakout": false,
+      "source_count": 1,
+      "pattern_state": "值得看圖",
+      "pattern_score": 67.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 21.8,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 0
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "平台突破回測"
+      ],
+      "patterns": [
+        "platform_breakout_retest"
+      ],
+      "key_level": 16.1,
+      "invalidation": 15.62,
+      "pattern_confidence": 0.95,
+      "focus_candidate": true,
+      "score": 67.8,
       "score_model": "pattern_score_only_v1"
     },
     {
@@ -1024,152 +973,66 @@
       "score_model": "pattern_score_only_v1"
     },
     {
-      "stock_id": "2357",
-      "name": "華碩",
-      "industry": "電腦",
-      "market": "",
-      "close": 968.0,
-      "entry_price": 921.0,
-      "current_price": 968.0,
+      "stock_id": "2421",
+      "name": "建準",
+      "industry": "電子工業",
+      "market": "TWSE",
+      "close": 163.5,
+      "entry_price": 163.5,
+      "current_price": 163.5,
       "sources": [
-        "big_holder_trend"
+        "right_top"
       ],
       "tags": [
-        "千張4週連增",
-        "400張4週連增"
+        "準突破",
+        "接近60日高",
+        "量能升溫"
       ],
       "metrics": {
-        "week_chg_pct": -7.53,
-        "big_pct_1000": 65.21,
-        "big_pct_400": 74.82,
-        "max_gain_60d": 51.6,
-        "pullback_from_60d_high_pct": -7.53,
-        "vol_20d_avg": 4909.0,
-        "since_entry_pct": 5.1
+        "vol_20d_avg": 3568.1,
+        "price_vol_ratio": 1.5,
+        "vol_ratio": 1.3,
+        "change_pct": 14.74,
+        "big_pct_1000": 48.35,
+        "big_pct_400": 59.14,
+        "breakout_key_level": 168.5,
+        "breakout_distance_pct": -2.97,
+        "pre_breakout_key_level": 168.5,
+        "pre_breakout_distance_pct": -2.97
       },
+      "breakout_stage": "pre_breakout",
+      "breakout_stage_label": "準突破",
+      "breakout_key_level": 168.5,
+      "breakout_distance_pct": -2.97,
+      "signal_types": [
+        "pre_price"
+      ],
+      "is_pre_breakout": true,
+      "is_consolidation_breakout": false,
+      "is_momentum_breakout": false,
+      "is_price_breakout": false,
       "source_count": 1,
       "pattern_state": "先觀察",
-      "pattern_score": 65.8,
+      "pattern_score": 63.7,
       "pattern_subs": {
         "結構": 27,
-        "型態": 19.8,
+        "型態": 18.7,
         "量價": 10,
-        "位置": 5,
-        "籌碼": 4
+        "位置": 8,
+        "籌碼": 0
       },
       "pattern_tags": [
         "均線多頭",
-        "W底突破頸線",
-        "量縮整理",
-        "大戶上升"
+        "頸線回測"
       ],
       "patterns": [
-        "w_bottom_breakout"
+        "w_bottom_retest"
       ],
-      "key_level": 780.0,
-      "invalidation": 756.6,
-      "pattern_confidence": 0.9,
-      "focus_candidate": false,
-      "score": 65.8,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
-      "stock_id": "6214",
-      "name": "精誠",
-      "industry": "資服",
-      "market": "",
-      "close": 182.5,
-      "entry_price": 179.5,
-      "current_price": 182.5,
-      "sources": [
-        "big_holder_trend"
-      ],
-      "tags": [
-        "千張單週激增",
-        "400張單週激增"
-      ],
-      "metrics": {
-        "week_chg_pct": 4.36,
-        "big_pct_1000": 53.78,
-        "big_pct_400": 62.81,
-        "max_gain_60d": 40.62,
-        "pullback_from_60d_high_pct": -0.28,
-        "vol_20d_avg": 4276.0,
-        "since_entry_pct": 1.67
-      },
-      "source_count": 1,
-      "pattern_state": "先觀察",
-      "pattern_score": 65.8,
-      "pattern_subs": {
-        "結構": 27,
-        "型態": 19.8,
-        "量價": 10,
-        "位置": 5,
-        "籌碼": 4
-      },
-      "pattern_tags": [
-        "均線多頭",
-        "W底突破頸線",
-        "量縮整理",
-        "大戶上升"
-      ],
-      "patterns": [
-        "w_bottom_breakout"
-      ],
-      "key_level": 154.5,
-      "invalidation": 149.87,
-      "pattern_confidence": 0.9,
-      "focus_candidate": false,
-      "score": 65.8,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
-      "stock_id": "1216",
-      "name": "統一",
-      "industry": "食品",
-      "market": "",
-      "close": 77.1,
-      "entry_price": 77.5,
-      "current_price": 77.1,
-      "sources": [
-        "chips"
-      ],
-      "tags": [
-        "持續成長"
-      ],
-      "metrics": {
-        "market_cap": 4363.8,
-        "bbw": 8.57,
-        "week_chg_pct": -1.41,
-        "big_pct_1000": 86.28,
-        "big_pct_400": 89.8,
-        "deviation": 3.41,
-        "vol_20d_avg": 17888.0
-      },
-      "source_count": 1,
-      "pattern_state": "先觀察",
-      "pattern_score": 62.0,
-      "pattern_subs": {
-        "結構": 30,
-        "型態": 14.0,
-        "量價": 5,
-        "位置": 9,
-        "籌碼": 4
-      },
-      "pattern_tags": [
-        "均線多頭",
-        "收斂接近pivot",
-        "量縮整理",
-        "大戶上升"
-      ],
-      "patterns": [
-        "tight_pivot"
-      ],
-      "key_level": 80.7,
-      "invalidation": 75.05,
-      "pattern_confidence": 0.7,
-      "focus_candidate": false,
-      "score": 62.0,
+      "key_level": 157.5,
+      "invalidation": 152.78,
+      "pattern_confidence": 0.85,
+      "focus_candidate": true,
+      "score": 63.7,
       "score_model": "pattern_score_only_v1"
     },
     {
@@ -1177,9 +1040,9 @@
       "name": "神達",
       "industry": "電腦",
       "market": "",
-      "close": 91.4,
+      "close": 92.1,
       "entry_price": 90.0,
-      "current_price": 91.4,
+      "current_price": 92.1,
       "sources": [
         "chips"
       ],
@@ -1190,7 +1053,7 @@
       "metrics": {
         "market_cap": 298.8,
         "bbw": 10.5,
-        "week_chg_pct": 1.44,
+        "week_chg_pct": 2.33,
         "big_pct_1000": 53.74,
         "big_pct_400": 56.91,
         "deviation": 3.85,
@@ -1223,181 +1086,13 @@
       "score_model": "pattern_score_only_v1"
     },
     {
-      "stock_id": "2030",
-      "name": "彰源",
-      "industry": "鋼鐵",
-      "market": "TWSE",
-      "close": 23.0,
-      "entry_price": 22.3,
-      "current_price": 23.0,
-      "sources": [
-        "big_holder_trend",
-        "right_top"
-      ],
-      "tags": [
-        "400張4週連增",
-        "準突破",
-        "接近60日高",
-        "400張同步",
-        "量能升溫"
-      ],
-      "metrics": {
-        "week_chg_pct": 8.52,
-        "big_pct_1000": 46.88,
-        "big_pct_400": 52.17,
-        "max_gain_60d": 32.34,
-        "pullback_from_60d_high_pct": 0.0,
-        "vol_20d_avg": 3536.4,
-        "since_entry_pct": 3.14,
-        "price_vol_ratio": 1.2,
-        "vol_ratio": 2.1,
-        "change_pct": 3.14,
-        "breakout_key_level": 23.65,
-        "breakout_distance_pct": -2.75,
-        "pre_breakout_key_level": 23.65,
-        "pre_breakout_distance_pct": -2.75
-      },
-      "breakout_stage": "pre_breakout",
-      "breakout_stage_label": "準突破",
-      "breakout_key_level": 23.65,
-      "breakout_distance_pct": -2.75,
-      "signal_types": [
-        "pre_price"
-      ],
-      "is_pre_breakout": true,
-      "is_consolidation_breakout": false,
-      "is_momentum_breakout": false,
-      "is_price_breakout": false,
-      "source_count": 2,
-      "pattern_state": "先觀察",
-      "pattern_score": 61.8,
-      "pattern_subs": {
-        "結構": 27,
-        "型態": 19.8,
-        "量價": 5,
-        "位置": 5,
-        "籌碼": 5
-      },
-      "pattern_tags": [
-        "均線多頭",
-        "W底突破頸線",
-        "大戶上升"
-      ],
-      "patterns": [
-        "w_bottom_breakout"
-      ],
-      "key_level": 21.9,
-      "invalidation": 21.24,
-      "pattern_confidence": 0.9,
-      "focus_candidate": true,
-      "score": 61.8,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
-      "stock_id": "1709",
-      "name": "和益",
-      "industry": "化學",
-      "market": "",
-      "close": 34.15,
-      "entry_price": 33.3,
-      "current_price": 34.15,
-      "sources": [
-        "big_holder_trend"
-      ],
-      "tags": [
-        "千張4週連增",
-        "400張4週連增"
-      ],
-      "metrics": {
-        "week_chg_pct": 9.72,
-        "big_pct_1000": 62.1,
-        "big_pct_400": 71.53,
-        "max_gain_60d": 71.65,
-        "pullback_from_60d_high_pct": 0.0,
-        "vol_20d_avg": 7218.0,
-        "since_entry_pct": 2.55
-      },
-      "source_count": 1,
-      "pattern_state": "先觀察",
-      "pattern_score": 61.7,
-      "pattern_subs": {
-        "結構": 27,
-        "型態": 18.7,
-        "量價": 6,
-        "位置": 6,
-        "籌碼": 4
-      },
-      "pattern_tags": [
-        "均線多頭",
-        "頸線回測",
-        "大戶上升"
-      ],
-      "patterns": [
-        "w_bottom_retest"
-      ],
-      "key_level": 33.85,
-      "invalidation": 32.83,
-      "pattern_confidence": 0.85,
-      "focus_candidate": false,
-      "score": 61.7,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
-      "stock_id": "1727",
-      "name": "中華化",
-      "industry": "化學",
-      "market": "",
-      "close": 96.9,
-      "entry_price": 90.2,
-      "current_price": 96.9,
-      "sources": [
-        "big_holder_trend"
-      ],
-      "tags": [
-        "400張單週激增"
-      ],
-      "metrics": {
-        "week_chg_pct": 20.11,
-        "big_pct_1000": 49.51,
-        "big_pct_400": 56.42,
-        "max_gain_60d": 63.72,
-        "pullback_from_60d_high_pct": -11.57,
-        "vol_20d_avg": 4047.0,
-        "since_entry_pct": 7.43
-      },
-      "source_count": 1,
-      "pattern_state": "先觀察",
-      "pattern_score": 60.8,
-      "pattern_subs": {
-        "結構": 27,
-        "型態": 19.8,
-        "量價": 5,
-        "位置": 5,
-        "籌碼": 4
-      },
-      "pattern_tags": [
-        "均線多頭",
-        "W底突破頸線",
-        "大戶上升"
-      ],
-      "patterns": [
-        "w_bottom_breakout"
-      ],
-      "key_level": 82.3,
-      "invalidation": 79.83,
-      "pattern_confidence": 0.9,
-      "focus_candidate": false,
-      "score": 60.8,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
       "stock_id": "2887",
       "name": "台新新光金",
       "industry": "金融",
       "market": "",
-      "close": 37.3,
+      "close": 37.5,
       "entry_price": 37.25,
-      "current_price": 37.3,
+      "current_price": 37.5,
       "sources": [
         "big_holder_trend"
       ],
@@ -1412,15 +1107,15 @@
         "max_gain_60d": 64.13,
         "pullback_from_60d_high_pct": -1.32,
         "vol_20d_avg": 58353.0,
-        "since_entry_pct": 0.13
+        "since_entry_pct": 0.67
       },
       "source_count": 1,
       "pattern_state": "先觀察",
-      "pattern_score": 56.4,
+      "pattern_score": 61.4,
       "pattern_subs": {
         "結構": 30,
         "型態": 8.4,
-        "量價": 5,
+        "量價": 10,
         "位置": 9,
         "籌碼": 4
       },
@@ -1437,7 +1132,130 @@
       "invalidation": null,
       "pattern_confidence": 0.6,
       "focus_candidate": false,
-      "score": 56.4,
+      "score": 61.4,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2890",
+      "name": "永豐金",
+      "industry": "金融",
+      "market": "",
+      "close": 39.8,
+      "entry_price": 39.6,
+      "current_price": 39.8,
+      "sources": [
+        "chips",
+        "big_holder_trend"
+      ],
+      "tags": [
+        "持續成長",
+        "千張4週連增"
+      ],
+      "metrics": {
+        "market_cap": 1358.2,
+        "bbw": 5.75,
+        "week_chg_pct": -2.34,
+        "big_pct_1000": 78.11,
+        "big_pct_400": 81.3,
+        "deviation": 9.85,
+        "vol_20d_avg": 27324.0,
+        "max_gain_60d": 42.03,
+        "pullback_from_60d_high_pct": -5.49,
+        "since_entry_pct": 0.51
+      },
+      "source_count": 2,
+      "pattern_state": "先觀察",
+      "pattern_score": 57.0,
+      "pattern_subs": {
+        "結構": 24,
+        "型態": 14.0,
+        "量價": 5,
+        "位置": 9,
+        "籌碼": 5
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "收斂接近pivot",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [
+        "tight_pivot"
+      ],
+      "key_level": 42.3,
+      "invalidation": 39.34,
+      "pattern_confidence": 0.7,
+      "focus_candidate": false,
+      "score": 57.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2881",
+      "name": "富邦金",
+      "industry": "金融",
+      "market": "TWSE",
+      "close": 144.0,
+      "entry_price": 134.0,
+      "current_price": 144.0,
+      "sources": [
+        "big_holder_trend",
+        "right_top"
+      ],
+      "tags": [
+        "400張4週連增",
+        "價格突破",
+        "60日新高",
+        "EMA多頭",
+        "400張同步"
+      ],
+      "metrics": {
+        "week_chg_pct": 3.47,
+        "big_pct_1000": 84.28,
+        "big_pct_400": 86.49,
+        "max_gain_60d": 25.91,
+        "pullback_from_60d_high_pct": -3.25,
+        "vol_20d_avg": 19634.2,
+        "since_entry_pct": 7.46,
+        "price_vol_ratio": 1.3,
+        "vol_ratio": 0.7,
+        "change_pct": 7.46,
+        "breakout_key_level": 141.5,
+        "breakout_distance_pct": 1.77
+      },
+      "breakout_stage": "confirmed_breakout",
+      "breakout_stage_label": "突破確認",
+      "breakout_key_level": 141.5,
+      "breakout_distance_pct": 1.77,
+      "signal_types": [
+        "price"
+      ],
+      "is_pre_breakout": false,
+      "is_consolidation_breakout": false,
+      "is_momentum_breakout": false,
+      "is_price_breakout": true,
+      "source_count": 2,
+      "pattern_state": "先觀察",
+      "pattern_score": 56.8,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 19.8,
+        "量價": 5,
+        "位置": 5,
+        "籌碼": 5
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 132.5,
+      "invalidation": 128.53,
+      "pattern_confidence": 0.9,
+      "focus_candidate": false,
+      "score": 56.8,
       "score_model": "pattern_score_only_v1"
     },
     {
@@ -1463,9 +1281,9 @@
         "big_pct_400": 85.92,
         "deviation": 0.7,
         "vol_20d_avg": 3974.0,
-        "today_vol_ratio": 2.2,
-        "vol_today": 6039.0,
-        "vol_10d_avg": 2749.0
+        "today_vol_ratio": 1.51,
+        "vol_today": 4671.0,
+        "vol_10d_avg": 3097.0
       },
       "source_count": 2,
       "pattern_state": "先觀察",
@@ -1493,13 +1311,110 @@
       "score_model": "pattern_score_only_v1"
     },
     {
+      "stock_id": "1727",
+      "name": "中華化",
+      "industry": "化學",
+      "market": "",
+      "close": 98.1,
+      "entry_price": 90.2,
+      "current_price": 98.1,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "tags": [
+        "400張單週激增"
+      ],
+      "metrics": {
+        "week_chg_pct": 20.11,
+        "big_pct_1000": 49.51,
+        "big_pct_400": 56.42,
+        "max_gain_60d": 63.72,
+        "pullback_from_60d_high_pct": -11.57,
+        "vol_20d_avg": 4047.0,
+        "since_entry_pct": 8.76
+      },
+      "source_count": 1,
+      "pattern_state": "先觀察",
+      "pattern_score": 55.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 0,
+        "位置": 5,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 82.3,
+      "invalidation": 79.83,
+      "pattern_confidence": 0.9,
+      "focus_candidate": false,
+      "score": 55.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "1216",
+      "name": "統一",
+      "industry": "食品",
+      "market": "",
+      "close": 75.7,
+      "entry_price": 77.5,
+      "current_price": 75.7,
+      "sources": [
+        "chips"
+      ],
+      "tags": [
+        "持續成長"
+      ],
+      "metrics": {
+        "market_cap": 4363.8,
+        "bbw": 8.57,
+        "week_chg_pct": -2.32,
+        "big_pct_1000": 86.28,
+        "big_pct_400": 89.8,
+        "deviation": 3.41,
+        "vol_20d_avg": 17888.0
+      },
+      "source_count": 1,
+      "pattern_state": "先觀察",
+      "pattern_score": 54.0,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 14.0,
+        "量價": 5,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "收斂接近pivot",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [
+        "tight_pivot"
+      ],
+      "key_level": 80.7,
+      "invalidation": 75.05,
+      "pattern_confidence": 0.7,
+      "focus_candidate": false,
+      "score": 54.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
       "stock_id": "1904",
       "name": "正隆",
       "industry": "造紙",
       "market": "",
-      "close": 25.45,
+      "close": 25.15,
       "entry_price": 25.7,
-      "current_price": 25.45,
+      "current_price": 25.15,
       "sources": [
         "big_holder_trend"
       ],
@@ -1513,7 +1428,7 @@
         "max_gain_60d": 36.7,
         "pullback_from_60d_high_pct": 0.0,
         "vol_20d_avg": 3084.0,
-        "since_entry_pct": -0.97
+        "since_entry_pct": -2.14
       },
       "source_count": 1,
       "pattern_state": "先觀察",
@@ -1528,6 +1443,7 @@
       "pattern_tags": [
         "均線多頭",
         "箱頂整理",
+        "量縮整理",
         "大戶上升"
       ],
       "patterns": [
@@ -1545,9 +1461,9 @@
       "name": "興富發",
       "industry": "營建",
       "market": "",
-      "close": 47.75,
+      "close": 47.0,
       "entry_price": 48.8,
-      "current_price": 47.75,
+      "current_price": 47.0,
       "sources": [
         "big_holder_trend"
       ],
@@ -1562,7 +1478,7 @@
         "max_gain_60d": 16.47,
         "pullback_from_60d_high_pct": 0.0,
         "vol_20d_avg": 8317.0,
-        "since_entry_pct": -2.15
+        "since_entry_pct": -3.69
       },
       "source_count": 1,
       "pattern_state": "先觀察",
@@ -1591,89 +1507,59 @@
       "score_model": "pattern_score_only_v1"
     },
     {
-      "stock_id": "2618",
-      "name": "長榮航",
-      "industry": "航運",
-      "market": "",
-      "close": 42.75,
-      "entry_price": 42.6,
-      "current_price": 42.75,
-      "sources": [
-        "chips",
-        "big_holder_trend"
-      ],
-      "tags": [
-        "持續成長",
-        "千張4週連增",
-        "400張4週連增"
-      ],
-      "metrics": {
-        "market_cap": 664.5,
-        "bbw": 10.09,
-        "week_chg_pct": 6.77,
-        "big_pct_1000": 78.62,
-        "big_pct_400": 81.85,
-        "deviation": 7.82,
-        "vol_20d_avg": 40696.0,
-        "max_gain_60d": 27.2,
-        "pullback_from_60d_high_pct": -5.12,
-        "since_entry_pct": 0.35
-      },
-      "source_count": 2,
-      "pattern_state": "先觀察",
-      "pattern_score": 49.0,
-      "pattern_subs": {
-        "結構": 25,
-        "型態": 0.0,
-        "量價": 10,
-        "位置": 9,
-        "籌碼": 5
-      },
-      "pattern_tags": [
-        "均線多頭",
-        "量縮整理",
-        "大戶上升"
-      ],
-      "patterns": [],
-      "key_level": null,
-      "invalidation": null,
-      "pattern_confidence": 1.0,
-      "focus_candidate": false,
-      "score": 49.0,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
       "stock_id": "1101",
       "name": "台泥",
       "industry": "水泥",
-      "market": "",
-      "close": 24.1,
+      "market": "TWSE",
+      "close": 24.3,
       "entry_price": 24.85,
-      "current_price": 24.1,
+      "current_price": 24.3,
       "sources": [
-        "chips"
+        "chips",
+        "right_top"
       ],
       "tags": [
-        "持續成長"
+        "持續成長",
+        "準突破",
+        "接近週線箱頂",
+        "千張大戶連增",
+        "400張同步"
       ],
       "metrics": {
         "market_cap": 2224.6,
         "bbw": 5.39,
-        "week_chg_pct": -2.82,
+        "week_chg_pct": -2.21,
         "big_pct_1000": 52.69,
         "big_pct_400": 56.54,
         "deviation": 1.71,
-        "vol_20d_avg": 28231.0
+        "vol_20d_avg": 26771.6,
+        "vol_ratio": 1.1,
+        "change_pct": -2.21,
+        "breakout_key_level": 24.85,
+        "breakout_distance_pct": -2.21,
+        "pre_breakout_key_level": 24.85,
+        "pre_breakout_distance_pct": -2.21
       },
-      "source_count": 1,
+      "breakout_stage": "pre_breakout",
+      "breakout_stage_label": "準突破",
+      "breakout_key_level": 24.85,
+      "breakout_distance_pct": -2.21,
+      "signal_types": [
+        "pre_consolidation"
+      ],
+      "is_pre_breakout": true,
+      "is_consolidation_breakout": false,
+      "is_momentum_breakout": false,
+      "is_price_breakout": false,
+      "source_count": 2,
       "pattern_state": "先觀察",
-      "pattern_score": 49.0,
+      "pattern_score": 50.0,
       "pattern_subs": {
         "結構": 22,
         "型態": 14.0,
         "量價": 0,
         "位置": 9,
-        "籌碼": 4
+        "籌碼": 5
       },
       "pattern_tags": [
         "均線多頭",
@@ -1686,53 +1572,196 @@
       "key_level": 25.7,
       "invalidation": 23.9,
       "pattern_confidence": 0.7,
-      "focus_candidate": false,
-      "score": 49.0,
+      "focus_candidate": true,
+      "score": 50.0,
       "score_model": "pattern_score_only_v1"
     },
     {
-      "stock_id": "2009",
-      "name": "第一銅",
-      "industry": "鋼鐵工業",
+      "stock_id": "2357",
+      "name": "華碩",
+      "industry": "電腦",
+      "market": "",
+      "close": 965.0,
+      "entry_price": 921.0,
+      "current_price": 965.0,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "tags": [
+        "千張4週連增",
+        "400張4週連增"
+      ],
+      "metrics": {
+        "week_chg_pct": -7.53,
+        "big_pct_1000": 65.21,
+        "big_pct_400": 74.82,
+        "max_gain_60d": 51.6,
+        "pullback_from_60d_high_pct": -7.53,
+        "vol_20d_avg": 4909.0,
+        "since_entry_pct": 4.78
+      },
+      "source_count": 1,
+      "pattern_state": "先觀察",
+      "pattern_score": 50.0,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "focus_candidate": false,
+      "score": 50.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2915",
+      "name": "潤泰全",
+      "industry": "貿易",
+      "market": "",
+      "close": 57.3,
+      "entry_price": 61.1,
+      "current_price": 57.3,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "tags": [
+        "千張4週連增",
+        "400張4週連增"
+      ],
+      "metrics": {
+        "week_chg_pct": 2.69,
+        "big_pct_1000": 64.57,
+        "big_pct_400": 69.79,
+        "max_gain_60d": 40.45,
+        "pullback_from_60d_high_pct": -1.13,
+        "vol_20d_avg": 3902.0,
+        "since_entry_pct": -6.22
+      },
+      "source_count": 1,
+      "pattern_state": "先觀察",
+      "pattern_score": 50.0,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "focus_candidate": false,
+      "score": 50.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2634",
+      "name": "漢翔",
+      "industry": "航運",
+      "market": "",
+      "close": 67.8,
+      "entry_price": 69.3,
+      "current_price": 67.8,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "tags": [
+        "千張單週激增",
+        "400張單週激增"
+      ],
+      "metrics": {
+        "week_chg_pct": -1.84,
+        "big_pct_1000": 53.55,
+        "big_pct_400": 55.68,
+        "max_gain_60d": 62.89,
+        "pullback_from_60d_high_pct": -5.46,
+        "vol_20d_avg": 46948.0,
+        "since_entry_pct": -2.16
+      },
+      "source_count": 1,
+      "pattern_state": "先觀察",
+      "pattern_score": 48.0,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 0.0,
+        "量價": 10,
+        "位置": 7,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "focus_candidate": false,
+      "score": 48.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "1316",
+      "name": "上曜",
+      "industry": "建材營造",
       "market": "TWSE",
-      "close": 41.8,
-      "entry_price": 41.8,
-      "current_price": 41.8,
+      "close": 11.15,
+      "entry_price": 11.15,
+      "current_price": 11.15,
       "sources": [
         "right_top"
       ],
       "tags": [
-        "盤整突破",
-        "千張大戶連增",
-        "週量強放大"
+        "準突破",
+        "接近週線箱頂",
+        "週量升溫"
       ],
       "metrics": {
-        "vol_20d_avg": 3265.0,
-        "vol_ratio": 2.3,
-        "change_pct": 5.03,
-        "big_pct_1000": 56.42,
-        "big_pct_400": 58.23,
-        "breakout_key_level": 39.9,
-        "breakout_distance_pct": 4.76
+        "vol_20d_avg": 4222.1,
+        "vol_ratio": 3.9,
+        "change_pct": -0.45,
+        "big_pct_1000": 33.17,
+        "big_pct_400": 42.79,
+        "breakout_key_level": 11.2,
+        "breakout_distance_pct": -0.45,
+        "pre_breakout_key_level": 11.2,
+        "pre_breakout_distance_pct": -0.45
       },
-      "breakout_stage": "confirmed_breakout",
-      "breakout_stage_label": "突破確認",
-      "breakout_key_level": 39.9,
-      "breakout_distance_pct": 4.76,
+      "breakout_stage": "pre_breakout",
+      "breakout_stage_label": "準突破",
+      "breakout_key_level": 11.2,
+      "breakout_distance_pct": -0.45,
       "signal_types": [
-        "consolidation"
+        "pre_consolidation"
       ],
-      "is_pre_breakout": false,
-      "is_consolidation_breakout": true,
+      "is_pre_breakout": true,
+      "is_consolidation_breakout": false,
       "is_momentum_breakout": false,
       "is_price_breakout": false,
       "source_count": 1,
       "pattern_state": "先觀察",
-      "pattern_score": 49.0,
+      "pattern_score": 45.0,
       "pattern_subs": {
         "結構": 27,
         "型態": 0.0,
-        "量價": 15,
+        "量價": 11,
         "位置": 7,
         "籌碼": 0
       },
@@ -1743,129 +1772,8 @@
       "key_level": null,
       "invalidation": null,
       "pattern_confidence": 1.0,
-      "focus_candidate": false,
-      "score": 49.0,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
-      "stock_id": "2301",
-      "name": "光寶科",
-      "industry": "電腦及週邊設備業",
-      "market": "TWSE",
-      "close": 301.0,
-      "entry_price": 301.0,
-      "current_price": 301.0,
-      "sources": [
-        "right_top"
-      ],
-      "tags": [
-        "準突破",
-        "接近60日高"
-      ],
-      "metrics": {
-        "vol_20d_avg": 39052.1,
-        "price_vol_ratio": 1.1,
-        "vol_ratio": 1.2,
-        "change_pct": 15.33,
-        "big_pct_1000": 76.14,
-        "big_pct_400": 81.53,
-        "breakout_key_level": 307.0,
-        "breakout_distance_pct": -1.95,
-        "pre_breakout_key_level": 307.0,
-        "pre_breakout_distance_pct": -1.95
-      },
-      "breakout_stage": "pre_breakout",
-      "breakout_stage_label": "準突破",
-      "breakout_key_level": 307.0,
-      "breakout_distance_pct": -1.95,
-      "signal_types": [
-        "pre_price"
-      ],
-      "is_pre_breakout": true,
-      "is_consolidation_breakout": false,
-      "is_momentum_breakout": false,
-      "is_price_breakout": false,
-      "source_count": 1,
-      "pattern_state": "先觀察",
-      "pattern_score": 48.8,
-      "pattern_subs": {
-        "結構": 27,
-        "型態": 19.8,
-        "量價": 0,
-        "位置": 2,
-        "籌碼": 0
-      },
-      "pattern_tags": [
-        "均線多頭",
-        "W底突破頸線"
-      ],
-      "patterns": [
-        "w_bottom_breakout"
-      ],
-      "key_level": 286.5,
-      "invalidation": 277.9,
-      "pattern_confidence": 0.9,
       "focus_candidate": true,
-      "score": 48.8,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
-      "stock_id": "1316",
-      "name": "上曜",
-      "industry": "建材營造",
-      "market": "TWSE",
-      "close": 11.75,
-      "entry_price": 11.75,
-      "current_price": 11.75,
-      "sources": [
-        "right_top"
-      ],
-      "tags": [
-        "盤整突破",
-        "週量強放大"
-      ],
-      "metrics": {
-        "vol_20d_avg": 3804.9,
-        "vol_ratio": 3.1,
-        "change_pct": 4.91,
-        "big_pct_1000": 33.17,
-        "big_pct_400": 42.79,
-        "breakout_key_level": 11.2,
-        "breakout_distance_pct": 4.91
-      },
-      "breakout_stage": "confirmed_breakout",
-      "breakout_stage_label": "突破確認",
-      "breakout_key_level": 11.2,
-      "breakout_distance_pct": 4.91,
-      "signal_types": [
-        "consolidation"
-      ],
-      "is_pre_breakout": false,
-      "is_consolidation_breakout": true,
-      "is_momentum_breakout": false,
-      "is_price_breakout": false,
-      "source_count": 1,
-      "pattern_state": "先觀察",
-      "pattern_score": 48.4,
-      "pattern_subs": {
-        "結構": 27,
-        "型態": 8.4,
-        "量價": 10,
-        "位置": 3,
-        "籌碼": 0
-      },
-      "pattern_tags": [
-        "均線多頭",
-        "箱頂整理"
-      ],
-      "patterns": [
-        "box_near_top"
-      ],
-      "key_level": 11.95,
-      "invalidation": null,
-      "pattern_confidence": 0.6,
-      "focus_candidate": false,
-      "score": 48.4,
+      "score": 45.0,
       "score_model": "pattern_score_only_v1"
     },
     {
@@ -1873,9 +1781,9 @@
       "name": "長榮",
       "industry": "航運",
       "market": "",
-      "close": 232.5,
+      "close": 231.5,
       "entry_price": 251.5,
-      "current_price": 232.5,
+      "current_price": 231.5,
       "sources": [
         "big_holder_trend"
       ],
@@ -1892,7 +1800,53 @@
         "max_gain_60d": 38.95,
         "pullback_from_60d_high_pct": 0.0,
         "vol_20d_avg": 14007.0,
-        "since_entry_pct": -7.55
+        "since_entry_pct": -7.95
+      },
+      "source_count": 1,
+      "pattern_state": "先觀察",
+      "pattern_score": 45.0,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 0.0,
+        "量價": 5,
+        "位置": 9,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "focus_candidate": false,
+      "score": 45.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2615",
+      "name": "萬海",
+      "industry": "航運",
+      "market": "",
+      "close": 111.5,
+      "entry_price": 124.5,
+      "current_price": 111.5,
+      "sources": [
+        "big_holder_trend"
+      ],
+      "tags": [
+        "千張4週連增",
+        "400張4週連增"
+      ],
+      "metrics": {
+        "week_chg_pct": 37.42,
+        "big_pct_1000": 86.68,
+        "big_pct_400": 89.04,
+        "max_gain_60d": 62.32,
+        "pullback_from_60d_high_pct": 0.0,
+        "vol_20d_avg": 24076.0,
+        "since_entry_pct": -10.44
       },
       "source_count": 1,
       "pattern_state": "先觀察",
@@ -1921,9 +1875,9 @@
       "name": "慧洋-KY",
       "industry": "航運",
       "market": "",
-      "close": 94.6,
+      "close": 92.1,
       "entry_price": 102.0,
-      "current_price": 94.6,
+      "current_price": 92.1,
       "sources": [
         "big_holder_trend"
       ],
@@ -1937,7 +1891,7 @@
         "max_gain_60d": 42.86,
         "pullback_from_60d_high_pct": 0.0,
         "vol_20d_avg": 3937.0,
-        "since_entry_pct": -7.25
+        "since_entry_pct": -9.71
       },
       "source_count": 1,
       "pattern_state": "先觀察",
@@ -1962,73 +1916,27 @@
       "score_model": "pattern_score_only_v1"
     },
     {
-      "stock_id": "2915",
-      "name": "潤泰全",
-      "industry": "貿易",
+      "stock_id": "4707",
+      "name": "磐亞",
+      "industry": "櫃化學",
       "market": "",
-      "close": 58.6,
-      "entry_price": 61.1,
-      "current_price": 58.6,
+      "close": 32.55,
+      "entry_price": 32.9,
+      "current_price": 32.55,
       "sources": [
         "big_holder_trend"
       ],
       "tags": [
-        "千張4週連增",
-        "400張4週連增"
+        "千張4週連增"
       ],
       "metrics": {
-        "week_chg_pct": 2.69,
-        "big_pct_1000": 64.57,
-        "big_pct_400": 69.79,
-        "max_gain_60d": 40.45,
-        "pullback_from_60d_high_pct": -1.13,
-        "vol_20d_avg": 3902.0,
-        "since_entry_pct": -4.09
-      },
-      "source_count": 1,
-      "pattern_state": "先觀察",
-      "pattern_score": 45.0,
-      "pattern_subs": {
-        "結構": 27,
-        "型態": 0.0,
-        "量價": 5,
-        "位置": 9,
-        "籌碼": 4
-      },
-      "pattern_tags": [
-        "均線多頭",
-        "大戶上升"
-      ],
-      "patterns": [],
-      "key_level": null,
-      "invalidation": null,
-      "pattern_confidence": 1.0,
-      "focus_candidate": false,
-      "score": 45.0,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
-      "stock_id": "3605",
-      "name": "宏致",
-      "industry": "電零",
-      "market": "",
-      "close": 119.5,
-      "entry_price": 108.5,
-      "current_price": 119.5,
-      "sources": [
-        "big_holder_trend"
-      ],
-      "tags": [
-        "千張單週激增"
-      ],
-      "metrics": {
-        "week_chg_pct": -17.49,
-        "big_pct_1000": 62.29,
-        "big_pct_400": 68.56,
-        "max_gain_60d": 92.98,
-        "pullback_from_60d_high_pct": -17.8,
-        "vol_20d_avg": 10650.0,
-        "since_entry_pct": 10.14
+        "week_chg_pct": 4.44,
+        "big_pct_1000": 67.65,
+        "big_pct_400": 71.99,
+        "max_gain_60d": 203.03,
+        "pullback_from_60d_high_pct": -26.89,
+        "vol_20d_avg": 5027.0,
+        "since_entry_pct": -1.06
       },
       "source_count": 1,
       "pattern_state": "先觀察",
@@ -2057,9 +1965,9 @@
       "name": "遠東銀",
       "industry": "金融",
       "market": "TWSE",
-      "close": 13.45,
+      "close": 13.4,
       "entry_price": 13.65,
-      "current_price": 13.45,
+      "current_price": 13.4,
       "sources": [
         "chips",
         "right_top"
@@ -2067,31 +1975,29 @@
       "tags": [
         "持續成長",
         "準突破",
-        "接近60日高",
-        "量能升溫"
+        "接近週線箱頂"
       ],
       "metrics": {
         "market_cap": 402.1,
         "bbw": 5.03,
-        "week_chg_pct": -1.1,
+        "week_chg_pct": -1.83,
         "big_pct_1000": 70.55,
         "big_pct_400": 75.38,
         "deviation": 5.73,
-        "vol_20d_avg": 9683.0,
-        "price_vol_ratio": 1.2,
-        "vol_ratio": 0.8,
-        "change_pct": -1.47,
+        "vol_20d_avg": 9452.4,
+        "vol_ratio": 1.1,
+        "change_pct": -1.83,
         "breakout_key_level": 13.65,
-        "breakout_distance_pct": -1.47,
+        "breakout_distance_pct": -1.83,
         "pre_breakout_key_level": 13.65,
-        "pre_breakout_distance_pct": -1.47
+        "pre_breakout_distance_pct": -1.83
       },
       "breakout_stage": "pre_breakout",
       "breakout_stage_label": "準突破",
       "breakout_key_level": 13.65,
-      "breakout_distance_pct": -1.47,
+      "breakout_distance_pct": -1.83,
       "signal_types": [
-        "pre_price"
+        "pre_consolidation"
       ],
       "is_pre_breakout": true,
       "is_consolidation_breakout": false,
@@ -2099,11 +2005,11 @@
       "is_price_breakout": false,
       "source_count": 2,
       "pattern_state": "先觀察",
-      "pattern_score": 44.4,
+      "pattern_score": 42.4,
       "pattern_subs": {
-        "結構": 22,
+        "結構": 14,
         "型態": 8.4,
-        "量價": 0,
+        "量價": 6,
         "位置": 9,
         "籌碼": 5
       },
@@ -2119,17 +2025,17 @@
       "invalidation": null,
       "pattern_confidence": 0.6,
       "focus_candidate": true,
-      "score": 44.4,
+      "score": 42.4,
       "score_model": "pattern_score_only_v1"
     },
     {
-      "stock_id": "3006",
-      "name": "晶豪科",
+      "stock_id": "3189",
+      "name": "景碩",
       "industry": "半導體業",
       "market": "TWSE",
-      "close": 274.0,
-      "entry_price": 274.0,
-      "current_price": 274.0,
+      "close": 899.0,
+      "entry_price": 899.0,
+      "current_price": 899.0,
       "sources": [
         "right_top"
       ],
@@ -2139,21 +2045,21 @@
         "量能升溫"
       ],
       "metrics": {
-        "vol_20d_avg": 11819.5,
+        "vol_20d_avg": 16151.8,
         "price_vol_ratio": 1.2,
-        "vol_ratio": 0.7,
-        "change_pct": 6.82,
-        "big_pct_1000": 48.57,
-        "big_pct_400": 58.71,
-        "breakout_key_level": 282.0,
-        "breakout_distance_pct": -2.84,
-        "pre_breakout_key_level": 282.0,
-        "pre_breakout_distance_pct": -2.84
+        "vol_ratio": 0.9,
+        "change_pct": 10.85,
+        "big_pct_1000": 68.17,
+        "big_pct_400": 73.44,
+        "breakout_key_level": 914.0,
+        "breakout_distance_pct": -1.64,
+        "pre_breakout_key_level": 914.0,
+        "pre_breakout_distance_pct": -1.64
       },
       "breakout_stage": "pre_breakout",
       "breakout_stage_label": "準突破",
-      "breakout_key_level": 282.0,
-      "breakout_distance_pct": -2.84,
+      "breakout_key_level": 914.0,
+      "breakout_distance_pct": -1.64,
       "signal_types": [
         "pre_price"
       ],
@@ -2163,172 +2069,12 @@
       "is_price_breakout": false,
       "source_count": 1,
       "pattern_state": "先觀察",
-      "pattern_score": 44.4,
+      "pattern_score": 42.4,
       "pattern_subs": {
         "結構": 27,
         "型態": 8.4,
         "量價": 0,
-        "位置": 9,
-        "籌碼": 0
-      },
-      "pattern_tags": [
-        "均線多頭",
-        "箱頂整理"
-      ],
-      "patterns": [
-        "box_near_top"
-      ],
-      "key_level": 285.5,
-      "invalidation": null,
-      "pattern_confidence": 0.6,
-      "focus_candidate": true,
-      "score": 44.4,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
-      "stock_id": "2890",
-      "name": "永豐金",
-      "industry": "金融",
-      "market": "",
-      "close": 39.35,
-      "entry_price": 39.6,
-      "current_price": 39.35,
-      "sources": [
-        "chips",
-        "big_holder_trend"
-      ],
-      "tags": [
-        "持續成長",
-        "千張4週連增"
-      ],
-      "metrics": {
-        "market_cap": 1358.2,
-        "bbw": 5.75,
-        "week_chg_pct": -2.34,
-        "big_pct_1000": 78.11,
-        "big_pct_400": 81.3,
-        "deviation": 9.85,
-        "vol_20d_avg": 27324.0,
-        "max_gain_60d": 42.03,
-        "pullback_from_60d_high_pct": -5.49,
-        "since_entry_pct": -0.63
-      },
-      "source_count": 2,
-      "pattern_state": "先觀察",
-      "pattern_score": 41.0,
-      "pattern_subs": {
-        "結構": 8,
-        "型態": 14.0,
-        "量價": 5,
-        "位置": 9,
-        "籌碼": 5
-      },
-      "pattern_tags": [
-        "收斂接近pivot",
-        "量縮整理",
-        "大戶上升"
-      ],
-      "patterns": [
-        "tight_pivot"
-      ],
-      "key_level": 42.3,
-      "invalidation": 39.34,
-      "pattern_confidence": 0.7,
-      "focus_candidate": false,
-      "score": 41.0,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
-      "stock_id": "2615",
-      "name": "萬海",
-      "industry": "航運",
-      "market": "",
-      "close": 113.5,
-      "entry_price": 124.5,
-      "current_price": 113.5,
-      "sources": [
-        "big_holder_trend"
-      ],
-      "tags": [
-        "千張4週連增",
-        "400張4週連增"
-      ],
-      "metrics": {
-        "week_chg_pct": 37.42,
-        "big_pct_1000": 86.68,
-        "big_pct_400": 89.04,
-        "max_gain_60d": 62.32,
-        "pullback_from_60d_high_pct": 0.0,
-        "vol_20d_avg": 24076.0,
-        "since_entry_pct": -8.84
-      },
-      "source_count": 1,
-      "pattern_state": "先觀察",
-      "pattern_score": 41.0,
-      "pattern_subs": {
-        "結構": 27,
-        "型態": 0.0,
-        "量價": 5,
-        "位置": 5,
-        "籌碼": 4
-      },
-      "pattern_tags": [
-        "均線多頭",
-        "大戶上升"
-      ],
-      "patterns": [],
-      "key_level": null,
-      "invalidation": null,
-      "pattern_confidence": 1.0,
-      "focus_candidate": false,
-      "score": 41.0,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
-      "stock_id": "3189",
-      "name": "景碩",
-      "industry": "半導體業",
-      "market": "TWSE",
-      "close": 914.0,
-      "entry_price": 914.0,
-      "current_price": 914.0,
-      "sources": [
-        "right_top"
-      ],
-      "tags": [
-        "價格突破",
-        "60日新高",
-        "EMA多頭"
-      ],
-      "metrics": {
-        "vol_20d_avg": 15142.9,
-        "price_vol_ratio": 1.3,
-        "vol_ratio": 0.7,
-        "change_pct": 12.7,
-        "big_pct_1000": 68.17,
-        "big_pct_400": 73.44,
-        "breakout_key_level": 905.0,
-        "breakout_distance_pct": 0.99
-      },
-      "breakout_stage": "confirmed_breakout",
-      "breakout_stage_label": "突破確認",
-      "breakout_key_level": 905.0,
-      "breakout_distance_pct": 0.99,
-      "signal_types": [
-        "price"
-      ],
-      "is_pre_breakout": false,
-      "is_consolidation_breakout": false,
-      "is_momentum_breakout": false,
-      "is_price_breakout": true,
-      "source_count": 1,
-      "pattern_state": "先觀察",
-      "pattern_score": 39.4,
-      "pattern_subs": {
-        "結構": 22,
-        "型態": 8.4,
-        "量價": 6,
-        "位置": 3,
+        "位置": 7,
         "籌碼": 0
       },
       "pattern_tags": [
@@ -2341,132 +2087,44 @@
       "key_level": 939.0,
       "invalidation": null,
       "pattern_confidence": 0.6,
-      "focus_candidate": false,
-      "score": 39.4,
+      "focus_candidate": true,
+      "score": 42.4,
       "score_model": "pattern_score_only_v1"
     },
     {
-      "stock_id": "4707",
-      "name": "磐亞",
-      "industry": "櫃化學",
-      "market": "",
-      "close": 32.2,
-      "entry_price": 32.9,
-      "current_price": 32.2,
-      "sources": [
-        "big_holder_trend"
-      ],
-      "tags": [
-        "千張4週連增"
-      ],
-      "metrics": {
-        "week_chg_pct": 4.44,
-        "big_pct_1000": 67.65,
-        "big_pct_400": 71.99,
-        "max_gain_60d": 203.03,
-        "pullback_from_60d_high_pct": -26.89,
-        "vol_20d_avg": 5027.0,
-        "since_entry_pct": -2.13
-      },
-      "source_count": 1,
-      "pattern_state": "先觀察",
-      "pattern_score": 35.0,
-      "pattern_subs": {
-        "結構": 19,
-        "型態": 0.0,
-        "量價": 5,
-        "位置": 7,
-        "籌碼": 4
-      },
-      "pattern_tags": [
-        "均線多頭",
-        "大戶上升"
-      ],
-      "patterns": [],
-      "key_level": null,
-      "invalidation": null,
-      "pattern_confidence": 1.0,
-      "focus_candidate": false,
-      "score": 35.0,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
-      "stock_id": "3450",
-      "name": "聯鈞",
-      "industry": "半導",
-      "market": "",
-      "close": 578.0,
-      "entry_price": 551.0,
-      "current_price": 578.0,
-      "sources": [
-        "big_holder_trend"
-      ],
-      "tags": [
-        "千張單週激增"
-      ],
-      "metrics": {
-        "week_chg_pct": 8.04,
-        "big_pct_1000": 36.26,
-        "big_pct_400": 48.17,
-        "max_gain_60d": 80.8,
-        "pullback_from_60d_high_pct": -9.97,
-        "vol_20d_avg": 10334.0,
-        "since_entry_pct": 4.9
-      },
-      "source_count": 1,
-      "pattern_state": "先觀察",
-      "pattern_score": 34.0,
-      "pattern_subs": {
-        "結構": 22,
-        "型態": 0.0,
-        "量價": 5,
-        "位置": 3,
-        "籌碼": 4
-      },
-      "pattern_tags": [
-        "均線多頭",
-        "大戶上升"
-      ],
-      "patterns": [],
-      "key_level": null,
-      "invalidation": null,
-      "pattern_confidence": 1.0,
-      "focus_candidate": false,
-      "score": 34.0,
-      "score_model": "pattern_score_only_v1"
-    },
-    {
-      "stock_id": "2851",
-      "name": "中再保",
-      "industry": "金融保險",
-      "market": "TWSE",
-      "close": 45.7,
-      "entry_price": 45.7,
-      "current_price": 45.7,
+      "stock_id": "4931",
+      "name": "新盛力",
+      "industry": "電腦及週邊設備業",
+      "market": "TPEX",
+      "close": 272.5,
+      "entry_price": 272.5,
+      "current_price": 272.5,
       "sources": [
         "right_top"
       ],
       "tags": [
         "準突破",
         "接近60日高",
+        "千張大戶連增",
+        "400張同步",
         "量能升溫"
       ],
       "metrics": {
-        "vol_20d_avg": 4020.7,
-        "price_vol_ratio": 2.4,
-        "vol_ratio": 1.8,
-        "change_pct": -2.97,
-        "big_pct_1000": 66.07,
-        "big_pct_400": 71.51,
-        "breakout_key_level": 47.1,
-        "breakout_distance_pct": -2.97,
-        "pre_breakout_key_level": 47.1,
-        "pre_breakout_distance_pct": -2.97
+        "vol_20d_avg": 7080.9,
+        "price_vol_ratio": 1.5,
+        "vol_ratio": 1.1,
+        "change_pct": -2.68,
+        "big_pct_1000": 24.71,
+        "big_pct_400": 40.24,
+        "breakout_key_level": 280.0,
+        "breakout_distance_pct": -2.68,
+        "pre_breakout_key_level": 280.0,
+        "pre_breakout_distance_pct": -2.68
       },
       "breakout_stage": "pre_breakout",
       "breakout_stage_label": "準突破",
-      "breakout_key_level": 47.1,
-      "breakout_distance_pct": -2.97,
+      "breakout_key_level": 280.0,
+      "breakout_distance_pct": -2.68,
       "signal_types": [
         "pre_price"
       ],
@@ -2476,11 +2134,11 @@
       "is_price_breakout": false,
       "source_count": 1,
       "pattern_state": "先觀察",
-      "pattern_score": 32.0,
+      "pattern_score": 42.0,
       "pattern_subs": {
         "結構": 22,
         "型態": 0.0,
-        "量價": 5,
+        "量價": 15,
         "位置": 5,
         "籌碼": 0
       },
@@ -2492,42 +2150,51 @@
       "invalidation": null,
       "pattern_confidence": 1.0,
       "focus_candidate": true,
-      "score": 32.0,
+      "score": 42.0,
       "score_model": "pattern_score_only_v1"
     },
     {
-      "stock_id": "6919",
-      "name": "康霈*",
-      "industry": "生技",
+      "stock_id": "2618",
+      "name": "長榮航",
+      "industry": "航運",
       "market": "",
-      "close": 103.0,
-      "entry_price": 113.5,
-      "current_price": 103.0,
+      "close": 41.8,
+      "entry_price": 42.6,
+      "current_price": 41.8,
       "sources": [
-        "chips"
+        "chips",
+        "big_holder_trend"
       ],
       "tags": [
-        "持續成長"
+        "持續成長",
+        "千張4週連增",
+        "400張4週連增"
       ],
       "metrics": {
-        "bbw": 12.82,
-        "week_chg_pct": -5.5,
-        "big_pct_1000": 68.27,
-        "big_pct_400": 75.17,
-        "deviation": 1.05,
-        "vol_20d_avg": 5273.0
+        "market_cap": 664.5,
+        "bbw": 10.09,
+        "week_chg_pct": 6.77,
+        "big_pct_1000": 78.62,
+        "big_pct_400": 81.85,
+        "deviation": 7.82,
+        "vol_20d_avg": 40696.0,
+        "max_gain_60d": 27.2,
+        "pullback_from_60d_high_pct": -5.12,
+        "since_entry_pct": -1.88
       },
-      "source_count": 1,
+      "source_count": 2,
       "pattern_state": "先觀察",
-      "pattern_score": 29.0,
+      "pattern_score": 41.0,
       "pattern_subs": {
-        "結構": 11,
+        "結構": 17,
         "型態": 0.0,
-        "量價": 5,
+        "量價": 10,
         "位置": 9,
-        "籌碼": 4
+        "籌碼": 5
       },
       "pattern_tags": [
+        "均線多頭",
+        "量縮整理",
         "大戶上升"
       ],
       "patterns": [],
@@ -2535,7 +2202,64 @@
       "invalidation": null,
       "pattern_confidence": 1.0,
       "focus_candidate": false,
-      "score": 29.0,
+      "score": 41.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2009",
+      "name": "第一銅",
+      "industry": "鋼鐵工業",
+      "market": "TWSE",
+      "close": 41.3,
+      "entry_price": 41.3,
+      "current_price": 41.3,
+      "sources": [
+        "right_top"
+      ],
+      "tags": [
+        "盤整突破",
+        "千張大戶連增",
+        "週量強放大"
+      ],
+      "metrics": {
+        "vol_20d_avg": 3347.8,
+        "vol_ratio": 2.6,
+        "change_pct": 3.77,
+        "big_pct_1000": 56.42,
+        "big_pct_400": 58.23,
+        "breakout_key_level": 39.9,
+        "breakout_distance_pct": 3.51
+      },
+      "breakout_stage": "confirmed_breakout",
+      "breakout_stage_label": "突破確認",
+      "breakout_key_level": 39.9,
+      "breakout_distance_pct": 3.51,
+      "signal_types": [
+        "consolidation"
+      ],
+      "is_pre_breakout": false,
+      "is_consolidation_breakout": true,
+      "is_momentum_breakout": false,
+      "is_price_breakout": false,
+      "source_count": 1,
+      "pattern_state": "先觀察",
+      "pattern_score": 41.0,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 0.0,
+        "量價": 5,
+        "位置": 9,
+        "籌碼": 0
+      },
+      "pattern_tags": [
+        "均線多頭"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "focus_candidate": false,
+      "score": 41.0,
       "score_model": "pattern_score_only_v1"
     },
     {
@@ -2543,9 +2267,9 @@
       "name": "貿聯-KY",
       "industry": "他電",
       "market": "",
-      "close": 2055.0,
+      "close": 2260.0,
       "entry_price": 2275.0,
-      "current_price": 2055.0,
+      "current_price": 2260.0,
       "sources": [
         "big_holder_trend"
       ],
@@ -2559,13 +2283,13 @@
         "max_gain_60d": 34.28,
         "pullback_from_60d_high_pct": -4.01,
         "vol_20d_avg": 3355.0,
-        "since_entry_pct": -9.67
+        "since_entry_pct": -0.66
       },
       "source_count": 1,
       "pattern_state": "先觀察",
-      "pattern_score": 23.0,
+      "pattern_score": 31.0,
       "pattern_subs": {
-        "結構": 5,
+        "結構": 13,
         "型態": 0.0,
         "量價": 5,
         "位置": 9,
@@ -2579,7 +2303,328 @@
       "invalidation": null,
       "pattern_confidence": 1.0,
       "focus_candidate": false,
-      "score": 23.0,
+      "score": 31.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "6919",
+      "name": "康霈*",
+      "industry": "生技",
+      "market": "",
+      "close": 99.6,
+      "entry_price": 113.5,
+      "current_price": 99.6,
+      "sources": [
+        "chips"
+      ],
+      "tags": [
+        "持續成長"
+      ],
+      "metrics": {
+        "bbw": 12.82,
+        "week_chg_pct": -12.25,
+        "big_pct_1000": 68.27,
+        "big_pct_400": 75.17,
+        "deviation": 1.05,
+        "vol_20d_avg": 5273.0
+      },
+      "source_count": 1,
+      "pattern_state": "先觀察",
+      "pattern_score": 27.0,
+      "pattern_subs": {
+        "結構": 5,
+        "型態": 0.0,
+        "量價": 11,
+        "位置": 7,
+        "籌碼": 4
+      },
+      "pattern_tags": [
+        "大戶上升"
+      ],
+      "patterns": [],
+      "key_level": null,
+      "invalidation": null,
+      "pattern_confidence": 1.0,
+      "focus_candidate": false,
+      "score": 27.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "1709",
+      "name": "和益",
+      "industry": "化學",
+      "market": "TWSE",
+      "close": 36.15,
+      "entry_price": 33.3,
+      "current_price": 36.15,
+      "sources": [
+        "big_holder_trend",
+        "right_top"
+      ],
+      "tags": [
+        "千張4週連增",
+        "400張4週連增",
+        "準突破",
+        "接近60日高",
+        "千張大戶連增",
+        "400張同步",
+        "量能升溫"
+      ],
+      "metrics": {
+        "week_chg_pct": 9.72,
+        "big_pct_1000": 62.1,
+        "big_pct_400": 71.53,
+        "max_gain_60d": 71.65,
+        "pullback_from_60d_high_pct": 0.0,
+        "vol_20d_avg": 11282.8,
+        "since_entry_pct": 8.56,
+        "price_vol_ratio": 1.7,
+        "vol_ratio": 6.0,
+        "change_pct": 8.56,
+        "breakout_key_level": 37.1,
+        "breakout_distance_pct": -2.56,
+        "pre_breakout_key_level": 37.1,
+        "pre_breakout_distance_pct": -2.56
+      },
+      "breakout_stage": "pre_breakout",
+      "breakout_stage_label": "準突破",
+      "breakout_key_level": 37.1,
+      "breakout_distance_pct": -2.56,
+      "signal_types": [
+        "pre_price"
+      ],
+      "is_pre_breakout": true,
+      "is_consolidation_breakout": false,
+      "is_momentum_breakout": false,
+      "is_price_breakout": false,
+      "source_count": 2,
+      "pattern_state": "太遠不追",
+      "pattern_score": 61.7,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 18.7,
+        "量價": 6,
+        "位置": 5,
+        "籌碼": 5
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "頸線回測",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_retest"
+      ],
+      "key_level": 33.85,
+      "invalidation": 32.83,
+      "pattern_confidence": 0.85,
+      "focus_candidate": false,
+      "score": 61.7,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "3450",
+      "name": "聯鈞",
+      "industry": "半導",
+      "market": "TWSE",
+      "close": 635.0,
+      "entry_price": 551.0,
+      "current_price": 635.0,
+      "sources": [
+        "big_holder_trend",
+        "right_top"
+      ],
+      "tags": [
+        "千張單週激增",
+        "價格突破",
+        "60日新高",
+        "EMA多頭",
+        "千張大戶連增"
+      ],
+      "metrics": {
+        "week_chg_pct": 8.04,
+        "big_pct_1000": 36.26,
+        "big_pct_400": 48.17,
+        "max_gain_60d": 80.8,
+        "pullback_from_60d_high_pct": -9.97,
+        "vol_20d_avg": 12248.9,
+        "since_entry_pct": 15.25,
+        "price_vol_ratio": 1.3,
+        "vol_ratio": 1.2,
+        "change_pct": 15.25,
+        "breakout_key_level": 612.0,
+        "breakout_distance_pct": 3.76
+      },
+      "breakout_stage": "confirmed_breakout",
+      "breakout_stage_label": "突破確認",
+      "breakout_key_level": 612.0,
+      "breakout_distance_pct": 3.76,
+      "signal_types": [
+        "price"
+      ],
+      "is_pre_breakout": false,
+      "is_consolidation_breakout": false,
+      "is_momentum_breakout": false,
+      "is_price_breakout": true,
+      "source_count": 2,
+      "pattern_state": "太遠不追",
+      "pattern_score": 53.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 0,
+        "位置": 2,
+        "籌碼": 5
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 600.0,
+      "invalidation": 582.0,
+      "pattern_confidence": 0.9,
+      "focus_candidate": false,
+      "score": 53.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "6547",
+      "name": "高端疫苗",
+      "industry": "生技醫療業",
+      "market": "TPEX",
+      "close": 65.0,
+      "entry_price": 65.0,
+      "current_price": 65.0,
+      "sources": [
+        "right_top"
+      ],
+      "tags": [
+        "價格突破",
+        "60日新高",
+        "EMA多頭",
+        "量能續航"
+      ],
+      "metrics": {
+        "vol_20d_avg": 5628.9,
+        "price_vol_ratio": 1.9,
+        "vol_ratio": 4.3,
+        "change_pct": 16.7,
+        "big_pct_1000": 28.14,
+        "big_pct_400": 35.69,
+        "breakout_key_level": 63.1,
+        "breakout_distance_pct": 3.01
+      },
+      "breakout_stage": "confirmed_breakout",
+      "breakout_stage_label": "突破確認",
+      "breakout_key_level": 63.1,
+      "breakout_distance_pct": 3.01,
+      "signal_types": [
+        "price"
+      ],
+      "is_pre_breakout": false,
+      "is_consolidation_breakout": false,
+      "is_momentum_breakout": false,
+      "is_price_breakout": true,
+      "source_count": 1,
+      "pattern_state": "太遠不追",
+      "pattern_score": 52.8,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 19.8,
+        "量價": 6,
+        "位置": 0,
+        "籌碼": 0
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "W底突破頸線",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 54.6,
+      "invalidation": 52.96,
+      "pattern_confidence": 0.9,
+      "focus_candidate": false,
+      "score": 52.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "6108",
+      "name": "競國",
+      "industry": "電零",
+      "market": "TWSE",
+      "close": 25.7,
+      "entry_price": 25.95,
+      "current_price": 25.7,
+      "sources": [
+        "big_holder_trend",
+        "right_top"
+      ],
+      "tags": [
+        "千張單週激增",
+        "準突破",
+        "接近60日高",
+        "量能升溫"
+      ],
+      "metrics": {
+        "week_chg_pct": 17.42,
+        "big_pct_1000": 48.57,
+        "big_pct_400": 55.89,
+        "max_gain_60d": 60.0,
+        "pullback_from_60d_high_pct": -0.19,
+        "vol_20d_avg": 3672.8,
+        "since_entry_pct": -0.96,
+        "price_vol_ratio": 1.6,
+        "vol_ratio": 3.2,
+        "change_pct": -0.96,
+        "breakout_key_level": 26.0,
+        "breakout_distance_pct": -1.15,
+        "pre_breakout_key_level": 26.0,
+        "pre_breakout_distance_pct": -1.15
+      },
+      "breakout_stage": "pre_breakout",
+      "breakout_stage_label": "準突破",
+      "breakout_key_level": 26.0,
+      "breakout_distance_pct": -1.15,
+      "signal_types": [
+        "pre_price"
+      ],
+      "is_pre_breakout": true,
+      "is_consolidation_breakout": false,
+      "is_momentum_breakout": false,
+      "is_price_breakout": false,
+      "source_count": 2,
+      "pattern_state": "太遠不追",
+      "pattern_score": 51.4,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 8.4,
+        "量價": 6,
+        "位置": 5,
+        "籌碼": 5
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "箱頂整理",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "box_near_top"
+      ],
+      "key_level": 26.6,
+      "invalidation": null,
+      "pattern_confidence": 0.6,
+      "focus_candidate": false,
+      "score": 51.4,
       "score_model": "pattern_score_only_v1"
     },
     {
@@ -2587,9 +2632,9 @@
       "name": "鼎元",
       "industry": "光電",
       "market": "",
-      "close": 96.6,
+      "close": 96.1,
       "entry_price": 82.2,
-      "current_price": 96.6,
+      "current_price": 96.1,
       "sources": [
         "big_holder_trend"
       ],
@@ -2604,15 +2649,15 @@
         "max_gain_60d": 99.58,
         "pullback_from_60d_high_pct": -13.2,
         "vol_20d_avg": 15954.0,
-        "since_entry_pct": 17.52
+        "since_entry_pct": 16.91
       },
       "source_count": 1,
       "pattern_state": "太遠不追",
-      "pattern_score": 60.8,
+      "pattern_score": 50.8,
       "pattern_subs": {
         "結構": 27,
         "型態": 19.8,
-        "量價": 10,
+        "量價": 0,
         "位置": 0,
         "籌碼": 4
       },
@@ -2629,54 +2674,113 @@
       "invalidation": 72.27,
       "pattern_confidence": 0.9,
       "focus_candidate": false,
-      "score": 60.8,
+      "score": 50.8,
       "score_model": "pattern_score_only_v1"
     },
     {
-      "stock_id": "3504",
-      "name": "揚明光",
-      "industry": "光電業",
+      "stock_id": "3376",
+      "name": "新日興",
+      "industry": "電子零組件業",
       "market": "TWSE",
-      "close": 94.1,
-      "entry_price": 94.1,
-      "current_price": 94.1,
+      "close": 217.0,
+      "entry_price": 217.0,
+      "current_price": 217.0,
       "sources": [
         "right_top"
       ],
       "tags": [
-        "價格突破",
-        "60日新高",
-        "EMA多頭",
-        "400張同步"
+        "盤整突破"
       ],
       "metrics": {
-        "vol_20d_avg": 3322.9,
-        "price_vol_ratio": 1.5,
-        "vol_ratio": 1.7,
-        "change_pct": 18.07,
-        "big_pct_1000": 60.34,
-        "big_pct_400": 65.54,
-        "breakout_key_level": 91.5,
-        "breakout_distance_pct": 2.84
+        "vol_20d_avg": 3896.6,
+        "vol_ratio": 1.6,
+        "change_pct": 18.58,
+        "big_pct_1000": 32.09,
+        "big_pct_400": 43.4,
+        "breakout_key_level": 205.0,
+        "breakout_distance_pct": 5.85
       },
       "breakout_stage": "confirmed_breakout",
       "breakout_stage_label": "突破確認",
-      "breakout_key_level": 91.5,
-      "breakout_distance_pct": 2.84,
+      "breakout_key_level": 205.0,
+      "breakout_distance_pct": 5.85,
       "signal_types": [
-        "price"
+        "consolidation"
       ],
       "is_pre_breakout": false,
-      "is_consolidation_breakout": false,
+      "is_consolidation_breakout": true,
       "is_momentum_breakout": false,
-      "is_price_breakout": true,
+      "is_price_breakout": false,
       "source_count": 1,
       "pattern_state": "太遠不追",
-      "pattern_score": 58.8,
+      "pattern_score": 50.8,
+      "pattern_subs": {
+        "結構": 19,
+        "型態": 19.8,
+        "量價": 10,
+        "位置": 2,
+        "籌碼": 0
+      },
+      "pattern_tags": [
+        "W底突破頸線",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "w_bottom_breakout"
+      ],
+      "key_level": 197.5,
+      "invalidation": 191.57,
+      "pattern_confidence": 0.9,
+      "focus_candidate": false,
+      "score": 50.8,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "2351",
+      "name": "順德",
+      "industry": "電子工業",
+      "market": "TWSE",
+      "close": 239.5,
+      "entry_price": 239.5,
+      "current_price": 239.5,
+      "sources": [
+        "right_top"
+      ],
+      "tags": [
+        "準突破",
+        "接近60日高",
+        "量能升溫"
+      ],
+      "metrics": {
+        "vol_20d_avg": 4904.4,
+        "price_vol_ratio": 1.9,
+        "vol_ratio": 1.2,
+        "change_pct": 30.87,
+        "big_pct_1000": 60.66,
+        "big_pct_400": 71.93,
+        "breakout_key_level": 240.0,
+        "breakout_distance_pct": -0.21,
+        "pre_breakout_key_level": 240.0,
+        "pre_breakout_distance_pct": -0.21
+      },
+      "breakout_stage": "pre_breakout",
+      "breakout_stage_label": "準突破",
+      "breakout_key_level": 240.0,
+      "breakout_distance_pct": -0.21,
+      "signal_types": [
+        "pre_price"
+      ],
+      "is_pre_breakout": true,
+      "is_consolidation_breakout": false,
+      "is_momentum_breakout": false,
+      "is_price_breakout": false,
+      "source_count": 1,
+      "pattern_state": "太遠不追",
+      "pattern_score": 48.8,
       "pattern_subs": {
         "結構": 27,
         "型態": 19.8,
-        "量價": 10,
+        "量價": 0,
         "位置": 2,
         "籌碼": 0
       },
@@ -2688,58 +2792,130 @@
       "patterns": [
         "w_bottom_breakout"
       ],
-      "key_level": 80.9,
-      "invalidation": 78.47,
+      "key_level": 182.5,
+      "invalidation": 177.03,
       "pattern_confidence": 0.9,
       "focus_candidate": false,
-      "score": 58.8,
+      "score": 48.8,
       "score_model": "pattern_score_only_v1"
     },
     {
-      "stock_id": "6547",
-      "name": "高端疫苗",
-      "industry": "生技醫療業",
+      "stock_id": "3605",
+      "name": "宏致",
+      "industry": "電零",
+      "market": "TWSE",
+      "close": 131.0,
+      "entry_price": 108.5,
+      "current_price": 131.0,
+      "sources": [
+        "big_holder_trend",
+        "right_top"
+      ],
+      "tags": [
+        "千張單週激增",
+        "準突破",
+        "接近60日高",
+        "千張大戶連增"
+      ],
+      "metrics": {
+        "week_chg_pct": -17.49,
+        "big_pct_1000": 62.29,
+        "big_pct_400": 68.56,
+        "max_gain_60d": 92.98,
+        "pullback_from_60d_high_pct": -17.8,
+        "vol_20d_avg": 12420.6,
+        "since_entry_pct": 20.74,
+        "price_vol_ratio": 1.1,
+        "vol_ratio": 1.8,
+        "change_pct": 20.74,
+        "breakout_key_level": 132.0,
+        "breakout_distance_pct": -0.76,
+        "pre_breakout_key_level": 132.0,
+        "pre_breakout_distance_pct": -0.76
+      },
+      "breakout_stage": "pre_breakout",
+      "breakout_stage_label": "準突破",
+      "breakout_key_level": 132.0,
+      "breakout_distance_pct": -0.76,
+      "signal_types": [
+        "pre_price"
+      ],
+      "is_pre_breakout": true,
+      "is_consolidation_breakout": false,
+      "is_momentum_breakout": false,
+      "is_price_breakout": false,
+      "source_count": 2,
+      "pattern_state": "太遠不追",
+      "pattern_score": 48.4,
+      "pattern_subs": {
+        "結構": 27,
+        "型態": 8.4,
+        "量價": 6,
+        "位置": 2,
+        "籌碼": 5
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "箱頂整理",
+        "大戶上升",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "box_near_top"
+      ],
+      "key_level": 137.5,
+      "invalidation": null,
+      "pattern_confidence": 0.6,
+      "focus_candidate": false,
+      "score": 48.4,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "3081",
+      "name": "聯亞",
+      "industry": "通信網路業",
       "market": "TPEX",
-      "close": 63.1,
-      "entry_price": 63.1,
-      "current_price": 63.1,
+      "close": 3305.0,
+      "entry_price": 3305.0,
+      "current_price": 3305.0,
       "sources": [
         "right_top"
       ],
       "tags": [
-        "價格突破",
-        "60日新高",
-        "EMA多頭",
-        "量能續航"
+        "準突破",
+        "接近60日高",
+        "量能升溫"
       ],
       "metrics": {
-        "vol_20d_avg": 5109.8,
-        "price_vol_ratio": 1.9,
-        "vol_ratio": 3.4,
-        "change_pct": 13.29,
-        "big_pct_1000": 28.14,
-        "big_pct_400": 35.69,
-        "breakout_key_level": 61.9,
-        "breakout_distance_pct": 1.94
+        "vol_20d_avg": 3480.6,
+        "price_vol_ratio": 1.5,
+        "vol_ratio": 1.8,
+        "change_pct": 13.18,
+        "big_pct_1000": 33.53,
+        "big_pct_400": 47.48,
+        "breakout_key_level": 3370.0,
+        "breakout_distance_pct": -1.93,
+        "pre_breakout_key_level": 3370.0,
+        "pre_breakout_distance_pct": -1.93
       },
-      "breakout_stage": "confirmed_breakout",
-      "breakout_stage_label": "突破確認",
-      "breakout_key_level": 61.9,
-      "breakout_distance_pct": 1.94,
+      "breakout_stage": "pre_breakout",
+      "breakout_stage_label": "準突破",
+      "breakout_key_level": 3370.0,
+      "breakout_distance_pct": -1.93,
       "signal_types": [
-        "price"
+        "pre_price"
       ],
-      "is_pre_breakout": false,
+      "is_pre_breakout": true,
       "is_consolidation_breakout": false,
       "is_momentum_breakout": false,
-      "is_price_breakout": true,
+      "is_price_breakout": false,
       "source_count": 1,
       "pattern_state": "太遠不追",
-      "pattern_score": 56.8,
+      "pattern_score": 46.8,
       "pattern_subs": {
         "結構": 27,
         "型態": 19.8,
-        "量價": 10,
+        "量價": 0,
         "位置": 0,
         "籌碼": 0
       },
@@ -2751,46 +2927,47 @@
       "patterns": [
         "w_bottom_breakout"
       ],
-      "key_level": 54.6,
-      "invalidation": 52.96,
+      "key_level": 2010.0,
+      "invalidation": 1949.7,
       "pattern_confidence": 0.9,
       "focus_candidate": false,
-      "score": 56.8,
+      "score": 46.8,
       "score_model": "pattern_score_only_v1"
     },
     {
-      "stock_id": "3234",
-      "name": "光環",
-      "industry": "通信網路業",
-      "market": "TPEX",
-      "close": 180.0,
-      "entry_price": 180.0,
-      "current_price": 180.0,
+      "stock_id": "6213",
+      "name": "聯茂",
+      "industry": "電子工業",
+      "market": "TWSE",
+      "close": 582.0,
+      "entry_price": 582.0,
+      "current_price": 582.0,
       "sources": [
         "right_top"
       ],
       "tags": [
         "準突破",
         "接近60日高",
+        "千張大戶連增",
         "400張同步",
         "量能升溫"
       ],
       "metrics": {
-        "vol_20d_avg": 3931.8,
+        "vol_20d_avg": 18998.3,
         "price_vol_ratio": 1.4,
-        "vol_ratio": 1.6,
-        "change_pct": 19.21,
-        "big_pct_1000": 23.27,
-        "big_pct_400": 33.94,
-        "breakout_key_level": 182.5,
-        "breakout_distance_pct": -1.37,
-        "pre_breakout_key_level": 182.5,
-        "pre_breakout_distance_pct": -1.37
+        "vol_ratio": 1.4,
+        "change_pct": 13.45,
+        "big_pct_1000": 62.24,
+        "big_pct_400": 68.77,
+        "breakout_key_level": 583.0,
+        "breakout_distance_pct": -0.17,
+        "pre_breakout_key_level": 583.0,
+        "pre_breakout_distance_pct": -0.17
       },
       "breakout_stage": "pre_breakout",
       "breakout_stage_label": "準突破",
-      "breakout_key_level": 182.5,
-      "breakout_distance_pct": -1.37,
+      "breakout_key_level": 583.0,
+      "breakout_distance_pct": -0.17,
       "signal_types": [
         "pre_price"
       ],
@@ -2800,11 +2977,11 @@
       "is_price_breakout": false,
       "source_count": 1,
       "pattern_state": "太遠不追",
-      "pattern_score": 29.0,
+      "pattern_score": 35.0,
       "pattern_subs": {
         "結構": 22,
         "型態": 0.0,
-        "量價": 5,
+        "量價": 11,
         "位置": 2,
         "籌碼": 0
       },
@@ -2817,7 +2994,72 @@
       "invalidation": null,
       "pattern_confidence": 1.0,
       "focus_candidate": false,
-      "score": 29.0,
+      "score": 35.0,
+      "score_model": "pattern_score_only_v1"
+    },
+    {
+      "stock_id": "3234",
+      "name": "光環",
+      "industry": "通信網路業",
+      "market": "TPEX",
+      "close": 181.5,
+      "entry_price": 181.5,
+      "current_price": 181.5,
+      "sources": [
+        "right_top"
+      ],
+      "tags": [
+        "準突破",
+        "接近60日高",
+        "400張同步",
+        "量能升溫"
+      ],
+      "metrics": {
+        "vol_20d_avg": 4027.4,
+        "price_vol_ratio": 1.3,
+        "vol_ratio": 1.7,
+        "change_pct": 20.2,
+        "big_pct_1000": 23.27,
+        "big_pct_400": 33.94,
+        "breakout_key_level": 182.5,
+        "breakout_distance_pct": -0.55,
+        "pre_breakout_key_level": 182.5,
+        "pre_breakout_distance_pct": -0.55
+      },
+      "breakout_stage": "pre_breakout",
+      "breakout_stage_label": "準突破",
+      "breakout_key_level": 182.5,
+      "breakout_distance_pct": -0.55,
+      "signal_types": [
+        "pre_price"
+      ],
+      "is_pre_breakout": true,
+      "is_consolidation_breakout": false,
+      "is_momentum_breakout": false,
+      "is_price_breakout": false,
+      "source_count": 1,
+      "pattern_state": "太遠不追",
+      "pattern_score": 32.4,
+      "pattern_subs": {
+        "結構": 22,
+        "型態": 8.4,
+        "量價": 0,
+        "位置": 2,
+        "籌碼": 0
+      },
+      "pattern_tags": [
+        "均線多頭",
+        "箱頂整理",
+        "已延伸/過熱"
+      ],
+      "patterns": [
+        "box_near_top"
+      ],
+      "key_level": 182.5,
+      "invalidation": null,
+      "pattern_confidence": 0.6,
+      "focus_candidate": false,
+      "score": 32.4,
       "score_model": "pattern_score_only_v1"
     }
   ],
