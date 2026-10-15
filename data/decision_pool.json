@@ -1,130 +1,190 @@
 {
- "updated": "2026-10-14T17:01:21+08:00",
- "data_date": "2026-10-14",
+ "updated": "2026-10-15T17:01:16+08:00",
+ "data_date": "2026-10-15",
  "criteria": {
   "neckline_confirmed": "neckline_track.active entry_date == neckline_candidates.updated",
   "resonance": "pool_resonance.level >= 3（三池共振）, resonance_date <= 3 trading days, first_entry_date <= 10 trading days, current >= MA20, first-entry drawdown >= -8%",
   "trend_45_65": "big_holder_trend.stat_bucket_60d == \"45-65\", 0% <= week_chg_pct <= 10%, pullback_from_60d_high_pct >= -15%, vol_20d_avg >= 1000"
  },
  "summary": {
-  "total": 23,
-  "neckline_confirmed": 16,
-  "resonance": 3,
+  "total": 7,
+  "neckline_confirmed": 3,
+  "resonance": 1,
   "trend_45_65": 5,
   "excluded": {
-   "resonance": 0,
+   "resonance": 3,
    "trend_45_65": 8
   }
  },
  "rows": [
   {
-   "stock_id": "3707",
-   "name": "漢磊",
-   "industry": "半導體業",
+   "stock_id": "6209",
+   "name": "今國光",
+   "industry": "光電業",
    "reasons": [
     "neckline_confirmed",
-    "resonance"
+    "resonance",
+    "trend_45_65"
    ],
    "reason_labels": [
     "頸線當日進場",
-    "三池共振"
+    "三池共振",
+    "趨勢大戶45-65"
    ],
    "status": "今日進場",
-   "current_price": 81.7,
-   "signal_date": "2026-10-14",
-   "volume": 13040.0,
-   "vol_20d_avg": 21271.65,
+   "current_price": 93.0,
+   "signal_date": "2026-10-15",
+   "volume": 41804.0,
+   "vol_20d_avg": 10208.0,
    "sources": [
     {
-     "stock_id": "3707",
-     "name": "漢磊",
-     "industry": "半導體業",
-     "entry_date": "2026-10-14",
-     "expire_date": "2026-10-28",
+     "stock_id": "6209",
+     "name": "今國光",
+     "industry": "光電業",
+     "entry_date": "2026-10-15",
+     "expire_date": "2026-10-29",
      "days_remaining": 11,
-     "entry_price": 81.7,
-     "current_price": 81.7,
+     "entry_price": 93.0,
+     "current_price": 93.0,
      "pnl_pct": 0.0,
      "entry_type_label": "急殺型",
      "early_type_label": "盤中過前高",
-     "neckline_price": 80.3,
+     "neckline_price": 90.9,
      "pinned": false
     },
     {
-     "stock_id": "3707",
-     "name": "漢磊",
-     "industry": "櫃半導",
+     "stock_id": "6209",
+     "name": "今國光",
+     "industry": "光電",
      "level": 3,
      "pools": {
       "趨勢": {
-       "entry_date": "2026-10-10",
-       "entry_price": 85.9,
-       "current_price": 81.7,
-       "pnl_pct": -4.89,
-       "expire_date": "2026-10-24",
-       "days_remaining": 10
+       "entry_date": "2026-10-03",
+       "entry_price": 83.9,
+       "current_price": 93.0,
+       "pnl_pct": 10.85,
+       "expire_date": "2026-10-17",
+       "days_remaining": 2
       },
       "突破": {
-       "entry_date": "2026-10-02",
-       "entry_price": 85.2,
-       "current_price": 81.7,
-       "pnl_pct": -4.11,
-       "expire_date": "2026-10-16",
+       "entry_date": "2026-10-05",
+       "entry_price": 87.9,
+       "current_price": 93.0,
+       "pnl_pct": 5.8,
+       "expire_date": "2026-10-19",
        "days_remaining": 3
       },
       "頸線": {
-       "entry_date": "2026-10-14",
-       "entry_price": 81.7,
-       "current_price": 81.7,
+       "entry_date": "2026-10-15",
+       "entry_price": 93.0,
+       "current_price": 93.0,
        "pnl_pct": 0.0,
-       "expire_date": "2026-10-28",
+       "expire_date": "2026-10-29",
        "days_remaining": 11
       }
      },
-     "current_price": 81.7,
-     "resonance_date": "2026-10-14",
-     "first_entry_date": "2026-10-02",
+     "current_price": 93.0,
+     "resonance_date": "2026-10-15",
+     "first_entry_date": "2026-10-03",
      "pool_names": "趨勢 / 突破 / 頸線",
      "workbench_filter": "新鮮共振且結構未破"
-    }
-   ]
-  },
-  {
-   "stock_id": "1440",
-   "name": "南紡",
-   "industry": "紡織纖維",
-   "reasons": [
-    "neckline_confirmed"
-   ],
-   "reason_labels": [
-    "頸線當日進場"
-   ],
-   "status": "今日進場",
-   "current_price": 14.5,
-   "signal_date": "2026-10-14",
-   "volume": 4955.0,
-   "vol_20d_avg": 3248.85,
-   "sources": [
+    },
     {
-     "stock_id": "1440",
-     "name": "南紡",
-     "industry": "紡織纖維",
-     "entry_date": "2026-10-14",
-     "expire_date": "2026-10-28",
-     "days_remaining": 11,
-     "entry_price": 14.5,
-     "current_price": 14.5,
-     "pnl_pct": 0.0,
-     "entry_type_label": "急殺型",
-     "early_type_label": "盤中過前高",
-     "neckline_price": 14.15,
-     "pinned": false
+     "stock_id": "6209",
+     "name": "今國光",
+     "industry": "光電",
+     "market_cap": 47.2,
+     "big_pct_1000": 36.91,
+     "big_pct_400": 44.53,
+     "chg_1w_1000": 18.0,
+     "chg_1w_400": 14.95,
+     "big_trend_1000": [
+      30.01,
+      29.98,
+      31.28,
+      36.91
+     ],
+     "big_trend_400": [
+      37.85,
+      37.69,
+      38.74,
+      44.53
+     ],
+     "date_labels": [
+      "09/18",
+      "09/24",
+      "10/02",
+      "10/08"
+     ],
+     "tags": [
+      "千張單週激增",
+      "400張單週激增"
+     ],
+     "signal_score": 9,
+     "sources": [
+      "big_holder_trend"
+     ],
+     "price_date": "2026-10-08",
+     "close": 93.0,
+     "entry_date": "2026-10-08",
+     "entry_close": 90.1,
+     "latest_price_date": "2026-10-15",
+     "latest_close": 93.0,
+     "since_entry_pct": 3.22,
+     "ema20": 82.66,
+     "ema60": 78.24,
+     "ema120": 74.38,
+     "ema200": 69.3,
+     "bullish_aligned": true,
+     "high_60d": 90.9,
+     "low_60d": 57.9,
+     "max_gain_60d": 56.99,
+     "pullback_from_60d_high_pct": -0.88,
+     "vol_20d_avg": 10208,
+     "week_chg_pct": 8.95,
+     "price_filter_pass": true,
+     "stat_bucket_60d": "45-65",
+     "stat_edge": true,
+     "stat_edge_id": "max_gain_60d_45_65",
+     "stat_edge_label": "60日45-65統計優勢區",
+     "stat_edge_range": [
+      45.0,
+      65.0
+     ],
+     "stat_edge_basis": "big_holder_trend 60日最大漲幅分箱回測：45-65% 區間入池後平均漲幅與勝率較佳",
+     "stat_week_0_10": true,
+     "stat_week_0_10_id": "max_gain_45_65_week_0_10",
+     "stat_week_0_10_label": "45-65週漲0-10",
+     "stat_week_0_10_basis": "60日漲幅45-65%、週漲幅0-10%",
+     "pattern_state": "先觀察",
+     "pattern_score": 64.7,
+     "pattern_subs": {
+      "結構": 27,
+      "型態": 18.7,
+      "量價": 10,
+      "位置": 5,
+      "籌碼": 4
+     },
+     "pattern_tags": [
+      "均線多頭",
+      "頸線回測",
+      "大戶上升"
+     ],
+     "patterns": [
+      "w_bottom_retest"
+     ],
+     "key_level": 84.8,
+     "invalidation": 82.26,
+     "pattern_confidence": 0.85,
+     "score": 64.7,
+     "score_model": "pattern_score_only_v1",
+     "workbench_filter": "45-65週漲0-10、回落<=15%、量>=1000"
     }
    ]
   },
   {
-   "stock_id": "1528",
-   "name": "恩德",
+   "stock_id": "2371",
+   "name": "大同",
    "industry": "電機機械",
    "reasons": [
     "neckline_confirmed"
@@ -133,98 +193,32 @@
     "頸線當日進場"
    ],
    "status": "今日進場",
-   "current_price": 24.9,
-   "signal_date": "2026-10-14",
-   "volume": 8310.0,
-   "vol_20d_avg": 10761.95,
+   "current_price": 29.1,
+   "signal_date": "2026-10-15",
+   "volume": 9390.0,
+   "vol_20d_avg": 14863.6,
    "sources": [
     {
-     "stock_id": "1528",
-     "name": "恩德",
+     "stock_id": "2371",
+     "name": "大同",
      "industry": "電機機械",
-     "entry_date": "2026-10-14",
-     "expire_date": "2026-10-28",
+     "entry_date": "2026-10-15",
+     "expire_date": "2026-10-29",
      "days_remaining": 11,
-     "entry_price": 24.9,
-     "current_price": 24.9,
+     "entry_price": 29.1,
+     "current_price": 29.1,
      "pnl_pct": 0.0,
-     "entry_type_label": "急殺型",
-     "early_type_label": "盤中過前高",
-     "neckline_price": 24.4,
-     "pinned": false
-    }
-   ]
-  },
-  {
-   "stock_id": "1727",
-   "name": "中華化",
-   "industry": "化學工業",
-   "reasons": [
-    "neckline_confirmed"
-   ],
-   "reason_labels": [
-    "頸線當日進場"
-   ],
-   "status": "今日進場",
-   "current_price": 102.0,
-   "signal_date": "2026-10-14",
-   "volume": 4075.0,
-   "vol_20d_avg": 15931.2,
-   "sources": [
-    {
-     "stock_id": "1727",
-     "name": "中華化",
-     "industry": "化學工業",
-     "entry_date": "2026-10-14",
-     "expire_date": "2026-10-28",
-     "days_remaining": 11,
-     "entry_price": 102.0,
-     "current_price": 102.0,
-     "pnl_pct": 0.0,
-     "entry_type_label": "急殺型",
-     "early_type_label": "盤中過前高",
-     "neckline_price": 101.5,
-     "pinned": false
-    }
-   ]
-  },
-  {
-   "stock_id": "1810",
-   "name": "和成",
-   "industry": "玻璃陶瓷",
-   "reasons": [
-    "neckline_confirmed"
-   ],
-   "reason_labels": [
-    "頸線當日進場"
-   ],
-   "status": "今日進場",
-   "current_price": 23.65,
-   "signal_date": "2026-10-14",
-   "volume": 1383.0,
-   "vol_20d_avg": 1242.85,
-   "sources": [
-    {
-     "stock_id": "1810",
-     "name": "和成",
-     "industry": "玻璃陶瓷",
-     "entry_date": "2026-10-14",
-     "expire_date": "2026-10-28",
-     "days_remaining": 11,
-     "entry_price": 23.5,
-     "current_price": 23.65,
-     "pnl_pct": 0.64,
      "entry_type_label": "緩降型",
      "early_type_label": "盤中過前高",
-     "neckline_price": 23.0,
+     "neckline_price": 28.75,
      "pinned": false
     }
    ]
   },
   {
-   "stock_id": "2020",
-   "name": "美亞",
-   "industry": "鋼鐵工業",
+   "stock_id": "4142",
+   "name": "國光生",
+   "industry": "化學生技醫療",
    "reasons": [
     "neckline_confirmed"
    ],
@@ -232,465 +226,25 @@
     "頸線當日進場"
    ],
    "status": "今日進場",
-   "current_price": 24.3,
-   "signal_date": "2026-10-14",
-   "volume": 696.0,
-   "vol_20d_avg": 2738.45,
+   "current_price": 18.4,
+   "signal_date": "2026-10-15",
+   "volume": 1629.0,
+   "vol_20d_avg": 1266.1,
    "sources": [
     {
-     "stock_id": "2020",
-     "name": "美亞",
-     "industry": "鋼鐵工業",
-     "entry_date": "2026-10-14",
-     "expire_date": "2026-10-28",
+     "stock_id": "4142",
+     "name": "國光生",
+     "industry": "化學生技醫療",
+     "entry_date": "2026-10-15",
+     "expire_date": "2026-10-29",
      "days_remaining": 11,
-     "entry_price": 24.3,
-     "current_price": 24.3,
+     "entry_price": 18.4,
+     "current_price": 18.4,
      "pnl_pct": 0.0,
-     "entry_type_label": "急殺型",
-     "early_type_label": "盤中過前高",
-     "neckline_price": 23.86,
-     "pinned": false
-    }
-   ]
-  },
-  {
-   "stock_id": "2025",
-   "name": "千興",
-   "industry": "鋼鐵工業",
-   "reasons": [
-    "neckline_confirmed"
-   ],
-   "reason_labels": [
-    "頸線當日進場"
-   ],
-   "status": "今日進場",
-   "current_price": 13.75,
-   "signal_date": "2026-10-14",
-   "volume": 793.0,
-   "vol_20d_avg": 1188.9,
-   "sources": [
-    {
-     "stock_id": "2025",
-     "name": "千興",
-     "industry": "鋼鐵工業",
-     "entry_date": "2026-10-14",
-     "expire_date": "2026-10-28",
-     "days_remaining": 11,
-     "entry_price": 13.45,
-     "current_price": 13.75,
-     "pnl_pct": 2.23,
      "entry_type_label": "緩降型",
-     "early_type_label": "盤中過前高",
-     "neckline_price": 13.2,
-     "pinned": false
-    }
-   ]
-  },
-  {
-   "stock_id": "2032",
-   "name": "新鋼",
-   "industry": "鋼鐵工業",
-   "reasons": [
-    "neckline_confirmed"
-   ],
-   "reason_labels": [
-    "頸線當日進場"
-   ],
-   "status": "今日進場",
-   "current_price": 18.35,
-   "signal_date": "2026-10-14",
-   "volume": 556.0,
-   "vol_20d_avg": 2150.4,
-   "sources": [
-    {
-     "stock_id": "2032",
-     "name": "新鋼",
-     "industry": "鋼鐵工業",
-     "entry_date": "2026-10-14",
-     "expire_date": "2026-10-28",
-     "days_remaining": 11,
-     "entry_price": 18.25,
-     "current_price": 18.35,
-     "pnl_pct": 0.55,
-     "entry_type_label": "緩降型",
-     "early_type_label": "盤中過前高",
-     "neckline_price": 17.9,
-     "pinned": false
-    }
-   ]
-  },
-  {
-   "stock_id": "2302",
-   "name": "麗正",
-   "industry": "半導體業",
-   "reasons": [
-    "neckline_confirmed"
-   ],
-   "reason_labels": [
-    "頸線當日進場"
-   ],
-   "status": "今日進場",
-   "current_price": 46.7,
-   "signal_date": "2026-10-14",
-   "volume": 3319.0,
-   "vol_20d_avg": 6056.15,
-   "sources": [
-    {
-     "stock_id": "2302",
-     "name": "麗正",
-     "industry": "半導體業",
-     "entry_date": "2026-10-14",
-     "expire_date": "2026-10-28",
-     "days_remaining": 11,
-     "entry_price": 46.7,
-     "current_price": 46.7,
-     "pnl_pct": 0.0,
-     "entry_type_label": "急殺型",
      "early_type_label": null,
-     "neckline_price": 46.45,
+     "neckline_price": 18.25,
      "pinned": false
-    }
-   ]
-  },
-  {
-   "stock_id": "3006",
-   "name": "晶豪科",
-   "industry": "半導體業",
-   "reasons": [
-    "neckline_confirmed"
-   ],
-   "reason_labels": [
-    "頸線當日進場"
-   ],
-   "status": "今日進場",
-   "current_price": 247.0,
-   "signal_date": "2026-10-14",
-   "volume": 5964.0,
-   "vol_20d_avg": 9415.4,
-   "sources": [
-    {
-     "stock_id": "3006",
-     "name": "晶豪科",
-     "industry": "半導體業",
-     "entry_date": "2026-10-14",
-     "expire_date": "2026-10-28",
-     "days_remaining": 11,
-     "entry_price": 247.0,
-     "current_price": 247.0,
-     "pnl_pct": 0.0,
-     "entry_type_label": "急殺型",
-     "early_type_label": null,
-     "neckline_price": 243.5,
-     "pinned": false
-    }
-   ]
-  },
-  {
-   "stock_id": "3450",
-   "name": "聯鈞",
-   "industry": "其他電子業",
-   "reasons": [
-    "neckline_confirmed"
-   ],
-   "reason_labels": [
-    "頸線當日進場"
-   ],
-   "status": "今日進場",
-   "current_price": 500.0,
-   "signal_date": "2026-10-14",
-   "volume": 9191.0,
-   "vol_20d_avg": 8963.75,
-   "sources": [
-    {
-     "stock_id": "3450",
-     "name": "聯鈞",
-     "industry": "其他電子業",
-     "entry_date": "2026-10-14",
-     "expire_date": "2026-10-28",
-     "days_remaining": 11,
-     "entry_price": 507.0,
-     "current_price": 500.0,
-     "pnl_pct": -1.38,
-     "entry_type_label": "緩降型",
-     "early_type_label": "盤中過前高",
-     "neckline_price": 470.5,
-     "pinned": false
-    }
-   ]
-  },
-  {
-   "stock_id": "3529",
-   "name": "力旺",
-   "industry": "半導體業",
-   "reasons": [
-    "neckline_confirmed"
-   ],
-   "reason_labels": [
-    "頸線當日進場"
-   ],
-   "status": "今日進場",
-   "current_price": 2875.0,
-   "signal_date": "2026-10-14",
-   "volume": 985.0,
-   "vol_20d_avg": 1317.0,
-   "sources": [
-    {
-     "stock_id": "3529",
-     "name": "力旺",
-     "industry": "半導體業",
-     "entry_date": "2026-10-14",
-     "expire_date": "2026-10-28",
-     "days_remaining": 11,
-     "entry_price": 2850.0,
-     "current_price": 2875.0,
-     "pnl_pct": 0.88,
-     "entry_type_label": "急殺型",
-     "early_type_label": "跳空開高",
-     "neckline_price": 2875.0,
-     "pinned": false
-    }
-   ]
-  },
-  {
-   "stock_id": "6120",
-   "name": "達運",
-   "industry": "電子工業",
-   "reasons": [
-    "neckline_confirmed"
-   ],
-   "reason_labels": [
-    "頸線當日進場"
-   ],
-   "status": "今日進場",
-   "current_price": 13.55,
-   "signal_date": "2026-10-14",
-   "volume": 2031.0,
-   "vol_20d_avg": 6461.25,
-   "sources": [
-    {
-     "stock_id": "6120",
-     "name": "達運",
-     "industry": "電子工業",
-     "entry_date": "2026-10-14",
-     "expire_date": "2026-10-28",
-     "days_remaining": 11,
-     "entry_price": 13.45,
-     "current_price": 13.55,
-     "pnl_pct": 0.74,
-     "entry_type_label": "緩降型",
-     "early_type_label": "盤中過前高",
-     "neckline_price": 13.15,
-     "pinned": false
-    }
-   ]
-  },
-  {
-   "stock_id": "6227",
-   "name": "茂綸",
-   "industry": "電子通路業",
-   "reasons": [
-    "neckline_confirmed"
-   ],
-   "reason_labels": [
-    "頸線當日進場"
-   ],
-   "status": "今日進場",
-   "current_price": 128.0,
-   "signal_date": "2026-10-14",
-   "volume": 463.0,
-   "vol_20d_avg": 1731.95,
-   "sources": [
-    {
-     "stock_id": "6227",
-     "name": "茂綸",
-     "industry": "電子通路業",
-     "entry_date": "2026-10-14",
-     "expire_date": "2026-10-28",
-     "days_remaining": 11,
-     "entry_price": 128.0,
-     "current_price": 128.0,
-     "pnl_pct": 0.0,
-     "entry_type_label": "急殺型",
-     "early_type_label": null,
-     "neckline_price": 125.0,
-     "pinned": false
-    }
-   ]
-  },
-  {
-   "stock_id": "6485",
-   "name": "點序",
-   "industry": "半導體業",
-   "reasons": [
-    "neckline_confirmed"
-   ],
-   "reason_labels": [
-    "頸線當日進場"
-   ],
-   "status": "今日進場",
-   "current_price": 77.9,
-   "signal_date": "2026-10-14",
-   "volume": 415.0,
-   "vol_20d_avg": 1158.85,
-   "sources": [
-    {
-     "stock_id": "6485",
-     "name": "點序",
-     "industry": "半導體業",
-     "entry_date": "2026-10-14",
-     "expire_date": "2026-10-28",
-     "days_remaining": 11,
-     "entry_price": 78.0,
-     "current_price": 77.9,
-     "pnl_pct": -0.13,
-     "entry_type_label": "緩降型",
-     "early_type_label": "盤中過前高",
-     "neckline_price": 73.1,
-     "pinned": false
-    }
-   ]
-  },
-  {
-   "stock_id": "6643",
-   "name": "M31",
-   "industry": "半導體業",
-   "reasons": [
-    "neckline_confirmed"
-   ],
-   "reason_labels": [
-    "頸線當日進場"
-   ],
-   "status": "今日進場",
-   "current_price": 468.5,
-   "signal_date": "2026-10-14",
-   "volume": 387.0,
-   "vol_20d_avg": 1051.25,
-   "sources": [
-    {
-     "stock_id": "6643",
-     "name": "M31",
-     "industry": "半導體業",
-     "entry_date": "2026-10-14",
-     "expire_date": "2026-10-28",
-     "days_remaining": 11,
-     "entry_price": 474.0,
-     "current_price": 468.5,
-     "pnl_pct": -1.16,
-     "entry_type_label": "緩降型",
-     "early_type_label": "盤中過前高",
-     "neckline_price": 458.0,
-     "pinned": false
-    }
-   ]
-  },
-  {
-   "stock_id": "2605",
-   "name": "新興",
-   "industry": "航運",
-   "reasons": [
-    "resonance"
-   ],
-   "reason_labels": [
-    "三池共振"
-   ],
-   "status": "三池共振",
-   "current_price": 37.05,
-   "signal_date": "2026-10-13",
-   "volume": 6316.0,
-   "vol_20d_avg": 9165.0,
-   "sources": [
-    {
-     "stock_id": "2605",
-     "name": "新興",
-     "industry": "航運",
-     "level": 3,
-     "pools": {
-      "趨勢": {
-       "entry_date": "2026-10-12",
-       "entry_price": 37.3,
-       "current_price": 37.05,
-       "pnl_pct": -0.67,
-       "expire_date": "2026-10-26",
-       "days_remaining": 12
-      },
-      "突破": {
-       "entry_date": "2026-10-13",
-       "entry_price": 37.3,
-       "current_price": 37.05,
-       "pnl_pct": -0.67,
-       "expire_date": "2026-10-27",
-       "days_remaining": 10
-      },
-      "頸線": {
-       "entry_date": "2026-10-06",
-       "entry_price": 36.95,
-       "current_price": 37.05,
-       "pnl_pct": 0.27,
-       "expire_date": "2026-10-20",
-       "days_remaining": 5
-      }
-     },
-     "current_price": 37.05,
-     "resonance_date": "2026-10-13",
-     "first_entry_date": "2026-10-06",
-     "pool_names": "趨勢 / 突破 / 頸線",
-     "workbench_filter": "新鮮共振且結構未破"
-    }
-   ]
-  },
-  {
-   "stock_id": "3693",
-   "name": "營邦",
-   "industry": "櫃電腦",
-   "reasons": [
-    "resonance"
-   ],
-   "reason_labels": [
-    "三池共振"
-   ],
-   "status": "三池共振",
-   "current_price": 754.0,
-   "signal_date": "2026-10-10",
-   "volume": 1950.0,
-   "vol_20d_avg": 2101.95,
-   "sources": [
-    {
-     "stock_id": "3693",
-     "name": "營邦",
-     "industry": "櫃電腦",
-     "level": 3,
-     "pools": {
-      "趨勢": {
-       "entry_date": "2026-10-10",
-       "entry_price": 736.0,
-       "current_price": 754.0,
-       "pnl_pct": 2.45,
-       "expire_date": "2026-10-24",
-       "days_remaining": 10
-      },
-      "突破": {
-       "entry_date": "2026-10-08",
-       "entry_price": 736.0,
-       "current_price": 754.0,
-       "pnl_pct": 2.45,
-       "expire_date": "2026-10-22",
-       "days_remaining": 7
-      },
-      "頸線": {
-       "entry_date": "2026-10-05",
-       "entry_price": 676.0,
-       "current_price": 754.0,
-       "pnl_pct": 11.54,
-       "expire_date": "2026-10-19",
-       "days_remaining": 4
-      }
-     },
-     "current_price": 754.0,
-     "resonance_date": "2026-10-10",
-     "first_entry_date": "2026-10-05",
-     "pool_names": "趨勢 / 突破 / 頸線",
-     "workbench_filter": "新鮮共振且結構未破"
     }
    ]
   },
@@ -705,9 +259,9 @@
     "趨勢大戶45-65"
    ],
    "status": "趨勢45-65",
-   "current_price": 41.3,
-   "signal_date": "2026-10-14",
-   "volume": 859.0,
+   "current_price": 40.85,
+   "signal_date": "2026-10-15",
+   "volume": 3344.0,
    "vol_20d_avg": 1130.0,
    "sources": [
     {
@@ -746,12 +300,12 @@
       "big_holder_trend"
      ],
      "price_date": "2026-10-08",
-     "close": 41.3,
+     "close": 40.85,
      "entry_date": "2026-10-08",
      "entry_close": 38.35,
-     "latest_price_date": "2026-10-14",
-     "latest_close": 41.3,
-     "since_entry_pct": 7.69,
+     "latest_price_date": "2026-10-15",
+     "latest_close": 40.85,
+     "since_entry_pct": 6.52,
      "ema20": 35.65,
      "ema60": 34.48,
      "ema120": 33.5,
@@ -778,12 +332,12 @@
      "stat_week_0_10_label": "45-65週漲0-10",
      "stat_week_0_10_basis": "60日漲幅45-65%、週漲幅0-10%",
      "pattern_state": "先觀察",
-     "pattern_score": 36.0,
+     "pattern_score": 40.0,
      "pattern_subs": {
       "結構": 22,
       "型態": 0.0,
-      "量價": 5,
-      "位置": 5,
+      "量價": 11,
+      "位置": 3,
       "籌碼": 4
      },
      "pattern_tags": [
@@ -794,7 +348,7 @@
      "key_level": null,
      "invalidation": null,
      "pattern_confidence": 1.0,
-     "score": 36.0,
+     "score": 40.0,
      "score_model": "pattern_score_only_v1",
      "workbench_filter": "45-65週漲0-10、回落<=15%、量>=1000"
     }
@@ -811,9 +365,9 @@
     "趨勢大戶45-65"
    ],
    "status": "趨勢45-65",
-   "current_price": 56.0,
-   "signal_date": "2026-10-14",
-   "volume": 15455.0,
+   "current_price": 50.7,
+   "signal_date": "2026-10-15",
+   "volume": 5451.0,
    "vol_20d_avg": 2740.0,
    "sources": [
     {
@@ -851,12 +405,12 @@
       "big_holder_trend"
      ],
      "price_date": "2026-10-08",
-     "close": 56.0,
+     "close": 50.7,
      "entry_date": "2026-10-08",
      "entry_close": 46.9,
-     "latest_price_date": "2026-10-14",
-     "latest_close": 56.0,
-     "since_entry_pct": 19.4,
+     "latest_price_date": "2026-10-15",
+     "latest_close": 50.7,
+     "since_entry_pct": 8.1,
      "ema20": 41.42,
      "ema60": 37.07,
      "ema120": 35.63,
@@ -882,28 +436,27 @@
      "stat_week_0_10_id": "max_gain_45_65_week_0_10",
      "stat_week_0_10_label": "45-65週漲0-10",
      "stat_week_0_10_basis": "60日漲幅45-65%、週漲幅0-10%",
-     "pattern_state": "太遠不追",
-     "pattern_score": 60.8,
+     "pattern_state": "先觀察",
+     "pattern_score": 42.4,
      "pattern_subs": {
       "結構": 27,
-      "型態": 19.8,
-      "量價": 10,
-      "位置": 0,
+      "型態": 8.4,
+      "量價": 0,
+      "位置": 3,
       "籌碼": 4
      },
      "pattern_tags": [
       "均線多頭",
-      "W底突破頸線",
-      "大戶上升",
-      "已延伸/過熱"
+      "箱頂整理",
+      "大戶上升"
      ],
      "patterns": [
-      "w_bottom_breakout"
+      "box_near_top"
      ],
      "key_level": 52.2,
-     "invalidation": 50.63,
-     "pattern_confidence": 0.9,
-     "score": 60.8,
+     "invalidation": null,
+     "pattern_confidence": 0.6,
+     "score": 42.4,
      "score_model": "pattern_score_only_v1",
      "workbench_filter": "45-65週漲0-10、回落<=15%、量>=1000"
     }
@@ -920,9 +473,9 @@
     "趨勢大戶45-65"
    ],
    "status": "趨勢45-65",
-   "current_price": 97.2,
-   "signal_date": "2026-10-14",
-   "volume": 6189.0,
+   "current_price": 92.5,
+   "signal_date": "2026-10-15",
+   "volume": 6213.0,
    "vol_20d_avg": 12532.0,
    "sources": [
     {
@@ -963,12 +516,12 @@
       "big_holder_trend"
      ],
      "price_date": "2026-10-08",
-     "close": 97.2,
+     "close": 92.5,
      "entry_date": "2026-10-08",
      "entry_close": 100.5,
-     "latest_price_date": "2026-10-14",
-     "latest_close": 97.2,
-     "since_entry_pct": -3.28,
+     "latest_price_date": "2026-10-15",
+     "latest_close": 92.5,
+     "since_entry_pct": -7.96,
      "ema20": 96.95,
      "ema60": 94.06,
      "ema120": 89.38,
@@ -995,16 +548,15 @@
      "stat_week_0_10_label": "45-65週漲0-10",
      "stat_week_0_10_basis": "60日漲幅45-65%、週漲幅0-10%",
      "pattern_state": "先觀察",
-     "pattern_score": 45.0,
+     "pattern_score": 29.0,
      "pattern_subs": {
-      "結構": 22,
+      "結構": 6,
       "型態": 0.0,
       "量價": 10,
       "位置": 9,
       "籌碼": 4
      },
      "pattern_tags": [
-      "均線多頭",
       "量縮整理",
       "大戶上升"
      ],
@@ -1012,116 +564,7 @@
      "key_level": null,
      "invalidation": null,
      "pattern_confidence": 1.0,
-     "score": 45.0,
-     "score_model": "pattern_score_only_v1",
-     "workbench_filter": "45-65週漲0-10、回落<=15%、量>=1000"
-    }
-   ]
-  },
-  {
-   "stock_id": "6209",
-   "name": "今國光",
-   "industry": "光電",
-   "reasons": [
-    "trend_45_65"
-   ],
-   "reason_labels": [
-    "趨勢大戶45-65"
-   ],
-   "status": "趨勢45-65",
-   "current_price": 89.8,
-   "signal_date": "2026-10-14",
-   "volume": 21621.0,
-   "vol_20d_avg": 10208.0,
-   "sources": [
-    {
-     "stock_id": "6209",
-     "name": "今國光",
-     "industry": "光電",
-     "market_cap": 47.2,
-     "big_pct_1000": 36.91,
-     "big_pct_400": 44.53,
-     "chg_1w_1000": 18.0,
-     "chg_1w_400": 14.95,
-     "big_trend_1000": [
-      30.01,
-      29.98,
-      31.28,
-      36.91
-     ],
-     "big_trend_400": [
-      37.85,
-      37.69,
-      38.74,
-      44.53
-     ],
-     "date_labels": [
-      "09/18",
-      "09/24",
-      "10/02",
-      "10/08"
-     ],
-     "tags": [
-      "千張單週激增",
-      "400張單週激增"
-     ],
-     "signal_score": 9,
-     "sources": [
-      "big_holder_trend"
-     ],
-     "price_date": "2026-10-08",
-     "close": 89.8,
-     "entry_date": "2026-10-08",
-     "entry_close": 90.1,
-     "latest_price_date": "2026-10-14",
-     "latest_close": 89.8,
-     "since_entry_pct": -0.33,
-     "ema20": 82.66,
-     "ema60": 78.24,
-     "ema120": 74.38,
-     "ema200": 69.3,
-     "bullish_aligned": true,
-     "high_60d": 90.9,
-     "low_60d": 57.9,
-     "max_gain_60d": 56.99,
-     "pullback_from_60d_high_pct": -0.88,
-     "vol_20d_avg": 10208,
-     "week_chg_pct": 8.95,
-     "price_filter_pass": true,
-     "stat_bucket_60d": "45-65",
-     "stat_edge": true,
-     "stat_edge_id": "max_gain_60d_45_65",
-     "stat_edge_label": "60日45-65統計優勢區",
-     "stat_edge_range": [
-      45.0,
-      65.0
-     ],
-     "stat_edge_basis": "big_holder_trend 60日最大漲幅分箱回測：45-65% 區間入池後平均漲幅與勝率較佳",
-     "stat_week_0_10": true,
-     "stat_week_0_10_id": "max_gain_45_65_week_0_10",
-     "stat_week_0_10_label": "45-65週漲0-10",
-     "stat_week_0_10_basis": "60日漲幅45-65%、週漲幅0-10%",
-     "pattern_state": "先觀察",
-     "pattern_score": 57.8,
-     "pattern_subs": {
-      "結構": 27,
-      "型態": 19.8,
-      "量價": 0,
-      "位置": 7,
-      "籌碼": 4
-     },
-     "pattern_tags": [
-      "均線多頭",
-      "W底突破頸線",
-      "大戶上升"
-     ],
-     "patterns": [
-      "w_bottom_breakout"
-     ],
-     "key_level": 84.8,
-     "invalidation": 82.26,
-     "pattern_confidence": 0.9,
-     "score": 57.8,
+     "score": 29.0,
      "score_model": "pattern_score_only_v1",
      "workbench_filter": "45-65週漲0-10、回落<=15%、量>=1000"
     }
@@ -1138,9 +581,9 @@
     "趨勢大戶45-65"
    ],
    "status": "趨勢45-65",
-   "current_price": 292.0,
-   "signal_date": "2026-10-14",
-   "volume": 13461.0,
+   "current_price": 275.5,
+   "signal_date": "2026-10-15",
+   "volume": 6943.0,
    "vol_20d_avg": 3336.0,
    "sources": [
     {
@@ -1178,12 +621,12 @@
       "big_holder_trend"
      ],
      "price_date": "2026-10-08",
-     "close": 292.0,
+     "close": 275.5,
      "entry_date": "2026-10-08",
      "entry_close": 280.5,
-     "latest_price_date": "2026-10-14",
-     "latest_close": 292.0,
-     "since_entry_pct": 4.1,
+     "latest_price_date": "2026-10-15",
+     "latest_close": 275.5,
+     "since_entry_pct": -1.78,
      "ema20": 273.1,
      "ema60": 262.07,
      "ema120": 254.52,
@@ -1209,27 +652,24 @@
      "stat_week_0_10_id": "max_gain_45_65_week_0_10",
      "stat_week_0_10_label": "45-65週漲0-10",
      "stat_week_0_10_basis": "60日漲幅45-65%、週漲幅0-10%",
-     "pattern_state": "值得看圖",
-     "pattern_score": 75.8,
+     "pattern_state": "先觀察",
+     "pattern_score": 49.0,
      "pattern_subs": {
       "結構": 27,
-      "型態": 19.8,
-      "量價": 10,
-      "位置": 15,
+      "型態": 0.0,
+      "量價": 11,
+      "位置": 7,
       "籌碼": 4
      },
      "pattern_tags": [
       "均線多頭",
-      "W底突破頸線",
       "大戶上升"
      ],
-     "patterns": [
-      "w_bottom_breakout"
-     ],
-     "key_level": 291.5,
-     "invalidation": 282.75,
-     "pattern_confidence": 0.9,
-     "score": 75.8,
+     "patterns": [],
+     "key_level": null,
+     "invalidation": null,
+     "pattern_confidence": 1.0,
+     "score": 49.0,
      "score_model": "pattern_score_only_v1",
      "workbench_filter": "45-65週漲0-10、回落<=15%、量>=1000"
     }
