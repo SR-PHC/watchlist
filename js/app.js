@@ -540,11 +540,13 @@ function updateAppChrome(strat) {
   if (title) title.textContent = strat?.id === 'performance' ? '投資組合總覽' : (strat?.name || '投資決策中心');
   const updateBtn = document.getElementById('headerUpdateBtn');
   if (updateBtn) updateBtn.style.display = strat?.id === 'performance' ? 'none' : '';
+  if (window.updateHealthStrip) window.updateHealthStrip(strat);  // 系統狀態列（js/health-strip.js）
   if (window._appSystemActionActive) return;
   const date = DATA.yuanta_portfolio?.meta?.updated_at
     || DATA.market_index_data?.updated
     || DATA.performance_data?.last_updated;
   setAppSystemStatus('ready', '同步正常', date ? `最後更新 ${String(date).slice(0, 16).replace('T', ' ')}` : '資料已連線');
+  if (window.applyHealthToSystemCard) window.applyHealthToSystemCard();  // 有提醒或需處理時覆蓋「同步正常」
 }
 
 function setAppSystemStatus(state, title, detail) {
