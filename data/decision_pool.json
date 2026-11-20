@@ -1,77 +1,22 @@
 {
- "updated": "2026-11-19T17:01:41+08:00",
- "data_date": "2026-11-19",
+ "updated": "2026-11-20T17:01:36+08:00",
+ "data_date": "2026-11-20",
  "criteria": {
   "neckline_confirmed": "neckline_track.active entry_date == neckline_candidates.updated",
   "resonance": "pool_resonance.level >= 3（三池共振）, resonance_date <= 3 trading days, first_entry_date <= 10 trading days, current >= MA20, first-entry drawdown >= -8%",
   "trend_45_65": "big_holder_trend.stat_bucket_60d == \"45-65\", 0% <= week_chg_pct <= 10%, pullback_from_60d_high_pct >= -15%, vol_20d_avg >= 1000"
  },
  "summary": {
-  "total": 2,
+  "total": 1,
   "neckline_confirmed": 0,
-  "resonance": 1,
+  "resonance": 0,
   "trend_45_65": 1,
   "excluded": {
-   "resonance": 9,
+   "resonance": 8,
    "trend_45_65": 7
   }
  },
  "rows": [
-  {
-   "stock_id": "2618",
-   "name": "長榮航",
-   "industry": "航運",
-   "reasons": [
-    "resonance"
-   ],
-   "reason_labels": [
-    "三池共振"
-   ],
-   "status": "三池共振",
-   "current_price": 46.4,
-   "signal_date": "2026-11-16",
-   "volume": 36152.0,
-   "vol_20d_avg": 27210.55,
-   "sources": [
-    {
-     "stock_id": "2618",
-     "name": "長榮航",
-     "industry": "航運",
-     "level": 3,
-     "pools": {
-      "趨勢": {
-       "entry_date": "2026-11-16",
-       "entry_price": 47.4,
-       "current_price": 46.4,
-       "pnl_pct": -2.11,
-       "expire_date": "2026-11-30",
-       "days_remaining": 11
-      },
-      "突破": {
-       "entry_date": "2026-11-05",
-       "entry_price": 45.1,
-       "current_price": 46.4,
-       "pnl_pct": 2.88,
-       "expire_date": "2026-11-19",
-       "days_remaining": 1
-      },
-      "頸線": {
-       "entry_date": "2026-11-09",
-       "entry_price": 44.0,
-       "current_price": 46.4,
-       "pnl_pct": 5.45,
-       "expire_date": "2026-11-23",
-       "days_remaining": 3
-      }
-     },
-     "current_price": 46.4,
-     "resonance_date": "2026-11-16",
-     "first_entry_date": "2026-11-05",
-     "pool_names": "趨勢 / 突破 / 頸線",
-     "workbench_filter": "新鮮共振且結構未破"
-    }
-   ]
-  },
   {
    "stock_id": "2061",
    "name": "風青",
@@ -83,9 +28,9 @@
     "趨勢大戶45-65"
    ],
    "status": "趨勢45-65",
-   "current_price": 53.5,
-   "signal_date": "2026-11-19",
-   "volume": 1627.0,
+   "current_price": 48.15,
+   "signal_date": "2026-11-20",
+   "volume": 1045.0,
    "vol_20d_avg": 1889.0,
    "sources": [
     {
@@ -123,12 +68,12 @@
       "big_holder_trend"
      ],
      "price_date": "2026-11-13",
-     "close": 53.5,
+     "close": 48.15,
      "entry_date": "2026-11-13",
      "entry_close": 63.5,
-     "latest_price_date": "2026-11-19",
-     "latest_close": 53.5,
-     "since_entry_pct": -15.75,
+     "latest_price_date": "2026-11-20",
+     "latest_close": 48.15,
+     "since_entry_pct": -24.17,
      "ema20": 60.76,
      "ema60": 57.95,
      "ema120": 51.91,
@@ -155,22 +100,23 @@
      "stat_week_0_10_label": "45-65週漲0-10",
      "stat_week_0_10_basis": "60日漲幅45-65%、週漲幅0-10%",
      "pattern_state": "先觀察",
-     "pattern_score": 12.0,
+     "pattern_score": 17.0,
      "pattern_subs": {
       "結構": 0,
       "型態": 0.0,
-      "量價": 5,
+      "量價": 10,
       "位置": 3,
       "籌碼": 4
      },
      "pattern_tags": [
+      "量縮整理",
       "大戶上升"
      ],
      "patterns": [],
      "key_level": null,
      "invalidation": null,
      "pattern_confidence": 1.0,
-     "score": 12.0,
+     "score": 17.0,
      "score_model": "pattern_score_only_v1",
      "workbench_filter": "45-65週漲0-10、回落<=15%、量>=1000"
     }
